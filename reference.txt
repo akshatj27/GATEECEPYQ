@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>Differential Equations - PracticePaper</title>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://practicepaper.in/gate-ec/differential-equations" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Differential Equations - PracticePaper" />
+<meta property="og:url" content="https://practicepaper.in/gate-ec/differential-equations" />
+<meta property="og:site_name" content="PracticePaper" />
+<meta property="article:tag" content="electronics and communication" />
+<meta property="article:tag" content="GATE 2021" />
+<meta property="article:tag" content="gate 2021 syllabus" />
+<meta property="article:tag" content="gate ec" />
+<meta property="article:tag" content="gate ec 2021" />
+<meta property="article:tag" content="gate ec paper" />
+<meta property="article:tag" content="gate ec paper solution" />
+<meta property="article:tag" content="gate ec paper with answer key" />
+<meta property="article:tag" content="gate ec paper with answer key and solution" />
+<meta property="article:tag" content="gate ec practice questions" />
+<meta property="article:tag" content="gate ec Previous year paper" />
+<meta property="article:tag" content="gate ec previous year paper with answer key" />
+<meta property="article:tag" content="gate ec Syllabus" />
+<meta property="article:tag" content="gate ece" />
+<meta property="article:tag" content="gate ece 2021" />
+<meta property="article:tag" content="gate ece Syllabus" />
+<meta property="article:tag" content="gate electronics and communication syllabus 2021" />
+<meta property="article:tag" content="GATE paper solution" />
+<meta property="article:tag" content="gate practice questions" />
+<meta property="article:tag" content="GATE Previous year paper" />
+<meta property="article:section" content="EC" />
+<meta property="og:updated_time" content="2020-10-26T08:26:06+05:30" />
+<meta property="og:image" content="https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg" />
+<meta property="og:image:secure_url" content="https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg" />
+<meta property="og:image:width" content="752" />
+<meta property="og:image:height" content="371" />
+<meta property="og:image:alt" content="practicepaper" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2020-10-06T07:00:27+05:30" />
+<meta property="article:modified_time" content="2020-10-26T08:26:06+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Differential Equations - PracticePaper" />
+<meta name="twitter:image" content="https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg" />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="Less than a minute" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://practicepaper.in/#person","name":"PracticePaper","logo":{"@type":"ImageObject","@id":"https://practicepaper.in/#logo","url":"https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png","contentUrl":"https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png","caption":"PracticePaper","inLanguage":"en-US","width":"16","height":"16"},"image":{"@type":"ImageObject","@id":"https://practicepaper.in/#logo","url":"https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png","contentUrl":"https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png","caption":"PracticePaper","inLanguage":"en-US","width":"16","height":"16"}},{"@type":"WebSite","@id":"https://practicepaper.in/#website","url":"https://practicepaper.in","name":"PracticePaper","publisher":{"@id":"https://practicepaper.in/#person"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg","url":"https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg","width":"752","height":"371","caption":"practicepaper","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://practicepaper.in/gate-ec/differential-equations#webpage","url":"https://practicepaper.in/gate-ec/differential-equations","name":"Differential Equations - PracticePaper","datePublished":"2020-10-06T07:00:27+05:30","dateModified":"2020-10-26T08:26:06+05:30","isPartOf":{"@id":"https://practicepaper.in/#website"},"primaryImageOfPage":{"@id":"https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://practicepaper.in/author/niralidomadiya","name":"PracrticePaper","url":"https://practicepaper.in/author/niralidomadiya","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/ae501d5d318761e894714d8841ebb95d?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/ae501d5d318761e894714d8841ebb95d?s=96&amp;d=mm&amp;r=g","caption":"PracrticePaper","inLanguage":"en-US"},"sameAs":["https://practicepaper.in"]},{"@type":"Article","headline":"Differential Equations - PracticePaper","datePublished":"2020-10-06T07:00:27+05:30","dateModified":"2020-10-26T08:26:06+05:30","author":{"@id":"https://practicepaper.in/author/niralidomadiya","name":"PracrticePaper"},"publisher":{"@id":"https://practicepaper.in/#person"},"name":"Differential Equations - PracticePaper","@id":"https://practicepaper.in/gate-ec/differential-equations#richSnippet","isPartOf":{"@id":"https://practicepaper.in/gate-ec/differential-equations#webpage"},"image":{"@id":"https://practicepaper.in/wp-content/uploads/2020/10/practicepaper.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://practicepaper.in/gate-ec/differential-equations#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel='dns-prefetch' href='//fundingchoicesmessages.google.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="PracticePaper &raquo; Feed" href="https://practicepaper.in/feed" />
+<link rel="alternate" type="application/rss+xml" title="PracticePaper &raquo; Comments Feed" href="https://practicepaper.in/comments/feed" />
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/practicepaper.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='generate-fonts-css' href='//fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://practicepaper.in/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='my-plugin-style-css' href='https://practicepaper.in/wp-content/plugins/custom-quiz-plugin/css/style.css?ver=1729663992' type='text/css' media='all' />
+<style id='my-plugin-style-inline-css' type='text/css'>
+
+        .mtq_wrong_marker {
+            background: url('https://practicepaper.in/wp-content/plugins/custom-quiz-plugin/images/wrong.png');
+        }
+		.mtq_correct_marker{
+			background: url('https://practicepaper.in/wp-content/plugins/custom-quiz-plugin/images/correct.png');
+		}
+    
+</style>
+<link rel='stylesheet' id='katex-css-css' href='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css?ver=0.16.11' type='text/css' media='all' />
+<link rel='stylesheet' id='generate-style-grid-css' href='https://practicepaper.in/wp-content/themes/generatepress/css/unsemantic-grid.min.css?ver=2.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='generate-style-css' href='https://practicepaper.in/wp-content/themes/generatepress/style.min.css?ver=2.4.2' type='text/css' media='all' />
+<style id='generate-style-inline-css' type='text/css'>
+body{background-color:#efefef;color:#3a3a3a;}a, a:visited{color:#1e73be;}a:hover, a:focus, a:active{color:#000000;}body .grid-container{max-width:1100px;}.wp-block-group__inner-container{max-width:1100px;margin-left:auto;margin-right:auto;}body, button, input, select, textarea{font-family:"Open Sans", sans-serif;font-size:15px;}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-navigation .main-nav ul ul li a{font-size:14px;}@media (max-width:768px){.main-title{font-size:30px;}h1{font-size:30px;}h2{font-size:25px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a,.top-bar a:visited{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a,.site-header a:visited{color:#3a3a3a;}.main-title a,.main-title a:hover,.main-title a:visited{color:#222222;}.site-description{color:#757575;}.main-navigation,.main-navigation ul ul{background-color:#222222;}.main-navigation .main-nav ul li a,.menu-toggle{color:#ffffff;}.main-navigation .main-nav ul li:hover > a,.main-navigation .main-nav ul li:focus > a, .main-navigation .main-nav ul li.sfHover > a{color:#ffffff;background-color:#3f3f3f;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#3f3f3f;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation ul ul{background-color:#3f3f3f;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li:hover > a,.main-navigation .main-nav ul ul li:focus > a,.main-navigation .main-nav ul ul li.sfHover > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#4f4f4f;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-meta{color:#595959;}.entry-meta a,.entry-meta a:visited{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{background-color:#ffffff;}.footer-widgets .widget-title{color:#000000;}.site-info{color:#ffffff;background-color:#222222;}.site-info a,.site-info a:visited{color:#ffffff;}.site-info a:hover{color:#606060;}.footer-bar .widget_nav_menu .current-menu-item a{color:#606060;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.button:visited,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#666666;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f3f3f;}.generate-back-to-top,.generate-back-to-top:visited{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}.generate-back-to-top:hover,.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:30px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}}.one-container .sidebar .widget{padding:0px;}@media (max-width:768px){.main-navigation .menu-toggle,.main-navigation .mobile-bar-items,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav{display:none;}[class*="nav-float-"] .site-header .inside-header > *{float:none;clear:both;}}@font-face {font-family: "GeneratePress";src:  url("https://practicepaper.in/wp-content/themes/generatepress/fonts/generatepress.eot");src:  url("https://practicepaper.in/wp-content/themes/generatepress/fonts/generatepress.eot#iefix") format("embedded-opentype"),  url("https://practicepaper.in/wp-content/themes/generatepress/fonts/generatepress.woff2") format("woff2"),  url("https://practicepaper.in/wp-content/themes/generatepress/fonts/generatepress.woff") format("woff"),  url("https://practicepaper.in/wp-content/themes/generatepress/fonts/generatepress.ttf") format("truetype"),  url("https://practicepaper.in/wp-content/themes/generatepress/fonts/generatepress.svg#GeneratePress") format("svg");font-weight: normal;font-style: normal;}
+</style>
+<link rel='stylesheet' id='generate-mobile-style-css' href='https://practicepaper.in/wp-content/themes/generatepress/css/mobile.min.css?ver=2.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://practicepaper.in/wp-content/themes/generatepress/css/font-awesome.min.css?ver=4.7' type='text/css' media='all' />
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://practicepaper.in/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://practicepaper.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-N3BGKY01E3" id="google_gtagjs-js" async></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["practicepaper.in"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-N3BGKY01E3");
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://practicepaper.in/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://practicepaper.in/wp-json/wp/v2/pages/1049" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://practicepaper.in/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel='shortlink' href='https://practicepaper.in/?p=1049' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://practicepaper.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpracticepaper.in%2Fgate-ec%2Fdifferential-equations" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://practicepaper.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpracticepaper.in%2Fgate-ec%2Fdifferential-equations&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.149.1" />		<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+			document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+		</script>
+				<style>
+			.no-js img.lazyload {
+				display: none;
+			}
+
+			figure.wp-block-image img.lazyloading {
+				min-width: 150px;
+			}
+
+						.lazyload, .lazyloading {
+				opacity: 0;
+			}
+
+			.lazyloaded {
+				opacity: 1;
+				transition: opacity 400ms;
+				transition-delay: 0ms;
+			}
+
+					</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+
+<!-- Google AdSense snippet added by Site Kit -->
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9048169315686568&amp;host=ca-host-pub-2644536267352236" crossorigin="anonymous"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+
+<!-- Google AdSense Ad Blocking Recovery snippet added by Site Kit -->
+<script async src="https://fundingchoicesmessages.google.com/i/pub-9048169315686568?ers=1" nonce="QjFaH5FBs-U441-Tr0DMPg" type="e90b41b33cb5aeb43eccee81-text/javascript"></script><script nonce="QjFaH5FBs-U441-Tr0DMPg" type="e90b41b33cb5aeb43eccee81-text/javascript">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+<!-- End Google AdSense Ad Blocking Recovery snippet added by Site Kit -->
+
+<!-- Google AdSense Ad Blocking Recovery Error Protection snippet added by Site Kit -->
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">(function(){'use strict';function aa(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}var ba="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a};
+function ea(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");}var fa=ea(this);function ha(a,b){if(b)a:{var c=fa;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&null!=b&&ba(c,a,{configurable:!0,writable:!0,value:b})}}
+var ia="function"==typeof Object.create?Object.create:function(a){function b(){}b.prototype=a;return new b},l;if("function"==typeof Object.setPrototypeOf)l=Object.setPrototypeOf;else{var m;a:{var ja={a:!0},ka={};try{ka.__proto__=ja;m=ka.a;break a}catch(a){}m=!1}l=m?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}var la=l;
+function n(a,b){a.prototype=ia(b.prototype);a.prototype.constructor=a;if(la)la(a,b);else for(var c in b)if("prototype"!=c)if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.A=b.prototype}function ma(){for(var a=Number(this),b=[],c=a;c<arguments.length;c++)b[c-a]=arguments[c];return b}
+var na="function"==typeof Object.assign?Object.assign:function(a,b){for(var c=1;c<arguments.length;c++){var d=arguments[c];if(d)for(var e in d)Object.prototype.hasOwnProperty.call(d,e)&&(a[e]=d[e])}return a};ha("Object.assign",function(a){return a||na});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+var p=this||self;function q(a){return a};var t,u;a:{for(var oa=["CLOSURE_FLAGS"],v=p,x=0;x<oa.length;x++)if(v=v[oa[x]],null==v){u=null;break a}u=v}var pa=u&&u[610401301];t=null!=pa?pa:!1;var z,qa=p.navigator;z=qa?qa.userAgentData||null:null;function A(a){return t?z?z.brands.some(function(b){return(b=b.brand)&&-1!=b.indexOf(a)}):!1:!1}function B(a){var b;a:{if(b=p.navigator)if(b=b.userAgent)break a;b=""}return-1!=b.indexOf(a)};function C(){return t?!!z&&0<z.brands.length:!1}function D(){return C()?A("Chromium"):(B("Chrome")||B("CriOS"))&&!(C()?0:B("Edge"))||B("Silk")};var ra=C()?!1:B("Trident")||B("MSIE");!B("Android")||D();D();B("Safari")&&(D()||(C()?0:B("Coast"))||(C()?0:B("Opera"))||(C()?0:B("Edge"))||(C()?A("Microsoft Edge"):B("Edg/"))||C()&&A("Opera"));var sa={},E=null;var ta="undefined"!==typeof Uint8Array,ua=!ra&&"function"===typeof btoa;var F="function"===typeof Symbol&&"symbol"===typeof Symbol()?Symbol():void 0,G=F?function(a,b){a[F]|=b}:function(a,b){void 0!==a.g?a.g|=b:Object.defineProperties(a,{g:{value:b,configurable:!0,writable:!0,enumerable:!1}})};function va(a){var b=H(a);1!==(b&1)&&(Object.isFrozen(a)&&(a=Array.prototype.slice.call(a)),I(a,b|1))}
+var H=F?function(a){return a[F]|0}:function(a){return a.g|0},J=F?function(a){return a[F]}:function(a){return a.g},I=F?function(a,b){a[F]=b}:function(a,b){void 0!==a.g?a.g=b:Object.defineProperties(a,{g:{value:b,configurable:!0,writable:!0,enumerable:!1}})};function wa(){var a=[];G(a,1);return a}function xa(a,b){I(b,(a|0)&-99)}function K(a,b){I(b,(a|34)&-73)}function L(a){a=a>>11&1023;return 0===a?536870912:a};var M={};function N(a){return null!==a&&"object"===typeof a&&!Array.isArray(a)&&a.constructor===Object}var O,ya=[];I(ya,39);O=Object.freeze(ya);var P;function Q(a,b){P=b;a=new a(b);P=void 0;return a}
+function R(a,b,c){null==a&&(a=P);P=void 0;if(null==a){var d=96;c?(a=[c],d|=512):a=[];b&&(d=d&-2095105|(b&1023)<<11)}else{if(!Array.isArray(a))throw Error();d=H(a);if(d&64)return a;d|=64;if(c&&(d|=512,c!==a[0]))throw Error();a:{c=a;var e=c.length;if(e){var f=e-1,g=c[f];if(N(g)){d|=256;b=(d>>9&1)-1;e=f-b;1024<=e&&(za(c,b,g),e=1023);d=d&-2095105|(e&1023)<<11;break a}}b&&(g=(d>>9&1)-1,b=Math.max(b,e-g),1024<b&&(za(c,g,{}),d|=256,b=1023),d=d&-2095105|(b&1023)<<11)}}I(a,d);return a}
+function za(a,b,c){for(var d=1023+b,e=a.length,f=d;f<e;f++){var g=a[f];null!=g&&g!==c&&(c[f-b]=g)}a.length=d+1;a[d]=c};function Aa(a){switch(typeof a){case "number":return isFinite(a)?a:String(a);case "boolean":return a?1:0;case "object":if(a&&!Array.isArray(a)&&ta&&null!=a&&a instanceof Uint8Array){if(ua){for(var b="",c=0,d=a.length-10240;c<d;)b+=String.fromCharCode.apply(null,a.subarray(c,c+=10240));b+=String.fromCharCode.apply(null,c?a.subarray(c):a);a=btoa(b)}else{void 0===b&&(b=0);if(!E){E={};c="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");d=["+/=","+/","-_=","-_.","-_"];for(var e=
+0;5>e;e++){var f=c.concat(d[e].split(""));sa[e]=f;for(var g=0;g<f.length;g++){var h=f[g];void 0===E[h]&&(E[h]=g)}}}b=sa[b];c=Array(Math.floor(a.length/3));d=b[64]||"";for(e=f=0;f<a.length-2;f+=3){var k=a[f],w=a[f+1];h=a[f+2];g=b[k>>2];k=b[(k&3)<<4|w>>4];w=b[(w&15)<<2|h>>6];h=b[h&63];c[e++]=g+k+w+h}g=0;h=d;switch(a.length-f){case 2:g=a[f+1],h=b[(g&15)<<2]||d;case 1:a=a[f],c[e]=b[a>>2]+b[(a&3)<<4|g>>4]+h+d}a=c.join("")}return a}}return a};function Ba(a,b,c){a=Array.prototype.slice.call(a);var d=a.length,e=b&256?a[d-1]:void 0;d+=e?-1:0;for(b=b&512?1:0;b<d;b++)a[b]=c(a[b]);if(e){b=a[b]={};for(var f in e)Object.prototype.hasOwnProperty.call(e,f)&&(b[f]=c(e[f]))}return a}function Da(a,b,c,d,e,f){if(null!=a){if(Array.isArray(a))a=e&&0==a.length&&H(a)&1?void 0:f&&H(a)&2?a:Ea(a,b,c,void 0!==d,e,f);else if(N(a)){var g={},h;for(h in a)Object.prototype.hasOwnProperty.call(a,h)&&(g[h]=Da(a[h],b,c,d,e,f));a=g}else a=b(a,d);return a}}
+function Ea(a,b,c,d,e,f){var g=d||c?H(a):0;d=d?!!(g&32):void 0;a=Array.prototype.slice.call(a);for(var h=0;h<a.length;h++)a[h]=Da(a[h],b,c,d,e,f);c&&c(g,a);return a}function Fa(a){return a.s===M?a.toJSON():Aa(a)};function Ga(a,b,c){c=void 0===c?K:c;if(null!=a){if(ta&&a instanceof Uint8Array)return b?a:new Uint8Array(a);if(Array.isArray(a)){var d=H(a);if(d&2)return a;if(b&&!(d&64)&&(d&32||0===d))return I(a,d|34),a;a=Ea(a,Ga,d&4?K:c,!0,!1,!0);b=H(a);b&4&&b&2&&Object.freeze(a);return a}a.s===M&&(b=a.h,c=J(b),a=c&2?a:Q(a.constructor,Ha(b,c,!0)));return a}}function Ha(a,b,c){var d=c||b&2?K:xa,e=!!(b&32);a=Ba(a,b,function(f){return Ga(f,e,d)});G(a,32|(c?2:0));return a};function Ia(a,b){a=a.h;return Ja(a,J(a),b)}function Ja(a,b,c,d){if(-1===c)return null;if(c>=L(b)){if(b&256)return a[a.length-1][c]}else{var e=a.length;if(d&&b&256&&(d=a[e-1][c],null!=d))return d;b=c+((b>>9&1)-1);if(b<e)return a[b]}}function Ka(a,b,c,d,e){var f=L(b);if(c>=f||e){e=b;if(b&256)f=a[a.length-1];else{if(null==d)return;f=a[f+((b>>9&1)-1)]={};e|=256}f[c]=d;e&=-1025;e!==b&&I(a,e)}else a[c+((b>>9&1)-1)]=d,b&256&&(d=a[a.length-1],c in d&&delete d[c]),b&1024&&I(a,b&-1025)}
+function La(a,b){var c=Ma;var d=void 0===d?!1:d;var e=a.h;var f=J(e),g=Ja(e,f,b,d);var h=!1;if(null==g||"object"!==typeof g||(h=Array.isArray(g))||g.s!==M)if(h){var k=h=H(g);0===k&&(k|=f&32);k|=f&2;k!==h&&I(g,k);c=new c(g)}else c=void 0;else c=g;c!==g&&null!=c&&Ka(e,f,b,c,d);e=c;if(null==e)return e;a=a.h;f=J(a);f&2||(g=e,c=g.h,h=J(c),g=h&2?Q(g.constructor,Ha(c,h,!1)):g,g!==e&&(e=g,Ka(a,f,b,e,d)));return e}function Na(a,b){a=Ia(a,b);return null==a||"string"===typeof a?a:void 0}
+function Oa(a,b){a=Ia(a,b);return null!=a?a:0}function S(a,b){a=Na(a,b);return null!=a?a:""};function T(a,b,c){this.h=R(a,b,c)}T.prototype.toJSON=function(){var a=Ea(this.h,Fa,void 0,void 0,!1,!1);return Pa(this,a,!0)};T.prototype.s=M;T.prototype.toString=function(){return Pa(this,this.h,!1).toString()};
+function Pa(a,b,c){var d=a.constructor.v,e=L(J(c?a.h:b)),f=!1;if(d){if(!c){b=Array.prototype.slice.call(b);var g;if(b.length&&N(g=b[b.length-1]))for(f=0;f<d.length;f++)if(d[f]>=e){Object.assign(b[b.length-1]={},g);break}f=!0}e=b;c=!c;g=J(a.h);a=L(g);g=(g>>9&1)-1;for(var h,k,w=0;w<d.length;w++)if(k=d[w],k<a){k+=g;var r=e[k];null==r?e[k]=c?O:wa():c&&r!==O&&va(r)}else h||(r=void 0,e.length&&N(r=e[e.length-1])?h=r:e.push(h={})),r=h[k],null==h[k]?h[k]=c?O:wa():c&&r!==O&&va(r)}d=b.length;if(!d)return b;
+var Ca;if(N(h=b[d-1])){a:{var y=h;e={};c=!1;for(var ca in y)Object.prototype.hasOwnProperty.call(y,ca)&&(a=y[ca],Array.isArray(a)&&a!=a&&(c=!0),null!=a?e[ca]=a:c=!0);if(c){for(var rb in e){y=e;break a}y=null}}y!=h&&(Ca=!0);d--}for(;0<d;d--){h=b[d-1];if(null!=h)break;var cb=!0}if(!Ca&&!cb)return b;var da;f?da=b:da=Array.prototype.slice.call(b,0,d);b=da;f&&(b.length=d);y&&b.push(y);return b};function Qa(a){return function(b){if(null==b||""==b)b=new a;else{b=JSON.parse(b);if(!Array.isArray(b))throw Error(void 0);G(b,32);b=Q(a,b)}return b}};function Ra(a){this.h=R(a)}n(Ra,T);var Sa=Qa(Ra);var U;function V(a){this.g=a}V.prototype.toString=function(){return this.g+""};var Ta={};function Ua(){return Math.floor(2147483648*Math.random()).toString(36)+Math.abs(Math.floor(2147483648*Math.random())^Date.now()).toString(36)};function Va(a,b){b=String(b);"application/xhtml+xml"===a.contentType&&(b=b.toLowerCase());return a.createElement(b)}function Wa(a){this.g=a||p.document||document}Wa.prototype.appendChild=function(a,b){a.appendChild(b)};/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+function Xa(a,b){a.src=b instanceof V&&b.constructor===V?b.g:"type_error:TrustedResourceUrl";var c,d;(c=(b=null==(d=(c=(a.ownerDocument&&a.ownerDocument.defaultView||window).document).querySelector)?void 0:d.call(c,"script[nonce]"))?b.nonce||b.getAttribute("nonce")||"":"")&&a.setAttribute("nonce",c)};function Ya(a){a=void 0===a?document:a;return a.createElement("script")};function Za(a,b,c,d,e,f){try{var g=a.g,h=Ya(g);h.async=!0;Xa(h,b);g.head.appendChild(h);h.addEventListener("load",function(){e();d&&g.head.removeChild(h)});h.addEventListener("error",function(){0<c?Za(a,b,c-1,d,e,f):(d&&g.head.removeChild(h),f())})}catch(k){f()}};var $a=p.atob("aHR0cHM6Ly93d3cuZ3N0YXRpYy5jb20vaW1hZ2VzL2ljb25zL21hdGVyaWFsL3N5c3RlbS8xeC93YXJuaW5nX2FtYmVyXzI0ZHAucG5n"),ab=p.atob("WW91IGFyZSBzZWVpbmcgdGhpcyBtZXNzYWdlIGJlY2F1c2UgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlIGlzIGludGVyZmVyaW5nIHdpdGggdGhpcyBwYWdlLg=="),bb=p.atob("RGlzYWJsZSBhbnkgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlLCB0aGVuIHJlbG9hZCB0aGlzIHBhZ2Uu");function db(a,b,c){this.i=a;this.l=new Wa(this.i);this.g=null;this.j=[];this.m=!1;this.u=b;this.o=c}
+function eb(a){if(a.i.body&&!a.m){var b=function(){fb(a);p.setTimeout(function(){return gb(a,3)},50)};Za(a.l,a.u,2,!0,function(){p[a.o]||b()},b);a.m=!0}}
+function fb(a){for(var b=W(1,5),c=0;c<b;c++){var d=X(a);a.i.body.appendChild(d);a.j.push(d)}b=X(a);b.style.bottom="0";b.style.left="0";b.style.position="fixed";b.style.width=W(100,110).toString()+"%";b.style.zIndex=W(2147483544,2147483644).toString();b.style["background-color"]=hb(249,259,242,252,219,229);b.style["box-shadow"]="0 0 12px #888";b.style.color=hb(0,10,0,10,0,10);b.style.display="flex";b.style["justify-content"]="center";b.style["font-family"]="Roboto, Arial";c=X(a);c.style.width=W(80,
+85).toString()+"%";c.style.maxWidth=W(750,775).toString()+"px";c.style.margin="24px";c.style.display="flex";c.style["align-items"]="flex-start";c.style["justify-content"]="center";d=Va(a.l.g,"IMG");d.className=Ua();d.src=$a;d.alt="Warning icon";d.style.height="24px";d.style.width="24px";d.style["padding-right"]="16px";var e=X(a),f=X(a);f.style["font-weight"]="bold";f.textContent=ab;var g=X(a);g.textContent=bb;Y(a,e,f);Y(a,e,g);Y(a,c,d);Y(a,c,e);Y(a,b,c);a.g=b;a.i.body.appendChild(a.g);b=W(1,5);for(c=
+0;c<b;c++)d=X(a),a.i.body.appendChild(d),a.j.push(d)}function Y(a,b,c){for(var d=W(1,5),e=0;e<d;e++){var f=X(a);b.appendChild(f)}b.appendChild(c);c=W(1,5);for(d=0;d<c;d++)e=X(a),b.appendChild(e)}function W(a,b){return Math.floor(a+Math.random()*(b-a))}function hb(a,b,c,d,e,f){return"rgb("+W(Math.max(a,0),Math.min(b,255)).toString()+","+W(Math.max(c,0),Math.min(d,255)).toString()+","+W(Math.max(e,0),Math.min(f,255)).toString()+")"}function X(a){a=Va(a.l.g,"DIV");a.className=Ua();return a}
+function gb(a,b){0>=b||null!=a.g&&0!=a.g.offsetHeight&&0!=a.g.offsetWidth||(ib(a),fb(a),p.setTimeout(function(){return gb(a,b-1)},50))}
+function ib(a){var b=a.j;var c="undefined"!=typeof Symbol&&Symbol.iterator&&b[Symbol.iterator];if(c)b=c.call(b);else if("number"==typeof b.length)b={next:aa(b)};else throw Error(String(b)+" is not an iterable or ArrayLike");for(c=b.next();!c.done;c=b.next())(c=c.value)&&c.parentNode&&c.parentNode.removeChild(c);a.j=[];(b=a.g)&&b.parentNode&&b.parentNode.removeChild(b);a.g=null};function jb(a,b,c,d,e){function f(k){document.body?g(document.body):0<k?p.setTimeout(function(){f(k-1)},e):b()}function g(k){k.appendChild(h);p.setTimeout(function(){h?(0!==h.offsetHeight&&0!==h.offsetWidth?b():a(),h.parentNode&&h.parentNode.removeChild(h)):a()},d)}var h=kb(c);f(3)}function kb(a){var b=document.createElement("div");b.className=a;b.style.width="1px";b.style.height="1px";b.style.position="absolute";b.style.left="-10000px";b.style.top="-10000px";b.style.zIndex="-10000";return b};function Ma(a){this.h=R(a)}n(Ma,T);function lb(a){this.h=R(a)}n(lb,T);var mb=Qa(lb);function nb(a){a=Na(a,4)||"";if(void 0===U){var b=null;var c=p.trustedTypes;if(c&&c.createPolicy){try{b=c.createPolicy("goog#html",{createHTML:q,createScript:q,createScriptURL:q})}catch(d){p.console&&p.console.error(d.message)}U=b}else U=b}a=(b=U)?b.createScriptURL(a):a;return new V(a,Ta)};function ob(a,b){this.m=a;this.o=new Wa(a.document);this.g=b;this.j=S(this.g,1);this.u=nb(La(this.g,2));this.i=!1;b=nb(La(this.g,13));this.l=new db(a.document,b,S(this.g,12))}ob.prototype.start=function(){pb(this)};
+function pb(a){qb(a);Za(a.o,a.u,3,!1,function(){a:{var b=a.j;var c=p.btoa(b);if(c=p[c]){try{var d=Sa(p.atob(c))}catch(e){b=!1;break a}b=b===Na(d,1)}else b=!1}b?Z(a,S(a.g,14)):(Z(a,S(a.g,8)),eb(a.l))},function(){jb(function(){Z(a,S(a.g,7));eb(a.l)},function(){return Z(a,S(a.g,6))},S(a.g,9),Oa(a.g,10),Oa(a.g,11))})}function Z(a,b){a.i||(a.i=!0,a=new a.m.XMLHttpRequest,a.open("GET",b,!0),a.send())}function qb(a){var b=p.btoa(a.j);a.m[b]&&Z(a,S(a.g,5))};(function(a,b){p[a]=function(){var c=ma.apply(0,arguments);p[a]=function(){};b.apply(null,c)}})("__h82AlnkH6D91__",function(a){"function"===typeof window.atob&&(new ob(window,mb(window.atob(a)))).start()});}).call(this);
+
+window.__h82AlnkH6D91__("WyJwdWItOTA0ODE2OTMxNTY4NjU2OCIsW251bGwsbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9iL3B1Yi05MDQ4MTY5MzE1Njg2NTY4Il0sbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9lbC9BR1NLV3hXdjBaSGFoQzJzUGswYzhOQzB2cWNHQ2hPal9ER0dBZHNTYWhtZjN1TUVkS1QycnN4aDFXNnpXbzRWcW9uMjNMeDZoVV9mZGJXMEw2dnZYUVp0M2kyZ0hBXHUwMDNkXHUwMDNkP3RlXHUwMDNkVE9LRU5fRVhQT1NFRCIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFVMUkhUUF8xdXRwWVY5aWpCeHdLazJpUGNzVVBWZmV6TUJ0RU16eUUxSDlFVHp2anNQQVVwWFZKbXN5OTBlaTJ6MXVpLTI1cXBxdERFWGtBX3hXVks4a3dcdTAwM2RcdTAwM2Q/YWJcdTAwM2QxXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFcyMkJ1dzdvNUhxWUxiaVVUVjNoazczenJIaXpRRjF1Ym53N0tNeFBuLVczWklhaEpMUmt3MXNfMU5yRnhqNENwVWxfSHpWTzM4SjctOXRvSE94Qm9XR2dcdTAwM2RcdTAwM2Q/YWJcdTAwM2QyXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFV2RmRaZkRDc1pKZDBPbHBuelhHZG1vOUw0OE82a1loM19xMXZFNzN3aktfRWh6VUlZWE9FMUtyN1NOcTFwbWVTLU5sSTl5NkVMcTJxR0F6T25DenBoUndcdTAwM2RcdTAwM2Q/c2JmXHUwMDNkMiIsImRpdi1ncHQtYWQiLDIwLDEwMCwiY0hWaUxUa3dORGd4Tmprek1UVTJPRFkxTmpnXHUwMDNkIixbbnVsbCxudWxsLG51bGwsImh0dHBzOi8vd3d3LmdzdGF0aWMuY29tLzBlbW4vZi9wL3B1Yi05MDQ4MTY5MzE1Njg2NTY4LmpzP3VzcXBcdTAwM2RDQUkiXSwiaHR0cHM6Ly9mdW5kaW5nY2hvaWNlc21lc3NhZ2VzLmdvb2dsZS5jb20vZWwvQUdTS1d4VjNaLW9iN0ZraUF1M2QyQWJqeW1INzBMSnlDZmNFSHNLS2UyQWE2cnNpdjg2TzNpbm9BTVhWcnJtMWZUbWVCUmhUWU9RektzemJnSnRyTHBoeFVQY3NkUVx1MDAzZFx1MDAzZCJd");</script>
+<!-- End Google AdSense Ad Blocking Recovery Error Protection snippet added by Site Kit -->
+<link rel="icon" href="https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png" sizes="32x32" />
+<link rel="icon" href="https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png" />
+<meta name="msapplication-TileImage" content="https://practicepaper.in/wp-content/uploads/2020/10/menu-icon.png" />
+		<style type="text/css" id="wp-custom-css">
+			body .site.grid-container {
+    max-width: 100%;
+}
+.page .entry-header {
+  text-align: center;
+
+} 
+
+#right-sidebar {
+position: sticky !important;
+    top: 10px !important;
+ }		</style>
+		</head>
+
+<body class="page-template-default page page-id-1049 page-child parent-pageid-574 wp-embed-responsive right-sidebar nav-below-header fluid-header separate-containers active-footer-widgets-3 nav-aligned-left header-aligned-left dropdown-hover" itemtype="https://schema.org/WebPage" itemscope>
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header id="masthead" class="site-header" itemtype="https://schema.org/WPHeader" itemscope>
+			<div class="inside-header grid-container grid-parent">
+				<div class="site-branding">
+					<p class="main-title" itemprop="headline">
+				<a href="https://practicepaper.in/" rel="home">
+					PracticePaper
+				</a>
+			</p>
+					
+				</div>			</div><!-- .inside-header -->
+		</header><!-- #masthead -->
+				<nav id="site-navigation" class="main-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container grid-parent">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="mobile-menu">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-main-menu" class=" menu sf-menu"><li id="menu-item-1484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1484"><a href="https://practicepaper.in/">Home</a></li>
+<li id="menu-item-1465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1465"><a href="https://practicepaper.in/gate-cse">GATE CSE<span role="presentation" class="dropdown-menu-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-2587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2587"><a href="https://practicepaper.in/gate-cse/gate-cse-mock-test-series">Mock Test</a></li>
+	<li id="menu-item-1492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1492"><a href="https://practicepaper.in/gate-cse/topic-wise-practice-of-gate-cse-previous-year-papers">Topic wise</a></li>
+	<li id="menu-item-1483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1483"><a href="https://practicepaper.in/gate-cse/gate-cse-subject-wise-questions">Subject wise</a></li>
+	<li id="menu-item-1475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1475"><a href="https://practicepaper.in/gate-cse/gate-cse-year-wise-questions">Year wise</a></li>
+	<li id="menu-item-2356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2356"><a href="https://practicepaper.in/gate-cse/gate-cse-notes">Subject Notes</a></li>
+	<li id="menu-item-1489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1489"><a href="https://practicepaper.in/gate-cse/gate-cse-syllabus">Syllabus</a></li>
+</ul>
+</li>
+<li id="menu-item-1473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1473"><a href="https://practicepaper.in/gate-me">GATE ME<span role="presentation" class="dropdown-menu-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-2375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2375"><a href="https://practicepaper.in/gate-me/gate-notes-mechanical-engineering">Subject Notes</a></li>
+	<li id="menu-item-1495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1495"><a href="https://practicepaper.in/gate-me/topic-wise-practice-of-gate-me-previous-year-papers">Topic wise</a></li>
+	<li id="menu-item-1482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1482"><a href="https://practicepaper.in/gate-me/gate-me-subject-wise-questions">Subject wise</a></li>
+	<li id="menu-item-1474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1474"><a href="https://practicepaper.in/gate-me/gate-me-year-wise-questions">Year wise</a></li>
+	<li id="menu-item-1487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1487"><a href="https://practicepaper.in/gate-me/gate-me-syllabus">Syllabus</a></li>
+</ul>
+</li>
+<li id="menu-item-1470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1470"><a href="https://practicepaper.in/gate-ce">GATE CE<span role="presentation" class="dropdown-menu-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-2391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2391"><a href="https://practicepaper.in/gate-ce/gate-notes-civil-engineering">Subject Notes</a></li>
+	<li id="menu-item-1494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1494"><a href="https://practicepaper.in/gate-ce/topic-wise-practice-of-gate-ce-previous-year-papers">Topic wise</a></li>
+	<li id="menu-item-1476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1476"><a href="https://practicepaper.in/gate-ce/gate-ce-subject-wise-questions">Subject wise</a></li>
+	<li id="menu-item-1477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1477"><a href="https://practicepaper.in/gate-ce/gate-ce-year-wise-questions">Year wise</a></li>
+	<li id="menu-item-1488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1488"><a href="https://practicepaper.in/gate-ce/gate-ce-syllabus">Syllabus</a></li>
+</ul>
+</li>
+<li id="menu-item-1471" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-1471"><a href="https://practicepaper.in/gate-ec">GATE EC<span role="presentation" class="dropdown-menu-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-2424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2424"><a href="https://practicepaper.in/gate-ec/gate-notes-electronics-and-communications-ec">Subject Notes</a></li>
+	<li id="menu-item-1493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1493"><a href="https://practicepaper.in/gate-ec/topic-wise-practice-of-gate-ec-previous-year-papers">Topic wise</a></li>
+	<li id="menu-item-1478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1478"><a href="https://practicepaper.in/gate-ec/gate-ec-subject-wise-questions">Subject wise</a></li>
+	<li id="menu-item-1479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1479"><a href="https://practicepaper.in/gate-ec/gate-ec-year-wise-questions">Year wise</a></li>
+	<li id="menu-item-1485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1485"><a href="https://practicepaper.in/gate-ec/gate-ec-syllabus">Syllabus</a></li>
+</ul>
+</li>
+<li id="menu-item-1472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1472"><a href="https://practicepaper.in/gate-ee">GATE EE<span role="presentation" class="dropdown-menu-toggle"></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-2414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2414"><a href="https://practicepaper.in/gate-ee/gate-notes-electrical-engineering">Subject Notes</a></li>
+	<li id="menu-item-1491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1491"><a href="https://practicepaper.in/gate-ee/topic-wise-practice-of-gate-ee-previous-year-papers">Topic wise</a></li>
+	<li id="menu-item-1480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1480"><a href="https://practicepaper.in/gate-ee/gate-ee-subject-wise-questions">Subject wise</a></li>
+	<li id="menu-item-1481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1481"><a href="https://practicepaper.in/gate-ee/gate-ee-year-wise-questions">Year wise</a></li>
+	<li id="menu-item-1486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1486"><a href="https://practicepaper.in/gate-ee/gate-ee-syllabus">Syllabus</a></li>
+</ul>
+</li>
+<li id="menu-item-1490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1490"><a href="https://practicepaper.in/contact-us">Contact Us</a></li>
+</ul></div>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+		
+	<div id="page" class="hfeed site grid-container container grid-parent">
+				<div id="content" class="site-content">
+			
+	<div id="primary" class="content-area grid-parent mobile-grid-100 grid-75 tablet-grid-75">
+		<main id="main" class="site-main">
+			
+<article id="post-1049" class="post-1049 page type-page status-publish category-ec category-gate tag-electronics-and-communication tag-gate-2021 tag-gate-2021-syllabus tag-gate-ec tag-gate-ec-2021 tag-gate-ec-paper tag-gate-ec-paper-solution tag-gate-ec-paper-with-answer-key tag-gate-ec-paper-with-answer-key-and-solution tag-gate-ec-practice-questions tag-gate-ec-previous-year-paper tag-gate-ec-previous-year-paper-with-answer-key tag-gate-ec-syllabus tag-gate-ece tag-gate-ece-2021 tag-gate-ece-syllabus tag-gate-electronics-and-communication-syllabus-2021 tag-gate-paper-solution tag-gate-practice-questions tag-gate-previous-year-paper" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+		
+			<header class="entry-header">
+				<h1 class="entry-title" itemprop="headline">Differential Equations</h1>			</header><!-- .entry-header -->
+
+		
+		<div class="entry-content" itemprop="text">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9048169315686568" crossorigin="anonymous" type="e90b41b33cb5aeb43eccee81-text/javascript"></script>
+<!-- N_After Title -->
+<ins class="adsbygoogle Google_Ad_after_Title_height"
+     style="display:block"
+     data-ad-client="ca-pub-9048169315686568"
+     data-ad-slot="3942157232"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class='allquestionarea' data-value=40><div class='question'>
+          <table class='question_heading_table'>
+            <tbody>
+              <tr>
+                <td class='question_number_lable'>
+				<div class='question_number_lable_type'>
+				  <div class='leftside'>
+                  <div class='question_lable'>Question 1</div>
+                  <div class='mtq_stamp'></div>
+				  </div>
+			<!--  <div class='rightside'>
+				  <div class='question_type_labal'> [MSQ]</div>
+				  <div class='question_type_labal'> [2 Mark]</div>
+				  </div> -->
+				  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table><div class='question_text' data-value=2>Let [latex]F_{1}, F_{2}[/latex], and [latex]F_{3}[/latex] be functions of [latex](x, y, z)[/latex]. Suppose that for every given pair of points [latex]A[/latex] and [latex]B[/latex] in space, the line integral [latex]\int_{C}\left(F_{1} d x+F_{2} d y+F_{3} d z\right)[/latex] evaluates to the same value along any path [latex]C[/latex] that starts at [latex]A[/latex] and ends at [latex]B[/latex]. Then which of the following is/are true?</div><table class='answer_table' data-value=3>
+            <colgroup>
+              <col class='option_index'>
+            </colgroup>
+            <tbody><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>A </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>There exists a differentiable scalar function [latex]f(x, y, z)[/latex] such that [latex]F_{1}=\frac{\partial f}{\partial x}, F_{2}=\frac{\partial f}{\partial y}, F_{3}=\frac{\partial f}{\partial z}[/latex].</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>B </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>For every closed path [latex]\Gamma[/latex], we have [latex]\oint_{\Gamma}\left(F_{1} d x+F_{2} d y+F_{3} d z\right)=0[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>C </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\frac{\partial F_{1}}{\partial x}+\frac{\partial F_{2}}{\partial y}+\frac{\partial F_{3}}{\partial z}=0[/latex].</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>D </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\frac{\partial F_{3}}{\partial y}=\frac{\partial F_{2}}{\partial z}, \frac{\partial F_{1}}{\partial z}=\frac{\partial F_{3}}{\partial x}, \frac{\partial F_{2}}{\partial x}=\frac{\partial F_{1}}{\partial y}[/latex]</div>
+					</td>
+					</tr></tbody>
+          </table><div class='year_sub_chap_link'><b><a href='https://practicepaper.in/gate-ec/gate-ec-2024' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>GATE EC 2024</a></b>&nbsp;&nbsp;&nbsp;<b><a href='https://practicepaper.in/gate-ec/engineering-mathematics' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>Engineering Mathematics</a></b></div><div id='mtq_question_explanation_1'  class='mtq_explanation' style='display: none;'>
+			<div class='mtq_explanation-label'> Question 1  Explanation:</div>
+			<div class='mtq_explanation-text'>	
+			[latex]\because[/latex] Given integral is independent of contour ' [latex]C[/latex] ' [latex]\int_{C}\left(F_{1} d x+F_{2} d y+F_{3} d z\right)=\int_{C} \bar{F} \cdot \overline{d r}[/latex] is independent of ' [latex]C[/latex] '
+<br>
+Then [latex]\bar{F}[/latex] is conservative field
+<br> [latex]
+\begin{array}{ll}
+\therefore & \bar{F}=\overline{\nabla \phi} \\
+\Rightarrow & F_{1}=\frac{\partial \phi}{\partial x}, F_{2}=\frac{\partial \phi}{\partial y}, F_{3}=\frac{\partial \phi}{\partial z}
+\end{array}
+[/latex]<br>
+[latex]\therefore[/latex] Option is true.
+<br>
+[latex]\because \bar{F}[/latex] is conservative
+<br>
+Then,
+<br> [latex]
+\nabla \times \bar{F}=0
+[/latex]<br>
+[latex]\Rightarrow \quad\left|\begin{array}{ccc}i & j & K \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ F_{1} & F_{2} & F_{3}\end{array}\right|=\overrightarrow{0}[/latex]<br>
+[latex]=i\left(\frac{\partial F_{3}}{\partial y}-\frac{\partial F_{2}}{\partial z}\right)-j\left(\frac{\partial F_{3}}{\partial x}-\frac{\partial F_{1}}{\partial z}\right)+K\left(\frac{\partial F_{2}}{\partial x}-\frac{\partial F_{1}}{\partial y}\right)=0 \hat{i}+0 \hat{j}+0 \hat{k}[/latex]
+<br>
+Equate on both sides,
+<br>
+We get,
+<br> [latex]
+\frac{\partial F_{3}}{\partial y}=\frac{\partial F_{2}}{\partial z}, \quad \frac{\partial F_{3}}{\partial x}=\frac{\partial F_{1}}{\partial z}, \quad \frac{\partial F_{2}}{\partial x}=\frac{\partial F_{1}}{\partial y}
+[/latex]<br>
+[latex]\therefore[/latex] Option is true.
+<br>
+If [latex]\bar{F}[/latex] is irrotational then,
+<br> [latex]
+\oint_{C} F_{1} d x+F_{2} d y+F_{3} d z=0
+[/latex]<br>
+[latex]\therefore[/latex] Option is also true.
+But,
+<br> [latex]
+\bar{\nabla} \cdot \bar{F}=\bar{\nabla} \cdot(\bar{\nabla} \phi) \neq 0
+[/latex]<br>
+[latex]\therefore[/latex] Option is false.
+			</div>
+		</div></div><div class='question'>
+          <table class='question_heading_table'>
+            <tbody>
+              <tr>
+                <td class='question_number_lable'>
+				<div class='question_number_lable_type'>
+				  <div class='leftside'>
+                  <div class='question_lable'>Question 2</div>
+                  <div class='mtq_stamp'></div>
+				  </div>
+			<!--  <div class='rightside'>
+				  <div class='question_type_labal'> [MCQ]</div>
+				  <div class='question_type_labal'> [1 Mark]</div>
+				  </div> -->
+				  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table><div class='question_text' data-value=1>The general form of the complementary function of a differential equation is given by [latex]y(t)=(A t+B) e^{-2 t}[/latex], where [latex]A[/latex] and [latex]B[/latex] are real constants determined by the initial condition. The corresponding differential equation is</div><table class='answer_table' data-value=1>
+            <colgroup>
+              <col class='option_index'>
+            </colgroup>
+            <tbody><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>A </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\frac{d^{2} y}{d t^{2}}+4 \frac{d y}{d t}+4 y=f(t)[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>B </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\frac{d^{2} y}{d t^{2}}+4 y=f(t)[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>C </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\frac{d^{2} y}{d t^{2}}+3 \frac{d y}{d t}+2 y=f(t)[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>D </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\frac{d^{2} y}{d t^{2}}+5 \frac{d y}{d t}+6 y=f(t)[/latex]</div>
+					</td>
+					</tr></tbody>
+          </table><div class='year_sub_chap_link'><b><a href='https://practicepaper.in/gate-ec/gate-ec-2024' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>GATE EC 2024</a></b>&nbsp;&nbsp;&nbsp;<b><a href='https://practicepaper.in/gate-ec/engineering-mathematics' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>Engineering Mathematics</a></b></div><div id='mtq_question_explanation_2'  class='mtq_explanation' style='display: none;'>
+			<div class='mtq_explanation-label'> Question 2  Explanation:</div>
+			<div class='mtq_explanation-text'>	
+			[latex]\because[/latex] Given
+<br>
+Complementary function [latex]=(A t+B) e^{-2 t} \approx\left(C_{1}+C_{2} t\right) e^{-2 t}[/latex]
+<br>
+i.e. roots of auxiliary equation are [latex]m=-2,-2[/latex]
+<br>
+So, [latex]\mathrm{AE}[/latex] is [latex](m+2)(m+2)=0[/latex]
+<br> [latex]
+m^{2}+4 m+4=0
+[/latex]<br>
+Replace [latex]m \rightarrow D[/latex] we get,
+<br> [latex]
+\left(D^{2}+4 D+4\right) y=0
+[/latex]<br>
+i.e. the required different
+<br> [latex]
+\frac{d^{2} y}{d x^{2}}+4 \frac{d y}{d x}+4 y=f(t)
+[/latex]
+			</div>
+		</div></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9048169315686568" crossorigin="anonymous" type="e90b41b33cb5aeb43eccee81-text/javascript"></script>
+<!-- In question Ad-first -->
+<ins class="adsbygoogle Google_ads_in_question"
+     style="display:block"
+     data-ad-client="ca-pub-9048169315686568"
+     data-ad-slot="3992028625"
+     data-full-width-responsive="true"></ins>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class='question'>
+          <table class='question_heading_table'>
+            <tbody>
+              <tr>
+                <td class='question_number_lable'>
+				<div class='question_number_lable_type'>
+				  <div class='leftside'>
+                  <div class='question_lable'>Question 3</div>
+                  <div class='mtq_stamp'></div>
+				  </div>
+			<!--  <div class='rightside'>
+				  <div class='question_type_labal'> [MSQ]</div>
+				  <div class='question_type_labal'> [1 Mark]</div>
+				  </div> -->
+				  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table><div class='question_text' data-value=1>Consider the following partial differential equation (PDE)<br>[latex]a\frac{\partial^2 f(x,y)}{\partial x^2} +b\frac{\partial^2 f(x,y)}{\partial y^2}=f(x,y)[/latex]<br>,
+where [latex]a[/latex]and [latex]b[/latex] are distinct positive real numbers. Select the combination(s) of values
+of the real parameters [latex]\xi [/latex] and [latex]\eta  [/latex] such that [latex]f(x,y)=e^{(\xi x+\eta y)}  [/latex] is a solution of the
+given PDE. </div><table class='answer_table' data-value=2>
+            <colgroup>
+              <col class='option_index'>
+            </colgroup>
+            <tbody><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>A </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\xi =\frac{1}{\sqrt{2a}},\eta =\frac{1}{\sqrt{2b}} [/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>B </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\xi =\frac{1}{\sqrt{a}},\eta =0 [/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>C </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\xi =0,\eta =0 [/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>D </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\xi =\frac{1}{\sqrt{a}},\eta =\frac{1}{\sqrt{b}} [/latex]</div>
+					</td>
+					</tr></tbody>
+          </table><div class='year_sub_chap_link'><b><a href='https://practicepaper.in/gate-ec/gate-ec-2022' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>GATE EC 2022</a></b>&nbsp;&nbsp;&nbsp;<b><a href='https://practicepaper.in/gate-ec/engineering-mathematics' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>Engineering Mathematics</a></b></div><div id='mtq_question_explanation_3'  class='mtq_explanation' style='display: none;'>
+			<div class='mtq_explanation-label'> Question 3  Explanation:</div>
+			<div class='mtq_explanation-text'>	
+			Given<br>[latex] \begin{aligned}
+ f(x,y)&=e^{(\xi x+\eta y)}\\
+\frac{\partial f(x,y)}{\partial x}&=\xi \cdot e^{(\xi x+\eta y)}\\
+\frac{\partial^2 f(x,y)}{\partial x^2}&=\xi ^2\cdot e^{(\xi x+\eta y)}\\
+\end{aligned}[/latex]<br>Similarly,<br>
+[latex] \frac{\partial^2 f(x,y)}{\partial y^2}=\eta ^2\cdot e^{(\xi x+\eta y)}[/latex]<br>Now, as given<br>
+[latex]a \frac{\partial^2 f(x,y)}{\partial x^2}+b\frac{\partial^2 f(x,y)}{\partial y^2}=f(x,y)[/latex]<br>or<br>
+[latex]a \times \xi ^2\cdot e^{(\xi x+\eta y)}+b \times  \eta  ^2\cdot e^{(\xi x+\eta y)}= e^{(\xi x+\eta y)}[/latex]<br>
+[latex] a\cdot \xi ^2+b\cdot \eta ^2=1[/latex]<br>Thus,  
+[latex]\xi =\frac{1}{\sqrt{2a}}, \eta = \frac{1}{\sqrt{2b}}[/latex]<br>
+[latex](\xi =\frac{1}{\sqrt{a}}, \eta = 0)[/latex] and [latex](\xi =0, \eta = \frac{1}{\sqrt{b}})[/latex] satisfy the above result.
+			</div>
+		</div></div><div class='question'>
+          <table class='question_heading_table'>
+            <tbody>
+              <tr>
+                <td class='question_number_lable'>
+				<div class='question_number_lable_type'>
+				  <div class='leftside'>
+                  <div class='question_lable'>Question 4</div>
+                  <div class='mtq_stamp'></div>
+				  </div>
+			<!--  <div class='rightside'>
+				  <div class='question_type_labal'> [MCQ]</div>
+				  <div class='question_type_labal'> [1 Mark]</div>
+				  </div> -->
+				  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table><div class='question_text' data-value=1>Consider the differential equation given below.<br>[latex]\frac{dy}{dx}+\frac{x}{1-x^{2}}y=x\sqrt{y}[/latex]<br>The integrating factor of the differential equation is
+</div><table class='answer_table' data-value=1>
+            <colgroup>
+              <col class='option_index'>
+            </colgroup>
+            <tbody><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>A </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\left ( 1-x^{2} \right )^{-3/4}[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>B </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\left ( 1-x^{2} \right )^{-1/4}[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>C </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\left ( 1-x^{2} \right )^{-3/2}[/latex]</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>D </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]\left ( 1-x^{2} \right )^{-1/2}[/latex]</div>
+					</td>
+					</tr></tbody>
+          </table><div class='year_sub_chap_link'><b><a href='https://practicepaper.in/gate-ec/gate-ec-2021' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>GATE EC 2021</a></b>&nbsp;&nbsp;&nbsp;<b><a href='https://practicepaper.in/gate-ec/engineering-mathematics' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>Engineering Mathematics</a></b></div><div id='mtq_question_explanation_4'  class='mtq_explanation' style='display: none;'>
+			<div class='mtq_explanation-label'> Question 4  Explanation:</div>
+			<div class='mtq_explanation-text'>	
+			[latex]\begin{aligned} \frac{d y}{d x}+\frac{x}{1-x^{2}} y&=x \sqrt{y}, \quad \text { IF }=?\\ \text{Divided by }\sqrt{y}\\ \frac{1}{\sqrt{y}} \frac{d y}{d x}+\frac{x}{1-x^{2}} \sqrt{y}&=x \\ 2 \frac{d u}{d x}+\frac{x}{1-x^{2}} u&=x\\ \text{Let }\qquad x \sqrt{y}&=u\\ \frac{1}{2 \sqrt{v}} \frac{d y}{d x}&=\frac{d u}{d x}\\ \Rightarrow \qquad \frac{d u}{d x}+\frac{x}{2\left(1-x^{2}\right)} u&=\frac{x}{2} \rightarrow \text{ lines diff. equ.} \\ \text { I. } F&=e^{\int \frac{x}{2\left(1-x^{2}\right)} d x}=e^{-\frac{1}{4} \log \left(1-x^{2}\right)}&=e^{\log \left(1-x^{2}\right) \frac{-1}{4}} \\ \text { I.F }&=\frac{1}{\left(1-x^{2}\right)^{\frac{1}{4}}} \end{aligned}[/latex]
+
+			</div>
+		</div></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9048169315686568" crossorigin="anonymous" type="e90b41b33cb5aeb43eccee81-text/javascript"></script>
+<!-- In question Ad-first -->
+<ins class="adsbygoogle Google_ads_in_question"
+     style="display:block"
+     data-ad-client="ca-pub-9048169315686568"
+     data-ad-slot="6644050610"
+     data-full-width-responsive="true"></ins>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div class='question'>
+          <table class='question_heading_table'>
+            <tbody>
+              <tr>
+                <td class='question_number_lable'>
+				<div class='question_number_lable_type'>
+				  <div class='leftside'>
+                  <div class='question_lable'>Question 5</div>
+                  <div class='mtq_stamp'></div>
+				  </div>
+			<!--  <div class='rightside'>
+				  <div class='question_type_labal'> [MCQ]</div>
+				  <div class='question_type_labal'> [2 Mark]</div>
+				  </div> -->
+				  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table><div class='question_text' data-value=2>Which one of the following options contains two solutions of the differential equation [latex]\frac{dy}{dx}=(y-1)x[/latex]?</div><table class='answer_table' data-value=1>
+            <colgroup>
+              <col class='option_index'>
+            </colgroup>
+            <tbody><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=1>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>A </div>
+					<div id='mtq_marker-1-1-1' class=mtq_correct_marker alt=Correct></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]ln |y-1|=0.5x^2 +C[/latex] and y=1</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>B </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]ln |y-1|=2x^2 +C[/latex] and y=1</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>C </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]ln |y-1|=0.5x^2 +C[/latex] and y=-1</div>
+					</td>
+					</tr><tr id='mtq_row-1-1-1' class='mtq_clickable' data-value=0>
+					<td class='option_lable'>
+					<div id='mtq_button-1-1-1' class='option_index_number'>D </div>
+					<div id='mtq_marker-1-1-1' class=mtq_wrong_marker alt=Wrong></div>
+					</td>
+					<td class='answer_col'>
+					<div class='option_data'>[latex]ln |y-1|=2x^2 +C[/latex] and y=-1</div>
+					</td>
+					</tr></tbody>
+          </table><div class='year_sub_chap_link'><b><a href='https://practicepaper.in/gate-ec/gate-ec-2020' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>GATE EC 2020</a></b>&nbsp;&nbsp;&nbsp;<b><a href='https://practicepaper.in/gate-ec/engineering-mathematics' style='color:#2f6d1a; box-shadow:none'; text-decoration: none'  target='_blank'>Engineering Mathematics</a></b></div><div id='mtq_question_explanation_5'  class='mtq_explanation' style='display: none;'>
+			<div class='mtq_explanation-label'> Question 5  Explanation:</div>
+			<div class='mtq_explanation-text'>	
+			[latex]\begin{aligned} \frac{dy}{dx}&=(y-1)x\\ \frac{dy}{y-1}&=x dx\\ \text{Integrating}&\text{ both side, we get}\\ \int \frac{1}{y-1}dy&=\int xdx\\ \ln |y-1|&=\frac{x^2}{2}+C\; \; \;...(i)\\ \text{Now, }&\\ \frac{dy}{dx}&=0 \text{ when y=1}\\ \text{It means }y&= \text{constant C}\\ \therefore \; y&=1\;\;\;...(ii) \end{aligned}[/latex]<br>So, equation (i) and (ii) are two different solution of given differential equation.
+
+
+			</div>
+		</div></div></div><div style='text-align: center;'>		
+					<ul class='pagination'><li class='active'><a>1</a></li><li><a href='?page_no=2'>2</a></li><li><a href='?page_no=3'>3</a></li><li><a href='?page_no=4'>4</a></li><li><a href='?page_no=5'>5</a></li><li><a href='?page_no=6'>6</a></li><li><a href='?page_no=7'>7</a></li></ul>
+         </div><div id='mtq_quiz_status-1' class='mtq_quiz_status' style='display: block;'> You have completed <span id='total-completed'>0 </span>  out of 31 Questions.<br> Your Current Score: Marks <span id='current-marks'>0</span> out of 40 (<span id='score-value'>0%</span>). <br> Correct Answers: <span id='correct-score-value'>0 </span>  <br>Incorrect Answers: <span id='incorrect-score-value'> 0</span>  </div>
+		</div><!-- .entry-content -->
+
+			</div><!-- .inside-article -->
+</article><!-- #post-## -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div id="right-sidebar" class="widget-area grid-25 tablet-grid-25 grid-parent sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
+	<div class="inside-right-sidebar">
+		<aside id="block-4" class="widget inner-padding widget_block"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9048169315686568" crossorigin="anonymous" type="e90b41b33cb5aeb43eccee81-text/javascript"></script>
+<!-- Sidebar Square -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9048169315686568"
+     data-ad-slot="3325311305"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="block-2" class="widget inner-padding widget_block"><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9048169315686568" crossorigin="anonymous" type="e90b41b33cb5aeb43eccee81-text/javascript"></script>
+<!-- Sidebar-1 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9048169315686568" data-ad-slot="7416457065" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></aside><aside id="search-2" class="widget inner-padding widget_search"><form method="get" class="search-form" action="https://practicepaper.in/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>
+</aside>	</div><!-- .inside-right-sidebar -->
+</div><!-- #secondary -->
+
+	</div><!-- #content -->
+</div><!-- #page -->
+
+
+<div class="site-footer">
+			<footer class="site-info" itemtype="https://schema.org/WPFooter" itemscope>
+			<div class="inside-site-info grid-container grid-parent">
+								<div class="copyright-bar">
+					<span class="copyright">&copy; 2025 PracticePaper</span> &bull;  <a href="https://practicepaper.in/privacy-policy" itemprop="url">Privacy Policy</a>				</div>
+			</div>
+		</footer><!-- .site-info -->
+		</div><!-- .site-footer -->
+
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://practicepaper.in/wp-content/plugins/custom-quiz-plugin/js/script.js?ver=1729664862" id="my-plugin-script-js"></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js?ver=0.16.11" id="katex-js-js"></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js?ver=0.16.11" id="katex-auto-render-js"></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" id="katex-auto-render-js-after">
+/* <![CDATA[ */
+document.addEventListener("DOMContentLoaded", function() { 
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "[latex]", right: "[/latex]", display: false}
+                ]
+            });
+        });
+/* ]]> */
+</script>
+<!--[if lte IE 11]>
+<script type="text/javascript" src="https://practicepaper.in/wp-content/themes/generatepress/js/classList.min.js?ver=2.4.2" id="generate-classlist-js"></script>
+<![endif]-->
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://practicepaper.in/wp-content/themes/generatepress/js/menu.min.js?ver=2.4.2" id="generate-menu-js"></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://practicepaper.in/wp-content/themes/generatepress/js/a11y.min.js?ver=2.4.2" id="generate-a11y-js"></script>
+<script type="e90b41b33cb5aeb43eccee81-text/javascript" src="https://practicepaper.in/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.18.0" id="smush-lazy-load-js"></script>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="e90b41b33cb5aeb43eccee81-|49" defer></script></body>
+</html>
+
+<!-- Dynamic page generated in 1.295 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2025-03-26 17:03:02 -->

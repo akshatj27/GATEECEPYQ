@@ -1,0 +1,1780 @@
+[
+  {
+    "number": "Question 1",
+    "text": "If [latex]v_1, v_2,..., v_6[/latex] are six vectors in [latex]\\mathbb{R}^4[/latex], which one of the following statements is False?",
+    "html": "<div class=\"question_text\" data-value=\"1\">If [latex]v_1, v_2,..., v_6[/latex] are six vectors in [latex]\\mathbb{R}^4[/latex], which one of the following statements is False?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Calculus",
+    "explanation_text": "[latex]v_1, v_2,..., v_6[/latex] are six vectors in [latex]\\mathbb{R}^4[/latex]. For a 4-dimensional vector space, (i) any four linearly independent vectors form a basis (or) (ii) Any set of four vectors in [latex]\\mathbb{R}^4[/latex] spans  [latex]\\mathbb{R}^4[/latex], then it forms a basis. Therefore, clearly options (A), (B), (D) are true. Option (C) is FALSE",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]v_1, v_2,..., v_6[/latex] are six vectors in [latex]\\mathbb{R}^4[/latex].<br/> For a 4-dimensional vector space,<br/> (i) any four linearly independent vectors form a basis (or) <br/>(ii) Any set of four vectors in [latex]\\mathbb{R}^4[/latex] spans  [latex]\\mathbb{R}^4[/latex],<bt> then it forms a basis.<br/>Therefore, clearly options (A), (B), (D) are true.  <br/>Option (C) is FALSE\r\n\t\t\t</bt></div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "It is not necessary that these vectors span [latex]\\mathbb{R}^4[/latex].",
+        "html": "<div class=\"option_data\">It is not necessary that these vectors span [latex]\\mathbb{R}^4[/latex].</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "These vectors are not linearly independent.",
+        "html": "<div class=\"option_data\">These vectors are not linearly independent.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "Any four of these vectors form a basis for [latex]\\mathbb{R}^4[/latex].",
+        "html": "<div class=\"option_data\">Any four of these vectors form a basis for [latex]\\mathbb{R}^4[/latex].</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "If {[latex]v_1, v_3,v_5, v_6[/latex]} spans [latex]\\mathbb{R}^4[/latex], then it forms a basis for [latex]\\mathbb{R}^4[/latex].",
+        "html": "<div class=\"option_data\"> If {[latex]v_1, v_3,v_5, v_6[/latex]} spans [latex]\\mathbb{R}^4[/latex], then it forms a basis for [latex]\\mathbb{R}^4[/latex].</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020"
+  },
+  {
+    "number": "Question 2",
+    "text": "For a vector field [latex]\\vec{A}[/latex], which one of the following is False?",
+    "html": "<div class=\"question_text\" data-value=\"1\">For a vector field [latex]\\vec{A}[/latex], which one of the following is False?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Calculus",
+    "explanation_text": "Divergence and curl operator is performed on a vector field [latex]\\vec{A}[/latex] Curl operation provides a vector orthogonal to the given vector field [latex] \\vec{A} [/latex] [latex]\\bigtriangledown \\times(\\bigtriangledown \\times \\vec{A})=\\bigtriangledown (\\bigtriangledown \\cdot \\vec{A})-\\bigtriangledown ^2 \\vec{A}[/latex] If a vector field is irrortational then  [latex]\\bigtriangledown \\times \\vec{A}=0[/latex] If a vector field is solenoidal then [latex]\\bigtriangledown \\cdot \\vec{A}=0[/latex] If a field is scalar A, then [latex]\\bigtriangledown ^2  \\vec{A}=0[/latex], is a laplacian equation. Hence option (C) is incorrect",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tDivergence and curl operator is performed on a vector field [latex]\\vec{A}[/latex]<br/> Curl operation provides a vector orthogonal to the given vector field [latex] \\vec{A} [/latex] <br/> [latex]\\bigtriangledown \\times(\\bigtriangledown \\times \\vec{A})=\\bigtriangledown (\\bigtriangledown \\cdot \\vec{A})-\\bigtriangledown ^2 \\vec{A}[/latex]<br/> If a vector field is irrortational then  [latex]\\bigtriangledown \\times \\vec{A}=0[/latex] <br/> If a vector field is solenoidal then [latex]\\bigtriangledown \\cdot \\vec{A}=0[/latex] <br/> If a field is scalar A, then [latex]\\bigtriangledown ^2  \\vec{A}=0[/latex], is a laplacian equation. <br/> Hence option (C) is incorrect\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\vec{A}[/latex] is solenoidal if [latex]\\bigtriangledown \\cdot \\vec{A}=0[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\vec{A}[/latex] is solenoidal if [latex]\\bigtriangledown \\cdot \\vec{A}=0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\bigtriangledown \\times \\vec{A}[/latex] is another vector field.",
+        "html": "<div class=\"option_data\">[latex]\\bigtriangledown \\times \\vec{A}[/latex] is another vector field.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\vec{A}[/latex] is irrotational if [latex]\\bigtriangledown ^2 \\vec{A}=0[/latex].",
+        "html": "<div class=\"option_data\">[latex]\\vec{A}[/latex] is irrotational if [latex]\\bigtriangledown ^2 \\vec{A}=0[/latex].</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\bigtriangledown \\times(\\bigtriangledown \\times \\vec{A})=\\bigtriangledown (\\bigtriangledown \\cdot \\vec{A})-\\bigtriangledown ^2 \\vec{A}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bigtriangledown \\times(\\bigtriangledown \\times \\vec{A})=\\bigtriangledown (\\bigtriangledown \\cdot \\vec{A})-\\bigtriangledown ^2 \\vec{A}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020"
+  },
+  {
+    "number": "Question 3",
+    "text": "The partial derivative of the function [latex]f(x,y,z)=e^{1-x \\cos y}+xze^{-1/(1+y^2)}[/latex] with respect to x at the point (1,0,e) is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The partial derivative of the function <br/><br/>[latex]f(x,y,z)=e^{1-x \\cos y}+xze^{-1/(1+y^2)}[/latex]<br/><br/> with respect to x at the point (1,0,e) is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Calculus",
+    "explanation_text": "[latex] \\begin{aligned} \\text{Given, } f(x,y,z)&=e^{1-x\\cos y}+xze^{-1/(1+y^{2})} \\\\ \\frac{\\partial f}{\\partial x}&=e^{1-x\\cos y}(0-\\cos y)+ze^{-1/1+y^{2}} \\\\ \\left ( \\frac{\\partial f }{\\partial x} \\right )_{(1,0,e)}&=e^{0}(0-1)+e\\cdot e^{-1/(1+0)} \\\\ &=-1+1=0\r\n\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex] \\begin{aligned} \\text{Given, } f(x,y,z)&amp;=e^{1-x\\cos y}+xze^{-1/(1+y^{2})} \\\\ \\frac{\\partial f}{\\partial x}&amp;=e^{1-x\\cos y}(0-\\cos y)+ze^{-1/1+y^{2}} \\\\ \\left ( \\frac{\\partial f }{\\partial x} \\right )_{(1,0,e)}&amp;=e^{0}(0-1)+e\\cdot e^{-1/(1+0)} \\\\ &amp;=-1+1=0\r\n\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "-1",
+        "html": "<div class=\"option_data\">-1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "0",
+        "html": "<div class=\"option_data\">0</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{1}{e}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{e}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020"
+  },
+  {
+    "number": "Question 4",
+    "text": "The general solution of [latex]\\frac{d^2y}{dx^2}-6\\frac{dy}{dx}+9y=0[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The general solution of [latex]\\frac{d^2y}{dx^2}-6\\frac{dy}{dx}+9y=0[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Differential Equations",
+    "explanation_text": "Taking [latex] \\frac{\\mathrm{d} }{\\mathrm{d} x}=D[/latex] Given, [latex]\r\n  D^{2}-6D+9=0 [/latex] [latex]\r\n(D-3)^2=0[/latex] [latex]\r\n D=3,3[/latex] So, Solution of the given Differential equation [latex]y=(C_{1}+C_{2}x)e^{3x}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tTaking [latex] \\frac{\\mathrm{d} }{\\mathrm{d} x}=D[/latex]<br/>Given, [latex]\r\n  D^{2}-6D+9=0 [/latex]<br/>[latex]\r\n(D-3)^2=0[/latex]<br/>[latex]\r\n D=3,3[/latex]<br/>So, Solution of the given Differential equation<br/>\r\n[latex]y=(C_{1}+C_{2}x)e^{3x}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]y=C_1e^{3x}+C_2e^{-3x}[/latex]",
+        "html": "<div class=\"option_data\">[latex]y=C_1e^{3x}+C_2e^{-3x}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]y=(C_1+C_2x)e^{-3x}[/latex]",
+        "html": "<div class=\"option_data\">[latex]y=(C_1+C_2x)e^{-3x}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]y=(C_1+C_2x)e^{3x}[/latex]",
+        "html": "<div class=\"option_data\">[latex]y=(C_1+C_2x)e^{3x}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]y=C_1e^{3x}[/latex]",
+        "html": "<div class=\"option_data\">[latex]y=C_1e^{3x}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020"
+  },
+  {
+    "number": "Question 5",
+    "text": "The output y[n] of a discrete-time system for an input x[n] is [latex]y[n]=\\begin{matrix} max\\\\ -\\infty \\leq k\\leq n \\end{matrix}\\; |x[k]|[/latex]. The unit impulse response of the system is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The output y[n] of a discrete-time system for an input x[n] is <br/><br/>\r\n[latex]y[n]=\\begin{matrix} max\\\\ -\\infty \\leq k\\leq n \\end{matrix}\\; |x[k]|[/latex].<br/><br/>\r\nThe unit impulse response of the system is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - LTI Systems Continuous and Discrete",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0 for all n",
+        "html": "<div class=\"option_data\">0 for all n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1 for all n",
+        "html": "<div class=\"option_data\">1 for all n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "unit step signal u[n].",
+        "html": "<div class=\"option_data\">unit step signal u[n].</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "unit impulse signal [latex]\\delta[/latex][n].",
+        "html": "<div class=\"option_data\">unit impulse signal [latex]\\delta[/latex][n].</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020"
+  },
+  {
+    "number": "Question 6",
+    "text": "A single crystal intrinsic semiconductor is at a temperature of 300 K with effective density\nof states for holes twice that of electrons. The thermal voltage is 26 mV. The intrinsic\nFermi level is shifted from mid-bandgap energy level by",
+    "html": "<div class=\"question_text\" data-value=\"1\">A single crystal intrinsic semiconductor is at a temperature of 300 K with effective density\nof states for holes twice that of electrons. The thermal voltage is 26 mV. The intrinsic\nFermi level is shifted from mid-bandgap energy level by</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electronic Devices - Basic Semiconductor Physics",
+    "explanation_text": "[latex]\\frac{E_{c}+E_{v}}{2}-E_{F_{i}}=\\frac{KT}{2}\\ln \\left ( \\frac{N_{C}}{N_{V}}\\right )\\, \\, \\, \\, \\, \\, \\left ( \\because N_{C}=\\frac{N_{V}}{2} \\right )[/latex] [latex]=\\frac{0.026}{2}\\ln 0.5=-9.01\\, meV[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\frac{E_{c}+E_{v}}{2}-E_{F_{i}}=\\frac{KT}{2}\\ln \\left ( \\frac{N_{C}}{N_{V}}\\right )\\, \\, \\, \\, \\, \\, \\left ( \\because N_{C}=\\frac{N_{V}}{2} \\right )[/latex]<br/>[latex]=\\frac{0.026}{2}\\ln 0.5=-9.01\\, meV[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "18.02 meV",
+        "html": "<div class=\"option_data\">18.02 meV</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "9.01 meV",
+        "html": "<div class=\"option_data\">9.01 meV</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "13.45 meV",
+        "html": "<div class=\"option_data\">13.45 meV</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "26.90 meV",
+        "html": "<div class=\"option_data\">26.90 meV</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=2"
+  },
+  {
+    "number": "Question 7",
+    "text": "Consider the recombination process via bulk traps in a forward biased [latex]pn[/latex] homojunction\ndiode. The maximum recombination rate is [latex]U_{max}[/latex]. If the electron and the hole capture\ncross-section are equal, which one of the following is False?",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider the recombination process via bulk traps in a forward biased [latex]pn[/latex] homojunction\ndiode. The maximum recombination rate is [latex]U_{max}[/latex]. If the electron and the hole capture\ncross-section are equal, which one of the following is False?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electronic Devices - PN-Junction Diodes and Special Diodes",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "With all other parameters unchanged, [latex]U_{max}[/latex] decreases if the intrinsic carrier density\nis reduced.",
+        "html": "<div class=\"option_data\">With all other parameters unchanged, [latex]U_{max}[/latex] decreases if the intrinsic carrier density\nis reduced.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]U_{max}[/latex] occurs at the edges of the depletion region in the device.",
+        "html": "<div class=\"option_data\">[latex]U_{max}[/latex] occurs at the edges of the depletion region in the device.</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]U_{max}[/latex] depends exponentially on the applied bias.",
+        "html": "<div class=\"option_data\">[latex]U_{max}[/latex] depends exponentially on the applied bias.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "With all other parameters unchanged,[latex]U_{max}[/latex] increases if the thermal velocity of the\ncarriers increases.",
+        "html": "<div class=\"option_data\">With all other parameters unchanged,[latex]U_{max}[/latex] increases if the thermal velocity of the\ncarriers increases.</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=2"
+  },
+  {
+    "number": "Question 8",
+    "text": "The components in the circuit shown below are ideal. If the op-amp is in positive feedback\nand the input voltage [latex]V_i[/latex] is a sine wave of amplitude 1 V, the output voltage [latex]V_o[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The components in the circuit shown below are ideal. If the op-amp is in positive feedback\nand the input voltage [latex]V_i[/latex] is a sine wave of amplitude 1 V, the output voltage [latex]V_o[/latex] is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\754c0c14aba698253e7a17cd6ef2c19a.jpg\" style=\"--smush-placeholder-width: 381px; --smush-placeholder-aspect-ratio: 381/178;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q8.jpg": "images\\754c0c14aba698253e7a17cd6ef2c19a.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - Operational Amplifiers",
+    "explanation_text": "Given circuit is a Schmitt trigger of non-inverting type. [latex]V_{o}=\\pm 5\\, V[/latex] [latex]V^{+}=\\frac{V_{o}\\times 1+V_{i}\\times 1}{1+1}=\\frac{V_{o}+V}{2}[/latex] let,[latex] V_{o}=-5\\, V,\\, \\, \\, \\,V^{+}=\\frac{-5+V_{i}}{2}[/latex] [latex]V_{o}[/latex] \r\ncan change from -5 V to +5 V if [latex]V^{+} \\gt 0 [/latex] i.e.  [latex]\\frac{-5+V_{i}}{2} \\gt 0\\Rightarrow V_{i} \\gt 5\\, V[/latex] similarly, [latex]V_{o}[/latex] \r\ncan change from -5 V to +5 V if [latex]V_{i} \\lt -5\\, V[/latex] But given input has peak value 1 V. Hence output cannot change from +5 V to -5 V or -5 V to +5 V. Output remain constant at +5 V or -5 V.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\30ee167e5c3803a18d0cdd5ab45fca2f.jpg\" style=\"--smush-placeholder-width: 169px; --smush-placeholder-aspect-ratio: 169/120;\"/> <br/> Given circuit is a Schmitt trigger of non-inverting type.<br/>[latex]V_{o}=\\pm 5\\, V[/latex]<br/>[latex]V^{+}=\\frac{V_{o}\\times 1+V_{i}\\times 1}{1+1}=\\frac{V_{o}+V}{2}[/latex]<br/>let,[latex] V_{o}=-5\\, V,\\, \\, \\, \\,V^{+}=\\frac{-5+V_{i}}{2}[/latex]<br/>[latex]V_{o}[/latex] \r\ncan change from -5 V to +5 V if [latex]V^{+} \\gt 0 [/latex] <br/>i.e.  [latex]\\frac{-5+V_{i}}{2} \\gt 0\\Rightarrow V_{i} \\gt 5\\, V[/latex]\r\n<br/>similarly, [latex]V_{o}[/latex] \r\ncan change from -5 V to +5 V if [latex]V_{i} \\lt -5\\, V[/latex]<br/>But given input has peak value 1 V. Hence output cannot change from +5 V to -5 V or -5 V to +5 V.<br/>\r\n Output remain constant at +5 V or -5 V.\r\n\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a25.jpg": "images\\30ee167e5c3803a18d0cdd5ab45fca2f.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "a non-inverted sine wave of 2 V amplitude",
+        "html": "<div class=\"option_data\">a non-inverted sine wave of 2 V amplitude</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "an inverted sine wave of 1 V amplitude",
+        "html": "<div class=\"option_data\">an inverted sine wave of 1 V amplitude</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "a square wave of 5 V amplitude",
+        "html": "<div class=\"option_data\">a square wave of 5 V amplitude</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "a constant of either +5 or -5V",
+        "html": "<div class=\"option_data\">a constant of either +5 or -5V</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=2"
+  },
+  {
+    "number": "Question 9",
+    "text": "In the circuit shown below, the Thevenin voltage [latex]V_{TH}[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown below, the Thevenin voltage [latex]V_{TH}[/latex] is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\43dc39b1e4de43a2858b2f0f6f1d17d8.jpg\" style=\"--smush-placeholder-width: 337px; --smush-placeholder-aspect-ratio: 337/118;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q9.jpg": "images\\43dc39b1e4de43a2858b2f0f6f1d17d8.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Network Theorems",
+    "explanation_text": "By applying the Source Transformation",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tBy applying the Source Transformation<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\574f2b99cd0f6aec54d9d3fe07b1e97e.jpg\" style=\"--smush-placeholder-width: 343px; --smush-placeholder-aspect-ratio: 343/365;\"/>\n</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a23.jpg": "images\\574f2b99cd0f6aec54d9d3fe07b1e97e.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "2.4  V",
+        "html": "<div class=\"option_data\"> 2.4  V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "2.8 V",
+        "html": "<div class=\"option_data\">2.8 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "3.6  V",
+        "html": "<div class=\"option_data\">3.6  V</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "4.5  V",
+        "html": "<div class=\"option_data\">4.5  V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=2"
+  },
+  {
+    "number": "Question 10",
+    "text": "The figure below shows a multiplexer where [latex]S_1 \\; and \\; S_0[/latex] are the select lines, [latex]I_0 \\; to \\; I_3[/latex] are \nthe input data lines, EN is the enable line, and [latex]F(P, Q, R)[/latex] is the output, F is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The figure below shows a multiplexer where [latex]S_1 \\; and \\; S_0[/latex] are the select lines, [latex]I_0 \\; to \\; I_3[/latex] are \nthe input data lines, EN is the enable line, and [latex]F(P, Q, R)[/latex] is the output, F is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\d055d6cdcabd86b6fc332e2375bc6c3e.jpg\" style=\"--smush-placeholder-width: 288px; --smush-placeholder-aspect-ratio: 288/236;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q10.jpg": "images\\d055d6cdcabd86b6fc332e2375bc6c3e.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Circuits - Combinational Circuits",
+    "explanation_text": "Output,[latex]F=\\bar{P}\\bar{Q}R+P\\bar{Q}R+PQ\\, \\, \\, \\,[/latex] [latex] F=\\bar{Q}R+PQ[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tOutput,[latex]F=\\bar{P}\\bar{Q}R+P\\bar{Q}R+PQ\\, \\, \\, \\,[/latex]<br/>[latex] F=\\bar{Q}R+PQ[/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\d35d0716bb0bdea9843e0300d3dd45cd.jpg\" style=\"--smush-placeholder-width: 165px; --smush-placeholder-aspect-ratio: 165/97;\"/>\n</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a22.jpg": "images\\d35d0716bb0bdea9843e0300d3dd45cd.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]PQ+\\bar{Q}R[/latex]",
+        "html": "<div class=\"option_data\">[latex]PQ+\\bar{Q}R[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]P+Q\\bar{R}[/latex]",
+        "html": "<div class=\"option_data\">[latex]P+Q\\bar{R}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]P\\bar{Q}R+\\bar{P}Q[/latex]",
+        "html": "<div class=\"option_data\">[latex]P\\bar{Q}R+\\bar{P}Q[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\bar{Q}+PR[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bar{Q}+PR[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=2"
+  },
+  {
+    "number": "Question 11",
+    "text": "The pole-zero map of a rational function G(s) is shown below. When the closed counter [latex]\\Gamma[/latex] is mapped into the G(s)-plane, then the mapping encircles.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The pole-zero map of a rational function G(s) is shown below. When the closed counter [latex]\\Gamma[/latex] is mapped into the G(s)-plane, then the mapping encircles. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\ad6be708cf35bfd6c923b6ec8c2f10af.jpg\" style=\"--smush-placeholder-width: 381px; --smush-placeholder-aspect-ratio: 381/276;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q11.jpg": "images\\ad6be708cf35bfd6c923b6ec8c2f10af.jpg"
+    },
+    "type": "mcq",
+    "subject": "Control Systems - Frequency Response Analysis",
+    "explanation_text": "s-plane contour is encircling 2-poles and 3-zeros in clockwise direction hence the corresponding G(s) plane contour encircles origin 2-times in anti-clockwise direction and 3-times in clockwise direction. Therefore,  Effectively once in clockwise direction.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\ts-plane contour is encircling 2-poles and 3-zeros in clockwise direction hence the corresponding G(s) plane contour encircles origin 2-times in anti-clockwise direction and 3-times in clockwise direction.<br/>\r\nTherefore,  Effectively once in clockwise direction.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "the origin of the G(s)-plane once in the counter-clockwise direction.",
+        "html": "<div class=\"option_data\">the origin of the G(s)-plane once in the counter-clockwise direction.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "the origin of the G(s)-plane once in the clockwise direction.",
+        "html": "<div class=\"option_data\">the origin of the G(s)-plane once in the clockwise direction.</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "the point -1+j0 of the G(s)-plane once in the counter-clockwise direction.",
+        "html": "<div class=\"option_data\">the point -1+j0 of the G(s)-plane once in the counter-clockwise direction.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "the point -1+j0 of the G(s)-plane once in the clockwise direction.",
+        "html": "<div class=\"option_data\"> the point -1+j0 of the G(s)-plane once in the clockwise direction.</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=3"
+  },
+  {
+    "number": "Question 12",
+    "text": "A digital communication system transmits a block of N bits. The probability of error in\ndecoding a bit is [latex]\\alpha[/latex]. The error event of each bit is independent of the error events of\nthe other bits. The received block is declared erroneous if at least one of the its bits\nis decoded wrongly. The probability that the received block is erroneous is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A digital communication system transmits a block of N bits. The probability of error in\ndecoding a bit is [latex]\\alpha[/latex]. The error event of each bit is independent of the error events of\nthe other bits. The received block is declared erroneous if at least one of the its bits\nis decoded wrongly. The probability that the received block is erroneous is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Communication Systems - Information Theory and Coding",
+    "explanation_text": "Probability of error in decoding single bit=[latex]\\alpha[/latex] Then probability of no error will be [latex]1- \\alpha[/latex]. Total N-bits transmitted, so that probability of no error in received block =[latex](1-\\alpha )(1-\\alpha )...N \\, \\text{ Times}[/latex] [latex]=(1-\\alpha) ^{N}[/latex] The Probability of received block is erroneous is [latex]=1-(1-\\alpha) ^{N}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tProbability of error in decoding single bit=[latex]\\alpha[/latex]\r\n<br/>Then probability of no error will be [latex]1- \\alpha[/latex].<br/>Total N-bits transmitted, so that probability of no error in received block<br/>=[latex](1-\\alpha )(1-\\alpha )...N \\, \\text{ Times}[/latex]\r\n<br/>[latex]=(1-\\alpha) ^{N}[/latex]<br/>The Probability of received block is erroneous is [latex]=1-(1-\\alpha) ^{N}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]N(1-\\alpha )[/latex]",
+        "html": "<div class=\"option_data\">[latex]N(1-\\alpha )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\alpha ^n[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\alpha ^n[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]1-\\alpha ^n[/latex]",
+        "html": "<div class=\"option_data\">[latex]1-\\alpha ^n[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]1-(1-\\alpha )^n[/latex]",
+        "html": "<div class=\"option_data\">[latex]1-(1-\\alpha )^n[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=3"
+  },
+  {
+    "number": "Question 13",
+    "text": "The impedances Z=jX, for all X in the range ([latex]-\\infty ,\\infty[/latex]), map to the Smith chart as",
+    "html": "<div class=\"question_text\" data-value=\"1\">The impedances Z=jX, for all X in the range ([latex]-\\infty ,\\infty[/latex]), map to the Smith chart as</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Transmission Lines",
+    "explanation_text": "For given impedance Normalized impedance is [latex]\\begin{aligned} \\frac{Z}{Z_{0}}&=\\frac{jX}{Z_{0}}\\\\ Z&=jX \\\\ \\Rightarrow \\; Z&=0+jX \\end{aligned}[/latex] Normalized Resistance  [latex]=0 \\; \\Rightarrow \\;  r=0[/latex] [latex]X=-\\infty \\text{ to } \\infty[/latex] [latex]r=0[/latex] and X from [latex]-\\infty \\, to\\, \\infty[/latex] is a unit circle (radius 1) and centre (0,0) on a complex reflection coeffient plane:",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor given impedance Normalized impedance is<br/>[latex]\\begin{aligned} \\frac{Z}{Z_{0}}&amp;=\\frac{jX}{Z_{0}}\\\\ Z&amp;=jX \\\\ \\Rightarrow \\; Z&amp;=0+jX \\end{aligned}[/latex]<br/>Normalized Resistance  [latex]=0 \\; \\Rightarrow \\;  r=0[/latex]<br/>[latex]X=-\\infty \\text{ to } \\infty[/latex]<br/>[latex]r=0[/latex] and X from [latex]-\\infty \\, to\\, \\infty[/latex] is a unit circle (radius 1) and centre (0,0) on a complex reflection coeffient plane:<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\c2ad795e7002be392fef0c8eb286cb2b.jpg\" style=\"--smush-placeholder-width: 143px; --smush-placeholder-aspect-ratio: 143/153;\"/>\n</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a20.jpg": "images\\c2ad795e7002be392fef0c8eb286cb2b.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "a circle of radius 1 with centre at (0, 0).",
+        "html": "<div class=\"option_data\">a circle of radius 1 with centre at (0, 0).</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "a point at the centre of the chart.",
+        "html": "<div class=\"option_data\">a point at the centre of the chart.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "a line passing through the centre of the chart",
+        "html": "<div class=\"option_data\">a line passing through the centre of the chart</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "a circle of radius 0.5 with centre at (0.5, 0).",
+        "html": "<div class=\"option_data\">a circle of radius 0.5 with centre at (0.5, 0).</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=3"
+  },
+  {
+    "number": "Question 14",
+    "text": "Which one of the following pole-zero corresponds to the transfer function of an LTI system\ncharacterized by the input-output difference equation given below? [latex]y[n]=\\sum_{k=0}^{3}(-1)^k x[n-k][/latex]",
+    "html": "<div class=\"question_text\" data-value=\"1\">Which one of the following pole-zero corresponds to the transfer function of an LTI system\ncharacterized by the input-output difference equation given below? <br/>[latex]y[n]=\\sum_{k=0}^{3}(-1)^k x[n-k][/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\dec60fe3df6aabf7d334edbf0b8b727f.jpg\" style=\"--smush-placeholder-width: 673px; --smush-placeholder-aspect-ratio: 673/522;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q14.jpg": "images\\dec60fe3df6aabf7d334edbf0b8b727f.jpg"
+    },
+    "type": "mcq",
+    "subject": "Signals and Systems - LTI Systems Continuous and Discrete",
+    "explanation_text": "[latex]\\begin{aligned}y(n)&=\\sum_{K=0}^{3}(-1)^K  x(n-K) \\\\ &=x(n)-x(n-1)+x(n-2)-x(n-3) \\\\ y(z)&=X(z)-z^{-1}X(z)+Z^{-2}X(z)-Z^-3X(z) \\\\ H(z)&=\\frac{Y(z)}{X(z)}=1-Z^{-1}+Z^{-2}-Z^{-3}\\\\ &=\\frac{z^{3}-z^{2}+z-1}{z^{3}}=\\frac{(z-1)(z^{2}+1)}{Z^{3}}\\end{aligned}[/latex] Pole Zero plot:",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}y(n)&amp;=\\sum_{K=0}^{3}(-1)^K  x(n-K) \\\\ &amp;=x(n)-x(n-1)+x(n-2)-x(n-3) \\\\ y(z)&amp;=X(z)-z^{-1}X(z)+Z^{-2}X(z)-Z^-3X(z) \\\\ H(z)&amp;=\\frac{Y(z)}{X(z)}=1-Z^{-1}+Z^{-2}-Z^{-3}\\\\ &amp;=\\frac{z^{3}-z^{2}+z-1}{z^{3}}=\\frac{(z-1)(z^{2}+1)}{Z^{3}}\\end{aligned}[/latex]<br/>Pole Zero plot:<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\32d72f4138f4c5c272d861b6e2b2c4df.jpg\" style=\"--smush-placeholder-width: 170px; --smush-placeholder-aspect-ratio: 170/166;\"/>\n</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a24.jpg": "images\\32d72f4138f4c5c272d861b6e2b2c4df.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "A",
+        "html": "<div class=\"option_data\">A</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "B",
+        "html": "<div class=\"option_data\">B</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "C",
+        "html": "<div class=\"option_data\">C</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "D",
+        "html": "<div class=\"option_data\">D</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=3"
+  },
+  {
+    "number": "Question 15",
+    "text": "In the given circuit, the two-port network has the impedance matrix[latex][Z] =\\begin{bmatrix} 40 & 60\\\\ 60 & 120 \\end{bmatrix}[/latex]. The value of [latex]Z_L[/latex] for which maximum power is transferred to the load is _________ [latex]\\Omega[/latex].",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the given circuit, the two-port network has the impedance matrix[latex][Z] =\\begin{bmatrix} 40 &amp; 60\\\\ 60 &amp; 120 \\end{bmatrix}[/latex]. The value of [latex]Z_L[/latex] for which maximum power is transferred to the load is _________ [latex]\\Omega[/latex]. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\f94fc956fec923fb14ff878507d31a7c.jpg\" style=\"--smush-placeholder-width: 500px; --smush-placeholder-aspect-ratio: 500/194;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q15.jpg": "images\\f94fc956fec923fb14ff878507d31a7c.jpg"
+    },
+    "type": "numerical",
+    "subject": "Network Theory - Two Port Networks",
+    "explanation_text": "From maximum power transfer theorem [latex]Z_{L}=Z_{th} [/latex] [latex]Z_{th}=Z_{22}-\\frac{Z_{12}\\times Z_{21}}{R_{S}+Z_{11}}[/latex] For given data, [latex]Z_{th}=120-\\frac{60\\times 60}{10+40}=48\\Omega[/latex] [latex] Z_{L}=48\\Omega[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFrom maximum power transfer theorem <br/>[latex]Z_{L}=Z_{th} [/latex]<br/>[latex]Z_{th}=Z_{22}-\\frac{Z_{12}\\times Z_{21}}{R_{S}+Z_{11}}[/latex]<br/>For given data,<br/>[latex]Z_{th}=120-\\frac{60\\times 60}{10+40}=48\\Omega[/latex]<br/>[latex] Z_{L}=48\\Omega[/latex]\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 48.0,
+    "answer_max": 48.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=3"
+  },
+  {
+    "number": "Question 16",
+    "text": "The current in the RL-circuit shown below is [latex]i(t) = 10cos(5t-\\pi /4)A[/latex]. The value of the\ninductor (rounded off to two decimal places) is _________ H.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The current in the RL-circuit shown below is [latex]i(t) = 10cos(5t-\\pi /4)A[/latex]. The value of the\ninductor (rounded off to two decimal places) is _________ H. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\10d5250cd0dd331fc230d6b9378c44cc.jpg\" style=\"--smush-placeholder-width: 384px; --smush-placeholder-aspect-ratio: 384/210;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q16.jpg": "images\\10d5250cd0dd331fc230d6b9378c44cc.jpg"
+    },
+    "type": "numerical",
+    "subject": "Network Theory - Transient Analysis",
+    "explanation_text": "[latex]Z=\\frac{V}{I}=\\frac{200\\angle 0^{\\circ}}{10\\angle -45^{\\circ}}=20\\angle 45^{\\circ}[/latex] [latex]Z=10\\sqrt{2}+j10\\sqrt{2}[/latex] [latex]X_{L}=10\\sqrt{2}[/latex] [latex]\\omega L=10\\sqrt{2}[/latex] [latex]L=\\frac{10\\sqrt{2}}{5}=2.828\\, H[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]Z=\\frac{V}{I}=\\frac{200\\angle 0^{\\circ}}{10\\angle -45^{\\circ}}=20\\angle 45^{\\circ}[/latex]<br/>[latex]Z=10\\sqrt{2}+j10\\sqrt{2}[/latex]<br/>\n[latex]X_{L}=10\\sqrt{2}[/latex]<br/>[latex]\\omega L=10\\sqrt{2}[/latex]<br/>[latex]L=\\frac{10\\sqrt{2}}{5}=2.828\\, H[/latex]\n\n\n\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 2.8,
+    "answer_max": 2.85,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=4"
+  },
+  {
+    "number": "Question 17",
+    "text": "In the circuit shown below, all the components are ideal and the input voltage is\nsinusoidal. The magnitude of the steady-state output [latex]V_0[/latex] (rounded off to two decimal\nplaces) is _________ V.",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown below, all the components are ideal and the input voltage is\nsinusoidal. The magnitude of the steady-state output [latex]V_0[/latex] (rounded off to two decimal\nplaces) is _________ V. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\5bf90d0dc0524a517a38738e914f60e7.jpg\" style=\"--smush-placeholder-width: 596px; --smush-placeholder-aspect-ratio: 596/210;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q17.jpg": "images\\5bf90d0dc0524a517a38738e914f60e7.jpg"
+    },
+    "type": "numerical",
+    "subject": "Analog Circuits - Diodes Applications",
+    "explanation_text": "Voltage Doubles, [latex]V_{o}=2\\: V_{m}=2\\times 230\\sqrt{2}\\cong 650.4V[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tVoltage Doubles, [latex]V_{o}=2\\: V_{m}=2\\times 230\\sqrt{2}\\cong 650.4V[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 644.0,
+    "answer_max": 657.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=4"
+  },
+  {
+    "number": "Question 18",
+    "text": "In the circuit shown below, all the components are ideal. If [latex]V_i[/latex] is +2 V, the current [latex]I_o[/latex] sourced\nby the op-amp is __________ mA.",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown below, all the components are ideal. If [latex]V_i[/latex] is +2 V, the current [latex]I_o[/latex] sourced\nby the op-amp is __________ mA. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\2cf5005705d712e1e60425dc98d6a80f.jpg\" style=\"--smush-placeholder-width: 298px; --smush-placeholder-aspect-ratio: 298/236;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q18.jpg": "images\\2cf5005705d712e1e60425dc98d6a80f.jpg"
+    },
+    "type": "numerical",
+    "subject": "Analog Circuits - Operational Amplifiers",
+    "explanation_text": "[latex]\\begin{aligned} V_o=(1+1) \\times 2&=4V \\\\ \\text{KCL at node } V_o & \\\\ \\frac{2-4}{1k\\Omega }I_o+\\frac{0-4}{1k\\Omega }&=0 \\\\ -2+I_o-4 &=0 \\\\ I_o&=6mA \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} V_o=(1+1) \\times 2&amp;=4V \\\\ \\text{KCL at node } V_o &amp; \\\\ \\frac{2-4}{1k\\Omega }I_o+\\frac{0-4}{1k\\Omega }&amp;=0 \\\\ -2+I_o-4 &amp;=0 \\\\ I_o&amp;=6mA \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 6.0,
+    "answer_max": 6.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=4"
+  },
+  {
+    "number": "Question 19",
+    "text": "In an 8085 microprocessor, the number of address lines required to access a 16 K byte\nmemory bank is __________.",
+    "html": "<div class=\"question_text\" data-value=\"1\">In an 8085 microprocessor, the number of address lines required to access a 16 K byte\nmemory bank is __________.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Microprocessors - Basics of 8085 Microprocessor",
+    "explanation_text": "[latex]\\begin{aligned}2^{n}&=N  \\\\ \r\nn & \\rightarrow \\text{ Number of Address Lines} \\\\ N & \\rightarrow \\text{ Number of Memory Locations} \\\\ 2^{n}&=16 KB \\\\ &=2^{4} (2^{10}) \\\\ &=2^{14}\\\\ n&=14\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}2^{n}&amp;=N  \\\\ \r\nn &amp; \\rightarrow \\text{ Number of Address Lines} \\\\ N &amp; \\rightarrow \\text{ Number of Memory Locations} \\\\ 2^{n}&amp;=16 KB \\\\ &amp;=2^{4} (2^{10}) \\\\ &amp;=2^{14}\\\\ n&amp;=14\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 14.0,
+    "answer_max": 14.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=4"
+  },
+  {
+    "number": "Question 20",
+    "text": "A 10-bit D/A converter is calibrated over the full range from 0 to 10 V. If the input to\nthe D/A converter is 13A (in hex), the output (rounded off to three decimal places) is\n_________ V.",
+    "html": "<div class=\"question_text\" data-value=\"1\">A 10-bit D/A converter is calibrated over the full range from 0 to 10 V. If the input to\nthe D/A converter is 13A (in hex), the output (rounded off to three decimal places) is\n_________ V.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Digital Circuits - ADC and DAC",
+    "explanation_text": "Given,  n=10 [latex]V_{FS}=10\\, V[/latex] Input Voltage=[latex](13A)_{16}=(314)_{10}[/latex] Output Voltage=Resolution X Decimal Equivalent of input [latex]V_{o}=\\frac{10}{2^{10}-1}\\times 314=3.069\\, V[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven,  n=10<br/>[latex]V_{FS}=10\\, V[/latex]<br/>Input Voltage=[latex](13A)_{16}=(314)_{10}[/latex]<br/>Output Voltage=Resolution X Decimal Equivalent of input<br/>[latex]V_{o}=\\frac{10}{2^{10}-1}\\times 314=3.069\\, V[/latex]\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 3.05,
+    "answer_max": 3.08,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=4"
+  },
+  {
+    "number": "Question 21",
+    "text": "A transmission line of length [latex]3\\lambda /4[/latex] and having a characteristic impedance of 50[latex]\\Omega[/latex] is\nterminated with a load of 400[latex]\\Omega[/latex]. The impedance (rounded off to two decimal places)\nseen at the input end of the transmission line is __________ [latex]\\Omega[/latex].",
+    "html": "<div class=\"question_text\" data-value=\"1\">A transmission line of length [latex]3\\lambda /4[/latex] and having a characteristic impedance of 50[latex]\\Omega[/latex] is\nterminated with a load of 400[latex]\\Omega[/latex]. The impedance (rounded off to two decimal places)\nseen at the input end of the transmission line is __________ [latex]\\Omega[/latex].</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Electromagnetics - Transmission Lines",
+    "explanation_text": "[latex]Z_{in}\\,\\, for \\, (l=\\lambda /4)=\\frac{Z_{0}^{2}}{Z_{L}}=\\frac{50^{2}}{400}=\\frac{25}{4}=6.25\\Omega[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\b33499cfcd8d9b4b58dbb4cbb844852b.jpg\" style=\"--smush-placeholder-width: 219px; --smush-placeholder-aspect-ratio: 219/118;\"/><br/>[latex]Z_{in}\\,\\, for \\, (l=\\lambda /4)=\\frac{Z_{0}^{2}}{Z_{L}}=\\frac{50^{2}}{400}=\\frac{25}{4}=6.25\\Omega[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a8.jpg": "images\\b33499cfcd8d9b4b58dbb4cbb844852b.jpg"
+    },
+    "answer_min": 6.25,
+    "answer_max": 6.25,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=5"
+  },
+  {
+    "number": "Question 22",
+    "text": "A binary random variable X takes the value +2 or -2. The probability [latex]P(X=+2)= \\alpha[/latex].\nThe value of [latex]\\alpha[/latex] (rounded off to one decimal place), for which the entropy of X is maximum,\nis __________",
+    "html": "<div class=\"question_text\" data-value=\"1\">A binary random variable X takes the value +2 or -2. The probability [latex]P(X=+2)= \\alpha[/latex].\nThe value of [latex]\\alpha[/latex] (rounded off to one decimal place), for which the entropy of X is maximum,\nis __________</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Communication Systems - Random Processes",
+    "explanation_text": "Given that, [latex]P(X=2)=\\alpha[/latex] Entropy Will be Maximum; Provided Probabilities are equal. i.e.   [latex] P(X=2)=P(X=-2)=\\alpha =\\frac{1}{2}[/latex] [latex]\r\n\\alpha =\\frac{1}{2}=0.5[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven that, [latex]P(X=2)=\\alpha[/latex]<br/>Entropy Will be Maximum; <br/> Provided Probabilities are equal.<br/>i.e.   [latex] P(X=2)=P(X=-2)=\\alpha =\\frac{1}{2}[/latex]<br/>[latex]\r\n\\alpha =\\frac{1}{2}=0.5[/latex]\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 0.5,
+    "answer_max": 0.5,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=5"
+  },
+  {
+    "number": "Question 23",
+    "text": "The loop transfer function of a negative feedback system is [latex]G(s)H(s)=\\frac{K(s+11)}{s(s+2)(s+8)}[/latex] The value of K, for which the system is marginally stable, is ________.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The loop transfer function of a negative feedback system is\n<br/><br/>[latex]G(s)H(s)=\\frac{K(s+11)}{s(s+2)(s+8)}[/latex]<br/><br/>\nThe value of K, for which the system is marginally stable, is ________.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Control Systems - Time Response Analysis",
+    "explanation_text": "Characteristic equation q(s) for the given open loop system will be [latex]q(s)=s^{3}+10s^{2}+16s+Ks+11K=0[/latex] Using R-H criteria, For System to be Marginally Stable [latex]\\begin{aligned}\\frac{10(16+K)-11K}{10}&=0 \\\\ 160+10K-11K&=0 \\\\ K&=160\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tCharacteristic equation q(s) for the given open loop system will be<br/>[latex]q(s)=s^{3}+10s^{2}+16s+Ks+11K=0[/latex]<br/>Using R-H criteria,<br/><br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\6e93541fba2a9639fa4349a4e5096a3b.jpg\" style=\"--smush-placeholder-width: 189px; --smush-placeholder-aspect-ratio: 189/114;\"/><br/>For System to be Marginally Stable<br/>[latex]\\begin{aligned}\\frac{10(16+K)-11K}{10}&amp;=0 \\\\ 160+10K-11K&amp;=0 \\\\ K&amp;=160\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a4.jpg": "images\\6e93541fba2a9639fa4349a4e5096a3b.jpg"
+    },
+    "answer_min": 160.0,
+    "answer_max": 160.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=5"
+  },
+  {
+    "number": "Question 24",
+    "text": "The random variable [latex]Y=\\int_{-\\infty }^{\\infty }W(t)\\phi (t) dt[/latex] where [latex]\\phi (t) =\\left\\{\\begin{matrix} 1; & 5\\leq t\\leq 7\\\\ 0; & otherwise \\end{matrix}\\right.[/latex] and W(t) is a real white Gaussian noise process with two-sided power spectral density [latex]S_W(f) = 3[/latex] W/Hz, for all f. The variance of Y is _________.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The random variable <br/><br/>[latex]Y=\\int_{-\\infty }^{\\infty }W(t)\\phi (t) dt[/latex]<br/> where [latex]\\phi (t) =\\left\\{\\begin{matrix} 1; &amp; 5\\leq t\\leq 7\\\\ 0; &amp; otherwise \\end{matrix}\\right.[/latex]<br/><br/>\r\nand W(t) is a real white Gaussian noise process with two-sided power spectral density [latex]S_W(f) = 3[/latex] W/Hz, for all f. The variance of Y is _________.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Communication Systems - Random Processes",
+    "explanation_text": "[latex] \\begin{aligned} \\text{Given:  }\\phi (t) &=\\left\\{\\begin{matrix} 1 & 5\\leq t\\leq 7\\\\ 0 & otherwise \\end{matrix}\\right. \\\\ s_{\\omega }(f)& =3 \\text{ Watts/Hz} \\\\ R_{\\omega }(\\tau )&=3\\delta (\\tau )=3\\delta (t_{1}-t_{2})  \\\\ Var[y]&=E[y^{2}]-{E[y]}^{2} \\\\ {E[W(t)]}^{2}&=\\text{DC  power} \\\\ &=\\text{Area under PSD at }f=0  \\\\ {E[W(t)]}^{2}&=0  \\\\ E[W(t)]&=0 \\\\ y&=\\int_{-\\infty }^{\\infty }W(t)\\phi (t)dt \\\\ E[y]&=\\int_{-\\infty }^{\\infty }E[W(t)]\\phi (t)dt \\\\ y&=\\int_{-\\infty }^{\\infty }W(t)\\phi (t)dt\\rightarrow E[y^{2}]\\\\ &=S_{\\omega }(f)\\cdot Energy[\\phi (t)]\\\\ & =3 \\times 2=6\\\\ \\text{Var}[y]&=6-0=6\\end{aligned}[/latex] Detailed Explanations for: [latex]\\begin{aligned}y&=\\int_{-\\infty }^{\\infty }W(t)\\phi (t)dt \\\\ E(y^{2})&=E[y \\cdot y] \\\\ &=E[\\int_{-\\infty }^{\\infty }W(t_{1})\\phi (t_{1})dt_{1}\\int_{-\\infty }^{\\infty }W(t_{2})\\phi (t_{2})dt_{2}] \\\\ &=E[\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }W(t_{1})W(t_{2})\\phi (t_{1})\\phi (t_{2})dt_{1}\\cdot dt_{2}] \\\\ &=\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }E[W(t_{1})W(t_{2}) \\cdot \\phi (t_{1})\\phi (t_{2})dt_{1} dt_{2}] \\\\ &=\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }R_{W}(t_{1}-t_{2})\\phi (t_{1})\\phi (t_{2})dt_{1}dt_{2} \\\\ &=\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }3\\delta (t_{1}-t_{2})\\phi (t_{1})\\phi (t_{2})dt_{1}dt_{2}\\end{aligned}[/latex] Above Integration Exists Provided [latex]\\begin{aligned}t_{1}&=t_{2}=t\\\\ &=\\int_{-\\infty }^{\\infty }3\\delta (0)\\phi (t)\\phi (t)dt \\, dt\\\\ &=3 \\int_{-\\infty }^{\\infty } \\delta (0) dt + \\int_{-\\infty }^{\\infty } \\phi ^2 (t) dt\\\\&=2 \\times 1 \\times \\text{Energy}[\\phi (t)] \\\\E[y^{2}]&=6\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex] \\begin{aligned} \\text{Given:  }\\phi (t) &amp;=\\left\\{\\begin{matrix} 1 &amp; 5\\leq t\\leq 7\\\\ 0 &amp; otherwise \\end{matrix}\\right. \\\\ s_{\\omega }(f)&amp; =3 \\text{ Watts/Hz} \\\\ R_{\\omega }(\\tau )&amp;=3\\delta (\\tau )=3\\delta (t_{1}-t_{2})  \\\\ Var[y]&amp;=E[y^{2}]-{E[y]}^{2} \\\\ {E[W(t)]}^{2}&amp;=\\text{DC  power} \\\\ &amp;=\\text{Area under PSD at }f=0  \\\\ {E[W(t)]}^{2}&amp;=0  \\\\ E[W(t)]&amp;=0 \\\\ y&amp;=\\int_{-\\infty }^{\\infty }W(t)\\phi (t)dt \\\\ E[y]&amp;=\\int_{-\\infty }^{\\infty }E[W(t)]\\phi (t)dt \\\\ y&amp;=\\int_{-\\infty }^{\\infty }W(t)\\phi (t)dt\\rightarrow E[y^{2}]\\\\ &amp;=S_{\\omega }(f)\\cdot Energy[\\phi (t)]\\\\ &amp; =3 \\times 2=6\\\\ \\text{Var}[y]&amp;=6-0=6\\end{aligned}[/latex] <br/><br/>Detailed Explanations for:<br/>[latex]\\begin{aligned}y&amp;=\\int_{-\\infty }^{\\infty }W(t)\\phi (t)dt \\\\ E(y^{2})&amp;=E[y \\cdot y] \\\\ &amp;=E[\\int_{-\\infty }^{\\infty }W(t_{1})\\phi (t_{1})dt_{1}\\int_{-\\infty }^{\\infty }W(t_{2})\\phi (t_{2})dt_{2}] \\\\ &amp;=E[\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }W(t_{1})W(t_{2})\\phi (t_{1})\\phi (t_{2})dt_{1}\\cdot dt_{2}] \\\\ &amp;=\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }E[W(t_{1})W(t_{2}) \\cdot \\phi (t_{1})\\phi (t_{2})dt_{1} dt_{2}] \\\\ &amp;=\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }R_{W}(t_{1}-t_{2})\\phi (t_{1})\\phi (t_{2})dt_{1}dt_{2} \\\\ &amp;=\\int_{-\\infty }^{\\infty }\\int_{-\\infty }^{\\infty }3\\delta (t_{1}-t_{2})\\phi (t_{1})\\phi (t_{2})dt_{1}dt_{2}\\end{aligned}[/latex]<br/><br/> Above Integration Exists Provided<br/>[latex]\\begin{aligned}t_{1}&amp;=t_{2}=t\\\\ &amp;=\\int_{-\\infty }^{\\infty }3\\delta (0)\\phi (t)\\phi (t)dt \\, dt\\\\ &amp;=3 \\int_{-\\infty }^{\\infty } \\delta (0) dt + \\int_{-\\infty }^{\\infty } \\phi ^2 (t) dt\\\\&amp;=2 \\times 1 \\times \\text{Energy}[\\phi (t)] \\\\E[y^{2}]&amp;=6\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=5"
+  },
+  {
+    "number": "Question 25",
+    "text": "The two sides of a fair coin are labelled as 0 and 1. The coin is tossed two times\nindependently. Let M and N denote the labels corresponding to the outcomes of those\ntosses. For a random variable X, defined as X = min(M, N), the expected value E(X)\n(rounded off to two decimal places) is _________.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The two sides of a fair coin are labelled as 0 and 1. The coin is tossed two times\nindependently. Let M and N denote the labels corresponding to the outcomes of those\ntosses. For a random variable X, defined as X = min(M, N), the expected value E(X)\n(rounded off to two decimal places) is _________.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Engineering Mathematics - Probability and Statistics",
+    "explanation_text": "s={(H,H),(H,T),(T,H),(T,T)} [latex]M=\\begin{bmatrix} 1 & 1 & 0 & 0 \\\\ H & H & T & T \\end{bmatrix}[/latex] of first toss [latex]N=\\begin{bmatrix} H & T & H& T \\\\ 1 & 0 & 1 & 0 \\end{bmatrix}[/latex] of second toss Now,X=Min{M,N} [latex]\\therefore[/latex] X=Min{H,H}=Min{1,1}=1 X=Min{H,T}=Min{1,0}=0 X=Min{T,H}=Min{0,1}=0 X=Min(T,T)=Min(0,0)=0 [latex]\\therefore[/latex]P(X=1)=[latex]\\frac{1}{4}[/latex],P(x=0)=[latex]\\frac{3}{4}[/latex] We Know that, [latex]E(X)=\\sum_{i}X_{i}P(x_{i})=1\\times \\frac{1}{4}+0\\times \\frac{3}{4}=\\frac{1}{4}=0.25[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\ts={(H,H),(H,T),(T,H),(T,T)}<br/>[latex]M=\\begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; 0 \\\\ H &amp; H &amp; T &amp; T \\end{bmatrix}[/latex] of first toss<br/><br/><br/>[latex]N=\\begin{bmatrix} H &amp; T &amp; H&amp; T \\\\ 1 &amp; 0 &amp; 1 &amp; 0 \\end{bmatrix}[/latex] of second toss <br/>Now,X=Min{M,N}<br/>[latex]\\therefore[/latex]<br/>X=Min{H,H}=Min{1,1}=1<br/>X=Min{H,T}=Min{1,0}=0<br/>X=Min{T,H}=Min{0,1}=0<br/>X=Min(T,T)=Min(0,0)=0<br/>[latex]\\therefore[/latex]P(X=1)=[latex]\\frac{1}{4}[/latex],P(x=0)=[latex]\\frac{3}{4}[/latex]<br/>We Know that, [latex]E(X)=\\sum_{i}X_{i}P(x_{i})=1\\times \\frac{1}{4}+0\\times \\frac{3}{4}=\\frac{1}{4}=0.25[/latex]\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=5"
+  },
+  {
+    "number": "Question 26",
+    "text": "Consider the following system of linear equation. [latex]x_1+2x_2=b_1;[/latex] [latex]2x_1+4x_2=b_2;[/latex] [latex]3x_1+7x_2=b_3;[/latex] [latex]3x_1+9x_2=b_4;[/latex] Which one of the following conditions ensures that a solution exists for the above system?",
+    "html": "<div class=\"question_text\" data-value=\"2\">Consider the following system of linear equation. <br/> <br/>[latex]x_1+2x_2=b_1;[/latex]<br/>[latex]2x_1+4x_2=b_2;[/latex]<br/>[latex]3x_1+7x_2=b_3;[/latex]<br/>[latex]3x_1+9x_2=b_4;[/latex]<br/><br/> Which one of the following conditions ensures that a solution exists for the above system?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Linear Algebra",
+    "explanation_text": "Given: [latex]x_{1}+2x_{2}=b_{1} \\; \\; ...(i)[/latex] [latex] 2x_{1}+4X_{2}=b_{2}\\; \\; ...(ii)[/latex] [latex] 3x_{1}+7x_{2}=b_{3}\\; \\; ...(iii)[/latex] [latex] 3x_{1}+9x_{2}=b_{4}\\; \\; ...(iv)[/latex] From equations (ii) and (i) We can write, [latex]b_{2}=2[x_{1}+2x_{2}]=2b_{1} [/latex] From option (C): [latex]3b_{1}-6b_{3}+b_{4}=3[x_{1}+2x_{2}]-6[3x_{1}+7x_{2}]+3x_{1}+9x_{2}\\neq 0[/latex] From option (A): [latex]b_{2}=2b_{1}[/latex] and \r\n [latex]  b_{1}-3b_{3}+b_{4}=6[x_{1}+2x_{2}]-3[3x_{1}+7x_{2}]+[3x_{1}+9x_{2}]=0 [/latex] [latex] 6b_{1}-3b_{3}+b_{4}=0[/latex] Hence, answer is option (A).",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven:<br/>[latex]x_{1}+2x_{2}=b_{1} \\; \\; ...(i)[/latex]<br/>[latex] 2x_{1}+4X_{2}=b_{2}\\; \\; ...(ii)[/latex]<br/>[latex] 3x_{1}+7x_{2}=b_{3}\\; \\; ...(iii)[/latex]<br/>[latex] 3x_{1}+9x_{2}=b_{4}\\; \\; ...(iv)[/latex]<br/>From equations (ii) and (i)<br/>We can write, <br/>[latex]b_{2}=2[x_{1}+2x_{2}]=2b_{1} [/latex]<br/>From option (C):<br/>[latex]3b_{1}-6b_{3}+b_{4}=3[x_{1}+2x_{2}]-6[3x_{1}+7x_{2}]+3x_{1}+9x_{2}\\neq 0[/latex]<br/> From option (A):<br/>[latex]b_{2}=2b_{1}[/latex]<br/>and \r\n [latex]  b_{1}-3b_{3}+b_{4}=6[x_{1}+2x_{2}]-3[3x_{1}+7x_{2}]+[3x_{1}+9x_{2}]=0 [/latex]<br/>[latex] 6b_{1}-3b_{3}+b_{4}=0[/latex]<br/>Hence, answer is option (A).\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]b_2=2b_1[/latex] and [latex]6b_1-3b_3+b_4=0[/latex]",
+        "html": "<div class=\"option_data\">[latex]b_2=2b_1[/latex] and [latex]6b_1-3b_3+b_4=0[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]b_3=2b_1[/latex] and [latex]6b_1-3b_3+b_4=0[/latex]",
+        "html": "<div class=\"option_data\">[latex]b_3=2b_1[/latex] and [latex]6b_1-3b_3+b_4=0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]b_2=2b_1[/latex] and [latex]3b_1-6b_3+b_4=0[/latex]",
+        "html": "<div class=\"option_data\">[latex]b_2=2b_1[/latex] and [latex]3b_1-6b_3+b_4=0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]b_3=2b_1[/latex] and [latex]3b_1-6b_3+b_4=0[/latex]",
+        "html": "<div class=\"option_data\">[latex]b_3=2b_1[/latex] and [latex]3b_1-6b_3+b_4=0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=6"
+  },
+  {
+    "number": "Question 27",
+    "text": "Which one of the following options contains two solutions of the differential equation [latex]\\frac{dy}{dx}=(y-1)x[/latex]?",
+    "html": "<div class=\"question_text\" data-value=\"2\">Which one of the following options contains two solutions of the differential equation [latex]\\frac{dy}{dx}=(y-1)x[/latex]?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Differential Equations",
+    "explanation_text": "[latex]\\begin{aligned} \\frac{dy}{dx}&=(y-1)x\\\\ \\frac{dy}{y-1}&=x dx\\\\ \\text{Integrating}&\\text{ both side, we get}\\\\ \\int \\frac{1}{y-1}dy&=\\int xdx\\\\ \\ln |y-1|&=\\frac{x^2}{2}+C\\; \\; \\;...(i)\\\\ \\text{Now, }&\\\\ \\frac{dy}{dx}&=0 \\text{ when y=1}\\\\ \\text{It means }y&= \\text{constant C}\\\\ \\therefore \\; y&=1\\;\\;\\;...(ii) \\end{aligned}[/latex] So, equation (i) and (ii) are two different solution of given differential equation.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} \\frac{dy}{dx}&amp;=(y-1)x\\\\ \\frac{dy}{y-1}&amp;=x dx\\\\ \\text{Integrating}&amp;\\text{ both side, we get}\\\\ \\int \\frac{1}{y-1}dy&amp;=\\int xdx\\\\ \\ln |y-1|&amp;=\\frac{x^2}{2}+C\\; \\; \\;...(i)\\\\ \\text{Now, }&amp;\\\\ \\frac{dy}{dx}&amp;=0 \\text{ when y=1}\\\\ \\text{It means }y&amp;= \\text{constant C}\\\\ \\therefore \\; y&amp;=1\\;\\;\\;...(ii) \\end{aligned}[/latex]<br/>So, equation (i) and (ii) are two different solution of given differential equation.\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]ln |y-1|=0.5x^2 +C[/latex] and y=1",
+        "html": "<div class=\"option_data\">[latex]ln |y-1|=0.5x^2 +C[/latex] and y=1</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]ln |y-1|=2x^2 +C[/latex] and y=1",
+        "html": "<div class=\"option_data\">[latex]ln |y-1|=2x^2 +C[/latex] and y=1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]ln |y-1|=0.5x^2 +C[/latex] and y=-1",
+        "html": "<div class=\"option_data\">[latex]ln |y-1|=0.5x^2 +C[/latex] and y=-1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]ln |y-1|=2x^2 +C[/latex] and y=-1",
+        "html": "<div class=\"option_data\">[latex]ln |y-1|=2x^2 +C[/latex] and y=-1</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=6"
+  },
+  {
+    "number": "Question 28",
+    "text": "The current I in the given network is",
+    "html": "<div class=\"question_text\" data-value=\"2\">The current I in the given network is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\edb295645411b80e342703fe74523343.jpg\" style=\"--smush-placeholder-width: 471px; --smush-placeholder-aspect-ratio: 471/244;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q28.jpg": "images\\edb295645411b80e342703fe74523343.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Basics of Network Analysis",
+    "explanation_text": "[latex]I=-[I_{1}+I_{2}][/latex] [latex] I=-\\left [ \\frac{120\\angle -90^{\\circ}}{80-j35}+\\frac{120\\angle -30^{\\circ}}{80-j35} \\right ] [/latex] [latex]I=2.38\\angle 143.7^{\\circ}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\4079061c194b419d00630b2632d77538.jpg\" style=\"--smush-placeholder-width: 298px; --smush-placeholder-aspect-ratio: 298/164;\"/><br/>[latex]I=-[I_{1}+I_{2}][/latex]<br/>[latex] I=-\\left [ \\frac{120\\angle -90^{\\circ}}{80-j35}+\\frac{120\\angle -30^{\\circ}}{80-j35} \\right ] [/latex]<br/>[latex]I=2.38\\angle 143.7^{\\circ}[/latex]\n\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a42.jpg": "images\\4079061c194b419d00630b2632d77538.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "12:00 AM",
+        "html": "<div class=\"option_data\">12:00 AM</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]2.38 \\angle -96.37^{\\circ}[/latex] A",
+        "html": "<div class=\"option_data\">[latex]2.38 \\angle -96.37^{\\circ}[/latex] A</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]2.38 \\angle 143.63^{\\circ}[/latex] A",
+        "html": "<div class=\"option_data\">[latex]2.38 \\angle 143.63^{\\circ}[/latex] A</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]2.38 \\angle -23.63^{\\circ}[/latex] A",
+        "html": "<div class=\"option_data\">[latex]2.38 \\angle -23.63^{\\circ}[/latex] A</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=6"
+  },
+  {
+    "number": "Question 29",
+    "text": "A finite duration discrete-time signal x[n] is obtained by sampling the continuous-time\r\nsignal [latex]x(t) = \\cos (200 \\pi t)[/latex] at sampling instants t = n/400, n = 0,1,..., 7. The 8-point\r\ndiscrete Fourier transform (DFT) of x[n] is defined as [latex]x[k]=\\sum_{n=0}^{7}x[n]e^{-j\\frac{\\pi kn}{4}}[/latex],  k=0,1,...,7. Which one of the following statement is TRUE?",
+    "html": "<div class=\"question_text\" data-value=\"2\">A finite duration discrete-time signal x[n] is obtained by sampling the continuous-time\r\nsignal [latex]x(t) = \\cos (200 \\pi t)[/latex] at sampling instants t = n/400, n = 0,1,..., 7. The 8-point\r\ndiscrete Fourier transform (DFT) of x[n] is defined as <br/><br/>[latex]x[k]=\\sum_{n=0}^{7}x[n]e^{-j\\frac{\\pi kn}{4}}[/latex],  k=0,1,...,7.<br/><br/> Which one of the following statement is TRUE? </div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - DTFS, DTFT and DFT",
+    "explanation_text": "[latex]\\begin{aligned}x(t)&=\\cos 200\\pi t\\\\ t&=\\frac{n}{400}\\\\ x(n)&=\\cos \\left ( 200\\pi \\frac{n}{400} \\right )\\\\&=\\cos \\left ( \\frac{\\pi }{2} n\\right ); \\; \\; n=0,1,...,7\\\\ &=\\left \\{ \\cos 0,\\cos \\frac{\\pi }{2},\\cos \\pi ,\\cos \\frac{3\\pi }{2} ,\\cos 2\\pi ,\\cos \\frac{5\\pi }{2},\\cos 3\\pi ,\\cos \\frac{7\\pi }{2}\\right \\} \\\\  &={1,0,-1,0,1,0,-1,0}\\xLeftrightarrow{\\text{DFT}} X(K) \\\\ \\text{suppose, }  y(n)&={1,-1,1,-1}\\xLeftrightarrow{\\text{DFT}} Y(k)\\end{aligned}[/latex] [latex][Y(K)]=\\left.\\begin{matrix} [W_{N}] \\end{matrix}\\right|_{N=4}[y(n)]=\\begin{bmatrix} 1 &1 &1 &1 \\\\ 1 &-j &-1 &j \\\\ 1&-1 &1 &-1 \\\\ 1&j& -1 &-j \\end{bmatrix}\\begin{bmatrix} 1\\\\ -1\\\\ 1\\\\ -1 \\end{bmatrix}=\\begin{bmatrix} 0 &0 &4 &0 \\end{bmatrix}[/latex] Now,as we know, If for [latex]\\, \\left \\{ a,b,c,d \\right \\}\\xLeftrightarrow{\\text{DFT}} \\left \\{ A,B,C,D \\right \\} [/latex] Then for, [latex]\\left \\{ a,0,b,0,c,0,d,0 \\right \\}\\xLeftrightarrow{\\text{DFT}}\\left \\{A,B,C,D,A,B,C,D \\right \\}[/latex] Similarly for [latex] y(n)={1,-1,1,-1}\\xLeftrightarrow{\\text{DFT}}Y(k)=\\left \\{ 0,0,4,0\\right \\}[/latex] Here, for [latex]x(n)=\\left \\{ 1,0,-1,0,1,0,-1,0 \\right \\} [/latex] [latex]X(k)=\\left \\{ \\underset{0}{\\uparrow},0,4,0,0,0,4,0 \\right \\}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}x(t)&amp;=\\cos 200\\pi t\\\\ t&amp;=\\frac{n}{400}\\\\ x(n)&amp;=\\cos \\left ( 200\\pi \\frac{n}{400} \\right )\\\\&amp;=\\cos \\left ( \\frac{\\pi }{2} n\\right ); \\; \\; n=0,1,...,7\\\\ &amp;=\\left \\{ \\cos 0,\\cos \\frac{\\pi }{2},\\cos \\pi ,\\cos \\frac{3\\pi }{2} ,\\cos 2\\pi ,\\cos \\frac{5\\pi }{2},\\cos 3\\pi ,\\cos \\frac{7\\pi }{2}\\right \\} \\\\  &amp;={1,0,-1,0,1,0,-1,0}\\xLeftrightarrow{\\text{DFT}} X(K) \\\\ \\text{suppose, }  y(n)&amp;={1,-1,1,-1}\\xLeftrightarrow{\\text{DFT}} Y(k)\\end{aligned}[/latex]\r\n\r\n<br/>[latex][Y(K)]=\\left.\\begin{matrix} [W_{N}] \\end{matrix}\\right|_{N=4}[y(n)]=\\begin{bmatrix} 1 &amp;1 &amp;1 &amp;1 \\\\ 1 &amp;-j &amp;-1 &amp;j \\\\ 1&amp;-1 &amp;1 &amp;-1 \\\\ 1&amp;j&amp; -1 &amp;-j \\end{bmatrix}\\begin{bmatrix} 1\\\\ -1\\\\ 1\\\\ -1 \\end{bmatrix}=\\begin{bmatrix} 0 &amp;0 &amp;4 &amp;0 \\end{bmatrix}[/latex]<br/>Now,as we know,<br/>If for [latex]\\, \\left \\{ a,b,c,d \\right \\}\\xLeftrightarrow{\\text{DFT}} \\left \\{ A,B,C,D \\right \\} [/latex]<br/>Then for, [latex]\\left \\{ a,0,b,0,c,0,d,0 \\right \\}\\xLeftrightarrow{\\text{DFT}}\\left \\{A,B,C,D,A,B,C,D \\right \\}[/latex]<br/>Similarly for [latex] y(n)={1,-1,1,-1}\\xLeftrightarrow{\\text{DFT}}Y(k)=\\left \\{ 0,0,4,0\\right \\}[/latex]<br/> Here, for [latex]x(n)=\\left \\{ 1,0,-1,0,1,0,-1,0 \\right \\} [/latex]<br/>[latex]X(k)=\\left \\{ \\underset{0}{\\uparrow},0,4,0,0,0,4,0 \\right \\}[/latex]\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "All X[k] are non-zero",
+        "html": "<div class=\"option_data\">All X[k] are non-zero</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "Only X[4] is non-zero",
+        "html": "<div class=\"option_data\">Only X[4] is non-zero</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "Only X[2] and X [6] are non-zero",
+        "html": "<div class=\"option_data\">Only X[2] and X [6] are non-zero</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "Only X[3] and X [5] are non-zero",
+        "html": "<div class=\"option_data\">Only X[3] and X [5] are non-zero</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=6"
+  },
+  {
+    "number": "Question 30",
+    "text": "For the given circuit, which one of the following is the correct state equation?",
+    "html": "<div class=\"question_text\" data-value=\"2\">For the given circuit, which one of the following is the correct state equation? <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\f03e12aded0d33c875b03ca018326c81.jpg\" style=\"--smush-placeholder-width: 471px; --smush-placeholder-aspect-ratio: 471/365;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q30.jpg": "images\\f03e12aded0d33c875b03ca018326c81.jpg"
+    },
+    "type": "mcq",
+    "subject": "Control Systems - State Space Analysis",
+    "explanation_text": "From source transformation, KVL in loop 1, [latex]2i_{1}=2i+0.5\\frac{\\mathrm{d} i}{\\mathrm{d} t}+V [/latex] [latex]\\frac{\\mathrm{d} i}{\\mathrm{d} t}=-2V-4i+4i_{1}[/latex] KCL at node (a), [latex]i=0.25\\frac{\\mathrm{d} V}{\\mathrm{d} t}+\\frac{V-i_{2}}{1}[/latex] [latex] \\frac{\\mathrm{d} v}{\\mathrm{d} t}=-4V+4i+4i_{2}[/latex] [latex] \\begin{bmatrix} v\\\\ i \\end{bmatrix}=\\begin{bmatrix} -4 & 4\\\\ -2 & -4 \\end{bmatrix}\\begin{bmatrix} v\\\\ i \\end{bmatrix}+\\begin{bmatrix} 0 &4 \\\\ 4 &0 \\end{bmatrix}\\begin{bmatrix} i_{1}\\\\ i_{2} \\end{bmatrix}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFrom source transformation,<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\1e213fa02b797fd989c2238d5ce583ac.jpg\" style=\"--smush-placeholder-width: 216px; --smush-placeholder-aspect-ratio: 216/95;\"/><br/>KVL in loop 1,<br/>[latex]2i_{1}=2i+0.5\\frac{\\mathrm{d} i}{\\mathrm{d} t}+V [/latex]<br/>[latex]\\frac{\\mathrm{d} i}{\\mathrm{d} t}=-2V-4i+4i_{1}[/latex]<br/>KCL at node (a),<br/>[latex]i=0.25\\frac{\\mathrm{d} V}{\\mathrm{d} t}+\\frac{V-i_{2}}{1}[/latex]<br/>[latex] \\frac{\\mathrm{d} v}{\\mathrm{d} t}=-4V+4i+4i_{2}[/latex]<br/>[latex] \\begin{bmatrix} v\\\\ i \\end{bmatrix}=\\begin{bmatrix} -4 &amp; 4\\\\ -2 &amp; -4 \\end{bmatrix}\\begin{bmatrix} v\\\\ i \\end{bmatrix}+\\begin{bmatrix} 0 &amp;4 \\\\ 4 &amp;0 \\end{bmatrix}\\begin{bmatrix} i_{1}\\\\ i_{2} \\end{bmatrix}[/latex]\n\n\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a34.jpg": "images\\1e213fa02b797fd989c2238d5ce583ac.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "A",
+        "html": "<div class=\"option_data\">A</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "B",
+        "html": "<div class=\"option_data\">B</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "C",
+        "html": "<div class=\"option_data\">C</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "D",
+        "html": "<div class=\"option_data\">D</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=6"
+  },
+  {
+    "number": "Question 31",
+    "text": "A one-sided abrupt [latex]pn[/latex] junction diode has a depletion capacitance CD of 50 pF at a reverse\nbias of 0.2 V. The plot of [latex]1/C_D^2[/latex] versus the applied voltage V for this diode is a straight\nline as shown in the figure below. The slope of the plot is ____[latex]\\times 10^{20} F^{-2} V^{-1}[/latex].",
+    "html": "<div class=\"question_text\" data-value=\"2\">A one-sided abrupt [latex]pn[/latex] junction diode has a depletion capacitance CD of 50 pF at a reverse\nbias of 0.2 V. The plot of [latex]1/C_D^2[/latex] versus the applied voltage V for this diode is a straight\nline as shown in the figure below. The slope of the plot is ____[latex]\\times 10^{20} F^{-2} V^{-1}[/latex]. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\67eaebfaa446b4c15112e62a12bc5946.jpg\" style=\"--smush-placeholder-width: 190px; --smush-placeholder-aspect-ratio: 190/171;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q31.jpg": "images\\67eaebfaa446b4c15112e62a12bc5946.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electronic Devices - PN-Junction Diodes and Special Diodes",
+    "explanation_text": "As per GATE official answer key MTA (Marks to ALL) Depletion or transition capacitance is, [latex]C_{D}=\\frac{A_{\\epsilon }}{W}[/latex] For one-sided PN junction [latex]\\left (EX:P^{+}N Junction \\right )[/latex] [latex]W=\\sqrt{\\frac{2\\epsilon V_{B}}{eN_{D}}}=\\sqrt{\\frac{2\\epsilon \\left ( V_{bi}-V \\right )}{eN_{D}}}[/latex] where V is anode to cathode applied potential. [latex]\\Rightarrow \\, \\, \\, \\, C_{D}=\\frac{A\\epsilon }{\\sqrt{\\frac{2\\, \\epsilon \\left ( V_{bi}-V \\right )}{eN_{D}}}} [/latex] [latex]\\Rightarrow \\, \\, \\, \\, \\frac{1}{C_{D}^{2}}=\\frac{2}{A^{2}\\epsilon eN_{D}}\\left ( V_{bi}-V \\right )[/latex] [latex] \\frac{1}{C_{D}^{2}}\\, becomes \\, zero \\, at V=V_{bi}[/latex] From above graph,[latex]y=\\frac{1}{C_{D}^{2}}=0\\, at\\, x_{1}=V_{bi}[/latex] [latex] And \\, \\, \\, y_{2}=\\frac{1}{C_{D}^{2}}=4\\times 10^{20}\\, at\\, x_{2}=-0.2V [/latex] [latex]Slope=\\frac{y_{2}-y_{1}}{x_{2}-X_{1}}=\\frac{4\\times 10^{20}-0}{-0.2-V_{bi}}[/latex] [latex] V_{bi}[/latex] is not provided,slope cannot be found.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/>As per GATE official answer key MTA (Marks to ALL)<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\6eafe2e5bc13eae1b25730c93e8e2c90.jpg\" style=\"--smush-placeholder-width: 231px; --smush-placeholder-aspect-ratio: 231/137;\"/><br/>\r\nDepletion or transition capacitance is,<br/>[latex]C_{D}=\\frac{A_{\\epsilon }}{W}[/latex]\r\n<br/>For one-sided PN junction [latex]\\left (EX:P^{+}N Junction \\right )[/latex]<br/>[latex]W=\\sqrt{\\frac{2\\epsilon V_{B}}{eN_{D}}}=\\sqrt{\\frac{2\\epsilon \\left ( V_{bi}-V \\right )}{eN_{D}}}[/latex]<br/>where V is anode to cathode applied potential.<br/>[latex]\\Rightarrow \\, \\, \\, \\, C_{D}=\\frac{A\\epsilon }{\\sqrt{\\frac{2\\, \\epsilon \\left ( V_{bi}-V \\right )}{eN_{D}}}} [/latex]<br/>[latex]\\Rightarrow \\, \\, \\, \\, \\frac{1}{C_{D}^{2}}=\\frac{2}{A^{2}\\epsilon eN_{D}}\\left ( V_{bi}-V \\right )[/latex]<br/>[latex] \\frac{1}{C_{D}^{2}}\\, becomes \\, zero \\, at V=V_{bi}[/latex]<br/>From above graph,[latex]y=\\frac{1}{C_{D}^{2}}=0\\, at\\, x_{1}=V_{bi}[/latex]<br/>[latex] And \\, \\, \\, y_{2}=\\frac{1}{C_{D}^{2}}=4\\times 10^{20}\\, at\\, x_{2}=-0.2V [/latex]<br/>[latex]Slope=\\frac{y_{2}-y_{1}}{x_{2}-X_{1}}=\\frac{4\\times 10^{20}-0}{-0.2-V_{bi}}[/latex]<br/>[latex] V_{bi}[/latex] is not provided,slope cannot be found.\r\n\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a46.jpg": "images\\6eafe2e5bc13eae1b25730c93e8e2c90.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "-5.7",
+        "html": "<div class=\"option_data\">-5.7</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "-3.8",
+        "html": "<div class=\"option_data\">-3.8</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "-1.2",
+        "html": "<div class=\"option_data\">-1.2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "-0.4",
+        "html": "<div class=\"option_data\">-0.4</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=7"
+  },
+  {
+    "number": "Question 32",
+    "text": "The band diagram of a p-type semiconductor with a band-gap of 1 eV is shown. Using\r\nthis semiconductor, a MOS capacitor having [latex]V_{TH}[/latex] of [latex]-0.16 V, C'_{ox}[/latex] of 100 [latex]nF/cm^2[/latex] and\r\na metal work function of 3.87 eV is fabricated. There is no charge within the oxide. If\r\nthe voltage across the capacitor is [latex]V_{TH}[/latex]. the magnitude of depletion charge per unit area\r\n(in [latex]C/cm^2[/latex]) is",
+    "html": "<div class=\"question_text\" data-value=\"2\">The band diagram of a p-type semiconductor with a band-gap of 1 eV is shown. Using\r\nthis semiconductor, a MOS capacitor having [latex]V_{TH}[/latex] of [latex]-0.16 V, C'_{ox}[/latex] of 100 [latex]nF/cm^2[/latex] and\r\na metal work function of 3.87 eV is fabricated. There is no charge within the oxide. If\r\nthe voltage across the capacitor is [latex]V_{TH}[/latex]. the magnitude of depletion charge per unit area\r\n(in [latex]C/cm^2[/latex]) is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\78a5fda6f7b8d4f6a6160692bb836ff9.jpg\" style=\"--smush-placeholder-width: 209px; --smush-placeholder-aspect-ratio: 209/271;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q32.jpg": "images\\78a5fda6f7b8d4f6a6160692bb836ff9.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electronic Devices - BJT and FET Basics",
+    "explanation_text": "MOS capacitance [latex]\\begin{aligned}\\phi_{m}&=3.87,\\phi _{B}=4.8,\\phi _{ms}=-0.93\\\\V_{T}&=\\phi _{ms}-\\frac{{Q}'_{ox} }{{C}_{ox}}-\\frac{{Q}'_{d}}{{C}_{ox}}+2\\phi_{F_{p}}\\\\ \\phi _{F_{p}}&=E_{i}-E_{F}=0.5-0.2=0.3\\\\ -0.16&=-0.93-0-\\frac{{Q}'_{d}}{C_{ox}}+2\\times 0.3 \\\\ \\frac{{Q}'_{d}}{C_{ox}}&=0.6+0.16-0.93=-0.17\\\\ Q_{b}&=-0.17\\times C_{ox}\\\\ &=-0.17\\times 100\\times 10^{-9} \\\\ & =-1.7\\times 10^{-8}C/cm^{2}\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tMOS capacitance<br/><br/>[latex]\\begin{aligned}\\phi_{m}&amp;=3.87,\\phi _{B}=4.8,\\phi _{ms}=-0.93\\\\V_{T}&amp;=\\phi _{ms}-\\frac{{Q}'_{ox} }{{C}_{ox}}-\\frac{{Q}'_{d}}{{C}_{ox}}+2\\phi_{F_{p}}\\\\ \\phi _{F_{p}}&amp;=E_{i}-E_{F}=0.5-0.2=0.3\\\\ -0.16&amp;=-0.93-0-\\frac{{Q}'_{d}}{C_{ox}}+2\\times 0.3 \\\\ \\frac{{Q}'_{d}}{C_{ox}}&amp;=0.6+0.16-0.93=-0.17\\\\ Q_{b}&amp;=-0.17\\times C_{ox}\\\\ &amp;=-0.17\\times 100\\times 10^{-9} \\\\ &amp; =-1.7\\times 10^{-8}C/cm^{2}\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]1.7 \\times 10^{-8}[/latex]",
+        "html": "<div class=\"option_data\">[latex]1.7 \\times 10^{-8}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]0.52 \\times 10^{-8}[/latex]",
+        "html": "<div class=\"option_data\">[latex]0.52 \\times 10^{-8}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]1.41 \\times 10^{-8}[/latex]",
+        "html": "<div class=\"option_data\">[latex]1.41 \\times 10^{-8}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]0.93 \\times 10^{-8}[/latex]",
+        "html": "<div class=\"option_data\">[latex]0.93 \\times 10^{-8}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=7"
+  },
+  {
+    "number": "Question 33",
+    "text": "The base of an npn BJT T1 has a linear doping profile [latex]N_B(x)[/latex] as shown below. The base\nof another npn BJT T2 has a uniform doping [latex]N_B[/latex] of [latex]10^{17} cm^{-3}[/latex]. All other parameters are\nidentical for both the devices. Assuming that the hole density profile is the same as\nthat of doping, the common-emitter current gain of T2 is",
+    "html": "<div class=\"question_text\" data-value=\"2\">The base of an npn BJT T1 has a linear doping profile [latex]N_B(x)[/latex] as shown below. The base\nof another npn BJT T2 has a uniform doping [latex]N_B[/latex] of [latex]10^{17} cm^{-3}[/latex]. All other parameters are\nidentical for both the devices. Assuming that the hole density profile is the same as\nthat of doping, the common-emitter current gain of T2 is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\8cac17d6a5ce3a069f29361b7cb97f71.jpg\" style=\"--smush-placeholder-width: 339px; --smush-placeholder-aspect-ratio: 339/181;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q33.jpg": "images\\8cac17d6a5ce3a069f29361b7cb97f71.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electronic Devices - BJT and FET Basics",
+    "explanation_text": "As per GATE official answer key MTA (Marks to ALL) [latex]\\frac{\\beta _{1}}{\\beta _{2}}=\\frac{\\int_{0}^{W}N_{A_{2}}(x)dx}{\\int_{0}^{W}N_{A_{1}}(x)dx}=\\frac{W\\times 10^{17}}{\\frac{1}{2}\\times W\\times (10^{17}-10^{14})}=\\frac{2\\times 10^{17}}{10^{17}+10^{14}}\\simeq 2[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/>As per GATE official answer key MTA (Marks to ALL)<br/>[latex]\\frac{\\beta _{1}}{\\beta _{2}}=\\frac{\\int_{0}^{W}N_{A_{2}}(x)dx}{\\int_{0}^{W}N_{A_{1}}(x)dx}=\\frac{W\\times 10^{17}}{\\frac{1}{2}\\times W\\times (10^{17}-10^{14})}=\\frac{2\\times 10^{17}}{10^{17}+10^{14}}\\simeq 2[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "approximately 2.0 times that of T1",
+        "html": "<div class=\"option_data\">approximately 2.0 times that of T1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "approximately 0.3 times that of T1",
+        "html": "<div class=\"option_data\">approximately 0.3 times that of T1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "approximately 2.5 times that of T1",
+        "html": "<div class=\"option_data\">approximately 2.5 times that of T1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "approximately 0.7 times that of T1",
+        "html": "<div class=\"option_data\">approximately 0.7 times that of T1</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=7"
+  },
+  {
+    "number": "Question 34",
+    "text": "A pn junction solar cell of area 1.0 [latex]cm^{2}[/latex], illuminated uniformly with 100 mW [latex]cm^{-2}[/latex],\nhas the following parameters: Efficiency = 15%, open circuit voltage = 0.7 V, fill\nfactor = 0.8, and thickness = 200 [latex]\\mu m[/latex], The charge of an electron is [latex]1.6 \\times 10^{-19}[/latex]C. The\naverage optical generation rate (in [latex]cm^{-3} s^{-1}[/latex]) is",
+    "html": "<div class=\"question_text\" data-value=\"2\">A pn junction solar cell of area 1.0 [latex]cm^{2}[/latex], illuminated uniformly with 100 mW [latex]cm^{-2}[/latex],\nhas the following parameters: Efficiency = 15%, open circuit voltage = 0.7 V, fill\nfactor = 0.8, and thickness = 200 [latex]\\mu m[/latex], The charge of an electron is [latex]1.6 \\times 10^{-19}[/latex]C. The\naverage optical generation rate (in [latex]cm^{-3} s^{-1}[/latex]) is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electronic Devices - PN-Junction Diodes and Special Diodes",
+    "explanation_text": "[latex]\\begin{aligned}\\eta &=\\frac{\\left ( FF \\right )V_{OC}I_{SC}}{P_{in}} \\\\ 0.15&=\\frac{0.8\\times 0.7\\times I_{SC}}{100mW} \\\\ I_{SC}&=\\frac{15}{0.56}mA \\\\ G_{L}&=\\frac{I_{SC}}{q \\times \\text{ Area } \\times \\text{ thickness } } \\\\ &=\\frac{15 \\times 10^{-3}}{0.56 \\times 1.6 \\times 10^{-19} \\times 1\\times 200\\times 10^{-4}} \\\\ &=\\frac{15}{0.56\\times 32}\\times 10^{19}\\\\ &=0.837\\times 10^{19} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t\r\n[latex]\\begin{aligned}\\eta &amp;=\\frac{\\left ( FF \\right )V_{OC}I_{SC}}{P_{in}} \\\\ 0.15&amp;=\\frac{0.8\\times 0.7\\times I_{SC}}{100mW} \\\\ I_{SC}&amp;=\\frac{15}{0.56}mA \\\\ G_{L}&amp;=\\frac{I_{SC}}{q \\times \\text{ Area } \\times \\text{ thickness } } \\\\ &amp;=\\frac{15 \\times 10^{-3}}{0.56 \\times 1.6 \\times 10^{-19} \\times 1\\times 200\\times 10^{-4}} \\\\ &amp;=\\frac{15}{0.56\\times 32}\\times 10^{19}\\\\ &amp;=0.837\\times 10^{19} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]0.84 \\times 10^{19}[/latex]",
+        "html": "<div class=\"option_data\">[latex]0.84 \\times 10^{19}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]5.57 \\times 10^{19}[/latex]",
+        "html": "<div class=\"option_data\">[latex]5.57 \\times 10^{19}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]1.04 \\times 10^{19}[/latex]",
+        "html": "<div class=\"option_data\">[latex]1.04 \\times 10^{19}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]83.6 \\times 10^{19}[/latex]",
+        "html": "<div class=\"option_data\">[latex]83.6 \\times 10^{19}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=7"
+  },
+  {
+    "number": "Question 35",
+    "text": "For the BJT in the amplifier shown below, [latex]V_{BE} = 0.7 V, kT/q = 26 mV[/latex]. Assume the BJT\noutput resistance ([latex]r_o[/latex]) is very high and the base current is negligible. The capacitors are\nalso assumed to be short circuited at signal frequencies. The input [latex]v_i[/latex] is direct coupled.\nThe low frequency gain [latex]v_o/v_i[/latex] of the amplifier is",
+    "html": "<div class=\"question_text\" data-value=\"2\">For the BJT in the amplifier shown below, [latex]V_{BE} = 0.7 V, kT/q = 26 mV[/latex]. Assume the BJT\noutput resistance ([latex]r_o[/latex]) is very high and the base current is negligible. The capacitors are\nalso assumed to be short circuited at signal frequencies. The input [latex]v_i[/latex] is direct coupled.\nThe low frequency gain [latex]v_o/v_i[/latex] of the amplifier is  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\37a70a6da80158c18eb32f1a2d7461fa.jpg\" style=\"--smush-placeholder-width: 358px; --smush-placeholder-aspect-ratio: 358/315;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q35.jpg": "images\\37a70a6da80158c18eb32f1a2d7461fa.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - BJT Analysis",
+    "explanation_text": "[latex]\\begin{aligned}I_{EQ}&=\\frac{10-0.7}{20}=0.465mA\\\\ g_{m}&=\\frac{I_{EQ}}{V_{T}}=\\frac{0.465}{26}A/V \\\\ \\frac{V_{out}}{V_{in}}&=-g_{m}(R_{e}\\parallel R_{L})\\\\ &=\\frac{0.465}{26}\\times 5000=-89.423\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}I_{EQ}&amp;=\\frac{10-0.7}{20}=0.465mA\\\\ g_{m}&amp;=\\frac{I_{EQ}}{V_{T}}=\\frac{0.465}{26}A/V \\\\ \\frac{V_{out}}{V_{in}}&amp;=-g_{m}(R_{e}\\parallel R_{L})\\\\ &amp;=\\frac{0.465}{26}\\times 5000=-89.423\\end{aligned}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "-89.42",
+        "html": "<div class=\"option_data\">-89.42</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "-128.21",
+        "html": "<div class=\"option_data\">-128.21</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "-178.85",
+        "html": "<div class=\"option_data\">-178.85</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "-256.42",
+        "html": "<div class=\"option_data\">-256.42</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=7"
+  },
+  {
+    "number": "Question 36",
+    "text": "An enhancement MOSFET of threshold voltage 3 V is being used in the sample and\nhold circuit given below. Assume that the substrate of the MOS device is connected\nto -10 V. If the input voltage [latex]V_I[/latex] lies between [latex]\\pm 10[/latex] V, the minimum and the maximum\nvalues of [latex]V_G[/latex]\nrequired for proper sampling and holding respectively, are",
+    "html": "<div class=\"question_text\" data-value=\"2\">An enhancement MOSFET of threshold voltage 3 V is being used in the sample and\nhold circuit given below. Assume that the substrate of the MOS device is connected\nto -10 V. If the input voltage [latex]V_I[/latex] lies between [latex]\\pm 10[/latex] V, the minimum and the maximum\nvalues of [latex]V_G[/latex]\nrequired for proper sampling and holding respectively, are <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\f2d53336ad09e48f845991157e5d3002.jpg\" style=\"--smush-placeholder-width: 303px; --smush-placeholder-aspect-ratio: 303/140;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q36.jpg": "images\\f2d53336ad09e48f845991157e5d3002.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - FET and MOSFET Analysis",
+    "explanation_text": "for holding MOSFET should be OFF. [latex]\\begin{aligned}V_{1\\, min}&\\rightarrow -10\\, V \\\\ V_{G}-V_{1\\, min}& \\lt 3 \\\\ V_{G}& \\lt 3-10V\\Rightarrow -7V \\\\ \\text{For Sampling, } V_{G}-V_{i\\, max}& \\gt 3\\\\ V_{G}& \\gt 3+V_{i\\, max}\\\\ V_{G}&\\gt 13\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\c6a82055cee0fda41f028aede97831bb.jpg\" style=\"--smush-placeholder-width: 284px; --smush-placeholder-aspect-ratio: 284/121;\"/><br/>for holding MOSFET should be OFF.<br/>[latex]\\begin{aligned}V_{1\\, min}&amp;\\rightarrow -10\\, V \\\\ V_{G}-V_{1\\, min}&amp; \\lt 3 \\\\ V_{G}&amp; \\lt 3-10V\\Rightarrow -7V \\\\ \\text{For Sampling, } V_{G}-V_{i\\, max}&amp; \\gt 3\\\\ V_{G}&amp; \\gt 3+V_{i\\, max}\\\\ V_{G}&amp;\\gt 13\\end{aligned}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a26.jpg": "images\\c6a82055cee0fda41f028aede97831bb.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "3V  and  -3 V",
+        "html": "<div class=\"option_data\">3V  and  -3 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "10 V and -10 V",
+        "html": "<div class=\"option_data\">10 V and -10 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "13 V and -7 V",
+        "html": "<div class=\"option_data\">13 V and -7 V</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "10 V and -13 V",
+        "html": "<div class=\"option_data\">10 V and -13 V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=8"
+  },
+  {
+    "number": "Question 37",
+    "text": "Using the incremental low frequency small-signal model of the MOS device, the Norton\nequivalent resistance of the following circuit is",
+    "html": "<div class=\"question_text\" data-value=\"2\">Using the incremental low frequency small-signal model of the MOS device, the Norton\nequivalent resistance of the following circuit is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\6037651d14cbb1dba9877a291b47ea32.jpg\" style=\"--smush-placeholder-width: 122px; --smush-placeholder-aspect-ratio: 122/141;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q37.jpg": "images\\6037651d14cbb1dba9877a291b47ea32.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - FET and MOSFET Analysis",
+    "explanation_text": "[latex]\\begin{aligned}v_{\\pi }&=-V_{x} \\\\ V_{x}&=\\left ( I_{x}-g_{m}V_{x} \\right )r_{ds}+I_{x}R\\\\ V_{x}\\left ( 1+g_{m} r_{ds}\\right )&=\\left ( r_{ds}+R \\right )I_{x} \\\\ R_{N}&=\\frac{V_{x}}{I_{x}}=\\frac{R+r_{ds}}{1+g_{m}r_{ds}}\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}v_{\\pi }&amp;=-V_{x} \\\\ V_{x}&amp;=\\left ( I_{x}-g_{m}V_{x} \\right )r_{ds}+I_{x}R\\\\ V_{x}\\left ( 1+g_{m} r_{ds}\\right )&amp;=\\left ( r_{ds}+R \\right )I_{x} \\\\ R_{N}&amp;=\\frac{V_{x}}{I_{x}}=\\frac{R+r_{ds}}{1+g_{m}r_{ds}}\\end{aligned}[/latex]\r\n<br/><br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\e88912c0f380ee328fb60bb92437960c.jpg\" style=\"--smush-placeholder-width: 199px; --smush-placeholder-aspect-ratio: 199/174;\"/>\n</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a49.jpg": "images\\e88912c0f380ee328fb60bb92437960c.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]r_{ds}+R+g_mr_{ds}R[/latex]",
+        "html": "<div class=\"option_data\">[latex]r_{ds}+R+g_mr_{ds}R[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{r_{ds} +R}{1+g_m r_{ds}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{r_{ds} +R}{1+g_m r_{ds}}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]r_{ds}+\\frac{1}{g_m}+R[/latex]",
+        "html": "<div class=\"option_data\">[latex]r_{ds}+\\frac{1}{g_m}+R[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]r_{ds}+R[/latex]",
+        "html": "<div class=\"option_data\">[latex]r_{ds}+R[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=8"
+  },
+  {
+    "number": "Question 38",
+    "text": "P, Q, and R are the decimal integers corresponding to the 4-bit binary number 1100\nconsidered in signed magnitude, 1's complement, and 2's complement representations,\nrespectively. The 6-bit 2's complement representation of (P+Q+R) is",
+    "html": "<div class=\"question_text\" data-value=\"2\">P, Q, and R are the decimal integers corresponding to the 4-bit binary number 1100\nconsidered in signed magnitude, 1's complement, and 2's complement representations,\nrespectively. The 6-bit 2's complement representation of (P+Q+R) is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Digital Circuits - Number Systems",
+    "explanation_text": "Given, binary number 1100 1's complement of 1100 = -3 Sign magnitude of 1100 = -4 2's complement of 1100 = -4 P + Q + R = -4 - 3 - 4 = -11 The 6 digit 2's complement of (-11) = 110101",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven, binary number 1100<br/>\r\n1's complement of 1100 = -3<br/>\r\nSign magnitude of 1100 = -4<br/>\r\n2's complement of 1100 = -4<br/>\r\n P + Q + R = -4 - 3 - 4 = -11<br/>\r\nThe 6 digit 2's complement of (-11) = 110101\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "110101",
+        "html": "<div class=\"option_data\">110101</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "110010",
+        "html": "<div class=\"option_data\">110010</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "111101",
+        "html": "<div class=\"option_data\">111101</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "111001",
+        "html": "<div class=\"option_data\">111001</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=8"
+  },
+  {
+    "number": "Question 39",
+    "text": "The state diagram of a sequence detector is shown below. State  [latex]S_0[/latex] is the initial state\nof the sequence detector. If the output is 1, then",
+    "html": "<div class=\"question_text\" data-value=\"2\">The state diagram of a sequence detector is shown below. State  [latex]S_0[/latex] is the initial state\nof the sequence detector. If the output is 1, then <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\eee4d8a95adaedee14dbce6a0499101d.jpg\" style=\"--smush-placeholder-width: 423px; --smush-placeholder-aspect-ratio: 423/295;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q39.jpg": "images\\eee4d8a95adaedee14dbce6a0499101d.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Circuits - Sequential Circuits",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "the sequence 01010 is detected",
+        "html": "<div class=\"option_data\">the sequence 01010 is detected</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "the sequence 01011 is detected",
+        "html": "<div class=\"option_data\">the sequence 01011 is detected</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "the sequence 01110 is detected",
+        "html": "<div class=\"option_data\">the sequence 01110 is detected</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "the sequence 01001 is detected",
+        "html": "<div class=\"option_data\">the sequence 01001 is detected</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=8"
+  },
+  {
+    "number": "Question 40",
+    "text": "The characteristic equation of a system is [latex]s^3 + 3s^2 + (K + 2)s + 3K = 0[/latex] In the root locus plot for the given system, as K varies from 0 to [latex]\\infty[/latex], the break-away\nor break-in point(s) lie within",
+    "html": "<div class=\"question_text\" data-value=\"2\">The characteristic equation of a system is<br/><br/>\n[latex]s^3 + 3s^2 + (K + 2)s + 3K = 0[/latex]<br/><br/>\nIn the root locus plot for the given system, as K varies from 0 to [latex]\\infty[/latex], the break-away\nor break-in point(s) lie within</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - Root Locus",
+    "explanation_text": "[latex]Q(s)=1+G(s)H(s)=0 [/latex] [latex]s^{3}+3s^{2}+2s+ks+3k=0 [/latex] [latex]-k=\\frac{s^{3}+3s^{2}+2s}{s+3}[/latex] [latex] -\\frac{\\mathrm{d} k}{\\mathrm{d} s}=\\frac{(s+3)(3s^{2}+6s+2)-(s^{3}+3s^{2}+2s)}{(s+3)^{2}}=0[/latex] [latex] 3s^{3}+6s^{2}+2s+9s^{2}+18s+6-s^{3}-3s^{2}-2s=0[/latex] [latex] 2s^{3}+12s^{2}+18s+6=0[/latex] [latex] s=-0.46,-3.87,-1.65[/latex] [latex]\\therefore[/latex]\r\nBreak-away point lies between (0, -1), i.e. (-1, 0)",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]Q(s)=1+G(s)H(s)=0 [/latex]<br/>[latex]s^{3}+3s^{2}+2s+ks+3k=0 [/latex]<br/>[latex]-k=\\frac{s^{3}+3s^{2}+2s}{s+3}[/latex]<br/>[latex] -\\frac{\\mathrm{d} k}{\\mathrm{d} s}=\\frac{(s+3)(3s^{2}+6s+2)-(s^{3}+3s^{2}+2s)}{(s+3)^{2}}=0[/latex]<br/>[latex] 3s^{3}+6s^{2}+2s+9s^{2}+18s+6-s^{3}-3s^{2}-2s=0[/latex]<br/>[latex] 2s^{3}+12s^{2}+18s+6=0[/latex]<br/>[latex] s=-0.46,-3.87,-1.65[/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\21d9b24011b4e3c8e2255f873cb12c57.jpg\" style=\"--smush-placeholder-width: 257px; --smush-placeholder-aspect-ratio: 257/188;\"/><br/>[latex]\\therefore[/latex]\r\nBreak-away point lies between (0, -1), i.e. (-1, 0)\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a37.jpg": "images\\21d9b24011b4e3c8e2255f873cb12c57.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "(-1,0)",
+        "html": "<div class=\"option_data\">(-1,0)</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "(-2,-1)",
+        "html": "<div class=\"option_data\">(-2,-1)</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "(-3,-2)",
+        "html": "<div class=\"option_data\">(-3,-2)</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "(-[latex]\\infty[/latex]\n,-3)",
+        "html": "<div class=\"option_data\">(-[latex]\\infty[/latex]\n,-3)</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=8"
+  },
+  {
+    "number": "Question 41",
+    "text": "The components in the circuit given below are ideal. If R = 2 [latex]k\\Omega[/latex] and C = 1 [latex]\\mu F[/latex], the\n-3 dB cut-off frequency of the circuit in Hz is",
+    "html": "<div class=\"question_text\" data-value=\"2\">The components in the circuit given below are ideal. If R = 2 [latex]k\\Omega[/latex] and C = 1 [latex]\\mu F[/latex], the\n-3 dB cut-off frequency of the circuit in Hz is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\744794d7c949e64ef3e157c2c73574e6.jpg\" style=\"--smush-placeholder-width: 357px; --smush-placeholder-aspect-ratio: 357/179;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q41.jpg": "images\\744794d7c949e64ef3e157c2c73574e6.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - Operational Amplifiers",
+    "explanation_text": "Op-amp active filter (LPF) inverting type 3 dB cut-off frequency, [latex]f_{c}=\\frac{1}{2\\pi RC}=\\frac{1}{2\\pi \\times 2\\times 10^{3}\\times 10^{-6}}=\\frac{500}{2\\pi }=79.58Hz[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tOp-amp active filter (LPF) inverting type 3 dB cut-off frequency,<br/>[latex]f_{c}=\\frac{1}{2\\pi RC}=\\frac{1}{2\\pi \\times 2\\times 10^{3}\\times 10^{-6}}=\\frac{500}{2\\pi }=79.58Hz[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "14.92",
+        "html": "<div class=\"option_data\">14.92</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "34.46",
+        "html": "<div class=\"option_data\">34.46</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "59.68",
+        "html": "<div class=\"option_data\">59.68</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "79.58",
+        "html": "<div class=\"option_data\">79.58</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=9"
+  },
+  {
+    "number": "Question 42",
+    "text": "For the modulated signal [latex]x(t)= m(t) \\cos(2 \\pi f_c t)[/latex], the message signal [latex]m(t) = 4 \\cos (1000 \\pi t)[/latex] and the carrier frequency [latex]f_c[/latex] is 1 MHz. The signal [latex]x(t)[/latex] is passed\nthrough a demodulator, as shown in the figure below. The output [latex]y(t)[/latex] of the\ndemodulator is",
+    "html": "<div class=\"question_text\" data-value=\"2\">For the modulated signal [latex]x(t)= m(t) \\cos(2 \\pi f_c t)[/latex], the message signal [latex]m(t) = 4 \\cos (1000 \\pi t)[/latex] and the carrier frequency [latex]f_c[/latex] is 1 MHz. The signal [latex]x(t)[/latex] is passed\nthrough a demodulator, as shown in the figure below. The output [latex]y(t)[/latex] of the\ndemodulator is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\5fe64795d092705961f9992c103d769f.jpg\" style=\"--smush-placeholder-width: 408px; --smush-placeholder-aspect-ratio: 408/163;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q42.jpg": "images\\5fe64795d092705961f9992c103d769f.jpg"
+    },
+    "type": "mcq",
+    "subject": "Communication Systems - Analog Communications",
+    "explanation_text": "Output of multiplier [latex]=x(t)\\cos 2\\pi (f_{c}+40)t=m(t)\\cos 2\\pi f_{c}t\\cdot \\cos2\\pi (f_{c}+40)t[/latex] [latex] =\\frac{m(t)}{2}[\\cos 2\\pi (2f_{c}+40)t+\\cos 2\\pi (40)t][/latex] Given, [latex]m(t)=4\\cos 1000\\pi t[/latex] So, output of multiplier [latex]=2\\cos 2\\pi (500)t[\\cos 2\\pi (2f_{c}+40)t+\\cos 2\\pi (40)t][/latex] [latex]=\\cos 2\\pi (2f_{c}+540)t+\\cos 2\\pi (2f_{c}-460)t+\\cos 2\\pi (540)t+\\cos 2\\pi (460)t[/latex] Output of Low pass filter [latex]=\\cos [2\\pi (460)]t[/latex] [latex] =\\cos 920\\pi t[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tOutput of multiplier<br/>[latex]=x(t)\\cos 2\\pi (f_{c}+40)t=m(t)\\cos 2\\pi f_{c}t\\cdot \\cos2\\pi (f_{c}+40)t[/latex]<br/>[latex] =\\frac{m(t)}{2}[\\cos 2\\pi (2f_{c}+40)t+\\cos 2\\pi (40)t][/latex]<br/>Given, [latex]m(t)=4\\cos 1000\\pi t[/latex]<br/>So, output of multiplier<br/>[latex]=2\\cos 2\\pi (500)t[\\cos 2\\pi (2f_{c}+40)t+\\cos 2\\pi (40)t][/latex]<br/>[latex]=\\cos 2\\pi (2f_{c}+540)t+\\cos 2\\pi (2f_{c}-460)t+\\cos 2\\pi (540)t+\\cos 2\\pi (460)t[/latex]<br/>Output of Low pass filter<br/>[latex]=\\cos [2\\pi (460)]t[/latex]<br/>[latex] =\\cos 920\\pi t[/latex]\r\n\r\n\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\cos (460 \\pi t)[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\cos (460 \\pi t)[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\cos (920 \\pi t)[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\cos (920 \\pi t)[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\cos (1000 \\pi t)[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\cos (1000 \\pi t)[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\cos (540 \\pi t)[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\cos (540 \\pi t)[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=9"
+  },
+  {
+    "number": "Question 43",
+    "text": "For an infinitesimally small dipole in free space, the electric field [latex]E_\\theta[/latex] in the far field\nis proportional to [latex](e^{-jkr}/r) \\sin \\theta[/latex], where [latex]k = 2 \\pi /\\lambda[/latex]. A vertical infinitesimally small\nelectric dipole ([latex]\\delta l \\lt \\lt \\lambda[/latex]) is placed at a distance [latex]h(h \\gt 0)[/latex] above an infinite ideal\nconducting plane, as shown in the figure. The minimum value of h, for which one\nof the maxima in the far field radiation pattern occurs at [latex]\\theta =60^{\\circ}[/latex], is",
+    "html": "<div class=\"question_text\" data-value=\"2\">For an infinitesimally small dipole in free space, the electric field [latex]E_\\theta[/latex] in the far field\nis proportional to [latex](e^{-jkr}/r) \\sin \\theta[/latex], where [latex]k = 2 \\pi /\\lambda[/latex]. A vertical infinitesimally small\nelectric dipole ([latex]\\delta l \\lt \\lt \\lambda[/latex]) is placed at a distance [latex]h(h \\gt 0)[/latex] above an infinite ideal\nconducting plane, as shown in the figure. The minimum value of h, for which one\nof the maxima in the far field radiation pattern occurs at [latex]\\theta =60^{\\circ}[/latex], is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\cd24f050d7752cb051a586cdddb133c6.jpg\" style=\"--smush-placeholder-width: 258px; --smush-placeholder-aspect-ratio: 258/244;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q43.jpg": "images\\cd24f050d7752cb051a586cdddb133c6.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electromagnetics - Antennas",
+    "explanation_text": "[latex]\\begin{aligned}\\left | \\text{Total E }\\right |&=\\left | (E_{\\text{single element}}) \\right | \\left | (A.F.) \\right | \\\\ \\left | (A.F.) \\right |&=\\frac{\\sin\\left ( N\\frac{\\psi }{2} \\right )}{\\sin (\\frac{\\psi }{2})}=\\frac{\\sin \\left ( 2\\frac{\\psi }{2} \\right )}{\\sin \\left ( \\frac{\\psi }{2} \\right )} \\\\ & =\\frac{2\\sin \\left ( \\frac{\\psi }{2} \\right )\\cos (\\frac{\\psi }{2})}{\\sin \\frac{\\psi }{2}} \\\\ & =2\\cos (\\frac{\\psi }{2})\\\\  \\left | A.F_{N} \\right | &=\\frac{A.F}{A.F_{max}}=\\frac{2\\cos (\\frac{\\psi }{2})}{2} \\\\ &=\\left | \\cos \\left ( \\frac{\\psi }{2} \\right ) \\right | \\\\\r\n\\text{where, }\\psi &=\\beta d\\cos \\theta =\\frac{2\\pi }{\\lambda }(2h)\\cos \\theta  \\\\ \\left.\\begin{matrix} \\left | A.F_{N} \\right |_{\\theta =60^{\\circ}} \\end{matrix}\\right|& =\\left | \\cos (\\frac{2\\pi }{\\lambda }h\\cos 60^{\\circ}) \\right |\\\\ &=\\left | \\cos \\left ( \\frac{\\pi h}{\\lambda } \\right ) \\right |\\\\ \\cos \\theta  \\text{ is maximum ,where   } \\theta &=n\\pi \\;\\; n=0,1,2..\\\\ \\frac{\\pi h}{\\lambda }&=n\\pi \\Rightarrow h=n\\lambda \\\\ \\Rightarrow \\; \\text{For } n=1,  \\;\\; h_{min}&=\\lambda \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\dde0a463ca9463a8a464d874979fe115.jpg\" style=\"--smush-placeholder-width: 326px; --smush-placeholder-aspect-ratio: 326/187;\"/><br/>[latex]\\begin{aligned}\\left | \\text{Total E }\\right |&amp;=\\left | (E_{\\text{single element}}) \\right | \\left | (A.F.) \\right | \\\\ \\left | (A.F.) \\right |&amp;=\\frac{\\sin\\left ( N\\frac{\\psi }{2} \\right )}{\\sin (\\frac{\\psi }{2})}=\\frac{\\sin \\left ( 2\\frac{\\psi }{2} \\right )}{\\sin \\left ( \\frac{\\psi }{2} \\right )} \\\\ &amp; =\\frac{2\\sin \\left ( \\frac{\\psi }{2} \\right )\\cos (\\frac{\\psi }{2})}{\\sin \\frac{\\psi }{2}} \\\\ &amp; =2\\cos (\\frac{\\psi }{2})\\\\  \\left | A.F_{N} \\right | &amp;=\\frac{A.F}{A.F_{max}}=\\frac{2\\cos (\\frac{\\psi }{2})}{2} \\\\ &amp;=\\left | \\cos \\left ( \\frac{\\psi }{2} \\right ) \\right | \\\\\r\n\\text{where, }\\psi &amp;=\\beta d\\cos \\theta =\\frac{2\\pi }{\\lambda }(2h)\\cos \\theta  \\\\ \\left.\\begin{matrix} \\left | A.F_{N} \\right |_{\\theta =60^{\\circ}} \\end{matrix}\\right|&amp; =\\left | \\cos (\\frac{2\\pi }{\\lambda }h\\cos 60^{\\circ}) \\right |\\\\ &amp;=\\left | \\cos \\left ( \\frac{\\pi h}{\\lambda } \\right ) \\right |\\\\ \\cos \\theta  \\text{ is maximum ,where   } \\theta &amp;=n\\pi \\;\\; n=0,1,2..\\\\ \\frac{\\pi h}{\\lambda }&amp;=n\\pi \\Rightarrow h=n\\lambda \\\\ \\Rightarrow \\; \\text{For } n=1,  \\;\\; h_{min}&amp;=\\lambda \\end{aligned}[/latex]\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a41.jpg": "images\\dde0a463ca9463a8a464d874979fe115.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\lambda[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\lambda[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "0.5[latex]\\lambda[/latex]",
+        "html": "<div class=\"option_data\">0.5[latex]\\lambda[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0.25[latex]\\lambda[/latex]",
+        "html": "<div class=\"option_data\">0.25[latex]\\lambda[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0.75[latex]\\lambda[/latex]",
+        "html": "<div class=\"option_data\">0.75[latex]\\lambda[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=9"
+  },
+  {
+    "number": "Question 44",
+    "text": "In the voltage regulator shown below, [latex]V_l[/latex] is the unregulated at 15 V. Assume [latex]V_{BE}[/latex]= 0.7 V\nand the base current is negligible for both the BJTs. If the regulated output [latex]V_O[/latex] is 9 V,\nthe value of [latex]R_2[/latex] is ________ [latex]\\Omega[/latex].",
+    "html": "<div class=\"question_text\" data-value=\"2\">In the voltage regulator shown below, [latex]V_l[/latex] is the unregulated at 15 V. Assume [latex]V_{BE}[/latex]= 0.7 V\nand the base current is negligible for both the BJTs. If the regulated output [latex]V_O[/latex] is 9 V,\nthe value of [latex]R_2[/latex] is ________ [latex]\\Omega[/latex]. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\f8d9ccb098f2e4b07fe5e06e906560a6.jpg\" style=\"--smush-placeholder-width: 466px; --smush-placeholder-aspect-ratio: 466/365;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q44.jpg": "images\\f8d9ccb098f2e4b07fe5e06e906560a6.jpg"
+    },
+    "type": "numerical",
+    "subject": "Analog Circuits - BJT Analysis",
+    "explanation_text": "[latex]\\begin{aligned}9\\times \\frac{R_{2}}{R_{2}+1K\\Omega }&=4 \\\\ 9R_{2}&=4R_{2}+4K\\Omega\\\\ 5R_{2}&=4K \\\\ R_{2}&=\\frac{4000}{5}=800\\Omega \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}9\\times \\frac{R_{2}}{R_{2}+1K\\Omega }&amp;=4 \\\\ 9R_{2}&amp;=4R_{2}+4K\\Omega\\\\ 5R_{2}&amp;=4K \\\\ R_{2}&amp;=\\frac{4000}{5}=800\\Omega \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 800.0,
+    "answer_max": 800.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=9"
+  },
+  {
+    "number": "Question 45",
+    "text": "The magnetic field of a uniform plane wave in vacuum is given by [latex]\\vec{H}(x,y,z,t)=(\\hat{a}_x+2\\hat{a}_y+b\\hat{a}_z) \\cos (\\omega t+3x-y-z)[/latex] The value of b is _____",
+    "html": "<div class=\"question_text\" data-value=\"2\">The magnetic field of a uniform plane wave in vacuum is given by <br/><br/>[latex]\\vec{H}(x,y,z,t)=(\\hat{a}_x+2\\hat{a}_y+b\\hat{a}_z) \\cos (\\omega t+3x-y-z)[/latex]<br/><br/> The value of b is _____</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Electromagnetics - Plane waves and Properties",
+    "explanation_text": "For uniform plane wave [latex]\\hat{a}_{H}\\cdot \\hat{a}_{\\rho }=0[/latex] [latex]\\hat{a}_{H}[/latex]is unit vector in magnetic field direction [latex]\\hat{a}_{\\rho }[/latex] is unit vector in power flow direction [latex]\\hat{a}_{H }=\\frac{1\\hat{a}_{x}+2\\hat{a}_{y}+b\\hat{a}_{z}}{\\sqrt{1^{2}+2^{2}+b^{2}}} [/latex] [latex]\\hat{a}_{\\rho }=\\frac{-3\\hat{a}_{x}+\\hat{a}_{y}+\\hat{a}_{z}}{\\sqrt{3^{2}+1^{2}+1^{2}}}[/latex] [latex] \\hat{a}_{H}\\cdot \\hat{a}_{\\rho }=0 (\\hat{a}_{x}+2\\hat{a}_{y}+b\\hat{a}_{z})\\cdot (-3\\hat{a}_{x}+\\hat{a}_{y}+\\hat{a}_{z})=0[/latex] [latex] -3+2+b=0[/latex] [latex] b=1[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor uniform plane wave<br/>[latex]\\hat{a}_{H}\\cdot \\hat{a}_{\\rho }=0[/latex]\n<br/>[latex]\\hat{a}_{H}[/latex]is unit vector in magnetic field direction [latex]\\hat{a}_{\\rho }[/latex] is unit vector in power flow direction<br/>\n\n[latex]\\hat{a}_{H }=\\frac{1\\hat{a}_{x}+2\\hat{a}_{y}+b\\hat{a}_{z}}{\\sqrt{1^{2}+2^{2}+b^{2}}} [/latex]<br/>[latex]\\hat{a}_{\\rho }=\\frac{-3\\hat{a}_{x}+\\hat{a}_{y}+\\hat{a}_{z}}{\\sqrt{3^{2}+1^{2}+1^{2}}}[/latex]<br/>[latex] \\hat{a}_{H}\\cdot \\hat{a}_{\\rho }=0 (\\hat{a}_{x}+2\\hat{a}_{y}+b\\hat{a}_{z})\\cdot (-3\\hat{a}_{x}+\\hat{a}_{y}+\\hat{a}_{z})=0[/latex]<br/>[latex] -3+2+b=0[/latex]<br/>[latex] b=1[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 1.0,
+    "answer_max": 1.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=9"
+  },
+  {
+    "number": "Question 46",
+    "text": "For a 2-port network consisting of an ideal lossless transformer, the parameter [latex]S_{21}[/latex] (rounded\noff to two decimal places) for a reference impedance of 10 [latex]\\Omega[/latex], is _____.",
+    "html": "<div class=\"question_text\" data-value=\"2\">For a 2-port network consisting of an ideal lossless transformer, the parameter [latex]S_{21}[/latex] (rounded\noff to two decimal places) for a reference impedance of 10 [latex]\\Omega[/latex], is _____. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\428664d608ce3dc12912ca34e07fe3b1.jpg\" style=\"--smush-placeholder-width: 239px; --smush-placeholder-aspect-ratio: 239/157;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q46.jpg": "images\\428664d608ce3dc12912ca34e07fe3b1.jpg"
+    },
+    "type": "numerical",
+    "subject": "Network Theory - Two Port Networks",
+    "explanation_text": "For ideal transformer of n : 1, the scattering matrix is [latex]\\begin{bmatrix} S_{11} &S_{12} \\\\ S_{21} & S_{22} \\end{bmatrix}=\\begin{bmatrix} \\frac{n^{2}-1}{n^{2}+1} &\\frac{2n}{n6{}} \\\\ & \\end{bmatrix}[/latex] [latex]S_{21}=\\frac{2n}{n^{2}+1}=\\frac{2(2)}{2^2+1}=\\frac{4}{5}=0.8[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor ideal transformer of n : 1, the scattering matrix is<br/> [latex]\\begin{bmatrix} S_{11} &amp;S_{12} \\\\ S_{21} &amp; S_{22} \\end{bmatrix}=\\begin{bmatrix} \\frac{n^{2}-1}{n^{2}+1} &amp;\\frac{2n}{n6{}} \\\\ &amp; \\end{bmatrix}[/latex]<br/>[latex]S_{21}=\\frac{2n}{n^{2}+1}=\\frac{2(2)}{2^2+1}=\\frac{4}{5}=0.8[/latex]\n\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 0.8,
+    "answer_max": 0.8,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=10"
+  },
+  {
+    "number": "Question 47",
+    "text": "[latex]S_{PM}(t)\\; and \\; S_{FM}(t)[/latex] as defined below, are the phase modulated and the frequency modulated\nwaveforms, respectively, corresponding to the message signal m(t) shown in the figure. [latex]S_{PM}(t)= \\cos (1000 \\pi t+K_p m(t))[/latex] and [latex]S_{FM}(t)= \\cos (1000 \\pi t+K_f \\int_{-\\infty }^{t} m(\\tau )d\\tau )[/latex] where [latex]K_p[/latex] is the phase deviation constant in radians/volt and [latex]K_f[/latex] is the frequency deviation\nconstant in radians/second/volt. If the highest instantaneous frequencies of [latex]S_{PM}(t)\\; and \\; S_{FM}(t)[/latex] are same, then the value of the ratio  [latex]\\frac{K_p}{K_f}[/latex] is ______ seconds.",
+    "html": "<div class=\"question_text\" data-value=\"2\">[latex]S_{PM}(t)\\; and \\; S_{FM}(t)[/latex] as defined below, are the phase modulated and the frequency modulated\nwaveforms, respectively, corresponding to the message signal m(t) shown in the figure.<br/><br/>[latex]S_{PM}(t)= \\cos (1000 \\pi t+K_p m(t))[/latex]  <br/> and [latex]S_{FM}(t)= \\cos (1000 \\pi t+K_f \\int_{-\\infty }^{t} m(\\tau )d\\tau )[/latex] <br/><br/>\nwhere [latex]K_p[/latex] is the phase deviation constant in radians/volt and [latex]K_f[/latex] is the frequency deviation\nconstant in radians/second/volt. If the highest instantaneous frequencies of [latex]S_{PM}(t)\\; and \\; S_{FM}(t)[/latex] are same, then the value of the ratio  [latex]\\frac{K_p}{K_f}[/latex] is ______ seconds. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\d1d0295919309b79a631c3520ca1c791.jpg\" style=\"--smush-placeholder-width: 267px; --smush-placeholder-aspect-ratio: 267/183;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q47.jpg": "images\\d1d0295919309b79a631c3520ca1c791.jpg"
+    },
+    "type": "numerical",
+    "subject": "Communication Systems - Analog Communications",
+    "explanation_text": "[latex]\\begin{aligned}S(t)_{pm}&=A_c \\cos [2\\pi f_{c}t+k_pm(t)]\\\\ S(t)_{Fm}&=A_c \\cos [2\\pi f_{c}t+k_{f}\\int_{0}^{\\infty }m(t)dt]\\end{aligned}[/latex] Instantaneous frequency are equal [latex]\\begin{aligned}f_{i}&=\\frac{1}{2\\pi }\\frac{\\mathrm{d} }{\\mathrm{d} t}\\theta (t)\\\\f_{iPM}&=f_{c}+\\frac{K_p}{2\\pi }\\frac{\\mathrm{d} }{\\mathrm{d} t} m(t)\\\\ f_{iFM}&=f_{c}+\\frac{K_f}{2\\pi }m(t)\\\\ \\text{Given that,  } (f_{iPM})_{max}&=(f_{iFM})_{max} \\\\ f_{c}+\\frac{k_P}{2\\pi}[\\frac{\\mathrm{d} }{\\mathrm{d} t}m(t)]_{max}&=f_{c}+\\frac{K_{f}}{2\\pi }[m(t)]_{max}\\\\ \\left.\\begin{matrix} \\frac{k_P}{2\\pi}\\frac{\\mathrm{d} }{\\mathrm{d} t}m(t) \\end{matrix}\\right|_{max} &= \\left. \\begin{matrix}  \\frac{K_{f}}{2\\pi }[m(t)] \\end{matrix}\\right|_{max}\\\\ \\left.\\begin{matrix} \\frac{\\mathrm{d} }{\\mathrm{d} t}m(t) \\end{matrix}\\right|_{max} &=5,  \\left.\\begin{matrix} m(t) \\end{matrix}\\right|_{max}=10 \\\\ 5k_{p}&=10k_{f} \\\\ \\frac{k_{p}}{k_{f}}&=2\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}S(t)_{pm}&amp;=A_c \\cos [2\\pi f_{c}t+k_pm(t)]\\\\ S(t)_{Fm}&amp;=A_c \\cos [2\\pi f_{c}t+k_{f}\\int_{0}^{\\infty }m(t)dt]\\end{aligned}[/latex]<br/>Instantaneous frequency are equal<br/>[latex]\\begin{aligned}f_{i}&amp;=\\frac{1}{2\\pi }\\frac{\\mathrm{d} }{\\mathrm{d} t}\\theta (t)\\\\f_{iPM}&amp;=f_{c}+\\frac{K_p}{2\\pi }\\frac{\\mathrm{d} }{\\mathrm{d} t} m(t)\\\\ f_{iFM}&amp;=f_{c}+\\frac{K_f}{2\\pi }m(t)\\\\ \\text{Given that,  } (f_{iPM})_{max}&amp;=(f_{iFM})_{max} \\\\ f_{c}+\\frac{k_P}{2\\pi}[\\frac{\\mathrm{d} }{\\mathrm{d} t}m(t)]_{max}&amp;=f_{c}+\\frac{K_{f}}{2\\pi }[m(t)]_{max}\\\\ \\left.\\begin{matrix} \\frac{k_P}{2\\pi}\\frac{\\mathrm{d} }{\\mathrm{d} t}m(t) \\end{matrix}\\right|_{max} &amp;= \\left. \\begin{matrix}  \\frac{K_{f}}{2\\pi }[m(t)] \\end{matrix}\\right|_{max}\\\\ \\left.\\begin{matrix} \\frac{\\mathrm{d} }{\\mathrm{d} t}m(t) \\end{matrix}\\right|_{max} &amp;=5,  \\left.\\begin{matrix} m(t) \\end{matrix}\\right|_{max}=10 \\\\ 5k_{p}&amp;=10k_{f} \\\\ \\frac{k_{p}}{k_{f}}&amp;=2\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 2.0,
+    "answer_max": 2.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=10"
+  },
+  {
+    "number": "Question 48",
+    "text": "In a digital communication system, a symbol S randomly chosen from the set ([latex]s_1, s_2, s_3, s_4[/latex])\nis transmitted. It is given that [latex]s_1=-3, s_2=-1, s_3=+1[/latex] and [latex]s_4=+2[/latex]. The received\nsymbol is Y = S + W. W is a zero-mean unit-variance Gaussian random variable and\nis independent of S. [latex]P_i[/latex] is the conditional probability of symbol error for the maximum\nlikelihood (ML) decoding when the transmitted symbol [latex]S=s_i[/latex]. The index i for which the\nconditional symbol error probability [latex]P_i[/latex] is the highest is ______.",
+    "html": "<div class=\"question_text\" data-value=\"2\">In a digital communication system, a symbol S randomly chosen from the set ([latex]s_1, s_2, s_3, s_4[/latex])\nis transmitted. It is given that [latex]s_1=-3, s_2=-1, s_3=+1[/latex] and [latex]s_4=+2[/latex]. The received\nsymbol is Y = S + W. W is a zero-mean unit-variance Gaussian random variable and\nis independent of S. [latex]P_i[/latex] is the conditional probability of symbol error for the maximum\nlikelihood (ML) decoding when the transmitted symbol [latex]S=s_i[/latex]. The index i for which the\nconditional symbol error probability [latex]P_i[/latex] is the highest is ______.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Communication Systems - Random Processes",
+    "explanation_text": "Since the noise variable is Gaussian with zero mean and ML decoding is used, the\r\ndecision boundary between two adjacent signal points will be their arithmetic mean.\r\nIn the following graphs, the shaded area indicates the conditional probability of decoding\r\na symbol correctly when it is transmitted. By comparing the above graphs, we can conclude that [latex]P_{3}[/latex] is larger among the four.\r\nEnd of Solution",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tSince the noise variable is Gaussian with zero mean and ML decoding is used, the\r\ndecision boundary between two adjacent signal points will be their arithmetic mean.\r\nIn the following graphs, the shaded area indicates the conditional probability of decoding\r\na symbol correctly when it is transmitted.<br/><br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\3c35fcd4044624321b77ce2278b9f306.jpg\" style=\"--smush-placeholder-width: 346px; --smush-placeholder-aspect-ratio: 346/407;\"/><br/>\r\nBy comparing the above graphs, we can conclude that [latex]P_{3}[/latex] is larger among the four.\r\nEnd of Solution\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20201/a48.jpg": "images\\3c35fcd4044624321b77ce2278b9f306.jpg"
+    },
+    "answer_min": 3.0,
+    "answer_max": 3.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=10"
+  },
+  {
+    "number": "Question 49",
+    "text": "A system with transfer function [latex]G(s)=\\frac{1}{(s+1)(s+a)}, a \\gt 0[/latex] is subjected an input [latex]5\\cos 3t[/latex].\nThe steady state output of the system is [latex]\\frac{1}{\\sqrt{10}} \\cos (3t-1.892)[/latex]. The value of [latex]a[/latex] is ____.",
+    "html": "<div class=\"question_text\" data-value=\"2\">A system with transfer function [latex]G(s)=\\frac{1}{(s+1)(s+a)}, a \\gt 0[/latex] is subjected an input [latex]5\\cos 3t[/latex].\nThe steady state output of the system is [latex]\\frac{1}{\\sqrt{10}} \\cos (3t-1.892)[/latex]. The value of [latex]a[/latex] is ____.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Control Systems - Time Response Analysis",
+    "explanation_text": "Given that, [latex]\\begin{aligned}G(j\\omega )&=\\frac{1}{(1+j\\omega )(\\alpha +j\\omega )} \\\\ \\left |G(j\\omega ) \\right |&=\\frac{1}{\\sqrt{(\\omega ^{2}+1)(\\omega ^{2}+\\alpha ^{2})}} \\\\ \\text{According to }& \\text{question,}\\\\ \\left | G(j\\omega ) \\right |_{\\omega =3}&=\\frac{1}{5\\sqrt{10}}\\\\ \\Rightarrow \\frac{1}{\\sqrt{(\\omega ^{2}+1)(\\omega ^{2}+\\alpha ^{2})}}&=\\frac{1}{5\\sqrt{10}} \\\\ \\Rightarrow \\frac{1}{\\sqrt{10(a^{2}+9)}}&=\\frac{1}{5\\sqrt{10}} \\alpha ^{2}+9=25 \\\\ \\alpha ^{2}&=16 \\\\ \\alpha &=4\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven that,<br/>[latex]\\begin{aligned}G(j\\omega )&amp;=\\frac{1}{(1+j\\omega )(\\alpha +j\\omega )} \\\\ \\left |G(j\\omega ) \\right |&amp;=\\frac{1}{\\sqrt{(\\omega ^{2}+1)(\\omega ^{2}+\\alpha ^{2})}} \\\\ \\text{According to }&amp; \\text{question,}\\\\ \\left | G(j\\omega ) \\right |_{\\omega =3}&amp;=\\frac{1}{5\\sqrt{10}}\\\\ \\Rightarrow \\frac{1}{\\sqrt{(\\omega ^{2}+1)(\\omega ^{2}+\\alpha ^{2})}}&amp;=\\frac{1}{5\\sqrt{10}} \\\\ \\Rightarrow \\frac{1}{\\sqrt{10(a^{2}+9)}}&amp;=\\frac{1}{5\\sqrt{10}} \\alpha ^{2}+9=25 \\\\ \\alpha ^{2}&amp;=16 \\\\ \\alpha &amp;=4\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 3.95,
+    "answer_max": 4.05,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=10"
+  },
+  {
+    "number": "Question 50",
+    "text": "For the components in the sequential circuit shown below, [latex]t_{pd}[/latex] is the propagation delay, [latex]t_{setup}[/latex] is the setup time, and [latex]t_{hold}[/latex] is the hold time. The maximum clock frequency (rounded\noff to the nearest integer), at which the given circuit can operate reliably, is ____ MHz.",
+    "html": "<div class=\"question_text\" data-value=\"2\">For the components in the sequential circuit shown below, [latex]t_{pd}[/latex] is the propagation delay, [latex]t_{setup}[/latex] is the setup time, and [latex]t_{hold}[/latex] is the hold time. The maximum clock frequency (rounded\noff to the nearest integer), at which the given circuit can operate reliably, is ____ MHz.  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\f7c058e6d13b2c57ae7d6a5a861615b9.jpg\" style=\"--smush-placeholder-width: 380px; --smush-placeholder-aspect-ratio: 380/329;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q50.jpg": "images\\f7c058e6d13b2c57ae7d6a5a861615b9.jpg"
+    },
+    "type": "numerical",
+    "subject": "Digital Circuits - Sequential Circuits",
+    "explanation_text": "Total propagation delay  [latex]=(t_{pd}+t_{set-up})_{max}=8ns+5ns=13ns[/latex] [latex] \\therefore[/latex] Frequency of operations [latex]=\\frac{1000}{13}MHz=76.92MHz[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tTotal propagation delay  [latex]=(t_{pd}+t_{set-up})_{max}=8ns+5ns=13ns[/latex]<br/>[latex] \\therefore[/latex] Frequency of operations [latex]=\\frac{1000}{13}MHz=76.92MHz[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 76.0,
+    "answer_max": 77.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=10"
+  },
+  {
+    "number": "Question 51",
+    "text": "For the solid S shown below, the value of [latex]\\int \\int_S \\int x dxdydz[/latex] (rounded off to two decimal\nplaces) is ______.",
+    "html": "<div class=\"question_text\" data-value=\"2\">For the solid S shown below, the value of [latex]\\int \\int_S \\int x dxdydz[/latex] (rounded off to two decimal\nplaces) is ______. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\35f97b5207355a287ba5e7b7bc8f830a.jpg\" style=\"--smush-placeholder-width: 276px; --smush-placeholder-aspect-ratio: 276/257;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q51.jpg": "images\\35f97b5207355a287ba5e7b7bc8f830a.jpg"
+    },
+    "type": "numerical",
+    "subject": "Engineering Mathematics - Calculus",
+    "explanation_text": "x : 0 to 3 y : 0 to 1 z : 0 to 1-y =[latex]\\int_{y=0}^{1}\\int_{z=0}^{1-y}\\int_{x=0}^{3}x\\, dx\\, dy\\, dz=\\int_{y=0}^{1}\\int_{0}^{1-y}\\left ( \\frac{x^{2}}{2} \\right )^{3}_{0}dz\\, dy[/latex] =[latex]\\int_{0}^{1}\\frac{9}{2}(z)_{0}^{1-y}dy=\\frac{9}{2}\\int_{0}^{1}(1-y)dy=\\frac{9}{2}\\left ( y-\\frac{y^{2}}{2} \\right )_{0}^{1}[/latex] =[latex]\\frac{9}{2}\\left ( 1-\\frac{1}{2} \\right )=\\frac{9}{4}= 2.25[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tx : 0 to 3<br/>\r\ny : 0 to 1<br/>\r\nz : 0 to 1-y<br/>=[latex]\\int_{y=0}^{1}\\int_{z=0}^{1-y}\\int_{x=0}^{3}x\\, dx\\, dy\\, dz=\\int_{y=0}^{1}\\int_{0}^{1-y}\\left ( \\frac{x^{2}}{2} \\right )^{3}_{0}dz\\, dy[/latex]<br/>=[latex]\\int_{0}^{1}\\frac{9}{2}(z)_{0}^{1-y}dy=\\frac{9}{2}\\int_{0}^{1}(1-y)dy=\\frac{9}{2}\\left ( y-\\frac{y^{2}}{2} \\right )_{0}^{1}[/latex]<br/>=[latex]\\frac{9}{2}\\left ( 1-\\frac{1}{2} \\right )=\\frac{9}{4}= 2.25[/latex]\r\n\r\n\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 2.25,
+    "answer_max": 2.25,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=11"
+  },
+  {
+    "number": "Question 52",
+    "text": "[latex]X(\\omega )[/latex] is the Fourier transform of [latex]x(t)[/latex] shown below. The value of [latex]\\int_{-\\infty }^{\\infty }|X(\\omega )|^2 d\\omega[/latex]  (rounded\noff to two decimal places) is ______.",
+    "html": "<div class=\"question_text\" data-value=\"2\">[latex]X(\\omega )[/latex] is the Fourier transform of [latex]x(t)[/latex] shown below. The value of [latex]\\int_{-\\infty }^{\\infty }|X(\\omega )|^2 d\\omega[/latex]  (rounded\noff to two decimal places) is ______. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\ee2fc66ca86fea49830af57c44b087a2.jpg\" style=\"--smush-placeholder-width: 219px; --smush-placeholder-aspect-ratio: 219/178;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q52.jpg": "images\\ee2fc66ca86fea49830af57c44b087a2.jpg"
+    },
+    "type": "numerical",
+    "subject": "Signals and Systems - Fourier Transforms, Frequency Response and Correlation",
+    "explanation_text": "[latex]\\begin{aligned} \\int_{-\\infty }^{\\infty }\\left | X(\\omega ) \\right |^{2}d\\omega &=2\\pi \\int_{-\\infty }^{\\infty }\\left | x(t) \\right |^{2}dt \\\\ &=2\\pi \\int_{-\\infty }^{\\infty }\\left | y(t) \\right |^{2}\\\\      &=2\\times 2\\pi \\int_{-2}^{0}\\left | y(t) \\right |^{2}dt\\\\      &=2\\times 2\\pi\\left [ \\int_{-2}^{-1}(t+2)^{2}dt+\\int_{-1}^{0}(2t+3)^{2}dt \\right ]\\\\&=4\\pi \\left [\\left \\{ \\frac{(t+2)^{3}}{3} \\right \\} _{-1}^{-2}+\\left \\{ \\frac{(2t+3)^3}{3\\times 2} \\right \\}_{0}^{-1} \\right ]\\\\&=4\\pi \\left [ \\frac{1-0}{3}+\\frac{3^{3}-1}{6} \\right ]\\\\&=4\\pi \\left [ \\frac{1}{3}+\\frac{26}{6} \\right ]\\\\&=     4\\pi \\times \\left [ \\frac{1}{3}+\\frac{26}{6} \\right ] \\\\ &=4\\pi \\times \\left [ \\frac{1}{3}+\\frac{13}{3} \\right ]\\\\&=4\\pi \\times \\frac{14}{3} \\\\&=\\frac{56\\pi }{3}=58.61\\end{aligned} [/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} \\int_{-\\infty }^{\\infty }\\left | X(\\omega ) \\right |^{2}d\\omega &amp;=2\\pi \\int_{-\\infty }^{\\infty }\\left | x(t) \\right |^{2}dt \\\\ &amp;=2\\pi \\int_{-\\infty }^{\\infty }\\left | y(t) \\right |^{2}\\\\      &amp;=2\\times 2\\pi \\int_{-2}^{0}\\left | y(t) \\right |^{2}dt\\\\      &amp;=2\\times 2\\pi\\left [ \\int_{-2}^{-1}(t+2)^{2}dt+\\int_{-1}^{0}(2t+3)^{2}dt \\right ]\\\\&amp;=4\\pi \\left [\\left \\{ \\frac{(t+2)^{3}}{3} \\right \\} _{-1}^{-2}+\\left \\{ \\frac{(2t+3)^3}{3\\times 2} \\right \\}_{0}^{-1} \\right ]\\\\&amp;=4\\pi \\left [ \\frac{1-0}{3}+\\frac{3^{3}-1}{6} \\right ]\\\\&amp;=4\\pi \\left [ \\frac{1}{3}+\\frac{26}{6} \\right ]\\\\&amp;=     4\\pi \\times \\left [ \\frac{1}{3}+\\frac{26}{6} \\right ] \\\\ &amp;=4\\pi \\times \\left [ \\frac{1}{3}+\\frac{13}{3} \\right ]\\\\&amp;=4\\pi \\times \\frac{14}{3} \\\\&amp;=\\frac{56\\pi }{3}=58.61\\end{aligned} [/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 58.5,
+    "answer_max": 58.8,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=11"
+  },
+  {
+    "number": "Question 53",
+    "text": "The transfer function of a stable discrete-time LTI system is [latex]H(z)=\\frac{K(z-\\alpha )}{z+0.5}[/latex], where K\nand [latex]\\alpha[/latex] are real numbers. The value of [latex]\\alpha[/latex] (rounded off to one decimal place) with [latex]|\\alpha| \\gt 1[/latex],\nfor which the magnitude response of the system is constant over all frequencies, is _____.",
+    "html": "<div class=\"question_text\" data-value=\"2\">The transfer function of a stable discrete-time LTI system is [latex]H(z)=\\frac{K(z-\\alpha )}{z+0.5}[/latex], where K\nand [latex]\\alpha[/latex] are real numbers. The value of [latex]\\alpha[/latex] (rounded off to one decimal place) with [latex]|\\alpha| \\gt 1[/latex],\nfor which the magnitude response of the system is constant over all frequencies, is _____.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Signals and Systems - Z-Transform",
+    "explanation_text": "System is all-pass filter. For digital all-pass filter, condition is [latex]\\text{zero}=\\frac{1}{\\text{pole}^{*}}\\; \\; ...(i)[/latex] By given transfer function, [latex]\\text{zero}=\\alpha [/latex] [latex] \\text{Pole}=-0.5 [/latex] using condition(i), [latex] \\alpha =\\frac{1}{-0.5}=-2[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tSystem is all-pass filter.<br/>For digital all-pass filter, condition is<br/>\r\n[latex]\\text{zero}=\\frac{1}{\\text{pole}^{*}}\\; \\; ...(i)[/latex]<br/>By given transfer function,<br/>\r\n[latex]\\text{zero}=\\alpha [/latex]<br/>[latex] \\text{Pole}=-0.5 [/latex]<br/>using condition(i),<br/>[latex] \\alpha =\\frac{1}{-0.5}=-2[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": -2.0,
+    "answer_max": -2.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=11"
+  },
+  {
+    "number": "Question 54",
+    "text": "X is a random variable with uniform probability density function in the interval [-2,10]. For Y = 2X-6, the conditional probability [latex]P(Y \\leq 7|X \\geq 5)[/latex] (rounded off to three decimal places) is _____.",
+    "html": "<div class=\"question_text\" data-value=\"2\">X is a random variable with uniform probability density function in the interval [-2,10]. For Y = 2X-6, the conditional probability [latex]P(Y \\leq 7|X \\geq 5)[/latex] (rounded off to three decimal places) is _____.</div>",
+    "images": {},
+    "type": "numerical",
+    "subject": "Communication Systems - Random Processes",
+    "explanation_text": "[latex]x[/latex] follows uniform distribution over [-2, 10] [latex]\\begin{aligned} \\therefore \\; f(x)&=\\frac{1}{b-a}=\\frac{1}{10-(-2)}=\\frac{1}{12}\\\\ \\text{Given: } y &= 2x - 6\\\\ \\Rightarrow \\; x&=\\frac{y+6}{2}\\\\ \\text{For } y = 7 \\\\ x&=\\frac{7+6}{2}=\\frac{13}{2}=6.5\\\\ P\\left [ \\frac{y\\lt7}{x\\gt 5} \\right ]&=P\\left [ \\frac{x\\lt6.5}{x\\gt 5} \\right ] \\\\ &=\\frac{P\\left [ x\\gt 5\\, and\\, x\\lt6.5 \\right ]}{P\\left [ x\\gt 5 \\right ]} \\\\ &=\\frac{P\\left [ 5\\lt x \\lt 6.5 \\right ]}{P[x\\gt 5]} \\\\ &=\\frac{\\int_{5}^{6.5}f(x)dx}{\\int_{5}^{10}F(x)dx} \\\\ &=\\frac{\\int_{5}^{6.5}\\frac{1}{12}dx}{\\int_{5}^{10}\\frac{1}{12}dx} \\\\ &=\\frac{(x)_{6.5}^{5}}{(x)_{5}^{10}}=\\frac{1.5}{5}=0.3\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]x[/latex] follows uniform distribution over [-2, 10]<br/>[latex]\\begin{aligned} \\therefore \\; f(x)&amp;=\\frac{1}{b-a}=\\frac{1}{10-(-2)}=\\frac{1}{12}\\\\ \\text{Given: } y &amp;= 2x - 6\\\\ \\Rightarrow \\; x&amp;=\\frac{y+6}{2}\\\\ \\text{For } y = 7 \\\\ x&amp;=\\frac{7+6}{2}=\\frac{13}{2}=6.5\\\\ P\\left [ \\frac{y\\lt7}{x\\gt 5} \\right ]&amp;=P\\left [ \\frac{x\\lt6.5}{x\\gt 5} \\right ] \\\\ &amp;=\\frac{P\\left [ x\\gt 5\\, and\\, x\\lt6.5 \\right ]}{P\\left [ x\\gt 5 \\right ]} \\\\ &amp;=\\frac{P\\left [ 5\\lt x \\lt 6.5 \\right ]}{P[x\\gt 5]} \\\\ &amp;=\\frac{\\int_{5}^{6.5}f(x)dx}{\\int_{5}^{10}F(x)dx} \\\\ &amp;=\\frac{\\int_{5}^{6.5}\\frac{1}{12}dx}{\\int_{5}^{10}\\frac{1}{12}dx} \\\\ &amp;=\\frac{(x)_{6.5}^{5}}{(x)_{5}^{10}}=\\frac{1.5}{5}=0.3\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 0.299,
+    "answer_max": 0.301,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=11"
+  },
+  {
+    "number": "Question 55",
+    "text": "Consider the following closed loop control system where [latex]G(s)=\\frac{1}{s(s+1)}[/latex] and [latex]C(s)=K\\frac{s+1}{s+3}[/latex].\nIf the steady state error for a unit ramp input\nis 0.1, then the value of K is _______.",
+    "html": "<div class=\"question_text\" data-value=\"2\">Consider the following closed loop control system <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2020/images\\38630758cbeebbb18e52a9a57b21d449.jpg\" style=\"--smush-placeholder-width: 434px; --smush-placeholder-aspect-ratio: 434/116;\"/><br/> where [latex]G(s)=\\frac{1}{s(s+1)}[/latex] and [latex]C(s)=K\\frac{s+1}{s+3}[/latex].\nIf the steady state error for a unit ramp input\nis 0.1, then the value of K is _______.</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20201/q55.jpg": "images\\38630758cbeebbb18e52a9a57b21d449.jpg"
+    },
+    "type": "numerical",
+    "subject": "Control Systems - Time Response Analysis",
+    "explanation_text": "Open loop transfer function for the system [latex]=C(s)\\times G(s)=\\frac{K(s+1)}{ (s+3)}\\times \\frac{1}{s(s+1)}[/latex] Since the system is type-1, so far a given unit ramp input steady state [latex]e_{ss}=\\frac{1}{K_{V}} [/latex] where,  [latex]K_{V}=\\lim_{s\\rightarrow 0}S\\times \\frac{K}{S(S+3)}=\\frac{K}{3} [/latex] so, [latex]\\; e_{ss}=\\frac{1}{K/3}=\\frac{3}{K}[/latex] Given that,  [latex]\\; e_{ss}=0.1 [/latex] So, [latex]0.1=\\frac{3}{K}\\Rightarrow K=30[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tOpen loop transfer function for the system [latex]=C(s)\\times G(s)=\\frac{K(s+1)}{ (s+3)}\\times \\frac{1}{s(s+1)}[/latex]<br/>Since the system is type-1, so far a given unit ramp input steady state<br/>[latex]e_{ss}=\\frac{1}{K_{V}} [/latex]<br/>where,  [latex]K_{V}=\\lim_{s\\rightarrow 0}S\\times \\frac{K}{S(S+3)}=\\frac{K}{3} [/latex]<br/>so, [latex]\\; e_{ss}=\\frac{1}{K/3}=\\frac{3}{K}[/latex]<br/> Given that,  [latex]\\; e_{ss}=0.1 [/latex]<br/>So, [latex]0.1=\\frac{3}{K}\\Rightarrow K=30[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "answer_min": 30.0,
+    "answer_max": 30.0,
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2020?page_no=11"
+  }
+]

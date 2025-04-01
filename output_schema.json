@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GATE EC Questions Collection",
+  "type": "object",
+  "description": "Collection of GATE EC questions organized by year and set",
+  "patternProperties": {
+    "^(\\d{4})(-set-\\d+)?$": {
+      "type": "array",
+      "description": "Array of questions for a specific year or year-set combination",
+      "items": {
+        "type": "object",
+        "description": "Individual question data",
+        "properties": {
+          "number": {
+            "type": "string",
+            "description": "Question number or identifier"
+          },
+          "text": {
+            "type": "string",
+            "description": "Plain text version of the question"
+          },
+          "html": {
+            "type": "string",
+            "description": "HTML formatted version of the question"
+          },
+          "images": {
+            "type": "object",
+            "description": "Map of image URLs to local file paths"
+          },
+          "type": {
+            "type": "string",
+            "description": "Question type (e.g., 'mcq')"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Subject category of the question"
+          },
+          "explanation_text": {
+            "type": "string",
+            "description": "Plain text explanation of the answer"
+          },
+          "explanation_html": {
+            "type": "string",
+            "description": "HTML formatted explanation of the answer"
+          },
+          "explanation_images": {
+            "type": "object",
+            "description": "Map of image URLs to local file paths for explanation images"
+          },
+          "options": {
+            "type": "array",
+            "description": "Array of possible answer options",
+            "items": {
+              "type": "object",
+              "properties": {
+                "letter": {
+                  "type": "string",
+                  "description": "Option identifier (A, B, C, D, etc.)"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "Plain text of the option"
+                },
+                "html": {
+                  "type": "string",
+                  "description": "HTML formatted text of the option"
+                },
+                "is_correct": {
+                  "type": "boolean",
+                  "description": "Whether this option is the correct answer"
+                },
+                "images": {
+                  "type": "object",
+                  "description": "Map of image URLs to local file paths for this option"
+                }
+              }
+            }
+          },
+          "answer": {
+            "type": "string",
+            "description": "Letter indicating the correct answer"
+          },
+          "source_url": {
+            "type": "string",
+            "description": "Source URL where the question was obtained"
+          },
+          "year": {
+            "type": "string",
+            "description": "Year of the question"
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the question"
+          }
+        },
+        "required": ["number", "text"]
+      }
+    }
+  },
+  "examples": [
+    {
+      "2001": [
+        {
+          "number": "Question 1",
+          "text": "Sample question text",
+          "html": "<div>Sample question HTML</div>",
+          "images": {
+            "/url/to/image.jpg": "images/local_image_file.jpg"
+          },
+          "type": "mcq",
+          "subject": "Network Theory",
+          "options": [
+            {
+              "letter": "A",
+              "text": "Option A",
+              "html": "<div>Option A</div>",
+              "is_correct": false,
+              "images": {}
+            },
+            {
+              "letter": "B",
+              "text": "Option B",
+              "html": "<div>Option B</div>",
+              "is_correct": true,
+              "images": {}
+            }
+          ],
+          "answer": "B"
+        }
+      ],
+      "2014-set-1": [
+        {
+          "number": "Question 1",
+          "text": "Another sample question",
+          "html": "<div>Another sample question HTML</div>",
+          "options": [
+            {
+              "letter": "A",
+              "text": "Option A",
+              "html": "<div>Option A</div>",
+              "is_correct": true,
+              "images": {}
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATE Question Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class", // Enable class-based dark mode
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"], // Ensure Inter font is primary
+            },
+            colors: {
+              gray: {
+                // Adjusted gray palette for better dark mode contrast
+                50: "#FAFAFA",
+                100: "#F4F4F5",
+                200: "#E4E4E7",
+                300: "#D4D4D8",
+                400: "#A1A1AA",
+                500: "#71717A",
+                600: "#52525B",
+                700: "#3F3F46",
+                800: "#27272A",
+                900: "#18181B",
+                950: "#09090B",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [["[latex]", "[/latex]"]],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true,
+        },
+        svg: { fontCache: "global" },
+        options: {
+          skipHtmlTags: [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code",
+          ],
+          ignoreHtmlClass: "tex2jax_ignore",
+          processHtmlClass: "tex2jax_process",
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <style>
+      /* Basic styling */
+      body {
+        font-family: "Inter", sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      /* Images */
+      .question-content img,
+      .explanation-content img,
+      .option-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.375rem; /* rounded-md */
+        background-color: #e5e7eb; /* gray-200 placeholder bg */
+      }
+      .dark .question-content img,
+      .dark .explanation-content img,
+      .dark .option-content img {
+        background-color: #374151; /* gray-700 placeholder bg */
+      }
+      /* Lazy load placeholder style */
+      img.lazy-load {
+        min-height: 50px; /* Give placeholder some height */
+      }
+
+      /* Correct/Incorrect styling */
+      .correct-option-display {
+        border-left: 4px solid #10b981;
+        padding-left: 0.75rem;
+      } /* Emerald-500 */
+      .dark .correct-option-display {
+        border-left-color: #34d399;
+      } /* Emerald-400 */
+      .selected-option {
+        background-color: #e0e7ff;
+      } /* Indigo-100 */
+      .dark .selected-option {
+        background-color: #3730a3;
+      } /* Indigo-800 */
+      .feedback-correct {
+        color: #059669;
+      } /* Emerald-600 */
+      .dark .feedback-correct {
+        color: #34d399;
+      } /* Emerald-400 */
+      .feedback-incorrect {
+        color: #dc2626;
+      } /* Red-600 */
+      .dark .feedback-incorrect {
+        color: #f87171;
+      } /* Red-400 */
+
+      /* Explanation section */
+      .explanation-section {
+        background-color: #f3f4f6;
+        border-left: 4px solid #60a5fa;
+      } /* gray-100, blue-400 */
+      .dark .explanation-section {
+        background-color: #1f2937;
+        border-left-color: #3b82f6;
+      } /* gray-800, blue-500 */
+
+      /* Initial hide */
+      #question-list {
+        visibility: hidden;
+        min-height: 100px;
+      }
+      .mathjax-processed {
+        visibility: visible !important;
+      }
+
+      /* Ensure inline MathJax content stays inline */
+      .question-content span[aria-hidden="true"] {
+        display: inline;
+      }
+
+      /* Choices.js styling overrides for dark mode */
+      .dark .choices {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #f3f4f6;
+      } /* gray-700, gray-600, gray-100 */
+      .dark .choices__inner {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #f3f4f6;
+      }
+      .dark .choices__list--dropdown,
+      .dark .choices__list[aria-expanded] {
+        background-color: #1f2937;
+        border-color: #4b5563;
+      } /* gray-800 */
+      .dark .choices__list--dropdown .choices__item--selectable.is-highlighted,
+      .dark
+        .choices__list[aria-expanded]
+        .choices__item--selectable.is-highlighted {
+        background-color: #4b5563;
+      } /* gray-600 */
+      .dark .choices__item {
+        color: #d1d5db;
+      } /* gray-300 */
+      .dark .choices__button {
+        background-image: url('data:image/svg+xml;utf8,<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path fill="%239CA3AF" d="M8.1 1.9c.4-.4.4-1 0-1.4s-1-.4-1.4 0L5 3.6 3.3 1.9c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L3.6 5 1.9 6.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3L5 6.4l1.7 1.7c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L6.4 5l1.7-1.7z"/></svg>');
+      } /* gray-400 cross */
+      .dark .choices__input {
+        background-color: #374151;
+        color: #f3f4f6;
+      }
+      .dark .choices__list--multiple .choices__item {
+        background-color: #4b5563;
+        border-color: #374151;
+        color: #f3f4f6;
+      } /* gray-600, gray-700 */
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 md:p-8"
+  >
+    <div class="max-w-5xl mx-auto">
+      <header class="mb-6 md:mb-8 flex justify-between items-center">
+        <div class="text-center flex-grow">
+          <h1
+            class="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400"
+          >
+            GATE Question Bank
+          </h1>
+          <p class="text-gray-600 dark:text-gray-400 text-sm md:text-base">
+            Browse, filter, and solve scraped questions
+          </p>
+        </div>
+        <button
+          id="darkModeToggle"
+          title="Toggle Dark Mode"
+          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-900"
+        >
+          <i class="fas fa-moon" id="darkModeIconMoon"></i>
+          <i class="fas fa-sun hidden" id="darkModeIconSun"></i>
+        </button>
+      </header>
+
+      <div
+        class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md mb-8 grid grid-cols-1 md:grid-cols-3 gap-4"
+      >
+        <div>
+          <label
+            for="year-filter"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Filter by Year:</label
+          >
+          <select id="year-filter" multiple class="w-full"></select>
+        </div>
+        <div>
+          <label
+            for="topic-filter"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Filter by Topic:</label
+          >
+          <select id="topic-filter" multiple class="w-full"></select>
+        </div>
+        <div>
+          <label
+            for="subtopic-filter"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Filter by Subtopic:</label
+          >
+          <select id="subtopic-filter" multiple class="w-full"></select>
+        </div>
+      </div>
+
+      <div id="question-list" class="space-y-6">
+        <p
+          id="loading-message"
+          class="text-center text-gray-500 dark:text-gray-400 py-10"
+        >
+          Loading questions...
+        </p>
+        <p
+          id="error-message"
+          class="text-center text-red-600 dark:text-red-400 hidden"
+        ></p>
+        <p
+          id="no-results-message"
+          class="text-center text-gray-500 dark:text-gray-400 hidden py-10"
+        >
+          No questions match the current filters.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script>
+      // --- DOM Elements ---
+      const questionList = document.getElementById("question-list");
+      const yearFilter = document.getElementById("year-filter");
+      const topicFilter = document.getElementById("topic-filter");
+      const subtopicFilter = document.getElementById("subtopic-filter");
+      const loadingMessage = document.getElementById("loading-message");
+      const errorMessage = document.getElementById("error-message");
+      const noResultsMessage = document.getElementById("no-results-message");
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const darkModeIconMoon = document.getElementById("darkModeIconMoon");
+      const darkModeIconSun = document.getElementById("darkModeIconSun");
+      const htmlElement = document.documentElement;
+
+      // --- Global State ---
+      let allProcessedQuestions = [];
+      const DATA_URL = "gate_questions/gate_ec_all_years.json"; // Make sure this file exists
+      let yearChoice, topicChoice, subtopicChoice; // Choices.js instances
+      let imageObserver; // Intersection Observer for lazy loading
+
+      // --- Helper Functions ---
+
+      function splitSubject(subjectString) {
+        if (!subjectString) return { topic: null, subtopic: null };
+        const parts = subjectString.split(" - ");
+        if (parts.length >= 2)
+          return {
+            topic: parts[0].trim(),
+            subtopic: parts.slice(1).join(" - ").trim(),
+          };
+        return { topic: subjectString.trim(), subtopic: null };
+      }
+
+      function formatImagePath(originalPath, year) {
+        if (!originalPath || !year || !/^\d{4}$/.test(year)) {
+          console.warn(
+            `Invalid year ('${year}') or path ('${originalPath}') for image formatting.`
+          );
+          return "";
+        }
+        // Ensure path separators are forward slashes
+        let correctedPath = originalPath.replace(/\\/g, "/");
+        // Remove leading slash if present, as we construct the relative path
+        if (correctedPath.startsWith("/")) {
+          correctedPath = correctedPath.substring(1);
+        }
+        // Construct the final path
+        return `gate_questions/gate_ec_${year}/${correctedPath}`;
+      }
+
+      function processHtmlContent(htmlContent, imagesMap, year) {
+        if (!htmlContent) return "";
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = htmlContent;
+        const imgTags = tempDiv.querySelectorAll("img");
+        const placeholderSrc =
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"; // Tiny transparent pixel
+
+        imgTags.forEach((img) => {
+          const originalSrcAttr = img.getAttribute("src");
+          let dataSrcValue = ""; // The actual image URL for lazy loading
+
+          // Try to find the image in the map first
+          let foundKey = null;
+          if (imagesMap && typeof imagesMap === "object") {
+            for (const key in imagesMap) {
+              const mappedPath = imagesMap[key]?.replace(/\\/g, "/"); // Normalize mapped path
+              if (
+                originalSrcAttr &&
+                mappedPath &&
+                (originalSrcAttr.toLowerCase().endsWith(key.toLowerCase()) ||
+                  originalSrcAttr.toLowerCase() === mappedPath.toLowerCase())
+              ) {
+                foundKey = key;
+                break;
+              }
+            }
+          }
+
+          if (foundKey && imagesMap[foundKey]) {
+            // Found in map, construct path using formatImagePath
+            dataSrcValue = formatImagePath(imagesMap[foundKey], year);
+          } else if (
+            originalSrcAttr &&
+            !originalSrcAttr.startsWith("http") &&
+            !originalSrcAttr.startsWith("data:")
+          ) {
+            // Not in map, but looks relative. Try to construct path directly.
+            // FIX: Check if path already contains the base structure
+            let relativePath = originalSrcAttr.replace(/\\/g, "/");
+            if (relativePath.startsWith("/"))
+              relativePath = relativePath.substring(1); // Remove leading slash
+
+            if (relativePath.startsWith(`gate_questions/gate_ec_${year}/`)) {
+              // Path seems complete already
+              dataSrcValue = relativePath;
+              console.warn(
+                `Image source "${originalSrcAttr}" not in map but seems complete. Using as is.`
+              );
+            } else {
+              // Assume it's relative to the year folder
+              dataSrcValue = `gate_questions/gate_ec_${year}/${relativePath}`;
+              console.warn(
+                `Image source "${originalSrcAttr}" not found in imagesMap for year ${year}. Attempting to construct path: ${dataSrcValue}`
+              );
+            }
+          } else if (originalSrcAttr && originalSrcAttr.startsWith("http")) {
+            // External image, load directly (not lazy loaded by default, could be changed)
+            dataSrcValue = originalSrcAttr; // Keep external URL
+            img.setAttribute("src", dataSrcValue); // Set src directly for external
+            img.classList.remove("lazy-load"); // Don't lazy load external by default
+          }
+
+          if (dataSrcValue && !img.getAttribute("src")) {
+            // Only modify if src wasn't set (i.e., not external)
+            img.setAttribute("data-src", dataSrcValue);
+            img.setAttribute("src", placeholderSrc); // Use placeholder
+            img.classList.add("lazy-load"); // Mark for lazy loading
+          } else if (!dataSrcValue && !img.getAttribute("src")) {
+            // Could not determine source, use placeholder permanently
+            const placeholderError = `https://placehold.co/300x100/e2e8f0/94a3b8?text=Image+Missing`;
+            img.setAttribute("src", placeholderError);
+            img.setAttribute(
+              "alt",
+              `Image source not found or invalid: ${originalSrcAttr || "none"}`
+            );
+            console.warn(
+              "Removing image tag with empty or unresolvable src:",
+              img
+            );
+            // img.parentNode?.removeChild(img); // Or remove it
+          }
+
+          const placeholderError = `https://placehold.co/300x100/e2e8f0/94a3b8?text=Load+Error`;
+          img.setAttribute(
+            "onerror",
+            `if (this.src !== '${placeholderError}') { this.onerror=null; this.src='${placeholderError}'; this.alt='Image failed to load'; console.error('Failed to load image:', this.dataset.src || this.src);}`
+          );
+          img.removeAttribute("style"); // Remove potentially harmful inline styles
+        });
+
+        return tempDiv.innerHTML;
+      }
+
+      /**
+       * Initializes the Intersection Observer for lazy loading images.
+       */
+      function initializeImageObserver() {
+        // Disconnect previous observer if exists
+        if (imageObserver) {
+          imageObserver.disconnect();
+        }
+
+        const lazyImages = questionList.querySelectorAll("img.lazy-load");
+        if (!lazyImages.length) return; // No images to observe
+
+        imageObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                const dataSrc = img.getAttribute("data-src");
+                if (dataSrc) {
+                  img.setAttribute("src", dataSrc);
+                  img.classList.remove("lazy-load"); // Stop observing once loaded
+                  img.removeAttribute("data-src");
+                  // Optional: Add loaded class for fade-in effects
+                  img.onload = () => img.classList.add("loaded");
+                }
+                observer.unobserve(img); // Unobserve the loaded image
+              }
+            });
+          },
+          {
+            rootMargin: "0px 0px 200px 0px", // Load images 200px before they enter viewport
+          }
+        );
+
+        lazyImages.forEach((img) => imageObserver.observe(img));
+      }
+
+      /**
+       * Fetches and processes question data.
+       */
+      async function loadAndProcessData() {
+        loadingMessage.classList.remove("hidden");
+        errorMessage.classList.add("hidden");
+        noResultsMessage.classList.add("hidden");
+        questionList.innerHTML = "";
+        allProcessedQuestions = [];
+
+        try {
+          const response = await fetch(DATA_URL);
+          if (!response.ok)
+            throw new Error(
+              `HTTP error! status: ${response.status} - Could not fetch ${DATA_URL}`
+            );
+          const rawQuestionDataByYear = await response.json();
+
+          if (
+            typeof rawQuestionDataByYear !== "object" ||
+            rawQuestionDataByYear === null ||
+            Array.isArray(rawQuestionDataByYear)
+          ) {
+            throw new Error(
+              `Invalid data format: Expected an object with years as keys in ${DATA_URL}.`
+            );
+          }
+
+          const years = new Set();
+          const topics = new Set();
+          const subtopicsMap = new Map();
+
+          for (const year in rawQuestionDataByYear) {
+            if (
+              /^\d{4}$/.test(year) &&
+              Array.isArray(rawQuestionDataByYear[year])
+            ) {
+              years.add(year);
+              const questionsInYear = rawQuestionDataByYear[year];
+
+              questionsInYear.forEach((q, index) => {
+                if (!q) {
+                  console.warn(
+                    `Skipping null/undefined question object at index ${index} for year ${year}`
+                  );
+                  return;
+                }
+
+                const { topic, subtopic } = splitSubject(q.subject);
+                if (topic) {
+                  topics.add(topic);
+                  if (subtopic) {
+                    if (!subtopicsMap.has(topic))
+                      subtopicsMap.set(topic, new Set());
+                    subtopicsMap.get(topic).add(subtopic);
+                  }
+                }
+
+                const processedQuestionHtml = processHtmlContent(
+                  q.html,
+                  q.images,
+                  year
+                );
+                const processedExplanationHtml = processHtmlContent(
+                  q.explanation_html,
+                  q.explanation_images,
+                  year
+                );
+
+                const processedOptions = Array.isArray(q.options)
+                  ? q.options
+                      .map((opt) => {
+                        if (!opt) {
+                          console.warn(
+                            `Skipping null/undefined option object in question q-${year}-${index}`
+                          );
+                          return null;
+                        }
+                        return {
+                          ...opt,
+                          html: processHtmlContent(opt.html, opt.images, year),
+                        };
+                      })
+                      .filter((opt) => opt !== null)
+                  : [];
+
+                allProcessedQuestions.push({
+                  ...q,
+                  id: `q-${year}-${index}`,
+                  year: year,
+                  topic: topic,
+                  subtopic: subtopic,
+                  html: processedQuestionHtml,
+                  explanation_html: processedExplanationHtml,
+                  options: processedOptions,
+                  answer: q.answer, // Ensure answer is preserved
+                });
+              });
+            } else {
+              console.warn(
+                `Skipping invalid year key or non-array value in JSON: Key='${year}'`
+              );
+            }
+          }
+
+          if (allProcessedQuestions.length === 0)
+            throw new Error("No valid question data found.");
+
+          populateFilters(years, topics, subtopicsMap);
+          applySavedFilters(); // Apply saved filters or defaults
+          filterAndDisplayQuestions(); // Initial display
+        } catch (error) {
+          console.error("Error loading or processing question data:", error);
+          errorMessage.textContent = `Error: ${error.message}. Check console for details.`;
+          errorMessage.classList.remove("hidden");
+          loadingMessage.classList.add("hidden");
+          questionList.innerHTML = "";
+        }
+      }
+
+      /**
+       * Populates filter dropdowns and initializes Choices.js.
+       */
+      function populateFilters(years, topics, subtopicsMap) {
+        // Destroy previous Choices instances if they exist
+        if (yearChoice) yearChoice.destroy();
+        if (topicChoice) topicChoice.destroy();
+        if (subtopicChoice) subtopicChoice.destroy();
+
+        // Clear previous options
+        yearFilter.innerHTML = "";
+        topicFilter.innerHTML = "";
+        subtopicFilter.innerHTML = "";
+
+        // Populate Year Filter
+        const yearChoices = Array.from(years)
+          .sort((a, b) => b - a)
+          .map((year) => ({ value: year, label: year }));
+        yearChoice = new Choices(yearFilter, {
+          choices: yearChoices,
+          removeItemButton: true,
+          placeholder: true,
+          placeholderValue: "All Years",
+        });
+
+        // Populate Topic Filter
+        const topicChoices = Array.from(topics)
+          .sort()
+          .map((topic) => ({ value: topic, label: topic }));
+        topicChoice = new Choices(topicFilter, {
+          choices: topicChoices,
+          removeItemButton: true,
+          placeholder: true,
+          placeholderValue: "All Topics",
+        });
+
+        // Populate Subtopic Filter
+        const subtopicChoices = [];
+        Array.from(topics)
+          .sort()
+          .forEach((topic) => {
+            if (subtopicsMap.has(topic)) {
+              Array.from(subtopicsMap.get(topic))
+                .sort()
+                .forEach((subtopic) => {
+                  subtopicChoices.push({
+                    value: subtopic,
+                    label: `${topic} - ${subtopic}`,
+                    customProperties: { topic: topic },
+                  });
+                });
+            }
+          });
+        subtopicChoice = new Choices(subtopicFilter, {
+          choices: subtopicChoices,
+          removeItemButton: true,
+          placeholder: true,
+          placeholderValue: "All Subtopics",
+        });
+
+        // Add event listeners AFTER initializing Choices
+        yearFilter.addEventListener("change", filterAndDisplayQuestions);
+        topicFilter.addEventListener("change", filterAndDisplayQuestions);
+        subtopicFilter.addEventListener("change", filterAndDisplayQuestions);
+      }
+
+      /**
+       * Gets selected values from a Choices.js instance.
+       */
+      function getSelectedChoiceValues(choiceInstance) {
+        if (!choiceInstance) return [];
+        // Use getValue(true) to get only the values as an array
+        const values = choiceInstance.getValue(true);
+        return Array.isArray(values) ? values : values ? [values] : []; // Ensure it's always an array
+      }
+
+      /**
+       * Applies saved filters from local storage or defaults.
+       */
+      function applySavedFilters() {
+        const savedFilters = JSON.parse(localStorage.getItem("filters")) || {};
+        const {
+          years = ["2024"],
+          topics = ["Network Theory"],
+          subtopics = [],
+        } = savedFilters;
+
+        yearChoice.setValue(years);
+        topicChoice.setValue(topics);
+        subtopicChoice.setValue(subtopics);
+      }
+
+      /**
+       * Saves the current filters to local storage.
+       */
+      function saveFilters() {
+        const filters = {
+          years: getSelectedChoiceValues(yearChoice),
+          topics: getSelectedChoiceValues(topicChoice),
+          subtopics: getSelectedChoiceValues(subtopicChoice),
+        };
+        localStorage.setItem("filters", JSON.stringify(filters));
+      }
+
+      /**
+       * Displays questions based on filtering.
+       */
+      function displayQuestions(questionsToDisplay) {
+        questionList.innerHTML = ""; // Clear previous
+        loadingMessage.classList.add("hidden");
+        errorMessage.classList.add("hidden");
+
+        if (questionsToDisplay.length === 0) {
+          noResultsMessage.classList.remove("hidden");
+          questionList.classList.remove("mathjax-processed");
+          return;
+        }
+        noResultsMessage.classList.add("hidden");
+
+        const fragment = document.createDocumentFragment();
+        questionsToDisplay.forEach((q) => {
+          const questionElement = document.createElement("div");
+          questionElement.id = q.id;
+          questionElement.className =
+            "question-container bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md border border-gray-200 dark:border-gray-700";
+          // Store correct answer on the container
+          questionElement.dataset.correctAnswer = Array.isArray(q.answer)
+            ? q.answer.join(",")
+            : q.answer; // Handle potential MSQ answers
+
+          let optionsHtml = '<div class="mt-4 space-y-3 options-group">';
+          if (Array.isArray(q.options) && q.options.length > 0) {
+            // Assuming MCQ, use radio buttons
+            const isMCQ = q.type?.toLowerCase() === "mcq" || !q.type; // Default to MCQ if type is missing
+            const inputType = isMCQ ? "radio" : "checkbox"; // Could add checkbox support later if needed
+
+            q.options.forEach((opt) => {
+              if (!opt) return;
+              const optionId = `${q.id}-opt-${opt.letter}`;
+              optionsHtml += `
+                            <div class="flex items-center space-x-3 p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 option-item">
+                                <input type="${inputType}" id="${optionId}" name="answer-${
+                q.id
+              }" value="${
+                opt.letter
+              }" class="form-${inputType} h-4 w-4 text-indigo-600 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:checked:bg-indigo-500 focus:ring-indigo-500">
+                                <label for="${optionId}" class="flex-1 cursor-pointer">
+                                    <span class="font-semibold text-gray-700 dark:text-gray-300">${
+                                      opt.letter || ""
+                                    }.</span>
+                                    <span class="option-content text-gray-800 dark:text-gray-200">${
+                                      opt.html || opt.text || ""
+                                    }</span>
+                                </label>
+                            </div>
+                        `;
+            });
+          } else {
+            // Display area for NAT questions (no options)
+            optionsHtml +=
+              '<p class="text-sm text-gray-500 dark:text-gray-400 italic">Numerical Answer Type (Enter answer below if applicable)</p>';
+            // Could add an input field here for NAT answers if needed
+          }
+          optionsHtml += "</div>";
+
+          // Add Check Answer button and feedback area
+          const checkButtonHtml =
+            Array.isArray(q.options) && q.options.length > 0 // Only show button if options exist
+              ? `<div class="mt-4 flex items-center justify-between">
+                        <button class="check-answer-btn px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" data-question-id="${q.id}">Check Answer</button>
+                        <span class="feedback-area ml-4 text-sm font-medium"></span>
+                    </div>`
+              : "";
+
+          let explanationHtml = "";
+          const hasExplanationContent =
+            q.explanation_html &&
+            q.explanation_html.replace(/<[^>]*>/g, "").trim().length > 5;
+          if (hasExplanationContent) {
+            // Initially hide explanation, show after checking answer? Or keep visible? Let's keep visible for now.
+            explanationHtml = `
+                        <div class="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600 explanation-section p-3 rounded-md">
+                            <h4 class="font-semibold text-blue-600 dark:text-blue-400 mb-2">Explanation:</h4>
+                            <div class="explanation-content text-sm text-gray-700 dark:text-gray-300">${q.explanation_html}</div>
+                        </div>
+                    `;
+          }
+
+          const subjectDisplay = [q.topic, q.subtopic]
+            .filter(Boolean)
+            .join(" - ");
+
+          questionElement.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">${
+                          q.number || "Question"
+                        }</h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 text-right">${subjectDisplay} ${
+            q.year ? `(${q.year})` : ""
+          }</span>
+                    </div>
+                    <div class="question-content text-gray-900 dark:text-gray-100 mb-4">${
+                      q.html || q.text || ""
+                    }</div>
+                    ${optionsHtml}
+                    ${checkButtonHtml}
+                    ${explanationHtml}
+                `;
+          fragment.appendChild(questionElement);
+        });
+
+        questionList.appendChild(fragment);
+
+        // Add event listeners for check answer buttons
+        addCheckAnswerListeners();
+
+        // Typeset MathJax
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          MathJax.typesetPromise([questionList])
+            .then(() => {
+              console.log("MathJax typesetting complete.");
+              questionList.classList.add("mathjax-processed");
+              initializeImageObserver(); // Initialize observer AFTER MathJax finishes and content is visible
+            })
+            .catch((err) => {
+              console.error("MathJax typesetting failed:", err);
+              questionList.classList.add("mathjax-processed"); // Still show content
+              initializeImageObserver(); // Still try to init observer
+            });
+        } else {
+          console.warn("MathJax not ready.");
+          questionList.classList.add("mathjax-processed"); // Still show content
+          initializeImageObserver(); // Still try to init observer
+        }
+      }
+
+      /**
+       * Adds event listeners to all "Check Answer" buttons currently in the DOM.
+       */
+      function addCheckAnswerListeners() {
+        const checkButtons = questionList.querySelectorAll(".check-answer-btn");
+        checkButtons.forEach((button) => {
+          // Remove existing listener to prevent duplicates if called multiple times
+          button.replaceWith(button.cloneNode(true));
+        });
+        // Add new listeners to the cloned buttons
+        questionList.querySelectorAll(".check-answer-btn").forEach((button) => {
+          button.addEventListener("click", handleCheckAnswer);
+        });
+      }
+
+      /**
+       * Handles the click event for a "Check Answer" button.
+       */
+      function handleCheckAnswer(event) {
+        const button = event.target;
+        const questionId = button.dataset.questionId;
+        const questionElement = document.getElementById(questionId);
+        if (!questionElement) return;
+
+        const feedbackArea = questionElement.querySelector(".feedback-area");
+        const correctAnswer = questionElement.dataset.correctAnswer;
+        const optionsGroup = questionElement.querySelector(".options-group");
+        const selectedInput = optionsGroup.querySelector(
+          `input[name="answer-${questionId}"]:checked`
+        );
+
+        // Clear previous feedback styling
+        feedbackArea.textContent = "";
+        feedbackArea.className = "feedback-area ml-4 text-sm font-medium"; // Reset classes
+        optionsGroup.querySelectorAll(".option-item").forEach((item) => {
+          item.classList.remove("correct-option-display", "selected-option");
+          item.style.borderLeft = ""; // Clear potential incorrect border
+        });
+
+        if (!selectedInput) {
+          feedbackArea.textContent = "Please select an answer.";
+          feedbackArea.classList.add("text-yellow-600", "dark:text-yellow-400");
+          return;
+        }
+
+        const selectedAnswer = selectedInput.value;
+
+        if (selectedAnswer === correctAnswer) {
+          feedbackArea.textContent = "Correct!";
+          feedbackArea.classList.add("feedback-correct");
+          selectedInput
+            .closest(".option-item")
+            .classList.add("correct-option-display");
+        } else {
+          feedbackArea.textContent = `Incorrect. Correct answer: ${correctAnswer}`;
+          feedbackArea.classList.add("feedback-incorrect");
+          // Highlight selected (incorrect) answer
+          selectedInput.closest(".option-item").style.borderLeft =
+            "4px solid #DC2626"; // Red border for incorrect selection
+          // Highlight correct answer
+          const correctInput = optionsGroup.querySelector(
+            `input[value="${correctAnswer}"]`
+          );
+          if (correctInput) {
+            correctInput
+              .closest(".option-item")
+              .classList.add("correct-option-display");
+          }
+        }
+      }
+
+      // --- Filtering Logic ---
+      function filterAndDisplayQuestions() {
+        // Use the helper to get values from Choices.js instances
+        const selectedYears = getSelectedChoiceValues(yearChoice);
+        const selectedTopics = getSelectedChoiceValues(topicChoice);
+        const selectedSubtopics = getSelectedChoiceValues(subtopicChoice);
+
+        // Hide list, show loading
+        questionList.classList.remove("mathjax-processed");
+        questionList.style.visibility = "hidden"; // Use style for immediate effect
+        loadingMessage.classList.remove("hidden");
+        noResultsMessage.classList.add("hidden");
+        errorMessage.classList.add("hidden");
+
+        // Disconnect observer while filtering to avoid issues
+        if (imageObserver) imageObserver.disconnect();
+
+        // Filter logic (runs quickly)
+        const filtered = allProcessedQuestions.filter((q) => {
+          const yearMatch =
+            selectedYears.length === 0 ||
+            (q.year && selectedYears.includes(q.year));
+          const topicMatch =
+            selectedTopics.length === 0 ||
+            (q.topic && selectedTopics.includes(q.topic));
+          const subtopicMatch =
+            selectedSubtopics.length === 0 ||
+            (q.subtopic && selectedSubtopics.includes(q.subtopic));
+          return yearMatch && topicMatch && subtopicMatch;
+        });
+
+        // Save filters to local storage
+        saveFilters();
+
+        // Use setTimeout to allow loading indicator to show before heavy DOM manipulation
+        setTimeout(() => {
+          displayQuestions(filtered); // This function handles MathJax and observer re-initialization
+          // Make sure list is visible again after displayQuestions finishes (handled by mathjax-processed class)
+          questionList.style.visibility = ""; // Clear style override
+        }, 50); // Short delay
+      }
+
+      // --- Dark Mode ---
+      function applyTheme(isDark) {
+        if (isDark) {
+          htmlElement.classList.add("dark");
+          darkModeIconMoon.classList.add("hidden");
+          darkModeIconSun.classList.remove("hidden");
+        } else {
+          htmlElement.classList.remove("dark");
+          darkModeIconMoon.classList.remove("hidden");
+          darkModeIconSun.classList.add("hidden");
+        }
+      }
+
+      function toggleDarkMode() {
+        const isDarkMode = htmlElement.classList.toggle("dark");
+        localStorage.setItem("darkMode", isDarkMode);
+        applyTheme(isDarkMode);
+      }
+
+      // --- Initial Load and Event Listeners ---
+      document.addEventListener("DOMContentLoaded", () => {
+        // Default to dark mode if no preference saved
+        const savedTheme = localStorage.getItem("darkMode");
+        // Set initialDark to true if savedTheme is 'true' OR if savedTheme is null (no preference yet)
+        const initialDark = savedTheme === "true" || savedTheme === null;
+        applyTheme(initialDark); // Apply theme immediately
+
+        // Load data (this also populates filters and calls initial display)
+        loadAndProcessData();
+
+        // Dark mode toggle listener
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+
+        // Note: Filter event listeners are added *after* Choices.js initialization in populateFilters
+      });
+    </script>
+  </body>
+</html>

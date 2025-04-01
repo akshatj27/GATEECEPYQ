@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATE Question Viewer</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .filter-section {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .filter-controls {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .filter-group {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+      }
+
+      /* Container layout for main content and question navigator */
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .main-content {
+        flex: 3;
+      }
+
+      .question-navigator {
+        flex: 1;
+        border-left: 1px solid #ccc;
+        padding-left: 15px;
+        max-width: 200px;
+      }
+
+      /* Question styles */
+      .question-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .question-text {
+        margin-bottom: 15px;
+      }
+
+      .options-container {
+        margin-bottom: 15px;
+      }
+
+      .option {
+        margin-bottom: 10px;
+      }
+
+      .numerical-input input {
+        width: 150px;
+        padding: 8px;
+        margin-right: 10px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      /* Question navigation panel */
+      #questionLinks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .question-link {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        min-width: 30px;
+      }
+
+      .question-link:hover {
+        background-color: #e9e9e9;
+      }
+
+      .question-link.active {
+        background-color: #007bff;
+        color: white;
+      }
+
+      /* Feedback styles */
+      .correct {
+        color: green;
+        font-weight: bold;
+      }
+
+      .incorrect {
+        color: red;
+        font-weight: bold;
+      }
+
+      .warning {
+        color: orange;
+        font-weight: bold;
+      }
+
+      /* Loading indicator */
+      #loadingIndicator {
+        text-align: center;
+        margin: 20px 0;
+        font-style: italic;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GATE Question Viewer</h1>
+
+    <div class="filter-section">
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="yearFilter">Filter by Year:</label>
+          <select id="yearFilter">
+            <option value="">All Years</option>
+            <!-- Years will be populated dynamically -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="topicFilter">Filter by Topic:</label>
+          <select id="topicFilter">
+            <option value="">All Topics</option>
+            <!-- Topics will be populated dynamically -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="subtopicFilter">Filter by Subtopic:</label>
+          <select id="subtopicFilter">
+            <option value="">All Subtopics</option>
+            <!-- Subtopics will be populated dynamically -->
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="main-content">
+        <div id="loadingIndicator">Loading questions...</div>
+        <div id="questionsContainer"></div>
+      </div>
+
+      <div class="question-navigator">
+        <h3>Questions</h3>
+        <div id="questionLinks"></div>
+      </div>
+    </div>
+
+    <script>
+      // Global variables
+      let allQuestions = [];
+      let filteredQuestions = [];
+      let allYears = [];
+      let allTopics = [];
+      let allSubtopics = [];
+
+      // Fetch and initialize data
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchQuestions();
+      });
+
+      async function fetchQuestions() {
+        try {
+          const response = await fetch("gate_ec_all_years.json");
+          if (!response.ok) {
+            throw new Error("Failed to fetch questions data");
+          }
+
+          allQuestions = await response.json();
+
+          // Extract unique years, topics, and subtopics
+          extractFilters();
+
+          // Populate filter dropdowns
+          populateFilterDropdowns();
+
+          // Initial load of all questions
+          loadQuestions();
+        } catch (error) {
+          console.error("Error loading questions:", error);
+          document.getElementById("loadingIndicator").textContent =
+            "Error loading questions. Please try again later.";
+        }
+      }
+
+      function extractFilters() {
+        // Extract unique years
+        allYears = [...new Set(allQuestions.map((q) => q.year))].sort(
+          (a, b) => b - a
+        );
+
+        // Extract unique topics
+        allTopics = [...new Set(allQuestions.map((q) => q.topic))].sort();
+
+        // Extract unique subtopics with their parent topics
+        const subtopicsSet = new Set();
+        allSubtopics = [];
+
+        allQuestions.forEach((q) => {
+          if (q.subtopic && !subtopicsSet.has(q.subtopic)) {
+            subtopicsSet.add(q.subtopic);
+            allSubtopics.push({
+              id: q.subtopic,
+              name: q.subtopic,
+              parentTopic: q.topic,
+            });
+          }
+        });
+
+        // Sort subtopics alphabetically
+        allSubtopics.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      function populateFilterDropdowns() {
+        // Populate year filter
+        const yearFilter = document.getElementById("yearFilter");
+        allYears.forEach((year) => {
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = year;
+          yearFilter.appendChild(option);
+        });
+
+        // Populate topic filter
+        const topicFilter = document.getElementById("topicFilter");
+        allTopics.forEach((topic) => {
+          const option = document.createElement("option");
+          option.value = topic;
+          option.textContent = topic;
+          topicFilter.appendChild(option);
+        });
+
+        // Initial population of all subtopics
+        populateSubtopics("");
+
+        // Add event listeners for filters
+        yearFilter.addEventListener("change", loadQuestions);
+        topicFilter.addEventListener("change", function () {
+          // When topic changes, update subtopics and reload questions
+          populateSubtopics(this.value);
+          loadQuestions();
+        });
+        document
+          .getElementById("subtopicFilter")
+          .addEventListener("change", loadQuestions);
+      }
+
+      function populateSubtopics(selectedTopic) {
+        const subtopicDropdown = document.getElementById("subtopicFilter");
+
+        // Clear current subtopics
+        subtopicDropdown.innerHTML = '<option value="">All Subtopics</option>';
+
+        // If no topic is selected, don't populate any subtopics
+        if (!selectedTopic) {
+          return;
+        }
+
+        // Filter subtopics that belong to the selected topic
+        const relevantSubtopics = allSubtopics.filter(
+          (subtopic) => subtopic.parentTopic === selectedTopic
+        );
+
+        // Add filtered subtopics to dropdown
+        relevantSubtopics.forEach((subtopic) => {
+          const option = document.createElement("option");
+          option.value = subtopic.id;
+          option.textContent = subtopic.name;
+          subtopicDropdown.appendChild(option);
+        });
+      }
+
+      function loadQuestions() {
+        const yearFilter = document.getElementById("yearFilter").value;
+        const topicFilter = document.getElementById("topicFilter").value;
+        const subtopicFilter = document.getElementById("subtopicFilter").value;
+
+        // Show loading indicator
+        document.getElementById("loadingIndicator").style.display = "block";
+
+        // Filter questions based on selected filters
+        filteredQuestions = allQuestions.filter((question) => {
+          return (
+            (!yearFilter || question.year == yearFilter) &&
+            (!topicFilter || question.topic === topicFilter) &&
+            (!subtopicFilter || question.subtopic === subtopicFilter)
+          );
+        });
+
+        // Display filtered questions
+        displayQuestions(filteredQuestions);
+
+        // Hide loading indicator
+        document.getElementById("loadingIndicator").style.display = "none";
+
+        // Update question navigation panel
+        populateQuestionLinks(filteredQuestions);
+      }
+
+      function displayQuestions(questions) {
+        const questionsContainer =
+          document.getElementById("questionsContainer");
+        questionsContainer.innerHTML = "";
+
+        if (questions.length === 0) {
+          questionsContainer.innerHTML =
+            "<p>No questions match the current filters.</p>";
+          return;
+        }
+
+        // Display questions with proper numbering
+        questions.forEach((question, index) => {
+          const questionDiv = document.createElement("div");
+          questionDiv.className = "question-card";
+          questionDiv.id = `question-${question.id}`;
+
+          questionDiv.innerHTML = `
+                    <h3>Question ${index + 1}</h3>
+                    <div class="question-text">${question.text}</div>
+                    <div class="options-container" id="options-${
+                      question.id
+                    }"></div>
+                    <div class="feedback" id="feedback-${question.id}"></div>
+                `;
+
+          questionsContainer.appendChild(questionDiv);
+          renderOptions(question, index);
+        });
+      }
+
+      function renderOptions(question, index) {
+        const optionsContainer = document.getElementById(
+          `options-${question.id}`
+        );
+        optionsContainer.innerHTML = "";
+
+        if (question.type === "multiple-choice-single") {
+          // Radio buttons for single select
+          question.options.forEach((option, optIndex) => {
+            const optionDiv = document.createElement("div");
+            optionDiv.className = "option";
+
+            optionDiv.innerHTML = `
+                        <input type="radio" id="q${index}-opt${optIndex}" 
+                               name="question-${question.id}" value="${optIndex}">
+                        <label for="q${index}-opt${optIndex}">${option.text}</label>
+                    `;
+
+            optionsContainer.appendChild(optionDiv);
+          });
+        } else if (question.type === "multiple-choice-multiple") {
+          // Checkboxes for multiple select
+          question.options.forEach((option, optIndex) => {
+            const optionDiv = document.createElement("div");
+            optionDiv.className = "option";
+
+            optionDiv.innerHTML = `
+                        <input type="checkbox" id="q${index}-opt${optIndex}" 
+                               name="question-${question.id}" value="${optIndex}">
+                        <label for="q${index}-opt${optIndex}">${option.text}</label>
+                    `;
+
+            optionsContainer.appendChild(optionDiv);
+          });
+        } else if (question.type === "numerical") {
+          // Numerical input
+          const inputDiv = document.createElement("div");
+          inputDiv.className = "numerical-input";
+
+          inputDiv.innerHTML = `
+                    <input type="number" step="0.01" id="numerical-${question.id}" 
+                           placeholder="Enter your answer">
+                    <button onclick="checkNumericalAnswer(${question.id})">Submit</button>
+                `;
+
+          optionsContainer.appendChild(inputDiv);
+        }
+
+        // Add verification button for multiple choice questions
+        if (question.type && question.type.includes("multiple-choice")) {
+          const verifyButton = document.createElement("button");
+          verifyButton.textContent = "Verify Answer";
+          verifyButton.onclick = function () {
+            verifyAnswer(question);
+          };
+          optionsContainer.appendChild(verifyButton);
+        }
+      }
+
+      function populateQuestionLinks(questions) {
+        const linksContainer = document.getElementById("questionLinks");
+        linksContainer.innerHTML = "";
+
+        questions.forEach((question, index) => {
+          const link = document.createElement("div");
+          link.className = "question-link";
+          link.textContent = index + 1;
+          link.dataset.questionId = question.id;
+
+          link.addEventListener("click", function () {
+            // Scroll to the question
+            const questionElement = document.getElementById(
+              `question-${question.id}`
+            );
+            questionElement.scrollIntoView({ behavior: "smooth" });
+
+            // Update active state
+            document
+              .querySelectorAll(".question-link")
+              .forEach((el) => el.classList.remove("active"));
+            link.classList.add("active");
+          });
+
+          linksContainer.appendChild(link);
+        });
+      }
+
+      function checkNumericalAnswer(questionId) {
+        const question = filteredQuestions.find((q) => q.id === questionId);
+        const userAnswer = parseFloat(
+          document.getElementById(`numerical-${questionId}`).value
+        );
+        const feedbackElement = document.getElementById(
+          `feedback-${questionId}`
+        );
+
+        if (isNaN(userAnswer)) {
+          feedbackElement.innerHTML =
+            '<p class="warning">Please enter a valid number.</p>';
+          return;
+        }
+
+        // Check if answer is within acceptable range
+        const lowerBound = question.correctAnswer - question.tolerance;
+        const upperBound = question.correctAnswer + question.tolerance;
+
+        if (userAnswer >= lowerBound && userAnswer <= upperBound) {
+          feedbackElement.innerHTML =
+            '<p class="correct">Correct! Your answer is within the acceptable range.</p>';
+        } else {
+          feedbackElement.innerHTML = `<p class="incorrect">Incorrect. The acceptable range is ${lowerBound} to ${upperBound}.</p>`;
+        }
+      }
+
+      function verifyAnswer(question) {
+        const feedbackElement = document.getElementById(
+          `feedback-${question.id}`
+        );
+
+        if (question.type === "multiple-choice-single") {
+          // Get selected radio button
+          const selectedOption = document.querySelector(
+            `input[name="question-${question.id}"]:checked`
+          );
+
+          if (!selectedOption) {
+            feedbackElement.innerHTML =
+              '<p class="warning">Please select an option.</p>';
+            return;
+          }
+
+          const selectedIndex = parseInt(selectedOption.value);
+          const isCorrect = selectedIndex === question.correctOptionIndex;
+
+          feedbackElement.innerHTML = isCorrect
+            ? '<p class="correct">Correct answer!</p>'
+            : `<p class="incorrect">Incorrect. The correct answer is: ${
+                question.options[question.correctOptionIndex].text
+              }</p>`;
+        } else if (question.type === "multiple-choice-multiple") {
+          // Get all selected checkboxes
+          const selectedOptions = Array.from(
+            document.querySelectorAll(
+              `input[name="question-${question.id}"]:checked`
+            )
+          ).map((input) => parseInt(input.value));
+
+          if (selectedOptions.length === 0) {
+            feedbackElement.innerHTML =
+              '<p class="warning">Please select at least one option.</p>';
+            return;
+          }
+
+          // Check if selected options match correct options
+          const correctOptions = question.correctOptionIndices;
+          const isCorrect =
+            selectedOptions.length === correctOptions.length &&
+            selectedOptions.every((opt) => correctOptions.includes(opt)) &&
+            correctOptions.every((opt) => selectedOptions.includes(opt));
+
+          if (isCorrect) {
+            feedbackElement.innerHTML =
+              '<p class="correct">Correct answer!</p>';
+          } else {
+            const correctAnswers = correctOptions
+              .map((idx) => question.options[idx].text)
+              .join(", ");
+            feedbackElement.innerHTML = `<p class="incorrect">Incorrect. The correct answers are: ${correctAnswers}</p>`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

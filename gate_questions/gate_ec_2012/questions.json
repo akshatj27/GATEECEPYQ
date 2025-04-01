@@ -1,0 +1,2446 @@
+[
+  {
+    "number": "Question 1",
+    "text": "The current  [latex] i_{b}  [/latex] through the base of a silicon npn transistor is [latex] 1 + 0.1 cos(10000 \\pi t) [/latex]  mA. At 300 K, the [latex]r_{\\pi}[/latex] in the small signal model of the transistor is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The current  [latex] i_{b}  [/latex] through the base of a silicon npn transistor is [latex] 1 + 0.1 cos(10000 \\pi t) [/latex]  mA. At 300 K, the [latex]r_{\\pi}[/latex] in the small signal model of the transistor is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\ab2d794b06ac6646ae68e95b51393e70.jpg\" style=\"--smush-placeholder-width: 493px; --smush-placeholder-aspect-ratio: 493/308;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q1.jpg": "images\\ab2d794b06ac6646ae68e95b51393e70.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - BJT Analysis",
+    "explanation_text": "We know that [latex]\n\\begin{array}{l}\nr_{\\pi}=(\\beta+1) r_{e} \\\\\nr_{\\pi}=(\\beta+1) \\frac{V_{T}}{I_{e}} \\\\\nr_{\\pi}=(\\beta+1) \\frac{V_{T}}{(\\beta+1) I_{b}} \\\\\nr_{\\pi}=\\frac{V_{T}}{I_{b}}\n\\end{array}[/latex] Where  [latex]I_{b}[/latex] is d.c. current through base so [latex]\nI_{b}=1 \\mathrm{mA}[/latex] [latex]\n V_{T}=25 \\mathrm{mV} [/latex] at room temperature So,[latex]\nr_{\\pi}=\\frac{25 \\times 10^{-3}}{1 \\times 10^{-3}}=25 \\Omega[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tWe know that<br/>[latex]\n\\begin{array}{l}\nr_{\\pi}=(\\beta+1) r_{e} \\\\\nr_{\\pi}=(\\beta+1) \\frac{V_{T}}{I_{e}} \\\\\nr_{\\pi}=(\\beta+1) \\frac{V_{T}}{(\\beta+1) I_{b}} \\\\\nr_{\\pi}=\\frac{V_{T}}{I_{b}}\n\\end{array}[/latex]<br/>\nWhere  [latex]I_{b}[/latex] is d.c. current through base so<br/>[latex]\nI_{b}=1 \\mathrm{mA}[/latex]<br/>[latex]\n V_{T}=25 \\mathrm{mV} [/latex] at room temperature<br/>So,[latex]\nr_{\\pi}=\\frac{25 \\times 10^{-3}}{1 \\times 10^{-3}}=25 \\Omega[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "250 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">250 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "27.5 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">27.5 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "25 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">25 [latex]\\Omega[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "22.5 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">22.5 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012"
+  },
+  {
+    "number": "Question 2",
+    "text": "The power spectral density of a real process X(t) for positive frequencies is shown below. The\r\nvalues of [latex]E[X^{2}(t)][/latex] and |E[X(t)]|, respectively, are",
+    "html": "<div class=\"question_text\" data-value=\"1\">The power spectral density of a real process X(t) for positive frequencies is shown below. The\r\nvalues of [latex]E[X^{2}(t)][/latex] and |E[X(t)]|, respectively, are <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\583e7c3cb0a270fe770b634a0d2ef49d.jpg\" style=\"--smush-placeholder-width: 625px; --smush-placeholder-aspect-ratio: 625/389;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q2.jpg": "images\\583e7c3cb0a270fe770b634a0d2ef49d.jpg"
+    },
+    "type": "mcq",
+    "subject": "Communication Systems - Random Processes",
+    "explanation_text": "We know that  [latex]E\\left[X^{2}(t)\\right][/latex]  represent the total power \r\nin random signal. So [latex]\r\n\\begin{aligned}\r\n P=E\\left[X^{2}(t)\\right]&=2 \\times \\frac{1}{2 \\pi} \\int_{9 \\times 10^{3}}^{11 \\times 10^{3}} S_{x}(\\omega) d \\omega \\\\\r\n E\\left[X^{2}(t)\\right]&=\\frac{1}{\\pi}\\left[400+\\frac{1}{2} \\times 6 \\times 2 \\times 10^{3}\\right] \\\\\r\n E\\left[X^{2}(t)\\right]&=\\frac{6400}{\\pi} \r\n\\end{aligned}[/latex] At  [latex]\\omega=0,[/latex]  there is no any frequency component \r\npresent, hence dc value of the process is zero.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\c1bab605cb3dd8b3b35ab54b7b78ee73.jpg\" style=\"--smush-placeholder-width: 335px; --smush-placeholder-aspect-ratio: 335/186;\"/><br/>We know that  [latex]E\\left[X^{2}(t)\\right][/latex]  represent the total power \r\nin random signal. So<br/>[latex]\r\n\\begin{aligned}\r\n P=E\\left[X^{2}(t)\\right]&amp;=2 \\times \\frac{1}{2 \\pi} \\int_{9 \\times 10^{3}}^{11 \\times 10^{3}} S_{x}(\\omega) d \\omega \\\\\r\n E\\left[X^{2}(t)\\right]&amp;=\\frac{1}{\\pi}\\left[400+\\frac{1}{2} \\times 6 \\times 2 \\times 10^{3}\\right] \\\\\r\n E\\left[X^{2}(t)\\right]&amp;=\\frac{6400}{\\pi} \r\n\\end{aligned}[/latex]<br/>\r\nAt  [latex]\\omega=0,[/latex]  there is no any frequency component \r\npresent, hence dc value of the process is zero.\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a02.jpg": "images\\c1bab605cb3dd8b3b35ab54b7b78ee73.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "6000/[latex]\\pi[/latex],0",
+        "html": "<div class=\"option_data\">6000/[latex]\\pi[/latex],0</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "6400/[latex]\\pi[/latex],0",
+        "html": "<div class=\"option_data\">6400/[latex]\\pi[/latex],0</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]6400/\\pi,20(\\pi /\\sqrt{2})[/latex]",
+        "html": "<div class=\"option_data\">[latex]6400/\\pi,20(\\pi /\\sqrt{2})[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]6000/\\pi,20(\\pi /\\sqrt{2})[/latex]",
+        "html": "<div class=\"option_data\">[latex]6000/\\pi,20(\\pi /\\sqrt{2})[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012"
+  },
+  {
+    "number": "Question 3",
+    "text": "In a baseband communications link, frequencies upto 3500 Hz are used for signaling. Using a\nraised cosine pulse with 75% excess bandwidth and for no inter-symbol interference, the maximum possible signaling rate in symbols per second is",
+    "html": "<div class=\"question_text\" data-value=\"1\">In a baseband communications link, frequencies upto 3500 Hz are used for signaling. Using a\nraised cosine pulse with 75% excess bandwidth and for no inter-symbol interference, the maximum possible signaling rate in symbols per second is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Communication Systems - Digital Communications",
+    "explanation_text": "[latex]\\begin{aligned} \\mathrm{BW} &=\\frac{R_{b}}{2}(1+\\alpha) \\\\ 3500 &=\\frac{R_{b}}{2}(1+0.75) \\\\ R_{b} &=4000 \\mathrm{bits} / \\mathrm{sec} \\end{aligned}[/latex] In base band transmission [latex]\\rightarrow [/latex] Symbol rate = Bit rate =4000 symbols/sec",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} \\mathrm{BW} &amp;=\\frac{R_{b}}{2}(1+\\alpha) \\\\ 3500 &amp;=\\frac{R_{b}}{2}(1+0.75) \\\\ R_{b} &amp;=4000 \\mathrm{bits} / \\mathrm{sec} \\end{aligned}[/latex]<br/> In base band transmission [latex]\\rightarrow [/latex]<br/> Symbol rate = Bit rate =4000 symbols/sec\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "1750",
+        "html": "<div class=\"option_data\">1750</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "2625",
+        "html": "<div class=\"option_data\">2625</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "4000",
+        "html": "<div class=\"option_data\">4000</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "5250",
+        "html": "<div class=\"option_data\">5250</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012"
+  },
+  {
+    "number": "Question 4",
+    "text": "A plane wave propagating in air with [latex]\\vec{E}=(8\\hat{a}_{x}+6\\hat{a}_{y}+5\\hat{a}_{z})e^{j(\\omega t+3x-4y)}[/latex] V/m is incident on a perfectly conducting slab positioned at 0 [latex]\\leq[/latex] x. The E field of the reflected wave is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A plane wave propagating in air with [latex]\\vec{E}=(8\\hat{a}_{x}+6\\hat{a}_{y}+5\\hat{a}_{z})e^{j(\\omega t+3x-4y)}[/latex] V/m is incident on a perfectly conducting slab positioned at 0 [latex]\\leq[/latex] x. The E field of the reflected wave is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Plane waves and Properties",
+    "explanation_text": "Incident wave propagation [latex]\\rightarrow-3 \\hat{a}_{x}+4 \\hat{a}_{y} [/latex] Reflected wave propagation [latex]\\rightarrow 3 \\hat{a}_{x}+4 \\hat{a}_{y} [/latex] [latex] E_{i} [/latex] incident direction [latex]\\rightarrow 8 \\hat{a}_{x}+6 \\hat{a}_{y}+5 \\hat{a}_{z} [/latex] [latex] \\left.\\begin{array}{l}E_{i} \\text { tangential } \\rightarrow 6 \\hat{a}_{y}+5 \\hat{a}_{z} \\\\ E_{r} \\text { tangential } \\rightarrow-6 \\hat{a}_{y}-5 \\hat{a}_{z}\\end{array}\\right\\} E_{\\text {tang }}=0 [/latex] [latex] \\left.\\begin{array}{rl}E_{i} \\text { normal } & =8 \\hat{a}_{x} \\\\ E_{r} \\text { normal } & =8 \\hat{a}_{x}\\end{array}\\right\\} E_{\\text {normal }}=E_{\\max } [/latex] [latex] E_{r} [/latex] reflected direction [latex]=8 \\hat{a}_{x}-6 \\hat{a}_{y}-5 \\hat{a}_{z}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\cbc61d05c93cb713c4e4d28a4bf6f997.jpg\" style=\"--smush-placeholder-width: 327px; --smush-placeholder-aspect-ratio: 327/268;\"/><br/>Incident wave propagation [latex]\\rightarrow-3 \\hat{a}_{x}+4 \\hat{a}_{y} [/latex]<br/> Reflected wave propagation [latex]\\rightarrow 3 \\hat{a}_{x}+4 \\hat{a}_{y} [/latex]<br/>[latex] E_{i} [/latex] incident direction [latex]\\rightarrow 8 \\hat{a}_{x}+6 \\hat{a}_{y}+5 \\hat{a}_{z} [/latex]<br/>[latex] \\left.\\begin{array}{l}E_{i} \\text { tangential } \\rightarrow 6 \\hat{a}_{y}+5 \\hat{a}_{z} \\\\ E_{r} \\text { tangential } \\rightarrow-6 \\hat{a}_{y}-5 \\hat{a}_{z}\\end{array}\\right\\} E_{\\text {tang }}=0 [/latex]<br/>[latex] \\left.\\begin{array}{rl}E_{i} \\text { normal } &amp; =8 \\hat{a}_{x} \\\\ E_{r} \\text { normal } &amp; =8 \\hat{a}_{x}\\end{array}\\right\\} E_{\\text {normal }}=E_{\\max } [/latex]<br/>[latex] E_{r} [/latex] reflected direction [latex]=8 \\hat{a}_{x}-6 \\hat{a}_{y}-5 \\hat{a}_{z}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a04.jpg": "images\\cbc61d05c93cb713c4e4d28a4bf6f997.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex](-8\\hat{a}_{x}-6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t+3x+4y)} V/m[/latex]",
+        "html": "<div class=\"option_data\">[latex](-8\\hat{a}_{x}-6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t+3x+4y)} V/m[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex](-8\\hat{a}_{x}+6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t+3x+4y)} V/m[/latex]",
+        "html": "<div class=\"option_data\">[latex](-8\\hat{a}_{x}+6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t+3x+4y)} V/m[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex](-8\\hat{a}_{x}-6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t-3x-4y)} V/m[/latex]",
+        "html": "<div class=\"option_data\">[latex](-8\\hat{a}_{x}-6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t-3x-4y)} V/m[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex](-8\\hat{a}_{x}+6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t-3x-4y)} V/m[/latex]",
+        "html": "<div class=\"option_data\">[latex](-8\\hat{a}_{x}+6\\hat{a}_{y}-5\\hat{a}_{z})e^{j(\\omega t-3x-4y)} V/m[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012"
+  },
+  {
+    "number": "Question 5",
+    "text": "The electric field of a uniform plane electromagnetic wave in free space, along the positive\n[latex]x[/latex] direction, is given by [latex]\\vec{E}=10(\\hat{a}_{y}+j\\hat{a}_{z})e^{-j25x}[/latex]. The frequency and polarization of the wave, respectively, are",
+    "html": "<div class=\"question_text\" data-value=\"1\">The electric field of a uniform plane electromagnetic wave in free space, along the positive\n[latex]x[/latex] direction, is given by [latex]\\vec{E}=10(\\hat{a}_{y}+j\\hat{a}_{z})e^{-j25x}[/latex]. The frequency and polarization of the wave, respectively, are</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Plane waves and Properties",
+    "explanation_text": "Out of phase by [latex]90^{\\circ}[/latex]and equal amplitude the wave is circularly polarized. Check the trace of E with the time which gives left  circularly polarized. [latex] \\begin{aligned} a_{y}&=\\sin \\omega t \\\\ a_{z}&=\\cos \\omega t \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tOut of phase by [latex]90^{\\circ}[/latex]and equal amplitude the wave is circularly polarized.<br/> Check the trace of E with the time which gives left  circularly polarized. <br/>[latex] \\begin{aligned} a_{y}&amp;=\\sin \\omega t \\\\ a_{z}&amp;=\\cos \\omega t \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "1.2 GHz and left circular",
+        "html": "<div class=\"option_data\">1.2 GHz and left circular</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "4 Hz and left circular",
+        "html": "<div class=\"option_data\">4 Hz and left circular</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1.2 GHz and right circular",
+        "html": "<div class=\"option_data\">1.2 GHz and right circular</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "4 Hz and right circular",
+        "html": "<div class=\"option_data\">4 Hz and right circular</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012"
+  },
+  {
+    "number": "Question 6",
+    "text": "Consider the given circuit. In this circuit, the race around",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider the given circuit.  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\7177578b65c8c14eef35dd7f30ba3eac.jpg\" style=\"--smush-placeholder-width: 482px; --smush-placeholder-aspect-ratio: 482/237;\"/> <br/> In this circuit, the race around</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q6.jpg": "images\\7177578b65c8c14eef35dd7f30ba3eac.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Circuits - Sequential Circuits",
+    "explanation_text": "Given flipflop is S-R flipflop with A= Sand B = R. In S-R flipflop race around condition does not \r\noccur.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven flipflop is S-R flipflop with A= Sand B = R.<br/>\r\nIn S-R flipflop race around condition does not \r\noccur. \r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "does not occur",
+        "html": "<div class=\"option_data\">does not occur</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "occurs when CLK = 0",
+        "html": "<div class=\"option_data\">occurs when CLK = 0</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "occurs when CLK = 1 and A = B = 1",
+        "html": "<div class=\"option_data\">occurs when CLK = 1 and A = B = 1 </div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "occurs when CLK = 1 and A = B = 0",
+        "html": "<div class=\"option_data\">occurs when CLK = 1 and A = B = 0</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=2"
+  },
+  {
+    "number": "Question 7",
+    "text": "The output Y of a 2-bit comparator is logic 1 whenever the 2-bit input A is greater than the 2-bit\ninput B. The number of combinations for which the output is logic 1, is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The output Y of a 2-bit comparator is logic 1 whenever the 2-bit input A is greater than the 2-bit\ninput B. The number of combinations for which the output is logic 1, is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Digital Circuits - Combinational Circuits",
+    "explanation_text": "Output will be 1 if  A>B. If  B=00  then there will be three combinations for \r\nwhich output will be 1 i.e. when  A=01,10 , or 11. If  B=01  there will be two conditions i.e.  A=10 \r\nand 11. If  B=10  there will be one condition i.e.  A=11. So total 6 combinations are there for which output \r\nwill be  1 .",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tOutput will be 1 if  A&gt;B.<br/>\r\n If  B=00  then there will be three combinations for \r\nwhich output will be 1 i.e. when  A=01,10 , or 11.<br/>\r\nIf  B=01  there will be two conditions i.e.  A=10 \r\nand 11.<br/>\r\nIf  B=10  there will be one condition i.e.  A=11.<br/>\r\nSo total 6 combinations are there for which output \r\nwill be  1 . \r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "4",
+        "html": "<div class=\"option_data\">4</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "6",
+        "html": "<div class=\"option_data\">6</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "8",
+        "html": "<div class=\"option_data\">8</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "10",
+        "html": "<div class=\"option_data\">10</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=2"
+  },
+  {
+    "number": "Question 8",
+    "text": "The i-v characteristics of the diode in the circuit given below are [latex]i=\\left\\{\\begin{matrix} \\frac{v-0.7}{500}A &v\\geq 0.7V \\\\ 0 A & v \\lt 0.7 V \\end{matrix}\\right.[/latex] The current in the circuit is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The i-v characteristics of the diode in the circuit given below are [latex]i=\\left\\{\\begin{matrix} \\frac{v-0.7}{500}A &amp;v\\geq 0.7V \\\\ 0 A &amp; v \\lt 0.7 V \\end{matrix}\\right.[/latex]  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\38c4a03757884861e9a57a56d383f08b.jpg\" style=\"--smush-placeholder-width: 299px; --smush-placeholder-aspect-ratio: 299/270;\"/> <br/> The current in the circuit is</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q8.jpg": "images\\38c4a03757884861e9a57a56d383f08b.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electronic Devices - PN-Junction Diodes and Special Diodes",
+    "explanation_text": "Applying KVL in given circuit we have [latex] 10-1000 i-v=0 \\qquad\\ldots(1)[/latex] since 10 V is greater than 0.7 V so current will flow through diode and is [latex] i=\\frac{v-0.7}{500}\\qquad\\ldots(2)[/latex] from (1) and (2) we have, [latex] \\begin{aligned} 10-2(v-0.7)-v &=0 \\\\ 10+1.4-3 v &=0 \\\\ 3 v &=11.4 \\\\ v &=\\frac{11.4}{3}=3.8 v\\\\ \\text{so}\\quad i &=\\frac{v-0.7}{500}=\\frac{3.8-0.7}{500} \\\\ &=6.2 \\mathrm{mA} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tApplying KVL in given circuit we have<br/>[latex] 10-1000 i-v=0 \\qquad\\ldots(1)[/latex]<br/> since 10 V is greater than 0.7 V so current will flow through diode and is<br/>[latex] i=\\frac{v-0.7}{500}\\qquad\\ldots(2)[/latex]<br/> from (1) and (2) we have,<br/>[latex] \\begin{aligned} 10-2(v-0.7)-v &amp;=0 \\\\ 10+1.4-3 v &amp;=0 \\\\ 3 v &amp;=11.4 \\\\ v &amp;=\\frac{11.4}{3}=3.8 v\\\\ \\text{so}\\quad i &amp;=\\frac{v-0.7}{500}=\\frac{3.8-0.7}{500} \\\\ &amp;=6.2 \\mathrm{mA} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "10 mA",
+        "html": "<div class=\"option_data\">10 mA</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "9.3 mA",
+        "html": "<div class=\"option_data\">9.3 mA</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "6.67 mA",
+        "html": "<div class=\"option_data\">6.67 mA</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "6.2 mA",
+        "html": "<div class=\"option_data\">6.2 mA</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=2"
+  },
+  {
+    "number": "Question 9",
+    "text": "In the following figure, C1 and C2 are ideal capacitors. C1 has been charged to 12 V before the ideal switch S is closed at t = 0. The current [latex]i(t)[/latex]\n for all [latex]t[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\"> In the following figure, C1 and C2 are ideal capacitors. C1 has been charged to 12 V before the ideal switch S is closed at t = 0. The current [latex]i(t)[/latex]\n for all [latex]t[/latex] is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\7924ef682b9b1c4d39ccec33e57ea55f.jpg\" style=\"--smush-placeholder-width: 417px; --smush-placeholder-aspect-ratio: 417/297;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q9.jpg": "images\\7924ef682b9b1c4d39ccec33e57ea55f.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Transient Analysis",
+    "explanation_text": "Since there is no resistance so time constant will  be zero. That means as soon as the switch will be  closed voltages at [latex]C_{1}[/latex] and [latex]C_{2}[/latex] will become equal  and capacitor allows sudden change of voltage  only if impulse of current will pass through it.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tSince there is no resistance so time constant will  be zero. That means as soon as the switch will be  closed voltages at [latex]C_{1}[/latex] and [latex]C_{2}[/latex] will become equal  and capacitor allows sudden change of voltage  only if impulse of current will pass through it.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "zero",
+        "html": "<div class=\"option_data\">zero</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "a step function",
+        "html": "<div class=\"option_data\">a step function</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "an exponentially decaying function",
+        "html": "<div class=\"option_data\">an exponentially decaying function</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "an impulse function",
+        "html": "<div class=\"option_data\">an impulse function</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=2"
+  },
+  {
+    "number": "Question 10",
+    "text": "The average power delivered to an impedance (4 - j3) [latex]\\Omega[/latex]by a current 5cos(100[latex]\\pi[/latex] t +100) A is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The average power delivered to an impedance (4 - j3) [latex]\\Omega[/latex]by a current 5cos(100[latex]\\pi[/latex] t +100) A is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Network Theory - Basics of Network Analysis",
+    "explanation_text": "Average power is same as RMS power. [latex]\r\n\\begin{array}{l}\r\nP=I_{\\mathrm{rms}}^{2} R=\\left(\\frac{5}{\\sqrt{2}}\\right)^{2} \\times 4 \\\\\r\n=\\frac{25}{2} \\times 4=50 \\mathrm{W}\r\n\\end{array}[/latex] Note: Power is consumed only by resistance i.e. \r\nby real part of impedance.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tAverage power is same as RMS power. <br/>[latex]\r\n\\begin{array}{l}\r\nP=I_{\\mathrm{rms}}^{2} R=\\left(\\frac{5}{\\sqrt{2}}\\right)^{2} \\times 4 \\\\\r\n=\\frac{25}{2} \\times 4=50 \\mathrm{W}\r\n\\end{array}[/latex]<br/>\r\nNote: Power is consumed only by resistance i.e. \r\nby real part of impedance. \r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "44.2 W",
+        "html": "<div class=\"option_data\">44.2 W</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "50W",
+        "html": "<div class=\"option_data\">50W</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "62.5W",
+        "html": "<div class=\"option_data\">62.5W</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "125W",
+        "html": "<div class=\"option_data\">125W</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=2"
+  },
+  {
+    "number": "Question 11",
+    "text": "The unilateral Laplace transform of [latex]f(t)[/latex] is [latex]\\frac{1}{s^{2}+s+1}[/latex]. The unilateral Laplace transform of [latex]t f(t)[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The unilateral Laplace transform of [latex]f(t)[/latex] is [latex]\\frac{1}{s^{2}+s+1}[/latex]. The unilateral Laplace transform of [latex]t f(t)[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Laplace Transform",
+    "explanation_text": "[latex]\\begin{aligned} \\text{If }\\quad L[f(t)]&=\\bar{f}(s) then\\\\ L\\left[t^{n} f(t)\\right]&=(-1)^{n} \\frac{d^{n}}{d s^{n}} \\bar{f}(s) \\end{aligned}[/latex] In this problem, Given, [latex] \\begin{aligned} L[f(t)] &=\\frac{1}{s^{2}+s+1}=\\bar{f}(s) \\\\ \\text { We need } & L[t f(t)]=(-1)^{1} \\frac{d^{1}}{d s^{1}} \\bar{f}(s) \\\\ &=-\\frac{d}{d s} \\bar{f}(s) \\\\ &=-\\frac{d}{d s}\\left[\\frac{1}{s^{2}+s+1}\\right] \\\\ &=-\\left[\\frac{-1}{\\left(s^{2}+s+1\\right)^{2}}\\right] \\times(2 s+1) \\\\ &=\\left[\\frac{2 s+1}{\\left(s^{2}+s+1\\right)^{2}}\\right] \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} \\text{If }\\quad L[f(t)]&amp;=\\bar{f}(s) then\\\\ L\\left[t^{n} f(t)\\right]&amp;=(-1)^{n} \\frac{d^{n}}{d s^{n}} \\bar{f}(s) \\end{aligned}[/latex]<br/> In this problem, <br/> Given,<br/>[latex] \\begin{aligned} L[f(t)] &amp;=\\frac{1}{s^{2}+s+1}=\\bar{f}(s) \\\\ \\text { We need } &amp; L[t f(t)]=(-1)^{1} \\frac{d^{1}}{d s^{1}} \\bar{f}(s) \\\\ &amp;=-\\frac{d}{d s} \\bar{f}(s) \\\\ &amp;=-\\frac{d}{d s}\\left[\\frac{1}{s^{2}+s+1}\\right] \\\\ &amp;=-\\left[\\frac{-1}{\\left(s^{2}+s+1\\right)^{2}}\\right] \\times(2 s+1) \\\\ &amp;=\\left[\\frac{2 s+1}{\\left(s^{2}+s+1\\right)^{2}}\\right] \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]-\\frac{s}{(s^{2}+s+1)^{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]-\\frac{s}{(s^{2}+s+1)^{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]-\\frac{2s+1}{(s^{2}+s+1)^{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]-\\frac{2s+1}{(s^{2}+s+1)^{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{s}{(s^{2}+s+1)^{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{s}{(s^{2}+s+1)^{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{2s+1}{(s^{2}+s+1)^{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{2s+1}{(s^{2}+s+1)^{2}}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=3"
+  },
+  {
+    "number": "Question 12",
+    "text": "With initial condition x(1) = 0.5, the solution of the differential equation, [latex]t\\frac{dx}{dt}+x=t[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">With initial condition x(1) = 0.5, the solution of the differential equation,<br/> [latex]t\\frac{dx}{dt}+x=t[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Differential Equations",
+    "explanation_text": "The given differential equation is [latex] t \\frac{d x}{d t}+x=t[/latex] with initial condition [latex]x(1)=\\frac{1}{2}[/latex] which is same as [latex] \\frac{d x}{d t}+\\frac{x}{t}=1[/latex] Which is a linear differential equation [latex] \\frac{d x}{d t}+P x=Q[/latex] Where, [latex]P=\\frac{1}{t}[/latex] and Q=1 Integrating factor [latex]=e^{\\int P t t=e^{1 \\frac{1}{t} d t}} [/latex] [latex] =e^{\\log _{e} t}=t[/latex] Solution is [latex] \\begin{aligned} x \\cdot(I F)&=\\int Q \\cdot(I F) d t+C \\\\ x \\cdot t&=\\int 1 \\cdot t \\cdot d t+C \\\\ x t&=\\frac{t^{2}}{2}+C \\\\ x&=\\frac{t}{2}+\\frac{C}{t} \\\\ \\text{Put},x(1)=\\frac{1}{2}&\\\\ \\Rightarrow\\quad \\frac{1}{2}+\\frac{C}{1}&=\\frac{1}{2} \\\\ \\Rightarrow\\quad C&=0 \\\\ \\text{So, }\\left[x=\\frac{t}{2}\\right]& \\text{ is the solution.} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tThe given differential equation is [latex] t \\frac{d x}{d t}+x=t[/latex] with initial condition [latex]x(1)=\\frac{1}{2}[/latex] which is same as [latex] \\frac{d x}{d t}+\\frac{x}{t}=1[/latex]<br/> Which is a linear differential equation<br/>[latex] \\frac{d x}{d t}+P x=Q[/latex]<br/> Where, [latex]P=\\frac{1}{t}[/latex] and Q=1 <br/> Integrating factor [latex]=e^{\\int P t t=e^{1 \\frac{1}{t} d t}} [/latex]<br/>[latex] =e^{\\log _{e} t}=t[/latex]<br/> Solution is<br/>[latex] \\begin{aligned} x \\cdot(I F)&amp;=\\int Q \\cdot(I F) d t+C \\\\ x \\cdot t&amp;=\\int 1 \\cdot t \\cdot d t+C \\\\ x t&amp;=\\frac{t^{2}}{2}+C \\\\ x&amp;=\\frac{t}{2}+\\frac{C}{t} \\\\ \\text{Put},x(1)=\\frac{1}{2}&amp;\\\\ \\Rightarrow\\quad \\frac{1}{2}+\\frac{C}{1}&amp;=\\frac{1}{2} \\\\ \\Rightarrow\\quad C&amp;=0 \\\\ \\text{So, }\\left[x=\\frac{t}{2}\\right]&amp; \\text{ is the solution.} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]x=t-\\frac{1}{2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]x=t-\\frac{1}{2}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]x=t^{2}-\\frac{1}{2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]x=t^{2}-\\frac{1}{2}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]x=\\frac{t^{2}}{2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]x=\\frac{t^{2}}{2}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]x=\\frac{t}{2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]x=\\frac{t}{2}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=3"
+  },
+  {
+    "number": "Question 13",
+    "text": "The diodes and capacitors in the circuit shown are ideal. The voltage [latex]v(t)[/latex] across the diode D1 is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The diodes and capacitors in the circuit shown are ideal. The voltage [latex]v(t)[/latex] across the diode D1 is  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\d62684148457a0af9a294e564186c334.jpg\" style=\"--smush-placeholder-width: 314px; --smush-placeholder-aspect-ratio: 314/153;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q13.jpg": "images\\d62684148457a0af9a294e564186c334.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - Diodes Applications",
+    "explanation_text": "It is voltage doubles circuit in which [latex]C_{1}[/latex] will be \r\ncharged to maximum value of input that is 1V. \r\n So v(t) = [latex](\\cos \\omega t- 1)[/latex] according to KVL.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tIt is voltage doubles circuit in which [latex]C_{1}[/latex] will be \r\ncharged to maximum value of input that is 1V. \r\n So v(t) = [latex](\\cos \\omega t- 1)[/latex] according to KVL.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "cos([latex]\\omega[/latex]t) -1",
+        "html": "<div class=\"option_data\">cos([latex]\\omega[/latex]t) -1</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "sin([latex]\\omega[/latex] t)",
+        "html": "<div class=\"option_data\">sin([latex]\\omega[/latex] t)</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1-cos([latex]\\omega[/latex]t)",
+        "html": "<div class=\"option_data\">1-cos([latex]\\omega[/latex]t)</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1-sin([latex]\\omega[/latex]t)",
+        "html": "<div class=\"option_data\">1-sin([latex]\\omega[/latex]t)</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=3"
+  },
+  {
+    "number": "Question 14",
+    "text": "In the circuit shown",
+    "html": "<div class=\"question_text\" data-value=\"1\"> In the circuit shown <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\42fc3476ed00871b38a8f48c0869ea66.jpg\" style=\"--smush-placeholder-width: 223px; --smush-placeholder-aspect-ratio: 223/338;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q14.jpg": "images\\42fc3476ed00871b38a8f48c0869ea66.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Circuits - Logic Families",
+    "explanation_text": "Series combination of n-mos is equivalent to AND \r\nand parallel combination is equivalent to OR. So,  [latex]Y=\\overline{C \\cdot(A+B)}=\\bar{C}+\\overline{(A+B)}=\\bar{C}+\\bar{A} \\cdot \\bar{B} [/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tSeries combination of n-mos is equivalent to AND \r\nand parallel combination is equivalent to OR.<br/>\r\nSo,  [latex]Y=\\overline{C \\cdot(A+B)}=\\bar{C}+\\overline{(A+B)}=\\bar{C}+\\bar{A} \\cdot \\bar{B} [/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]Y=\\bar{A}\\bar{B}+\\bar{C}[/latex]",
+        "html": "<div class=\"option_data\">[latex]Y=\\bar{A}\\bar{B}+\\bar{C}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "Y = (A+ B)C",
+        "html": "<div class=\"option_data\">Y = (A+ B)C</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]Y=(\\bar{A}+\\bar{B})+\\bar{C}[/latex]",
+        "html": "<div class=\"option_data\">[latex]Y=(\\bar{A}+\\bar{B})+\\bar{C}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "Y = AB +C",
+        "html": "<div class=\"option_data\">Y = AB +C</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=3"
+  },
+  {
+    "number": "Question 15",
+    "text": "A source alphabet consists of N symbols with the probability of the first two symbols being the\r\nsame. A source encoder increases the probability of the first symbol by a small amount [latex]\\varepsilon[/latex] and decreases that of the second by [latex]\\varepsilon[/latex]. After encoding, the entropy of the source",
+    "html": "<div class=\"question_text\" data-value=\"1\">A source alphabet consists of N symbols with the probability of the first two symbols being the\r\nsame. A source encoder increases the probability of the first symbol by a small amount [latex]\\varepsilon[/latex] and decreases that of the second by [latex]\\varepsilon[/latex]. After encoding, the entropy of the source</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Communication Systems - Information Theory and Coding",
+    "explanation_text": "We know that entropy is maximum when symbols \r\nare equal probable so if probability will change \r\nfrom equal to non equal entropy will decrease.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tWe know that entropy is maximum when symbols \r\nare equal probable so if probability will change \r\nfrom equal to non equal entropy will decrease.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "increases",
+        "html": "<div class=\"option_data\">increases</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "remains the same",
+        "html": "<div class=\"option_data\">remains the same</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "increases only if N = 2",
+        "html": "<div class=\"option_data\">increases only if N = 2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "decreases",
+        "html": "<div class=\"option_data\">decreases</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=3"
+  },
+  {
+    "number": "Question 16",
+    "text": "A coaxial cable with an inner diameter of 1 mm and outer diameter of 2.4 mm is filled with a\r\ndielectric of relative permittivity 10.89. Given [latex]\\mu _{0}=4 \\pi \\times 10^{-7} H/m,[/latex] [latex]\\varepsilon _{0}=\\frac{10^{-9}}{36 \\pi} F/m[/latex], the characteristic impedance of the cable is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A coaxial cable with an inner diameter of 1 mm and outer diameter of 2.4 mm is filled with a\r\ndielectric of relative permittivity 10.89. Given [latex]\\mu _{0}=4 \\pi \\times 10^{-7} H/m,[/latex] [latex]\\varepsilon _{0}=\\frac{10^{-9}}{36 \\pi} F/m[/latex], the characteristic impedance of the cable is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Transmission Lines",
+    "explanation_text": "Characteristics impedance of the co-axial cable is given by [latex] Z_{o}=\\frac{138}{\\sqrt{\\epsilon_{r}}} \\log \\frac{D}{d}[/latex] [latex] =\\frac{138}{\\sqrt{10.89}} \\log \\left(\\frac{2.4}{1}\\right)=15.89 \\Omega[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tCharacteristics impedance of the co-axial cable is given by <br/>[latex] Z_{o}=\\frac{138}{\\sqrt{\\epsilon_{r}}} \\log \\frac{D}{d}[/latex]<br/>[latex] =\\frac{138}{\\sqrt{10.89}} \\log \\left(\\frac{2.4}{1}\\right)=15.89 \\Omega[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "330 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">330 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "100 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">100 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "143.3 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">143.3 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "15.3 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">15.3 [latex]\\Omega[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=4"
+  },
+  {
+    "number": "Question 17",
+    "text": "The radiation pattern of an antenna in spherical co-ordinates is given by [latex]F(\\theta )=cos^{4}\\theta ;0\\leq \\theta\\leq \\pi /2[/latex] The directivity of the antenna is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The radiation pattern of an antenna in spherical co-ordinates is given by <br/> [latex]F(\\theta )=cos^{4}\\theta ;0\\leq \\theta\\leq \\pi /2[/latex] <br/>The directivity of the antenna is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Antennas",
+    "explanation_text": "[latex]F(\\theta)=\\cos ^{4} \\theta, 0 \\leq \\theta \\leq \\pi / 2[/latex] we know that directivity D is [latex] D=\\frac{4 \\pi u_{\\max }}{\\pi_{\\mathrm{rad}}} \\qquad\\ldots(1)[/latex] [latex] \\mathrm{F}(\\theta) [/latex] is nothing but radiation intensity [latex] u(\\theta, \\phi)[/latex] and [latex] W_{\\mathrm{rad}} [/latex] is radiated power. [latex] W_{\\mathrm{rad}}=\\int_{0}^{2 \\pi \\pi / 2} \\int_{0}^{2} \\cos ^{4} \\theta \\sin \\theta d \\phi\\qquad\\ldots(2)[/latex] above equation is written from the formula [latex] W_{\\mathrm{rad}}=\\iint_{\\theta \\phi} u(\\theta, \\phi) d \\Omega[/latex] where [latex]\\alpha \\Omega[/latex] is solid angle and [latex]d \\Omega=\\sin \\theta d \\theta d \\phi [/latex] So from (2) [latex] \\begin{aligned} W_{\\mathrm{rad}} &=\\int_{0}^{2 \\pi \\pi / 2} \\int_{0}^{2} \\cos ^{4} \\theta \\sin d \\theta d \\phi \\\\ W_{\\mathrm{rad}} &=2 \\pi \\int_{0}^{\\pi / 2} \\cos ^{4} \\theta \\sin \\theta d \\theta \\\\W_{\\mathrm{rad}}&=-2 \\pi\\left[\\frac{\\cos ^{5} \\theta}{5}\\right]_{0}^{\\pi / 2}\\\\\r\nW_{\\mathrm{rad}}&=\\frac{2 \\pi}{5}&\\ldots(3)\\\\\r\n\\text { So, } \\quad D&=\\frac{4 \\pi u_{\\max }}{\\left(\\frac{2 \\pi}{5}\\right)}=10 u_{\\max }=10\\\\\r\n&\\text { In } \\mathrm{dB} \\text { directivity }=10 \\mathrm{log}_{10} \\mathrm{D}=10 \\mathrm{dB}\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]F(\\theta)=\\cos ^{4} \\theta, 0 \\leq \\theta \\leq \\pi / 2[/latex]<br/> we know that directivity D is<br/>[latex] D=\\frac{4 \\pi u_{\\max }}{\\pi_{\\mathrm{rad}}} \\qquad\\ldots(1)[/latex]<br/>[latex] \\mathrm{F}(\\theta) [/latex] is nothing but radiation intensity [latex] u(\\theta, \\phi)[/latex] and<br/>[latex] W_{\\mathrm{rad}} [/latex] is radiated power.<br/>[latex] W_{\\mathrm{rad}}=\\int_{0}^{2 \\pi \\pi / 2} \\int_{0}^{2} \\cos ^{4} \\theta \\sin \\theta d \\phi\\qquad\\ldots(2)[/latex]<br/> above equation is written from the formula<br/>[latex] W_{\\mathrm{rad}}=\\iint_{\\theta \\phi} u(\\theta, \\phi) d \\Omega[/latex]<br/> where [latex]\\alpha \\Omega[/latex] is solid angle and [latex]d \\Omega=\\sin \\theta d \\theta d \\phi [/latex]<br/> So from (2)<br/>[latex] \\begin{aligned} W_{\\mathrm{rad}} &amp;=\\int_{0}^{2 \\pi \\pi / 2} \\int_{0}^{2} \\cos ^{4} \\theta \\sin d \\theta d \\phi \\\\ W_{\\mathrm{rad}} &amp;=2 \\pi \\int_{0}^{\\pi / 2} \\cos ^{4} \\theta \\sin \\theta d \\theta \\\\W_{\\mathrm{rad}}&amp;=-2 \\pi\\left[\\frac{\\cos ^{5} \\theta}{5}\\right]_{0}^{\\pi / 2}\\\\\r\nW_{\\mathrm{rad}}&amp;=\\frac{2 \\pi}{5}&amp;\\ldots(3)\\\\\r\n\\text { So, } \\quad D&amp;=\\frac{4 \\pi u_{\\max }}{\\left(\\frac{2 \\pi}{5}\\right)}=10 u_{\\max }=10\\\\\r\n&amp;\\text { In } \\mathrm{dB} \\text { directivity }=10 \\mathrm{log}_{10} \\mathrm{D}=10 \\mathrm{dB}\\end{aligned}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "10 dB",
+        "html": "<div class=\"option_data\">10 dB</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "12.6 dB",
+        "html": "<div class=\"option_data\">12.6 dB</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "11.5 dB",
+        "html": "<div class=\"option_data\">11.5 dB</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "18 dB",
+        "html": "<div class=\"option_data\">18 dB</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=4"
+  },
+  {
+    "number": "Question 18",
+    "text": "If [latex]x[n]=(1/3)^{|n|}-(1/2)^{n}u[n][/latex], then the region of convergence (ROC) of its Z-transform in the Z-plane will be",
+    "html": "<div class=\"question_text\" data-value=\"1\">If [latex]x[n]=(1/3)^{|n|}-(1/2)^{n}u[n][/latex], then the region of convergence (ROC) of its Z-transform in the Z-plane will be</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Z-Transform",
+    "explanation_text": "[latex]\\begin{aligned} x[n]&=\\left(\\frac{1}{3}\\right)^{|n|}-\\left(\\frac{1}{2}\\right)^{n} \\cup[n] \\\\ x[n]&=\\left(\\frac{1}{3}\\right)^{n}u[n]+\\left(\\frac{1}{3}\\right)^{-n} u[-n-1]-\\left(\\frac{1}{2}\\right)^{n} u[n] \\\\ \\left(\\frac{1}{3}\\right)^{n} &u[n] \\longleftrightarrow \\frac{1}{1-\\frac{1}{3} z^{-1}} \\quad \\text{ROC}|z|\\gt \\frac{1}{3} \\\\ \\left(\\frac{1}{3}\\right)^{-n} &u(-n-1] \\longleftrightarrow \\frac{-1}{1-3 z^{-1}} \\text{ROC}|z| \\lt 3 \\\\ \\left(\\frac{1}{2}\\right)^{n} &u[n] \\longleftrightarrow \\frac{1}{1-\\frac{1}{2} z^{-1}} \\quad \\text{ROC}|z| \\gt \\frac{1}{2} \\end{aligned}[/latex] So, overall ROC will be intersection of there ROC i.e. [latex] \\frac{1}{2}\\lt |z| \\lt 3[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} x[n]&amp;=\\left(\\frac{1}{3}\\right)^{|n|}-\\left(\\frac{1}{2}\\right)^{n} \\cup[n] \\\\ x[n]&amp;=\\left(\\frac{1}{3}\\right)^{n}u[n]+\\left(\\frac{1}{3}\\right)^{-n} u[-n-1]-\\left(\\frac{1}{2}\\right)^{n} u[n] \\\\ \\left(\\frac{1}{3}\\right)^{n} &amp;u[n] \\longleftrightarrow \\frac{1}{1-\\frac{1}{3} z^{-1}} \\quad \\text{ROC}|z|\\gt \\frac{1}{3} \\\\ \\left(\\frac{1}{3}\\right)^{-n} &amp;u(-n-1] \\longleftrightarrow \\frac{-1}{1-3 z^{-1}} \\text{ROC}|z| \\lt 3 \\\\ \\left(\\frac{1}{2}\\right)^{n} &amp;u[n] \\longleftrightarrow \\frac{1}{1-\\frac{1}{2} z^{-1}} \\quad \\text{ROC}|z| \\gt \\frac{1}{2} \\end{aligned}[/latex]<br/> So, overall ROC will be intersection of there ROC<br/> i.e.<br/>[latex] \\frac{1}{2}\\lt |z| \\lt 3[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{1}{3} \\lt |z| \\lt 3[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{3} \\lt |z| \\lt 3[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{1}{3} \\lt |z| \\lt \\frac{1}{2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{3} \\lt |z| \\lt \\frac{1}{2}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{1}{2} \\lt |z| \\lt 3[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{2} \\lt |z| \\lt 3[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{1}{3} \\lt |z|[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{3} \\lt |z|[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=4"
+  },
+  {
+    "number": "Question 19",
+    "text": "In the sum of products function f (X, Y, Z) =[latex]\\sum[/latex](2, 3, 4, 5), the prime implicants are",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the sum of products function f (X, Y, Z) =[latex]\\sum[/latex](2, 3, 4, 5), the prime implicants are</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Digital Circuits - Boolean Algebra",
+    "explanation_text": "[latex]f(X,Y,Z)=\\sum(2,3,4,5)[/latex] [latex] f(X, Y, Z)=X \\bar{Y}+\\bar{X} Y[/latex] So prime implicants are [latex]X\\bar{Y}[/latex] and [latex]\\bar{X}Y .[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]f(X,Y,Z)=\\sum(2,3,4,5)[/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\ed31d138b05bf69e18fa5251f3424919.jpg\" style=\"--smush-placeholder-width: 266px; --smush-placeholder-aspect-ratio: 266/117;\"/><br/><br/>[latex] f(X, Y, Z)=X \\bar{Y}+\\bar{X} Y[/latex]<br/> So prime implicants are [latex]X\\bar{Y}[/latex] and [latex]\\bar{X}Y .[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a19.jpg": "images\\ed31d138b05bf69e18fa5251f3424919.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\bar{X}Y,X\\bar{Y}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bar{X}Y,X\\bar{Y}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\bar{X}Y,X\\bar{Y}\\bar{Z},X\\bar{Y}Z[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bar{X}Y,X\\bar{Y}\\bar{Z},X\\bar{Y}Z[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\bar{X}Y\\bar{Z},\\bar{X}YZ,X\\bar{Y}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bar{X}Y\\bar{Z},\\bar{X}YZ,X\\bar{Y}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\bar{X}Y\\bar{Z},\\bar{X}YZ,X\\bar{Y}\\bar{Z},X\\bar{Y}Z[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bar{X}Y\\bar{Z},\\bar{X}YZ,X\\bar{Y}\\bar{Z},X\\bar{Y}Z[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=4"
+  },
+  {
+    "number": "Question 20",
+    "text": "A system with transfer function [latex]G(s)=\\frac{(s^{2}+9)(s+2)}{(s+1)(s+3)(s+4)}[/latex] is excited by sin([latex]\\omega[/latex] t). The steady-state output of the system is zero at",
+    "html": "<div class=\"question_text\" data-value=\"1\">A system with transfer function<br/> [latex]G(s)=\\frac{(s^{2}+9)(s+2)}{(s+1)(s+3)(s+4)}[/latex] <br/>is excited by sin([latex]\\omega[/latex] t). The steady-state output of the system is zero at</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - Frequency Response Analysis",
+    "explanation_text": "Transfer function is [latex] \\begin{aligned} G(s)&=\\frac{\\left(s^{2}+9\\right)(s+2)}{(s+1)(s+3)(s+4)} \\\\ \\text{Input }\\quad X(s)&=L \\cdot T[\\sin \\omega t]\\\\ X(s)&=\\frac{\\omega}{s^{2}+\\omega^{2}} \\end{aligned}[/latex] So output [latex] Y(s)=\\frac{\\left(s^{2}+9\\right)(s+2)}{(s+1)(s+3)(s+4)} \\cdot \\frac{\\omega}{\\left(s^{2}+\\omega^{2}\\right)}[/latex] Now [latex] \\lim _{t \\rightarrow \\infty} y(t)=\\lim _{s \\rightarrow 0} S Y(s)=\\lim _{s \\rightarrow 0} s \\frac{\\left(s^{2}+9\\right)(s+2)}{(s+1)(s+3)(s+4)} \\cdot \\frac{\\omega}{\\left(s^{2}+\\omega^{2}\\right)}[/latex] this will be zero if [latex] s^{2}+\\omega^{2}[/latex] will cancel [latex]\\left(s^{2}+9\\right)[/latex] term as only then final value theorem will be applicable. So at [latex]\\omega^{2}=9 \\Rightarrow \\omega=3 \\mathrm{rad} / \\mathrm{sec},[/latex] steady state output will be zero.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tTransfer function is<br/>[latex] \\begin{aligned} G(s)&amp;=\\frac{\\left(s^{2}+9\\right)(s+2)}{(s+1)(s+3)(s+4)} \\\\ \\text{Input }\\quad X(s)&amp;=L \\cdot T[\\sin \\omega t]\\\\ X(s)&amp;=\\frac{\\omega}{s^{2}+\\omega^{2}} \\end{aligned}[/latex]<br/> So output<br/>[latex] Y(s)=\\frac{\\left(s^{2}+9\\right)(s+2)}{(s+1)(s+3)(s+4)} \\cdot \\frac{\\omega}{\\left(s^{2}+\\omega^{2}\\right)}[/latex]<br/> Now<br/>[latex] \\lim _{t \\rightarrow \\infty} y(t)=\\lim _{s \\rightarrow 0} S Y(s)=\\lim _{s \\rightarrow 0} s \\frac{\\left(s^{2}+9\\right)(s+2)}{(s+1)(s+3)(s+4)} \\cdot \\frac{\\omega}{\\left(s^{2}+\\omega^{2}\\right)}[/latex]<br/> this will be zero if [latex] s^{2}+\\omega^{2}[/latex] will cancel [latex]\\left(s^{2}+9\\right)[/latex] term as only then final value theorem will be applicable. <br/> So at [latex]\\omega^{2}=9 \\Rightarrow \\omega=3 \\mathrm{rad} / \\mathrm{sec},[/latex] steady state output will be zero.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\omega[/latex]=1 rad/s",
+        "html": "<div class=\"option_data\">[latex]\\omega[/latex]=1 rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\omega[/latex]=2 rad/s",
+        "html": "<div class=\"option_data\">[latex]\\omega[/latex]=2 rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\omega[/latex]=3 rad/s",
+        "html": "<div class=\"option_data\">[latex]\\omega[/latex]=3 rad/s</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\omega[/latex]=4 rad/s",
+        "html": "<div class=\"option_data\">[latex]\\omega[/latex]=4 rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=4"
+  },
+  {
+    "number": "Question 21",
+    "text": "The impedance looking into nodes 1 and 2 in the given circuit is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The impedance looking into nodes 1 and 2 in the given circuit is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\3bdd28bfaf24d598c0ed8be7c1c4fb91.jpg\" style=\"--smush-placeholder-width: 295px; --smush-placeholder-aspect-ratio: 295/253;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q21.jpg": "images\\3bdd28bfaf24d598c0ed8be7c1c4fb91.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Network Theorems",
+    "explanation_text": "To find Thevenin impedance across node 1 and 2. Connect a 1 V source and find the current through voltage source. Then [latex]Z_{T h}=\\frac{1}{I}[/latex] By applying KCL at node B and A [latex] \\begin{aligned} i_{A B}+99 i_{b} &=I \\\\ i_{b} &=i_{A}+i_{A B}\\\\ \\Rightarrow \\quad i_{b}-i_{A}+99i_{b}&=1 \\\\ \\Rightarrow \\quad 100i_{b}-i_{A}&=I \\ldots(i) \\end{aligned}[/latex] By applying KVL in outer loop [latex] \\begin{aligned} 10 \\times 10^{3} i_{b}&=1\\\\ i_{b} &= 10^{-4}A\\\\ \\text{and }10 \\times 10^{3} i_{b}&=10^{1} \\mathrm{A} \\\\ \\Rightarrow \\quad i_{A}&=-100 i_{b} \\\\ \\end{aligned}[/latex] [latex] \\therefore \\quad[/latex] From equation (i) [latex] \\begin{aligned} 100 i_{n}+100 i_{n}&=1 \\\\ \\Rightarrow \\qquad I &=200 i_{b} \\\\ &=200 \\times 10^{-4}=0.02 \\\\ \\therefore \\quad Z_{T h} &=\\frac{1}{I}=\\frac{1}{0.02}=50 \\Omega \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\4dfb446aeece15049e01fd3fc20f45d9.jpg\" style=\"--smush-placeholder-width: 318px; --smush-placeholder-aspect-ratio: 318/374;\"/><br/>To find Thevenin impedance across node 1 and 2. Connect a 1 V source and find the current through voltage source.<br/> Then [latex]Z_{T h}=\\frac{1}{I}[/latex]<br/> By applying KCL at node B and A <br/>[latex] \\begin{aligned} i_{A B}+99 i_{b} &amp;=I \\\\ i_{b} &amp;=i_{A}+i_{A B}\\\\ \\Rightarrow \\quad i_{b}-i_{A}+99i_{b}&amp;=1 \\\\ \\Rightarrow \\quad 100i_{b}-i_{A}&amp;=I \\ldots(i) \\end{aligned}[/latex]<br/> By applying KVL in outer loop<br/>[latex] \\begin{aligned} 10 \\times 10^{3} i_{b}&amp;=1\\\\ i_{b} &amp;= 10^{-4}A\\\\ \\text{and }10 \\times 10^{3} i_{b}&amp;=10^{1} \\mathrm{A} \\\\ \\Rightarrow \\quad i_{A}&amp;=-100 i_{b} \\\\ \\end{aligned}[/latex]<br/>[latex] \\therefore \\quad[/latex] From equation (i) <br/>[latex] \\begin{aligned} 100 i_{n}+100 i_{n}&amp;=1 \\\\ \\Rightarrow \\qquad I &amp;=200 i_{b} \\\\ &amp;=200 \\times 10^{-4}=0.02 \\\\ \\therefore \\quad Z_{T h} &amp;=\\frac{1}{I}=\\frac{1}{0.02}=50 \\Omega \\end{aligned}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a21.jpg": "images\\4dfb446aeece15049e01fd3fc20f45d9.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "50 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">50 [latex]\\Omega[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "100 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">100 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "5k [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">5k [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "10.1k [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">10.1k [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=5"
+  },
+  {
+    "number": "Question 22",
+    "text": "In the circuit shown below, the current through the inductor is",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown below, the current through the inductor is<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\6b4bdc33c3572283bf6ba5ce17e4ca23.jpg\" style=\"--smush-placeholder-width: 403px; --smush-placeholder-aspect-ratio: 403/400;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q22.jpg": "images\\6b4bdc33c3572283bf6ba5ce17e4ca23.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Basics of Network Analysis",
+    "explanation_text": "According to KCL at node D there will be no current in voltage sources. According to KCL at node A current through inductor will be [latex] i_{1}=i+1\\qquad \\ldots(1)[/latex] Applying KVL in loop ACDBA we have [latex] \\begin{aligned} 1 \\times i+(i+1) j 1+1 \\angle 0-1 \\angle 0 &=0 \\\\ i+(i+1) j &=0 \\\\ (1+j) i &=-j \\\\ i &=\\frac{-j}{1+j} &\\ldots(2) \\end{aligned}[/latex] Therefore from (1) and (2) we have [latex] \\begin{aligned} i_{1}&=i+1=\\frac{-j}{j+1}+1\\\\ i_{1}&=\\frac{1}{1+j} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\d1b610570bb0898a3f9a4d0de707a2bc.jpg\" style=\"--smush-placeholder-width: 297px; --smush-placeholder-aspect-ratio: 297/269;\"/><br/>According to KCL at node D there will be no current in voltage sources.<br/> According to KCL at node A current through inductor will be <br/>[latex] i_{1}=i+1\\qquad \\ldots(1)[/latex]<br/> Applying KVL in loop ACDBA we have<br/>[latex] \\begin{aligned} 1 \\times i+(i+1) j 1+1 \\angle 0-1 \\angle 0 &amp;=0 \\\\ i+(i+1) j &amp;=0 \\\\ (1+j) i &amp;=-j \\\\ i &amp;=\\frac{-j}{1+j} &amp;\\ldots(2) \\end{aligned}[/latex]<br/> Therefore from (1) and (2) we have<br/>[latex] \\begin{aligned} i_{1}&amp;=i+1=\\frac{-j}{j+1}+1\\\\ i_{1}&amp;=\\frac{1}{1+j} \\end{aligned}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a22.jpg": "images\\d1b610570bb0898a3f9a4d0de707a2bc.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{2}{1+j}A[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{2}{1+j}A[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]-\\frac{1}{1+j}A[/latex]",
+        "html": "<div class=\"option_data\">[latex]-\\frac{1}{1+j}A[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{1}{1+j}A[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{1+j}A[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0A",
+        "html": "<div class=\"option_data\">0A</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=5"
+  },
+  {
+    "number": "Question 23",
+    "text": "Given [latex]f(z)=\\frac{1}{z+1}-\\frac{2}{z+3}[/latex]. If C is a counterclockwise path in the z-plane such that |z+1|=1, the value of [latex]\\frac{1}{2 \\pi j}\\oint_{C}f(z)dz[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Given [latex]f(z)=\\frac{1}{z+1}-\\frac{2}{z+3}[/latex]. If C is a counterclockwise path in the z-plane such that |z+1|=1, the value of [latex]\\frac{1}{2 \\pi j}\\oint_{C}f(z)dz[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Complex Analysis",
+    "explanation_text": "Given, [latex] \\begin{aligned} f(z) &=\\frac{1}{z+1}-\\frac{2}{z+3} \\\\ &=\\frac{(z+3)-2(z+1)}{(z+1)(z+3)} \\\\ &=\\frac{-z+1}{(z+1)(z+3)} \\end{aligned}[/latex] Poles are at -1 and -3 i.e. (-1,0) and (-3,0) From figure below of |z+1|=1 we see that (-1,0) is inside the circle and (-3,0) is outside the circle. Residue theorem says, [latex] \\frac{1}{2 \\pi j} \\oint_{C} f(z) d z= [/latex] Residue of those poles which are inside C . So, the required integral [latex]\\frac{1}{2 \\pi j} \\oint_{C} f(z) d z [/latex] is given by the residue of function at pole (-1,0) (which is inside the circle). This residue is [latex]=\\frac{-(-1)+1}{(-1+3)}=\\frac{2}{2}=1[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGiven,<br/>[latex] \\begin{aligned} f(z) &amp;=\\frac{1}{z+1}-\\frac{2}{z+3} \\\\ &amp;=\\frac{(z+3)-2(z+1)}{(z+1)(z+3)} \\\\ &amp;=\\frac{-z+1}{(z+1)(z+3)} \\end{aligned}[/latex]<br/> Poles are at -1 and -3 i.e. (-1,0) and (-3,0) <br/> From figure below of |z+1|=1 <br/> we see that (-1,0) is inside the circle and (-3,0) is outside the circle.<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\a7499101e2c4f57c9b6d119b38794548.jpg\" style=\"--smush-placeholder-width: 206px; --smush-placeholder-aspect-ratio: 206/164;\"/><br/><br/> Residue theorem says,<br/>[latex] \\frac{1}{2 \\pi j} \\oint_{C} f(z) d z= [/latex] Residue of those poles which are inside C .<br/> So, the required integral [latex]\\frac{1}{2 \\pi j} \\oint_{C} f(z) d z [/latex] is given by the residue of function at pole (-1,0) (which is inside the circle).<br/> This residue is [latex]=\\frac{-(-1)+1}{(-1+3)}=\\frac{2}{2}=1[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a23.jpg": "images\\a7499101e2c4f57c9b6d119b38794548.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "-2",
+        "html": "<div class=\"option_data\">-2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "-1",
+        "html": "<div class=\"option_data\">-1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "2",
+        "html": "<div class=\"option_data\">2</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=5"
+  },
+  {
+    "number": "Question 24",
+    "text": "Two independent random variables X and Y are uniformly distributed in the interval [-1,1]. The\r\nprobability that max[X,Y] is less than 1/2 is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Two independent random variables X and Y are uniformly distributed in the interval [-1,1]. The\r\nprobability that max[X,Y] is less than 1/2 is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Communication Systems - Random Processes",
+    "explanation_text": "[latex]-1 \\leq x \\leq 1 [/latex] and [latex]-1 \\leq y \\leq 1[/latex] is the entire rectangle. The region in which maximum of {x, y} is less than [latex] \\frac{1}{2}[/latex] is shown below as shaded region inside this rectangle. [latex] \\begin{aligned} \\rho\\left(\\max |x, y| \\lt \\frac{1}{2}\\right) &=\\frac{\\text { Area of shaded region }}{\\text { Area of entire rectangle }} \\\\ &=\\frac{\\frac{3}{2} \\times \\frac{3}{2}}{2 \\times 2}=\\frac{9}{16} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]-1 \\leq x \\leq 1 [/latex] and [latex]-1 \\leq y \\leq 1[/latex] is the entire rectangle. <br/> The region in which maximum of {x, y} is less than [latex] \\frac{1}{2}[/latex] is shown below as shaded region inside this rectangle.<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\467e99e3df265f5d9c9150fc8fb93602.jpg\" style=\"--smush-placeholder-width: 294px; --smush-placeholder-aspect-ratio: 294/223;\"/><br/><br/>[latex] \\begin{aligned} \\rho\\left(\\max |x, y| \\lt \\frac{1}{2}\\right) &amp;=\\frac{\\text { Area of shaded region }}{\\text { Area of entire rectangle }} \\\\ &amp;=\\frac{\\frac{3}{2} \\times \\frac{3}{2}}{2 \\times 2}=\\frac{9}{16} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a24.jpg": "images\\467e99e3df265f5d9c9150fc8fb93602.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]3/4[/latex]",
+        "html": "<div class=\"option_data\">[latex]3/4[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]9/16[/latex]",
+        "html": "<div class=\"option_data\">[latex]9/16[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]1/4[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/4[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]2/3[/latex]",
+        "html": "<div class=\"option_data\">[latex]2/3[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=5"
+  },
+  {
+    "number": "Question 25",
+    "text": "If [latex]x=\\sqrt{-1}[/latex], then the value of [latex]x^{x}[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">If [latex]x=\\sqrt{-1}[/latex], then the value of [latex]x^{x}[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Complex Analysis",
+    "explanation_text": "[latex]\\begin{aligned} x&=i,\\text{ then in polar coordinates,}\\\\ x&=\\cos \\frac{\\pi}{2}+i \\sin \\frac{\\pi}{2}=e^{\\frac{\\pi}{2} i}\\\\ \\text{Now, }\\quad x^{x}&=i^{i}=\\left(e^{\\pi i / 2}\\right)^{i}=e^{i^{2} \\pi / 2}=e^{-\\pi / 2} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} x&amp;=i,\\text{ then in polar coordinates,}\\\\ x&amp;=\\cos \\frac{\\pi}{2}+i \\sin \\frac{\\pi}{2}=e^{\\frac{\\pi}{2} i}\\\\ \\text{Now, }\\quad x^{x}&amp;=i^{i}=\\left(e^{\\pi i / 2}\\right)^{i}=e^{i^{2} \\pi / 2}=e^{-\\pi / 2} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]e^{-\\pi /2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]e^{-\\pi /2}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]e^{\\pi /2}[/latex]",
+        "html": "<div class=\"option_data\">[latex]e^{\\pi /2}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]x[/latex]",
+        "html": "<div class=\"option_data\">[latex]x[/latex]\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=5"
+  },
+  {
+    "number": "Question 26",
+    "text": "The source of a silicon ([latex]n_{i} = 10^{10} [/latex]per [latex]cm^{3}[/latex]) n-channel MOS transistor has an area of 1 sq [latex]\\mu[/latex]m and a depth of 1 [latex]\\mu[/latex]m. If the dopant density in the source is [latex]10^{19}/cm^{3}[/latex], the number of holes in the source\r\nregion with the above volume is approximately",
+    "html": "<div class=\"question_text\" data-value=\"1\">The source of a silicon ([latex]n_{i} = 10^{10} [/latex]per [latex]cm^{3}[/latex]) n-channel MOS transistor has an area of 1 sq [latex]\\mu[/latex]m and a depth of 1 [latex]\\mu[/latex]m. If the dopant density in the source is [latex]10^{19}/cm^{3}[/latex], the number of holes in the source\r\nregion with the above volume is approximately</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electronic Devices - BJT and FET Basics",
+    "explanation_text": "[latex]\\begin{aligned} n_{i} &=10^{10} / \\mathrm{cm}^{3} \\\\ A &=1 \\times 10^{-12} \\mathrm{m}^{2} \\\\ d &=10^{-6} \\mathrm{m} \\\\ V &=A d=10^{-18} \\mathrm{m}^{3} \\\\ &=10^{-12} \\mathrm{cm}^{3} \\\\ N_{D} &=n=10^{19} / \\mathrm{cm}^{3} \\\\ p &=\\frac{n_{i}^{2}}{N_{D}}=\\frac{10^{20}}{10^{19}}=10 / \\mathrm{cm}^{3} \\end{aligned}[/latex] So, holes in volume V is [latex] H=p V=10^{-11} [/latex] since, holes number can not be a decimal number so H=0",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} n_{i} &amp;=10^{10} / \\mathrm{cm}^{3} \\\\ A &amp;=1 \\times 10^{-12} \\mathrm{m}^{2} \\\\ d &amp;=10^{-6} \\mathrm{m} \\\\ V &amp;=A d=10^{-18} \\mathrm{m}^{3} \\\\ &amp;=10^{-12} \\mathrm{cm}^{3} \\\\ N_{D} &amp;=n=10^{19} / \\mathrm{cm}^{3} \\\\ p &amp;=\\frac{n_{i}^{2}}{N_{D}}=\\frac{10^{20}}{10^{19}}=10 / \\mathrm{cm}^{3} \\end{aligned}[/latex]<br/> So, holes in volume V is <br/>[latex] H=p V=10^{-11} [/latex]<br/> since, holes number can not be a decimal number<br/> so H=0\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]10^{7}[/latex]",
+        "html": "<div class=\"option_data\">[latex]10^{7}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "100",
+        "html": "<div class=\"option_data\">100</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "10",
+        "html": "<div class=\"option_data\">10</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0",
+        "html": "<div class=\"option_data\">0</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=6"
+  },
+  {
+    "number": "Question 27",
+    "text": "A BPSK scheme operating over an AWGN channel with noise power spectral density of [latex]N_{0}/2[/latex], uses equiprobable signals [latex]s_{1}(t)=\\sqrt{\\frac{2E}{T}}sin(\\omega _{c}t) [/latex] and [latex] s_{2}(t)=-\\sqrt{\\frac{2E}{T}}sin(\\omega _{c}t)[/latex] over the symbol interval (0, T). If the local oscillator in a coherent receiver is ahead in phase by 45[latex]^{\\circ}[/latex] with respect to the received signal, the probability of error in the resulting system is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A BPSK scheme operating over an AWGN channel with noise power spectral density of [latex]N_{0}/2[/latex], uses equiprobable signals [latex]s_{1}(t)=\\sqrt{\\frac{2E}{T}}sin(\\omega _{c}t) [/latex] and [latex] s_{2}(t)=-\\sqrt{\\frac{2E}{T}}sin(\\omega _{c}t)[/latex] over the symbol interval (0, T). If the local oscillator in a coherent receiver is ahead in phase by 45[latex]^{\\circ}[/latex] with respect to the received signal, the probability of error in the resulting system is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Communication Systems - Digital Communications",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]Q(\\sqrt{\\frac{2E}{N_{0}}})[/latex]",
+        "html": "<div class=\"option_data\">[latex]Q(\\sqrt{\\frac{2E}{N_{0}}})[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]Q(\\sqrt{\\frac{E}{N_{0}}})[/latex]",
+        "html": "<div class=\"option_data\">[latex]Q(\\sqrt{\\frac{E}{N_{0}}})[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]Q(\\sqrt{\\frac{E}{2N_{0}}})[/latex]",
+        "html": "<div class=\"option_data\">[latex]Q(\\sqrt{\\frac{E}{2N_{0}}})[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]Q(\\sqrt{\\frac{E}{4N_{0}}})[/latex]",
+        "html": "<div class=\"option_data\">[latex]Q(\\sqrt{\\frac{E}{4N_{0}}})[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=6"
+  },
+  {
+    "number": "Question 28",
+    "text": "A transmission line with a characteristic impedance of 100 [latex]\\Omega[/latex] is used to match a 50 [latex]\\Omega[/latex] section to a 200 [latex]\\Omega[/latex] section. If the matching is to be done both at 429 MHz and 1 GHz, the length of the transmission line can be approximately",
+    "html": "<div class=\"question_text\" data-value=\"1\">A transmission line with a characteristic impedance of 100 [latex]\\Omega[/latex] is used to match a 50 [latex]\\Omega[/latex] section to a 200 [latex]\\Omega[/latex] section. If the matching is to be done both at 429 MHz and 1 GHz, the length of the transmission line can be approximately</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Transmission Lines",
+    "explanation_text": "The [latex] 100 \\Omega [/latex] device used to match [latex] 50 \\Omega [/latex] and [latex] 200 \\Omega [/latex] devices is a quarter wave transformer. Length of matching device [latex]\r\n=(2 n+1) \\frac{\\lambda}{4}=\\text { odd multiple }\r\n[/latex] Where [latex] n [/latex] -depends on frequency of [latex] \\lambda / 4 [/latex] [latex]\r\n\\lambda_{1} \\text { of frequency } 429 \\mathrm{MHz}=0.7 \\mathrm{m}\r\n[/latex] [latex] \\lambda_{2} [/latex] of frequency [latex] 1 \\mathrm{GHz}=0.3 \\mathrm{m} [/latex] Common multiple [latex] =2.1 \\mathrm{m} [/latex] Dividing by [latex] 4=0.525 \\mathrm{m} [/latex] (not available in options) Another odd multiple of [latex] 0.525 \\times 3=1.58 \\mathrm{m} [/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tThe [latex] 100 \\Omega [/latex] device used to match [latex] 50 \\Omega [/latex] and [latex] 200 \\Omega [/latex] devices is a quarter wave transformer. <br/>Length of matching device<br/>\r\n[latex]\r\n=(2 n+1) \\frac{\\lambda}{4}=\\text { odd multiple }\r\n[/latex]<br/>\r\nWhere [latex] n [/latex] -depends on frequency of [latex] \\lambda / 4 [/latex]<br/>\r\n[latex]\r\n\\lambda_{1} \\text { of frequency } 429 \\mathrm{MHz}=0.7 \\mathrm{m}\r\n[/latex]<br/>\r\n[latex] \\lambda_{2} [/latex] of frequency [latex] 1 \\mathrm{GHz}=0.3 \\mathrm{m} [/latex]<br/>\r\nCommon multiple [latex] =2.1 \\mathrm{m} [/latex]<br/>\r\nDividing by [latex] 4=0.525 \\mathrm{m} [/latex] (not available in options) <br/>Another odd multiple of [latex] 0.525 \\times 3=1.58 \\mathrm{m} [/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "82.5 cm",
+        "html": "<div class=\"option_data\">82.5 cm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1.05 cm",
+        "html": "<div class=\"option_data\">1.05 cm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1.58 cm",
+        "html": "<div class=\"option_data\">1.58 cm</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1.75 cm",
+        "html": "<div class=\"option_data\">1.75 cm</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=6"
+  },
+  {
+    "number": "Question 29",
+    "text": "T he input [latex]x(t)[/latex] and output [latex]y(t)[/latex] of a system are related as [latex]y(t)=\\int_{-\\infty }^{t}x(\\tau )cos(3\\tau )d\\tau[/latex]. The system is",
+    "html": "<div class=\"question_text\" data-value=\"1\">T he input [latex]x(t)[/latex] and output [latex]y(t)[/latex] of a system are related as [latex]y(t)=\\int_{-\\infty }^{t}x(\\tau )cos(3\\tau )d\\tau[/latex]. The system is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Basics of Signals and Systems",
+    "explanation_text": "[latex]\\begin{aligned} y&=\\int_{-\\infty}^{t} x(\\tau) \\cos (3 \\tau) d \\tau \\\\ y\\left(t-t_{0}\\right)&=\\int_{-\\infty}^{t-t_{0}} x(\\tau) \\cos (3 \\tau) d \\tau \\\\ y^{\\prime}(t) \\text { for input } &x\\left(t-t_{0}\\right) \\text { , is }\\\\ y^{\\prime}(t)&=\\int_{-\\infty}^{t} x\\left(\\tau-t_{0}\\right) \\cos 3 \\tau d \\tau \\\\ y^{\\prime}(t)&=\\int_{-\\infty}^{\\left(t-t_{0}\\right)} x(\\tau) \\cos 3\\left(\\tau+t_{0}\\right) d \\tau \\end{aligned}[/latex] [latex] y^{\\prime}(t) \\neq y\\left(t-t_{0}\\right)[/latex] so system is not time invariant for input [latex]x(\\tau)=\\cos (3 \\tau)[/latex] (bounded input) [latex] y(t)=\\int_{-\\infty}^{t} \\cos ^{2}(3 \\tau) d \\tau \\rightarrow \\infty \\text { as } t \\rightarrow \\infty[/latex] So, for bounded i/p, o/p is not bounded therefore system is not stable.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} y&amp;=\\int_{-\\infty}^{t} x(\\tau) \\cos (3 \\tau) d \\tau \\\\ y\\left(t-t_{0}\\right)&amp;=\\int_{-\\infty}^{t-t_{0}} x(\\tau) \\cos (3 \\tau) d \\tau \\\\ y^{\\prime}(t) \\text { for input } &amp;x\\left(t-t_{0}\\right) \\text { , is }\\\\ y^{\\prime}(t)&amp;=\\int_{-\\infty}^{t} x\\left(\\tau-t_{0}\\right) \\cos 3 \\tau d \\tau \\\\ y^{\\prime}(t)&amp;=\\int_{-\\infty}^{\\left(t-t_{0}\\right)} x(\\tau) \\cos 3\\left(\\tau+t_{0}\\right) d \\tau \\end{aligned}[/latex]<br/>[latex] y^{\\prime}(t) \\neq y\\left(t-t_{0}\\right)[/latex] <br/>so system is not time invariant for input [latex]x(\\tau)=\\cos (3 \\tau)[/latex] (bounded input)<br/>[latex] y(t)=\\int_{-\\infty}^{t} \\cos ^{2}(3 \\tau) d \\tau \\rightarrow \\infty \\text { as } t \\rightarrow \\infty[/latex]<br/> So, for bounded i/p, o/p is not bounded therefore system is not stable.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "time-invariant and stable",
+        "html": "<div class=\"option_data\">time-invariant and stable</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "stable and not time-invariant",
+        "html": "<div class=\"option_data\">stable and not time-invariant</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "time-invariant and not stable",
+        "html": "<div class=\"option_data\">time-invariant and not stable</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "not time-invariant and not stable",
+        "html": "<div class=\"option_data\">not time-invariant and not stable</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=6"
+  },
+  {
+    "number": "Question 30",
+    "text": "The feedback system shown below oscillates at 2 rad/s when",
+    "html": "<div class=\"question_text\" data-value=\"1\">The feedback system shown below oscillates at 2 rad/s when <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\0cfe091f7c780c5136f251251762787e.jpg\" style=\"--smush-placeholder-width: 575px; --smush-placeholder-aspect-ratio: 575/172;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q30.jpg": "images\\0cfe091f7c780c5136f251251762787e.jpg"
+    },
+    "type": "mcq",
+    "subject": "Control Systems - Stability Analysis",
+    "explanation_text": "Characteristic equation is [latex] 1+G(s)H(s)=0[/latex] [latex] 1+\\frac{K(s+1)}{s^{3}+a s^{2}+2 s+1}=0 [/latex] [latex] s^{3}+a s^{2}+(2+K) s+(1+K)=0 [/latex] array for this is Routh [latex] \\begin{array}{l|lr} s^{3} & 1 & (2+K) \\\\ s^{2} & a & (1+K) \\\\ s^{1} & \\frac{a(2+K)-(1+K)}{a} \\\\ s^{0} & (1+K) & \\end{array}[/latex] For oscillation [latex]\\frac{a(2+K)-(1+K)}{a}=0 [/latex] [latex] \\Rightarrow \\quad a=\\left(\\frac{1+K}{2+K}\\right) [/latex] Now [latex] \\begin{aligned} a s^{2}+(1+K)&=0 \\\\ -a \\omega^{2}+(1+K)&=0 \\\\ \\text{given }\\quad \\omega&=2 \\mathrm{rad} / \\mathrm{sec} \\\\ -4 a+(1+K)&=0 \\\\ -4 \\frac{(1+K)}{(2+K)}+(1+K)&=0 \\\\ -4(1+K)+(2+K)(1+K)&=0 \\\\ (1+K)[(2+K)-4]&=0 \\\\ K=-1,2 \\end{aligned}[/latex] but K=-1 is not possible as system will not  oscillate for this as a=0 So, K=2 [latex] a=\\frac{1+K}{2+K}=\\frac{3}{4}=0.75[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tCharacteristic equation is<br/>[latex] 1+G(s)H(s)=0[/latex]<br/>[latex] 1+\\frac{K(s+1)}{s^{3}+a s^{2}+2 s+1}=0 [/latex]<br/>[latex] s^{3}+a s^{2}+(2+K) s+(1+K)=0 [/latex]<br/> array for this is Routh<br/>[latex] \\begin{array}{l|lr} s^{3} &amp; 1 &amp; (2+K) \\\\ s^{2} &amp; a &amp; (1+K) \\\\ s^{1} &amp; \\frac{a(2+K)-(1+K)}{a} \\\\ s^{0} &amp; (1+K) &amp; \\end{array}[/latex]<br/> For oscillation [latex]\\frac{a(2+K)-(1+K)}{a}=0 [/latex]<br/>[latex] \\Rightarrow \\quad a=\\left(\\frac{1+K}{2+K}\\right) [/latex]<br/> Now <br/>[latex] \\begin{aligned} a s^{2}+(1+K)&amp;=0 \\\\ -a \\omega^{2}+(1+K)&amp;=0 \\\\ \\text{given }\\quad \\omega&amp;=2 \\mathrm{rad} / \\mathrm{sec} \\\\ -4 a+(1+K)&amp;=0 \\\\ -4 \\frac{(1+K)}{(2+K)}+(1+K)&amp;=0 \\\\ -4(1+K)+(2+K)(1+K)&amp;=0 \\\\ (1+K)[(2+K)-4]&amp;=0 \\\\ K=-1,2 \\end{aligned}[/latex]<br/> but K=-1 is not possible as system will not  oscillate for this as a=0 <br/> So, K=2 <br/>[latex] a=\\frac{1+K}{2+K}=\\frac{3}{4}=0.75[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "K=2 and a=0.75",
+        "html": "<div class=\"option_data\">K=2 and a=0.75</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "K=3 and a=0.75",
+        "html": "<div class=\"option_data\">K=3 and a=0.75</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "K=4 and a=0.5",
+        "html": "<div class=\"option_data\">K=4 and a=0.5</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "K=2 and a=0.5",
+        "html": "<div class=\"option_data\">K=2 and a=0.5</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=6"
+  },
+  {
+    "number": "Question 31",
+    "text": "The Fourier transform of a signal h(t) is H(j[latex]\\omega[/latex]) = (2cos[latex]\\omega[/latex])(sin2[latex]\\omega[/latex]) /[latex]\\omega[/latex]. The value of h(0) is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The Fourier transform of a signal h(t) is H(j[latex]\\omega[/latex]) = (2cos[latex]\\omega[/latex])(sin2[latex]\\omega[/latex]) /[latex]\\omega[/latex]. The value of h(0) is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Fourier Transforms, Frequency Response and Correlation",
+    "explanation_text": "[latex]\\begin{aligned} \\frac{2 \\cos \\omega \\sin 2 \\omega}{\\omega}&=H(\\omega) \\\\ H(\\omega)=2 \\cos \\omega&\\left(\\frac{2 \\sin 2 \\omega}{2 \\omega}-H_{1}(j \\omega) \\cdot H_{2}(j \\omega)\\right)\\\\ \\text { where, } \\quad H_{1}(j \\omega)&=2 \\cos \\omega\\\\ H_{2}(j \\omega)=\\frac{2 \\sin 2 \\omega}{2 \\omega}&=2 \\operatorname{Sa}(2 \\omega) \\end{aligned}[/latex] [latex] H_{1}(j \\omega)=2 \\cos \\omega=\\left(e^{j \\omega}+e^{-j \\omega}\\right)=e^{j \\omega t}+e^{j \\omega(-1)} [/latex] So [latex] H(j \\omega)=2 \\cos \\omega H_{2}(j \\omega)=\\left(e^{j \\omega}+e^{-j \\omega}\\right) H_{2}(j \\omega) [/latex] [latex] H(j \\omega)=e^{j \\omega} H_{2}(j \\omega)+e^{-j \\omega} H_{2}(j \\omega) [/latex] [latex] \\Rightarrow \\quad h(t)=h_{2}(t+1)+h_{2}(t-1) [/latex] So, [latex]h(O) = 1[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} \\frac{2 \\cos \\omega \\sin 2 \\omega}{\\omega}&amp;=H(\\omega) \\\\ H(\\omega)=2 \\cos \\omega&amp;\\left(\\frac{2 \\sin 2 \\omega}{2 \\omega}-H_{1}(j \\omega) \\cdot H_{2}(j \\omega)\\right)\\\\ \\text { where, } \\quad H_{1}(j \\omega)&amp;=2 \\cos \\omega\\\\ H_{2}(j \\omega)=\\frac{2 \\sin 2 \\omega}{2 \\omega}&amp;=2 \\operatorname{Sa}(2 \\omega) \\end{aligned}[/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\7dbf2f6f593cad585cbfaea8f6cf990f.jpg\" style=\"--smush-placeholder-width: 368px; --smush-placeholder-aspect-ratio: 368/149;\"/><br/><br/>[latex] H_{1}(j \\omega)=2 \\cos \\omega=\\left(e^{j \\omega}+e^{-j \\omega}\\right)=e^{j \\omega t}+e^{j \\omega(-1)} [/latex]<br/> So<br/>[latex] H(j \\omega)=2 \\cos \\omega H_{2}(j \\omega)=\\left(e^{j \\omega}+e^{-j \\omega}\\right) H_{2}(j \\omega) [/latex]<br/>[latex] H(j \\omega)=e^{j \\omega} H_{2}(j \\omega)+e^{-j \\omega} H_{2}(j \\omega) [/latex]<br/>[latex] \\Rightarrow \\quad h(t)=h_{2}(t+1)+h_{2}(t-1) [/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\2c40a1a2e3b1e1a5c44a92cbfa7e581a.jpg\" style=\"--smush-placeholder-width: 353px; --smush-placeholder-aspect-ratio: 353/142;\"/><br/><br/> So, [latex]h(O) = 1[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a31a.jpg": "images\\7dbf2f6f593cad585cbfaea8f6cf990f.jpg",
+      "/wp-content/uploads/GATE/EC/20121/a31b.jpg": "images\\2c40a1a2e3b1e1a5c44a92cbfa7e581a.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]1/4[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/4[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]1/2[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/2[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "2",
+        "html": "<div class=\"option_data\">2</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=7"
+  },
+  {
+    "number": "Question 32",
+    "text": "The state variable description of an LTI system is given by [latex]\\begin{pmatrix} \\dot{x}_{1}\\\\ \\dot{x}_{2}\\\\ \\dot{x}_{3} \\end{pmatrix}=\\begin{pmatrix} 0 & a_{1}& 0\\\\ 0& 0 & a_{2}\\\\ a_{3} & 0 & 0 \\end{pmatrix}\\begin{pmatrix} x_{1}\\\\ x_{2}\\\\ x_{3} \\end{pmatrix}+\\begin{pmatrix} 0\\\\ 0\\\\ 1 \\end{pmatrix}u [/latex] [latex]  y=\\begin{pmatrix} 1 &0 &0 \\end{pmatrix}\\begin{pmatrix} x_{1}\\\\ x_{2}\\\\ x_{3} \\end{pmatrix}[/latex] where y is the output and u is the input. The system is controllable for",
+    "html": "<div class=\"question_text\" data-value=\"1\">The state variable description of an LTI system is given by [latex]\\begin{pmatrix} \\dot{x}_{1}\\\\ \\dot{x}_{2}\\\\ \\dot{x}_{3} \\end{pmatrix}=\\begin{pmatrix} 0 &amp; a_{1}&amp; 0\\\\ 0&amp; 0 &amp; a_{2}\\\\ a_{3} &amp; 0 &amp; 0 \\end{pmatrix}\\begin{pmatrix} x_{1}\\\\ x_{2}\\\\ x_{3} \\end{pmatrix}+\\begin{pmatrix} 0\\\\ 0\\\\ 1 \\end{pmatrix}u [/latex] <br/>[latex]  y=\\begin{pmatrix} 1 &amp;0 &amp;0 \\end{pmatrix}\\begin{pmatrix} x_{1}\\\\ x_{2}\\\\ x_{3} \\end{pmatrix}[/latex] <br/> where y is the output and u is the input. The system is controllable for</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - State Space Analysis",
+    "explanation_text": "[latex]\\begin{aligned} \\left[\\begin{array}{l}\\dot{x}_{1} \\\\\\dot{x}_{2} \\\\\\dot{x}_{3}\\end{array}\\right]&=\\left[\\begin{array}{lll} 0 & a_{1} & 0 \\\\0 & 0 & a_{2} \\\\a_{3} & 0 & 0\\end{array}\\right]\\left[\\begin{array}{l} x_{1} \\\\x_{2} \\\\x_{3}\\end{array}\\right]+\\left[\\begin{array}{l}0 \\\\0 \\\\1 \\end{array}\\right] u\\\\ y&=\\left[\\begin{array}{lll}1 & 0 & 0\\end{array}\\right]\\left[\\begin{array}{l} x_{1} \\\\x_{2} \\\\x_{3}\\end{array}\\right]\\\\ Q_{c}&=\\left[B A B A^{2} B\\right]\\\\ A B&=\\left[\\begin{array}{lll} 0 & a_{1} & 0 \\\\ 0 & 0 & a_{2} \\\\ a_{3} & 0 & 0 \\end{array}\\right]\\left[\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right]=\\left[\\begin{array}{l} 0 \\\\ a_{2} \\\\ 0 \\end{array}\\right]\\\\ A^{2} B&=A A B=\\left[\\begin{array}{lll} 0 & a_{1} & 0 \\\\ 0 & 0 & a_{2} \\\\ a_{3} & 0 & 0 \\end{array}\\right]\\left[\\begin{array}{l} 0 \\\\ a_{2} \\\\ 0 \\end{array}\\right]\\\\ A^{2} B&=\\left[\\begin{array}{c} a_{1} a_{2} \\\\ 0 \\\\ 0 \\end{array}\\right]\\\\ Q_{c}&=\\left[\\begin{array}{ccc}0 & 0 & a_{1} a_{2} \\\\ 0 & a_{2} & 0 \\\\ 1 & 0 & 0\\end{array}\\right] \\end{aligned}[/latex] For system to be controllable, [latex] \\begin{array}{l} |Q_{i}| \\neq 0 \\\\ \\Rightarrow\\left(0-a, a_{i}\\right) \\neq 0 \\\\ \\Rightarrow a_{1} \\neq 0 \\\\ a_{2} \\neq 0 \\end{array}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} \\left[\\begin{array}{l}\\dot{x}_{1} \\\\\\dot{x}_{2} \\\\\\dot{x}_{3}\\end{array}\\right]&amp;=\\left[\\begin{array}{lll} 0 &amp; a_{1} &amp; 0 \\\\0 &amp; 0 &amp; a_{2} \\\\a_{3} &amp; 0 &amp; 0\\end{array}\\right]\\left[\\begin{array}{l} x_{1} \\\\x_{2} \\\\x_{3}\\end{array}\\right]+\\left[\\begin{array}{l}0 \\\\0 \\\\1 \\end{array}\\right] u\\\\ y&amp;=\\left[\\begin{array}{lll}1 &amp; 0 &amp; 0\\end{array}\\right]\\left[\\begin{array}{l} x_{1} \\\\x_{2} \\\\x_{3}\\end{array}\\right]\\\\ Q_{c}&amp;=\\left[B A B A^{2} B\\right]\\\\ A B&amp;=\\left[\\begin{array}{lll} 0 &amp; a_{1} &amp; 0 \\\\ 0 &amp; 0 &amp; a_{2} \\\\ a_{3} &amp; 0 &amp; 0 \\end{array}\\right]\\left[\\begin{array}{l} 0 \\\\ 0 \\\\ 1 \\end{array}\\right]=\\left[\\begin{array}{l} 0 \\\\ a_{2} \\\\ 0 \\end{array}\\right]\\\\ A^{2} B&amp;=A A B=\\left[\\begin{array}{lll} 0 &amp; a_{1} &amp; 0 \\\\ 0 &amp; 0 &amp; a_{2} \\\\ a_{3} &amp; 0 &amp; 0 \\end{array}\\right]\\left[\\begin{array}{l} 0 \\\\ a_{2} \\\\ 0 \\end{array}\\right]\\\\ A^{2} B&amp;=\\left[\\begin{array}{c} a_{1} a_{2} \\\\ 0 \\\\ 0 \\end{array}\\right]\\\\ Q_{c}&amp;=\\left[\\begin{array}{ccc}0 &amp; 0 &amp; a_{1} a_{2} \\\\ 0 &amp; a_{2} &amp; 0 \\\\ 1 &amp; 0 &amp; 0\\end{array}\\right] \\end{aligned}[/latex]<br/>For system to be controllable,<br/>[latex] \\begin{array}{l} |Q_{i}| \\neq 0 \\\\ \\Rightarrow\\left(0-a, a_{i}\\right) \\neq 0 \\\\ \\Rightarrow a_{1} \\neq 0 \\\\ a_{2} \\neq 0 \\end{array}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]a_{1}\\neq 0, a_{2}=0,a_{3} \\neq 0[/latex]",
+        "html": "<div class=\"option_data\">[latex]a_{1}\\neq 0, a_{2}=0,a_{3} \\neq 0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]a_{1}= 0, a_{2}\\neq 0,a_{3} \\neq 0[/latex]",
+        "html": "<div class=\"option_data\">[latex]a_{1}= 0, a_{2}\\neq 0,a_{3} \\neq 0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]a_{1}= 0, a_{2}\\neq 0,a_{3} = 0[/latex]",
+        "html": "<div class=\"option_data\">[latex]a_{1}= 0, a_{2}\\neq 0,a_{3} = 0[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]a_{1}\\neq 0, a_{2}\\neq 0,a_{3} = 0[/latex]",
+        "html": "<div class=\"option_data\">[latex]a_{1}\\neq 0, a_{2}\\neq 0,a_{3} = 0[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=7"
+  },
+  {
+    "number": "Question 33",
+    "text": "Assuming both the voltage sources are in phase, the value of R for which maximum power is\ntransferred from circuit A to circuit B is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Assuming both the voltage sources are in phase, the value of R for which maximum power is\ntransferred from circuit A to circuit B is  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\31602c6fc2eaae35e8f362a697b5a301.jpg\" style=\"--smush-placeholder-width: 475px; --smush-placeholder-aspect-ratio: 475/264;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q33.jpg": "images\\31602c6fc2eaae35e8f362a697b5a301.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Network Theorems",
+    "explanation_text": "Redrawing the diagram Current through R will be [latex] i=\\frac{10-3}{2+R}=\\left(\\frac{7}{2+R}\\right) \\mathrm{A}[/latex] Current through 3V source is [latex] i_{1}=i-\\frac{3}{-j 1}=i-3 j[/latex] So power delivered to circuit B by circuit A is [latex] \\begin{array}{c} P=i^{2} R+i_{1} \\times 3 \\\\ P=\\left(\\frac{7}{2+R}\\right)^{2} \\cdot R+\\left(\\frac{7}{2+R}-3 j\\right) 3 \\end{array}[/latex] for P to be maximum [latex]\\frac{\\partial P}{\\partial R}[/latex] will be zero [latex] \\begin{array}{l} \\frac{\\partial P}{\\partial R}=0\\\\ \\left(\\frac{7}{2+R}\\right)^{2}-\\frac{98 R}{(2+R)^{3}}-\\frac{21}{(2+R)^{2}}=0 \\\\ 49(2+R)-98 R-21(2+R)=0 \\\\ 98-42=49 R+21 R \\\\ R=\\frac{56}{70}=0.8 \\Omega \\end{array}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tRedrawing the diagram<br/><br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\a888ae3b208036306a932485607c57e2.jpg\" style=\"--smush-placeholder-width: 315px; --smush-placeholder-aspect-ratio: 315/191;\"/><br/> Current through R will be<br/>[latex] i=\\frac{10-3}{2+R}=\\left(\\frac{7}{2+R}\\right) \\mathrm{A}[/latex]<br/> Current through 3V source is<br/>[latex] i_{1}=i-\\frac{3}{-j 1}=i-3 j[/latex]<br/> So power delivered to circuit B by circuit A is<br/>[latex] \\begin{array}{c} P=i^{2} R+i_{1} \\times 3 \\\\ P=\\left(\\frac{7}{2+R}\\right)^{2} \\cdot R+\\left(\\frac{7}{2+R}-3 j\\right) 3 \\end{array}[/latex]<br/> for P to be maximum [latex]\\frac{\\partial P}{\\partial R}[/latex] will be zero<br/>[latex] \\begin{array}{l} \\frac{\\partial P}{\\partial R}=0\\\\ \\left(\\frac{7}{2+R}\\right)^{2}-\\frac{98 R}{(2+R)^{3}}-\\frac{21}{(2+R)^{2}}=0 \\\\ 49(2+R)-98 R-21(2+R)=0 \\\\ 98-42=49 R+21 R \\\\ R=\\frac{56}{70}=0.8 \\Omega \\end{array}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a33.jpg": "images\\a888ae3b208036306a932485607c57e2.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "0.8 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">0.8 [latex]\\Omega[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1.4 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">1.4 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "2 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">2 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "2.8 [latex]\\Omega[/latex]",
+        "html": "<div class=\"option_data\">2.8 [latex]\\Omega[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=7"
+  },
+  {
+    "number": "Question 34",
+    "text": "Consider the differential equation [latex]\\frac{d^{2}y(t)}{dt^{2}}+2\\frac{dy(t)}{dt}+y(t)=\\delta (t)[/latex]  with [latex]y(t)|_{t=0^{-}}=-2 [/latex] and  [latex]\\frac{dy}{dt}|_{t=0^{-}}=0[/latex] The numerical value of [latex]\\frac{dy}{dt}|_{t=0^{+}}[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider the differential equation [latex]\\frac{d^{2}y(t)}{dt^{2}}+2\\frac{dy(t)}{dt}+y(t)=\\delta (t)[/latex]  with [latex]y(t)|_{t=0^{-}}=-2 [/latex] and  [latex]\\frac{dy}{dt}|_{t=0^{-}}=0[/latex] <br/>The numerical value of [latex]\\frac{dy}{dt}|_{t=0^{+}}[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Differential Equations",
+    "explanation_text": "[latex]\\frac{d^{2} y}{d t^{2}}+2 \\frac{d y}{d t}+y(t)=8(t) [/latex] taking Laplace transform on both the sides we have [latex] \\begin{array}{l} \\left[s^{2} Y(s)-s y\\left(0^{-}\\right)-y^{\\prime}(0)\\right]+2\\left[Y(s)-y\\left(0^{-}\\right)\\right]+Y(s)=1\\\\ s^{2} Y(s)+2 s+2 s Y(s)+4+\\eta(s)=1 \\\\ \\left(s^{2}+2 s+1\\right) Y(s)=-(2 s+3) \\\\ Y(s)=\\frac{-(2 s+3)}{(s+1)^{2}} \\\\ Y(s)=-\\left[\\frac{2}{(s+1)}+\\frac{1}{(s+1)^{2}}\\right] \\\\ \\Rightarrow \\quad Y(t)=-\\left[2 e^{-t}+t e^{-7}\\right] u(t) \\\\ \\frac{d y}{d t}=-\\left[-2 e^{-t}+e^{-t}-t e^{-1}\\right] u(t) \\\\ \\left.\\frac{d y}{d t}\\right|_{\\mathrm{at} t=0^{+}}=-[-2+1-0] \\\\ \\left.\\frac{d y}{d t}\\right|_{\\mathrm{at} t=0^{+}}=1 \\end{array}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\frac{d^{2} y}{d t^{2}}+2 \\frac{d y}{d t}+y(t)=8(t) [/latex]<br/> taking Laplace transform on both the sides we<br/> have<br/>[latex] \\begin{array}{l} \\left[s^{2} Y(s)-s y\\left(0^{-}\\right)-y^{\\prime}(0)\\right]+2\\left[Y(s)-y\\left(0^{-}\\right)\\right]+Y(s)=1\\\\ s^{2} Y(s)+2 s+2 s Y(s)+4+\\eta(s)=1 \\\\ \\left(s^{2}+2 s+1\\right) Y(s)=-(2 s+3) \\\\ Y(s)=\\frac{-(2 s+3)}{(s+1)^{2}} \\\\ Y(s)=-\\left[\\frac{2}{(s+1)}+\\frac{1}{(s+1)^{2}}\\right] \\\\ \\Rightarrow \\quad Y(t)=-\\left[2 e^{-t}+t e^{-7}\\right] u(t) \\\\ \\frac{d y}{d t}=-\\left[-2 e^{-t}+e^{-t}-t e^{-1}\\right] u(t) \\\\ \\left.\\frac{d y}{d t}\\right|_{\\mathrm{at} t=0^{+}}=-[-2+1-0] \\\\ \\left.\\frac{d y}{d t}\\right|_{\\mathrm{at} t=0^{+}}=1 \\end{array}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "-2",
+        "html": "<div class=\"option_data\">-2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "-1",
+        "html": "<div class=\"option_data\">-1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0",
+        "html": "<div class=\"option_data\">0</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=7"
+  },
+  {
+    "number": "Question 35",
+    "text": "The direction of vector A is radially outward from the origin, with [latex]|A|=kr^{n}[/latex]  where [latex]r^{2}=x^{2}+y^{2}+z^{2}[/latex] and [latex]k[/latex] is a constant. The value of [latex]n[/latex] for which [latex]\\bigtriangledown \\cdot A=0[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The direction of vector A is radially outward from the origin, with [latex]|A|=kr^{n}[/latex]  where [latex]r^{2}=x^{2}+y^{2}+z^{2}[/latex] and [latex]k[/latex] is a constant. The value of [latex]n[/latex] for which [latex]\\bigtriangledown \\cdot A=0[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Calculus",
+    "explanation_text": "[latex]|A|=k r^{n} [/latex] [latex] \\vec{A}=k r^{n} \\hat{a}_{r}[/latex] (since it is radially outward) [latex] \\nabla \\cdot \\vec{A}[/latex] in spherical coordinate is [latex] \\begin{aligned} \\nabla \\cdot \\vec{A} &=\\frac{1}{r^{2}} 2 \\frac{\\partial}{\\partial A}\\left(r^{2} A_{r}\\right)+\\frac{1}{r \\sin \\theta} \\frac{\\partial}{\\partial r}\\left(A_{0} \\sin \\theta\\right)+\\frac{1}{r \\sin \\theta} \\frac{\\partial}{\\partial \\phi} A_{0} \\\\ & \\nabla \\cdot \\vec{A}=\\frac{1}{r^{2}} \\frac{\\partial}{\\partial r}\\left(r^{2} k r^{n}\\right)+0+0 \\\\ & \\nabla \\cdot \\vec{A}=\\frac{k}{r^{2}} \\frac{\\partial}{\\partial r_{2}}\\left(r^{n+2}\\right) \\end{aligned} [/latex] So, [latex]\\nabla \\cdot \\vec{A}[/latex] will be zero if [latex]\\frac{\\partial}{\\partial r}\\left(r^{n+2}\\right)[/latex] will be zero. and [latex]\\frac{\\partial}{\\partial r}\\left(r^{n+2}\\right)[/latex] will be zero if [latex]r^{n+2}[/latex] will be constant and this is possible if [latex]n+2=0 \\Rightarrow n=-2[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]|A|=k r^{n} [/latex]<br/>[latex] \\vec{A}=k r^{n} \\hat{a}_{r}[/latex] (since it is radially outward)<br/>[latex] \\nabla \\cdot \\vec{A}[/latex] in spherical coordinate is <br/>[latex] \\begin{aligned} \\nabla \\cdot \\vec{A} &amp;=\\frac{1}{r^{2}} 2 \\frac{\\partial}{\\partial A}\\left(r^{2} A_{r}\\right)+\\frac{1}{r \\sin \\theta} \\frac{\\partial}{\\partial r}\\left(A_{0} \\sin \\theta\\right)+\\frac{1}{r \\sin \\theta} \\frac{\\partial}{\\partial \\phi} A_{0} \\\\ &amp; \\nabla \\cdot \\vec{A}=\\frac{1}{r^{2}} \\frac{\\partial}{\\partial r}\\left(r^{2} k r^{n}\\right)+0+0 \\\\ &amp; \\nabla \\cdot \\vec{A}=\\frac{k}{r^{2}} \\frac{\\partial}{\\partial r_{2}}\\left(r^{n+2}\\right) \\end{aligned} [/latex]<br/> So, [latex]\\nabla \\cdot \\vec{A}[/latex] will be zero if [latex]\\frac{\\partial}{\\partial r}\\left(r^{n+2}\\right)[/latex] will be zero.<br/> and [latex]\\frac{\\partial}{\\partial r}\\left(r^{n+2}\\right)[/latex] will be zero if [latex]r^{n+2}[/latex] will be constant <br/> and this is possible if [latex]n+2=0 \\Rightarrow n=-2[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "-2",
+        "html": "<div class=\"option_data\">-2</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "2",
+        "html": "<div class=\"option_data\">2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0",
+        "html": "<div class=\"option_data\">0</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=7"
+  },
+  {
+    "number": "Question 36",
+    "text": "A fair coin is tossed till a head appears for the first time. The probability that the number of\nrequired tosses is odd, is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A fair coin is tossed till a head appears for the first time. The probability that the number of\nrequired tosses is odd, is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Probability and Statistics",
+    "explanation_text": "P(no. of tosses is odd) =P(no. of tosses is 1,3,5,7 ...) P( no. of toss is 1)=P (Head in first toss) [latex]=\\frac{1}{2}[/latex] P(no. of toss is 3) = P(tail in first toss, tail in second toss and head in third toss) [latex] =\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}=\\frac{1}{8}[/latex] P(no. of toss is 5)=P(T, T, T, T, H)[latex]=\\left(\\frac{1}{2}\\right)^{5}=\\frac{1}{32} [/latex] ... etc. So P( no. of tosses is odd )[latex]=\\frac{1}{2}+\\frac{1}{8}+\\frac{1}{32}+\\cdots [/latex] Sum of infinite geometric series with [latex] \\begin{aligned} a&=\\frac{1}{2} \\text{ and }r=\\frac{1}{4} \\\\ &=\\frac{\\frac{1}{2}}{1-\\frac{1}{4}}=\\frac{\\frac{1}{2}}{\\frac{3}{4}}=\\frac{2}{3} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tP(no. of tosses is odd)<br/> =P(no. of tosses is 1,3,5,7 ...) <br/> P( no. of toss is 1)=P (Head in first toss) [latex]=\\frac{1}{2}[/latex]<br/> P(no. of toss is 3) = P(tail in first toss, tail in<br/> second toss and head in third toss)<br/>[latex] =\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}=\\frac{1}{8}[/latex]<br/> P(no. of toss is 5)=P(T, T, T, T, H)[latex]=\\left(\\frac{1}{2}\\right)^{5}=\\frac{1}{32} [/latex]<br/> ... etc. <br/> So P( no. of tosses is odd )[latex]=\\frac{1}{2}+\\frac{1}{8}+\\frac{1}{32}+\\cdots [/latex]<br/> Sum of infinite geometric series with <br/>[latex] \\begin{aligned} a&amp;=\\frac{1}{2} \\text{ and }r=\\frac{1}{4} \\\\ &amp;=\\frac{\\frac{1}{2}}{1-\\frac{1}{4}}=\\frac{\\frac{1}{2}}{\\frac{3}{4}}=\\frac{2}{3} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]1/3[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/3[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]1/2[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/2[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]2/3[/latex]",
+        "html": "<div class=\"option_data\">[latex]2/3[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]3/4[/latex]",
+        "html": "<div class=\"option_data\">[latex]3/4[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=8"
+  },
+  {
+    "number": "Question 37",
+    "text": "In the CMOS circuit shown, electron and hole mobilities are equal, and M1 and M2 are equally\nsized. The device M1 is in the linear region if",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the CMOS circuit shown, electron and hole mobilities are equal, and M1 and M2 are equally\nsized. The device M1 is in the linear region if <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\d782684e249bff80201f05b4a669dede.jpg\" style=\"--smush-placeholder-width: 281px; --smush-placeholder-aspect-ratio: 281/298;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q37.jpg": "images\\d782684e249bff80201f05b4a669dede.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - FET and MOSFET Analysis",
+    "explanation_text": "For PMOS [latex]V_{S G}=V_{S}-V_{G}=5-V_{\\text {in }} [/latex] for PMOS to be ON [latex] V_{S G} \\gt \\left|V_{T P}\\right|[/latex] [latex] \\Rightarrow \\quad 5-V_{\\text {in }} \\gt 1 [/latex] [latex] V_{\\text {in }} \\lt 4[/latex] So [latex]V_{in}[/latex] must be less than 4 V for MOS to be in linear regions so option C and Oare rejected. Now we know that for small [latex]V_{in}[/latex] output is high and PMOS is in linear region and NMOS is in cutoff region. Similarly for high [latex]V_{in}[/latex] PMOS is in cutoff and NMOS is in linear region and for [latex]V_{in}[/latex] in between both are in saturation. So PMOS will be in linear region for [latex] V_{in} \\lt  1.875V.[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor PMOS [latex]V_{S G}=V_{S}-V_{G}=5-V_{\\text {in }} [/latex]<br/> for PMOS to be ON<br/>[latex] V_{S G} \\gt \\left|V_{T P}\\right|[/latex]<br/>[latex] \\Rightarrow \\quad 5-V_{\\text {in }} \\gt 1 [/latex]<br/>[latex] V_{\\text {in }} \\lt 4[/latex]<br/> So [latex]V_{in}[/latex] must be less than 4 V for MOS to be in linear regions so option C and Oare rejected.<br/> Now we know that for small [latex]V_{in}[/latex] output is high and PMOS is in linear region and NMOS is in cutoff region. Similarly for high [latex]V_{in}[/latex] PMOS is in cutoff and NMOS is in linear region and for [latex]V_{in}[/latex] in between both are in saturation.<br/> So PMOS will be in linear region for [latex] V_{in} \\lt  1.875V.[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]V_{in} \\lt 1.875V[/latex]",
+        "html": "<div class=\"option_data\">[latex]V_{in} \\lt 1.875V[/latex] </div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex] 1.875 V \\lt V_{in} \\lt 3.125V [/latex]",
+        "html": "<div class=\"option_data\">[latex] 1.875 V \\lt V_{in} \\lt 3.125V [/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]V_{in} \\gt 3.125V[/latex]",
+        "html": "<div class=\"option_data\">[latex]V_{in} \\gt 3.125V[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]0 \\lt V_{in}\\lt 5V[/latex]",
+        "html": "<div class=\"option_data\">[latex]0 \\lt V_{in}\\lt 5V[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=8"
+  },
+  {
+    "number": "Question 38",
+    "text": "A binary symmetric channel (BSC) has a transition probability of 1/8. If the binary transmit symbol\nX is such that P(X=0) = 9/10, then the probability of error for an optimum receiver will be",
+    "html": "<div class=\"question_text\" data-value=\"1\">A binary symmetric channel (BSC) has a transition probability of 1/8. If the binary transmit symbol\nX is such that P(X=0) = 9/10, then the probability of error for an optimum receiver will be</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Communication Systems - Digital Communications",
+    "explanation_text": "[latex]\\begin{array}{l} P\\left(y_{0} \\mid x_{0}\\right) P\\left(x_{0}\\right)=\\frac{7}{8} \\times \\frac{9}{10}=\\frac{63}{80} \\\\ P\\left(y_{0} \\mid x_{1}\\right) P\\left(x_{1}\\right)=\\frac{1}{8} \\times \\frac{1}{10}=\\frac{1}{80} \\\\ P\\left(y_{1} \\mid x_{0}\\right) P\\left(x_{0}\\right)=\\frac{1}{8} \\times \\frac{9}{10}=\\frac{9}{80} \\\\ P\\left(y_{1} \\mid x_{1}\\right) P\\left(x_{1}\\right)=\\frac{7}{8} \\times \\frac{1}{10}=\\frac{7}{80} \\end{array}[/latex] [latex]P\\left(y_{0} \\mid x_{0}\\right) P\\left(x_{0}\\right)>P\\left(y_{0} \\mid x_{1}\\right) P\\left(x_{1}\\right);[/latex] So, when a symbol is received as [latex]y_{0}[/latex] , the decision can be made in favour of [latex]x_{0}[/latex] in an optimum way. [latex] P\\left(y, \\mid x_{0}\\right) P\\left(x_{0}\\right)>P\\left(y_{1} \\mid x_{1}\\right) P\\left(x_{1}\\right) ;[/latex] So, when a symbol is received as [latex]y_{1}[/latex], the decision can be made in favour of [latex]x_{0}[/latex] in an optimum way. So, for the given BSC, with optimum receiver, both the received symbols will be decoded as [latex]x_{0}[/latex] Hence, the probability of error is equal to the probability of transmitting [latex]x_{1}[/latex] So, [latex]P_{e}=P\\left(x_{1}\\right)=1 / 10[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\ffc3233fcb7db89d18755b8bc69d73fc.jpg\" style=\"--smush-placeholder-width: 305px; --smush-placeholder-aspect-ratio: 305/143;\"/><br/>[latex]\\begin{array}{l} P\\left(y_{0} \\mid x_{0}\\right) P\\left(x_{0}\\right)=\\frac{7}{8} \\times \\frac{9}{10}=\\frac{63}{80} \\\\ P\\left(y_{0} \\mid x_{1}\\right) P\\left(x_{1}\\right)=\\frac{1}{8} \\times \\frac{1}{10}=\\frac{1}{80} \\\\ P\\left(y_{1} \\mid x_{0}\\right) P\\left(x_{0}\\right)=\\frac{1}{8} \\times \\frac{9}{10}=\\frac{9}{80} \\\\ P\\left(y_{1} \\mid x_{1}\\right) P\\left(x_{1}\\right)=\\frac{7}{8} \\times \\frac{1}{10}=\\frac{7}{80} \\end{array}[/latex]<br/>[latex]P\\left(y_{0} \\mid x_{0}\\right) P\\left(x_{0}\\right)&gt;P\\left(y_{0} \\mid x_{1}\\right) P\\left(x_{1}\\right);[/latex] So, when a <br/> symbol is received as [latex]y_{0}[/latex] , the decision can be <br/> made in favour of [latex]x_{0}[/latex] in an optimum way. <br/>[latex] P\\left(y, \\mid x_{0}\\right) P\\left(x_{0}\\right)&gt;P\\left(y_{1} \\mid x_{1}\\right) P\\left(x_{1}\\right) ;[/latex] So, when a <br/> symbol is received as [latex]y_{1}[/latex], the decision can be <br/> made in favour of [latex]x_{0}[/latex] in an optimum way. <br/> So, for the given BSC, with optimum receiver, both <br/> the received symbols will be decoded as [latex]x_{0}[/latex]<br/> Hence, the probability of error is equal to the <br/> probability of transmitting [latex]x_{1}[/latex] <br/> So, [latex]P_{e}=P\\left(x_{1}\\right)=1 / 10[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a38.jpg": "images\\ffc3233fcb7db89d18755b8bc69d73fc.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]7/80[/latex]",
+        "html": "<div class=\"option_data\">[latex]7/80[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]63/80[/latex]",
+        "html": "<div class=\"option_data\">[latex]63/80[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]9/10[/latex]",
+        "html": "<div class=\"option_data\">[latex]9/10[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]1/10[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/10[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=8"
+  },
+  {
+    "number": "Question 39",
+    "text": "The signal m(t) as shown is applied both to a phase modulator (with [latex]k_{p}[/latex] as the phase constant) and a frequency modulator (with [latex]k_{f}[/latex] as the frequency constant) having the same carrier frequency The ratio [latex]k_{p}/k_{f}[/latex] (in rad/Hz) for the same maximum phase deviation is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The signal m(t) as shown is applied both to a phase modulator (with [latex]k_{p}[/latex] as the phase constant) and a frequency modulator (with [latex]k_{f}[/latex] as the frequency constant) having the same carrier frequency<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\c357a7753e24ecbbfd32e51c9593eae7.jpg\" style=\"--smush-placeholder-width: 358px; --smush-placeholder-aspect-ratio: 358/159;\"/> <br/>The ratio [latex]k_{p}/k_{f}[/latex] (in rad/Hz) for the same maximum phase deviation is</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q39.jpg": "images\\c357a7753e24ecbbfd32e51c9593eae7.jpg"
+    },
+    "type": "mcq",
+    "subject": "Communication Systems - Analog Communications",
+    "explanation_text": "For phase modulator [latex] \\phi(t)=2 \\pi f_{c} t+k_{p} m(t)[/latex] maximum phase deviation is [latex] \\left(\\phi_{D}\\right)_{\\max }=k_{p} \\max [m(t)]=2 k_{p} \\quad\\ldots(1)[/latex] for frequency modulator [latex] \\begin{aligned} \\phi(t) &=2 \\pi f_{c} t+2 \\pi k_{f} \\int_{0}^{t} m(t) d t \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &=2 \\pi k_{t} t\\left[\\int_{0}^{t} m(t) d t\\right]_{\\max } \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &=2 \\pi k_{t}\\left[\\int_{0}^{2} m(t) d t\\right] \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &=2 \\pi k_{f}\\left[\\int_{0}^{2} 2 d t\\right] \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &=8 \\pi k_{f} &\\ldots(2)\\\\ \\text{given}\\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max }&=\\left(\\phi_{D}\\right)_{\\max }\\\\ 8 \\pi k_{f}&=2 k_{p} \\\\ \\mid \\frac{k_{p}}{k_{f}}&=4 \\pi \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor phase modulator<br/>[latex] \\phi(t)=2 \\pi f_{c} t+k_{p} m(t)[/latex]<br/> maximum phase deviation is<br/>[latex] \\left(\\phi_{D}\\right)_{\\max }=k_{p} \\max [m(t)]=2 k_{p} \\quad\\ldots(1)[/latex]<br/> for frequency modulator <br/>[latex] \\begin{aligned} \\phi(t) &amp;=2 \\pi f_{c} t+2 \\pi k_{f} \\int_{0}^{t} m(t) d t \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &amp;=2 \\pi k_{t} t\\left[\\int_{0}^{t} m(t) d t\\right]_{\\max } \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &amp;=2 \\pi k_{t}\\left[\\int_{0}^{2} m(t) d t\\right] \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &amp;=2 \\pi k_{f}\\left[\\int_{0}^{2} 2 d t\\right] \\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max } &amp;=8 \\pi k_{f} &amp;\\ldots(2)\\\\ \\text{given}\\\\ \\left(\\phi_{D}^{\\prime}\\right)_{\\max }&amp;=\\left(\\phi_{D}\\right)_{\\max }\\\\ 8 \\pi k_{f}&amp;=2 k_{p} \\\\ \\mid \\frac{k_{p}}{k_{f}}&amp;=4 \\pi \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "8 [latex]\\pi[/latex]",
+        "html": "<div class=\"option_data\">8 [latex]\\pi[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "4 [latex]\\pi[/latex]",
+        "html": "<div class=\"option_data\">4 [latex]\\pi[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "2 [latex]\\pi[/latex]",
+        "html": "<div class=\"option_data\">2 [latex]\\pi[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\pi[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\pi[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=8"
+  },
+  {
+    "number": "Question 40",
+    "text": "The magnetic field along the propagation direction inside a rectangular waveguide with the crosssection shown in the figure is [latex]H_{z}=3 cos(2.094 \\times  10^{2}x)cos(2.618 \\times 10^{2}y)[/latex] [latex]cos(6.283 \\times 10^{10}t-\\beta z)[/latex] The phase velocity [latex]v_{p}[/latex] of the wave inside the waveguide satisfies",
+    "html": "<div class=\"question_text\" data-value=\"1\">The magnetic field along the propagation direction inside a rectangular waveguide with the crosssection shown in the figure is [latex]H_{z}=3 cos(2.094 \\times  10^{2}x)cos(2.618 \\times 10^{2}y)[/latex] [latex]cos(6.283 \\times 10^{10}t-\\beta z)[/latex]\r\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\f32b4dd2a1dfae2759d932b650bf303f.jpg\" style=\"--smush-placeholder-width: 189px; --smush-placeholder-aspect-ratio: 189/122;\"/> <br/> The phase velocity [latex]v_{p}[/latex] of the wave inside the waveguide satisfies</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q40.jpg": "images\\f32b4dd2a1dfae2759d932b650bf303f.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electromagnetics - Waveguides",
+    "explanation_text": "From the given data [latex]\\begin{aligned} \\omega_{c} &=\\left(\\sqrt{\\left(\\frac{m \\pi}{a}\\right)^{2}+\\left(\\frac{n\\pi}{b}\\right)^{2}}\\right) c \\\\ f_{c} &=(\\sqrt{(2.09)^{2}+(2.618)^{2}}) \\times \\frac{3 \\times 10^{10}}{2 \\times 3.14} \\\\ &=16 \\mathrm{GHz} \\\\ f &=\\frac{6.283 \\times 10^{10}}{2 \\times 3.14}=10 \\mathrm{GHz} \\\\ \\text { Hence, } \\quad f& \\lt f_{c^{\\prime}} \\gamma=\\alpha+j 0\\\\ \\beta=0, \\quad \\quad v_{p}&=\\frac{\\omega}{\\beta}=\\infty \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFrom the given data<br/>[latex]\\begin{aligned} \\omega_{c} &amp;=\\left(\\sqrt{\\left(\\frac{m \\pi}{a}\\right)^{2}+\\left(\\frac{n\\pi}{b}\\right)^{2}}\\right) c \\\\ f_{c} &amp;=(\\sqrt{(2.09)^{2}+(2.618)^{2}}) \\times \\frac{3 \\times 10^{10}}{2 \\times 3.14} \\\\ &amp;=16 \\mathrm{GHz} \\\\ f &amp;=\\frac{6.283 \\times 10^{10}}{2 \\times 3.14}=10 \\mathrm{GHz} \\\\ \\text { Hence, } \\quad f&amp; \\lt f_{c^{\\prime}} \\gamma=\\alpha+j 0\\\\ \\beta=0, \\quad \\quad v_{p}&amp;=\\frac{\\omega}{\\beta}=\\infty \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]v_{p}\\gt c [/latex]",
+        "html": "<div class=\"option_data\">[latex]v_{p}\\gt c [/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]v_{p}=c [/latex]",
+        "html": "<div class=\"option_data\">[latex]v_{p}=c [/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]0 \\lt v_{p}\\lt c [/latex]",
+        "html": "<div class=\"option_data\">[latex]0 \\lt v_{p}\\lt c [/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]v_{p}=0 [/latex]",
+        "html": "<div class=\"option_data\">[latex]v_{p}=0 [/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=8"
+  },
+  {
+    "number": "Question 41",
+    "text": "The circuit shown is a",
+    "html": "<div class=\"question_text\" data-value=\"1\">The circuit shown is a <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\cb5e4c2f57cb354d8e8861a3134a6499.jpg\" style=\"--smush-placeholder-width: 301px; --smush-placeholder-aspect-ratio: 301/133;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q41.jpg": "images\\cb5e4c2f57cb354d8e8861a3134a6499.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - Operational Amplifiers",
+    "explanation_text": "[latex]\\begin{array}{l} T(s)=\\frac{(O / P)}{(I / P)}=\\frac{-R_{2}}{\\left(R_{1}+\\frac{1}{C S}\\right)}=\\frac{-R_{2} s C}{R_{1} s C+1} \\\\ T(s)=\\frac{-\\left(\\frac{R_{2}}{R_{1}}\\right) s}{s+\\frac{1}{R_{1} C}} \\end{array}[/latex] It is the transfer function of high pass filter with  cutoff frequency [latex]\\rightarrow [/latex] [latex] \\omega=\\frac{1}{R_{1} C} \\mathrm{rad} / \\mathrm{sec}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{array}{l} T(s)=\\frac{(O / P)}{(I / P)}=\\frac{-R_{2}}{\\left(R_{1}+\\frac{1}{C S}\\right)}=\\frac{-R_{2} s C}{R_{1} s C+1} \\\\ T(s)=\\frac{-\\left(\\frac{R_{2}}{R_{1}}\\right) s}{s+\\frac{1}{R_{1} C}} \\end{array}[/latex]<br/> It is the transfer function of high pass filter with  cutoff frequency [latex]\\rightarrow [/latex]<br/>[latex] \\omega=\\frac{1}{R_{1} C} \\mathrm{rad} / \\mathrm{sec}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "low pass filter with [latex]f_{3dB}=\\frac{1}{(R_{1}+R_{2})C}[/latex] rad/s",
+        "html": "<div class=\"option_data\">low pass filter with [latex]f_{3dB}=\\frac{1}{(R_{1}+R_{2})C}[/latex] rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "high pass filter with [latex]f_{3dB}=\\frac{1}{R_{1}C}[/latex]rad/s",
+        "html": "<div class=\"option_data\">high pass filter with [latex]f_{3dB}=\\frac{1}{R_{1}C}[/latex]rad/s</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "low pass filter with [latex]f_{3dB}=\\frac{1}{R_{1}C}[/latex] rad/s",
+        "html": "<div class=\"option_data\">low pass filter with [latex]f_{3dB}=\\frac{1}{R_{1}C}[/latex] rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "high pass filter with [latex]f_{3dB}=\\frac{1}{(R_{1}+R_{2})C}[/latex] rad/s",
+        "html": "<div class=\"option_data\">high pass filter with [latex]f_{3dB}=\\frac{1}{(R_{1}+R_{2})C}[/latex] rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=9"
+  },
+  {
+    "number": "Question 42",
+    "text": "Let y[n] denote the convolution of h[n] and g[n], where [latex]h[n]=(1/2)^{n}u[n][/latex] and g[n] is a causal sequence. If y[0] = 1 and y[1] = 1/2, then g[1] equals",
+    "html": "<div class=\"question_text\" data-value=\"1\">Let y[n] denote the convolution of h[n] and g[n], where [latex]h[n]=(1/2)^{n}u[n][/latex] and g[n] is a causal sequence. If y[0] = 1 and y[1] = 1/2, then g[1] equals</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - LTI Systems Continuous and Discrete",
+    "explanation_text": "[latex]\\begin{aligned} h[n]&=\\left(\\frac{1}{2}\\right)^{n} u[n] \\\\ g[n]&=? ? \\end{aligned}[/latex] [latex] y[n]=\\sum_{k=-\\infty}^{\\infty} h[n-k] g[k] [/latex] [latex] \\begin{aligned} y[0] &=\\sum_{k=-\\infty}^{\\infty} h(-k] g[k] \\\\ y[0] &=h[0] g[0] \\\\ 1 &=1 g[0] \\\\ g[0] &=1 \\\\ y[1] &=\\sum_{k=-\\infty}^{\\infty} h(1-k] g[k] \\\\ y[1] &=h[1] g(0]+h[0] g(1] \\end{aligned} [/latex] [latex] h[1-k][/latex] will be zero for [latex]k \\gt 1[/latex] and [latex]g[k][/latex] will be z for [latex]k \\lt 0[/latex] as it is causal sequence. [latex] \\begin{aligned} \\frac{1}{2} &=\\frac{1}{2} \\times 1+1 g[1] \\\\ g[1] &=0 \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} h[n]&amp;=\\left(\\frac{1}{2}\\right)^{n} u[n] \\\\ g[n]&amp;=? ? \\end{aligned}[/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\55e23e1dfc0bf2fa5a398824d3264502.jpg\" style=\"--smush-placeholder-width: 245px; --smush-placeholder-aspect-ratio: 245/102;\"/><br/><br/>[latex] y[n]=\\sum_{k=-\\infty}^{\\infty} h[n-k] g[k] [/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\2f9a63a109bf0a121b0034de46400497.jpg\" style=\"--smush-placeholder-width: 287px; --smush-placeholder-aspect-ratio: 287/167;\"/><br/><br/>[latex] \\begin{aligned} y[0] &amp;=\\sum_{k=-\\infty}^{\\infty} h(-k] g[k] \\\\ y[0] &amp;=h[0] g[0] \\\\ 1 &amp;=1 g[0] \\\\ g[0] &amp;=1 \\\\ y[1] &amp;=\\sum_{k=-\\infty}^{\\infty} h(1-k] g[k] \\\\ y[1] &amp;=h[1] g(0]+h[0] g(1] \\end{aligned} [/latex]<br/>[latex] h[1-k][/latex] will be zero for [latex]k \\gt 1[/latex] and [latex]g[k][/latex] will be z <br/> for [latex]k \\lt 0[/latex] as it is causal sequence.<br/>[latex] \\begin{aligned} \\frac{1}{2} &amp;=\\frac{1}{2} \\times 1+1 g[1] \\\\ g[1] &amp;=0 \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a42a.jpg": "images\\55e23e1dfc0bf2fa5a398824d3264502.jpg",
+      "/wp-content/uploads/GATE/EC/20121/a42b.jpg": "images\\2f9a63a109bf0a121b0034de46400497.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "0",
+        "html": "<div class=\"option_data\">0</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]1/2[/latex]",
+        "html": "<div class=\"option_data\">[latex]1/2[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]3/2[/latex]",
+        "html": "<div class=\"option_data\">[latex]3/2[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=9"
+  },
+  {
+    "number": "Question 43",
+    "text": "The state transition diagram for the logic circuit shown is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The state transition diagram for the logic circuit shown is<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\68c6c83762698834e0bbb9044e1602e1.jpg\" style=\"--smush-placeholder-width: 251px; --smush-placeholder-aspect-ratio: 251/153;\"/><br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\c095f53c80b827ba6d08193aeca6c428.jpg\" style=\"--smush-placeholder-width: 509px; --smush-placeholder-aspect-ratio: 509/203;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q43a.jpg": "images\\68c6c83762698834e0bbb9044e1602e1.jpg",
+      "/wp-content/uploads/GATE/EC/20121/q43b.jpg": "images\\c095f53c80b827ba6d08193aeca6c428.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Circuits - Sequential Circuits",
+    "explanation_text": "When A = 1, then Q will be selected by MUX and \r\nfeedback to flipflop which gives output 0 again. So at A = 1 it holds its state. When A = 0, then [latex]\\bar{Q}[/latex] \r\nwill be selected by MUX and feedback to flipflop\r\nand output will be inverted. So for A = 1 it holds the state and for A = O it \r\ninterchange the state i.e. if Q = 0 then it will go to \r\nQ = 1 and if Q = 1 then it will go to Q = 0. So option (D) is correct option.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tWhen A = 1, then Q will be selected by MUX and \r\nfeedback to flipflop which gives output 0 again.<br/>\r\nSo at A = 1 it holds its state. When A = 0, then [latex]\\bar{Q}[/latex] \r\nwill be selected by MUX and feedback to flipflop\r\nand output will be inverted.<br/>\r\nSo for A = 1 it holds the state and for A = O it \r\ninterchange the state i.e. if Q = 0 then it will go to \r\nQ = 1 and if Q = 1 then it will go to Q = 0.<br/>\r\nSo option (D) is correct option. \r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "A",
+        "html": "<div class=\"option_data\">A</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "B",
+        "html": "<div class=\"option_data\">B</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "C",
+        "html": "<div class=\"option_data\">C</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "D",
+        "html": "<div class=\"option_data\">D</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=9"
+  },
+  {
+    "number": "Question 44",
+    "text": "The voltage gain [latex]A_{v}[/latex] of the circuit shown below is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The voltage gain [latex]A_{v}[/latex] of the circuit shown below is<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\d263a2cb1a8ace8ae580de2cf804861e.jpg\" style=\"--smush-placeholder-width: 242px; --smush-placeholder-aspect-ratio: 242/193;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q44.jpg": "images\\d263a2cb1a8ace8ae580de2cf804861e.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Circuits - BJT Analysis",
+    "explanation_text": "[latex]\\begin{aligned} \\mathrm{KVL}:-&13.7+12 \\times 101 I_{B} \\times 100 I_{B}+V_{B E}=0 \\\\ 1312 I_{B}&=B \\\\ \\Rightarrow I_{B} &\\equiv 0.01 \\mathrm{mA} \\\\ I_{C}&= \\beta I_{B}=1 \\mathrm{mA} \\\\ g_{m}&=\\frac{I_{C}}{V_{T}}=38 \\mathrm{mV} \\\\ r_{\\pi}&=\\frac{\\beta}{g_{m}}=\\frac{100}{38 \\mathrm{m}}=2.63 \\mathrm{k} \\Omega \\end{aligned}[/latex] Apply Miller's theorem to 100 k resistor. [latex] \\begin{aligned} R_{m}&=\\frac{100}{1-A_{v}} \\\\ R_{n}&=\\frac{100}{1-\\frac{1}{A_{v}}} \\equiv 100 \\mathrm{k}\\\\ \\frac{V_{0}}{V_{1}} &=-g_{m} R_{L}^{\\prime}=-38 \\times(12 \\| 100) \\\\ &=-407.14 \\\\ R_{m} &=\\frac{100}{1+407.1}=0.245 \\\\ R_{i}^{\\prime} &=r_{n}\\left\\|R_{m}=2.63\\right\\| 0.245=0.224 \\\\ \\frac{V_{o}}{V_{i}} &=\\frac{V_{o}}{V_{i}} \\times \\frac{R_{i}^{\\prime}}{R_{s}+R_{i}} \\\\ &=-407.14 \\times \\frac{0.224}{10+0.224}=-8.92 \\\\ \\left|A_{v}\\right| & \\cong 10 \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\72c5c3dc18ed656889135ee65a2b9024.jpg\" style=\"--smush-placeholder-width: 326px; --smush-placeholder-aspect-ratio: 326/241;\"/><br/>[latex]\\begin{aligned} \\mathrm{KVL}:-&amp;13.7+12 \\times 101 I_{B} \\times 100 I_{B}+V_{B E}=0 \\\\ 1312 I_{B}&amp;=B \\\\ \\Rightarrow I_{B} &amp;\\equiv 0.01 \\mathrm{mA} \\\\ I_{C}&amp;= \\beta I_{B}=1 \\mathrm{mA} \\\\ g_{m}&amp;=\\frac{I_{C}}{V_{T}}=38 \\mathrm{mV} \\\\ r_{\\pi}&amp;=\\frac{\\beta}{g_{m}}=\\frac{100}{38 \\mathrm{m}}=2.63 \\mathrm{k} \\Omega \\end{aligned}[/latex]<br/> Apply Miller's theorem to 100 k resistor.<br/>[latex] \\begin{aligned} R_{m}&amp;=\\frac{100}{1-A_{v}} \\\\ R_{n}&amp;=\\frac{100}{1-\\frac{1}{A_{v}}} \\equiv 100 \\mathrm{k}\\\\ \\frac{V_{0}}{V_{1}} &amp;=-g_{m} R_{L}^{\\prime}=-38 \\times(12 \\| 100) \\\\ &amp;=-407.14 \\\\ R_{m} &amp;=\\frac{100}{1+407.1}=0.245 \\\\ R_{i}^{\\prime} &amp;=r_{n}\\left\\|R_{m}=2.63\\right\\| 0.245=0.224 \\\\ \\frac{V_{o}}{V_{i}} &amp;=\\frac{V_{o}}{V_{i}} \\times \\frac{R_{i}^{\\prime}}{R_{s}+R_{i}} \\\\ &amp;=-407.14 \\times \\frac{0.224}{10+0.224}=-8.92 \\\\ \\left|A_{v}\\right| &amp; \\cong 10 \\end{aligned}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a44.jpg": "images\\72c5c3dc18ed656889135ee65a2b9024.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]|A_{v}|\\approx 200[/latex]",
+        "html": "<div class=\"option_data\">[latex]|A_{v}|\\approx 200[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]|A_{v}|\\approx 100[/latex]",
+        "html": "<div class=\"option_data\">[latex]|A_{v}|\\approx 100[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]|A_{v}|\\approx 20[/latex]",
+        "html": "<div class=\"option_data\">[latex]|A_{v}|\\approx 20[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]|A_{v}|\\approx 10[/latex]",
+        "html": "<div class=\"option_data\">[latex]|A_{v}|\\approx 10[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=9"
+  },
+  {
+    "number": "Question 45",
+    "text": "If [latex]V_{A}-V_{B}[/latex]=6V, then [latex]V_{C}-V_{D}[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">If [latex]V_{A}-V_{B}[/latex]=6V, then [latex]V_{C}-V_{D}[/latex] is<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\d2b5540da8d86a5993edec59bc054c0c.jpg\" style=\"--smush-placeholder-width: 366px; --smush-placeholder-aspect-ratio: 366/161;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q45.jpg": "images\\d2b5540da8d86a5993edec59bc054c0c.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Basics of Network Analysis",
+    "explanation_text": "[latex]\\begin{aligned} i &=\\frac{V_{A}-V_{B}}{2}=\\frac{6}{2} \\\\ &=3 \\mathrm{A}\\quad \\ldots(i) \\end{aligned}[/latex] KCL at node B, we have [latex] \\begin{aligned} i &=i_{2}+i_{1} \\\\ i_{2}+i_{1} &=3 \\mathrm{A} \\quad \\ldots(ii) \\end{aligned}[/latex] KCL at node E , we have [latex] i_{1}=i_{3}+i_{4}\\quad \\ldots(iii)[/latex] KCL at node D we have [latex] \\begin{array}{l} i_{5}=i_{2}+i_{3}+i_{4} \\\\ i_{5}=i_{2}+i_{1} \\\\ i_{5}=3 \\mathrm{A} \\end{array}[/latex] KCL at node F , we have [latex] \\begin{aligned} i_{6}+2+i_{5}&=0\\\\ i_{6}&=-2-i_{5} \\\\ i_{6}&=-5 \\mathrm{A}\\\\ \\text{SO} \\quad V_{C}-V_{D}&=1 \\times i_{6}=-5 \\mathrm{V} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\f2bf66cdd72d87355285f3ebe6929ee5.jpg\" style=\"--smush-placeholder-width: 418px; --smush-placeholder-aspect-ratio: 418/204;\"/><br/>[latex]\\begin{aligned} i &amp;=\\frac{V_{A}-V_{B}}{2}=\\frac{6}{2} \\\\ &amp;=3 \\mathrm{A}\\quad \\ldots(i) \\end{aligned}[/latex]<br/> KCL at node B, we have<br/>[latex] \\begin{aligned} i &amp;=i_{2}+i_{1} \\\\ i_{2}+i_{1} &amp;=3 \\mathrm{A} \\quad \\ldots(ii) \\end{aligned}[/latex]<br/> KCL at node E , we have<br/>[latex] i_{1}=i_{3}+i_{4}\\quad \\ldots(iii)[/latex]<br/> KCL at node D we have<br/>[latex] \\begin{array}{l} i_{5}=i_{2}+i_{3}+i_{4} \\\\ i_{5}=i_{2}+i_{1} \\\\ i_{5}=3 \\mathrm{A} \\end{array}[/latex]<br/> KCL at node F , we have<br/>[latex] \\begin{aligned} i_{6}+2+i_{5}&amp;=0\\\\ i_{6}&amp;=-2-i_{5} \\\\ i_{6}&amp;=-5 \\mathrm{A}\\\\ \\text{SO} \\quad V_{C}-V_{D}&amp;=1 \\times i_{6}=-5 \\mathrm{V} \\end{aligned}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a45.jpg": "images\\f2bf66cdd72d87355285f3ebe6929ee5.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]-5 V [/latex]",
+        "html": "<div class=\"option_data\">[latex]-5 V [/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "2 V",
+        "html": "<div class=\"option_data\">2 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "3 V",
+        "html": "<div class=\"option_data\">3 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "6 V",
+        "html": "<div class=\"option_data\">6 V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=9"
+  },
+  {
+    "number": "Question 46",
+    "text": "The maximum value of [latex]f(x)=x^{3}-9x^{2}+24x+5[/latex] in the interval [1, 6] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The maximum value of [latex]f(x)=x^{3}-9x^{2}+24x+5[/latex] in the interval [1, 6] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Calculus",
+    "explanation_text": "We need absolute maximum of [latex]\r\nf(x)=x^{3}-9 x^{2}+24 x+5 [/latex] in the interval [1,6] First find local maximum if any by putting  [latex]f^{\\prime}(x)=0 [/latex] [latex]\r\n\\begin{aligned}\r\n\\text{i.e.}\\quad f^{\\prime}(x)&=3 x^{2}-18 x+24=0\\\\\r\n\\text{i.e.}\\quad  x^{2}-6 x+8&=0 \\\\\r\nx &=2,4 \\\\\r\n\\text { Now } \\quad f^{\\prime \\prime}(x) &=6 x-18 \\\\\r\nf^{\\prime \\prime}(2) &=12-18=-6 \\lt 0\\\\\r\n&\\text{(So  x=2  is a point of local maximum)}\\\\\r\n\\text{ and  }f^{\\prime \\prime}(4)&=24-18=+6 \\gt 0 \\\\\r\n&\\text{(So  x=4  is a point of local minimum)}\r\n\\end{aligned}[/latex] Now tabulate the values of  f  at end point of interval \r\nand at local maximum point, to find absolute \r\nmaximum in given range, as shown below: [latex]\r\n\\begin{array}{l|l}\r\nx & f(x) \\\\\r\n1 & 21 \\\\\r\n2 & 25 \\\\\r\n6 & 41\r\n\\end{array}[/latex] Clearly the absolute maxima is at  x=6  \r\nand absolute maximum value is 41.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tWe need absolute maximum of  <br/>[latex]\r\nf(x)=x^{3}-9 x^{2}+24 x+5 [/latex] in the interval [1,6] <br/>\r\nFirst find local maximum if any by putting  [latex]f^{\\prime}(x)=0 [/latex]<br/>[latex]\r\n\\begin{aligned}\r\n\\text{i.e.}\\quad f^{\\prime}(x)&amp;=3 x^{2}-18 x+24=0\\\\\r\n\\text{i.e.}\\quad  x^{2}-6 x+8&amp;=0 \\\\\r\nx &amp;=2,4 \\\\\r\n\\text { Now } \\quad f^{\\prime \\prime}(x) &amp;=6 x-18 \\\\\r\nf^{\\prime \\prime}(2) &amp;=12-18=-6 \\lt 0\\\\\r\n&amp;\\text{(So  x=2  is a point of local maximum)}\\\\\r\n\\text{ and  }f^{\\prime \\prime}(4)&amp;=24-18=+6 \\gt 0 \\\\\r\n&amp;\\text{(So  x=4  is a point of local minimum)}\r\n\\end{aligned}[/latex]<br/>\r\n Now tabulate the values of  f  at end point of interval \r\nand at local maximum point, to find absolute \r\nmaximum in given range, as shown below:<br/>[latex]\r\n\\begin{array}{l|l}\r\nx &amp; f(x) \\\\\r\n1 &amp; 21 \\\\\r\n2 &amp; 25 \\\\\r\n6 &amp; 41\r\n\\end{array}[/latex]<br/>\r\nClearly the absolute maxima is at  x=6  \r\nand absolute maximum value is 41.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "21",
+        "html": "<div class=\"option_data\">21</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "25",
+        "html": "<div class=\"option_data\">25</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "41",
+        "html": "<div class=\"option_data\">41</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "46",
+        "html": "<div class=\"option_data\">46</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=10"
+  },
+  {
+    "number": "Question 47",
+    "text": "Given that [latex]A=\\begin{bmatrix} -5 & -3\\\\ 2&0 \\end{bmatrix} [/latex] and [latex]I=\\begin{bmatrix} 1 & 0\\\\ 0&1 \\end{bmatrix}[/latex], the value of [latex]A^{3}[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Given that [latex]A=\\begin{bmatrix} -5 &amp; -3\\\\ 2&amp;0 \\end{bmatrix} [/latex] and [latex]I=\\begin{bmatrix} 1 &amp; 0\\\\ 0&amp;1 \\end{bmatrix}[/latex], the value of [latex]A^{3}[/latex] is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Linear Algebra",
+    "explanation_text": "[latex]A=\\left[\\begin{array}{rr}-5 & -3 \\\\ 2 & 0\\end{array}\\right] \\text{ and } I=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right] [/latex] Characteristic equation of A is [latex] \\begin{aligned} \\left|\\begin{array}{rr}-5-\\lambda & -3 \\\\ 2 & 0-\\lambda\\end{array}\\right|&=0\\\\ (-5-\\lambda)(-\\lambda)+6&=0 \\\\ \\Rightarrow \\quad \\lambda^{2}+5 \\lambda+6&=0 \\\\ \\text{ So,}\\quad A^{2}+5 A+6 I&=0 \\\\ &\\text{(by Cayley Hamilton theorem) }\\\\ \\Rightarrow \\quad A^{2}=-5 A-6 I& \\end{aligned}[/latex] Multiplying by A on both sides, we have, [latex] \\begin{aligned} A^{3} &=-5 A^{2}-6 A \\\\ \\Rightarrow \\quad A^{3} &=-5(-5 A-6 I)-6 A \\\\ &=19 A+30I \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]A=\\left[\\begin{array}{rr}-5 &amp; -3 \\\\ 2 &amp; 0\\end{array}\\right] \\text{ and } I=\\left[\\begin{array}{ll}1 &amp; 0 \\\\ 0 &amp; 1\\end{array}\\right] [/latex]<br/> Characteristic equation of A is<br/>[latex] \\begin{aligned} \\left|\\begin{array}{rr}-5-\\lambda &amp; -3 \\\\ 2 &amp; 0-\\lambda\\end{array}\\right|&amp;=0\\\\ (-5-\\lambda)(-\\lambda)+6&amp;=0 \\\\ \\Rightarrow \\quad \\lambda^{2}+5 \\lambda+6&amp;=0 \\\\ \\text{ So,}\\quad A^{2}+5 A+6 I&amp;=0 \\\\ &amp;\\text{(by Cayley Hamilton theorem) }\\\\ \\Rightarrow \\quad A^{2}=-5 A-6 I&amp; \\end{aligned}[/latex]<br/> Multiplying by A on both sides, we have, <br/>[latex] \\begin{aligned} A^{3} &amp;=-5 A^{2}-6 A \\\\ \\Rightarrow \\quad A^{3} &amp;=-5(-5 A-6 I)-6 A \\\\ &amp;=19 A+30I \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex] 15 A + 12 I [/latex]",
+        "html": "<div class=\"option_data\">[latex] 15 A + 12 I [/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]19 A + 30 I [/latex]",
+        "html": "<div class=\"option_data\">[latex]19 A + 30 I [/latex]\r\n</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]17 A + 15 I [/latex]",
+        "html": "<div class=\"option_data\">[latex]17 A + 15 I [/latex]\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]17 A + 21 I [/latex]",
+        "html": "<div class=\"option_data\">[latex]17 A + 21 I [/latex]\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=10"
+  },
+  {
+    "number": "Question 48",
+    "text": "With 10 V dc connected at port A in the linear nonreciprocal two-port network shown below, the following\r\nwere observed: (i) 1[latex]\\Omega[/latex] connected at port B draws a current of 3 A (ii) 2.5  [latex]\\Omega[/latex] connected at port B draws a current of 2 A With 10 V dc connected at port A, the current drawn by 7 [latex]\\Omega[/latex] connected at port B is",
+    "html": "<div class=\"question_text\" data-value=\"1\">With 10 V dc connected at port A in the linear nonreciprocal two-port network shown below, the following\r\nwere observed: <br/> (i) 1[latex]\\Omega[/latex] connected at port B draws a current of 3 A <br/>\r\n(ii) 2.5  [latex]\\Omega[/latex] connected at port B draws a current of 2 A <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\07f4f5d56b4ee49ebc3f6c78a9f0cd12.jpg\" style=\"--smush-placeholder-width: 277px; --smush-placeholder-aspect-ratio: 277/91;\"/> <br/>With 10 V dc connected at port A, the current drawn by 7 [latex]\\Omega[/latex] connected at port B is</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q48.jpg": "images\\07f4f5d56b4ee49ebc3f6c78a9f0cd12.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Two Port Networks",
+    "explanation_text": "From the above solution [latex] \\begin{aligned} \\text { When, } & V_{\\mathrm{DC}}=10 \\mathrm{V} \\\\ \\text { When, } & V_{\\mathrm{Th}}=9 \\mathrm{V} \\text { and } R_{\\mathrm{Th}}=2 \\Omega \\\\ & R_{\\mathrm{L}}=7 \\Omega, I=? \\\\ & I=\\frac{V_{\\mathrm{Th}}}{R_{\\mathrm{Th}}+R_{L}}=\\frac{9}{2+7}=1 \\mathrm{A} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFrom the above solution<br/>[latex] \\begin{aligned} \\text { When, } &amp; V_{\\mathrm{DC}}=10 \\mathrm{V} \\\\ \\text { When, } &amp; V_{\\mathrm{Th}}=9 \\mathrm{V} \\text { and } R_{\\mathrm{Th}}=2 \\Omega \\\\ &amp; R_{\\mathrm{L}}=7 \\Omega, I=? \\\\ &amp; I=\\frac{V_{\\mathrm{Th}}}{R_{\\mathrm{Th}}+R_{L}}=\\frac{9}{2+7}=1 \\mathrm{A} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "3/7 A",
+        "html": "<div class=\"option_data\">3/7 A</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "5/7 A",
+        "html": "<div class=\"option_data\">5/7 A</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1A",
+        "html": "<div class=\"option_data\">1A</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "9/7 A",
+        "html": "<div class=\"option_data\">9/7 A</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=10"
+  },
+  {
+    "number": "Question 49",
+    "text": "With 10 V dc connected at port A in the linear nonreciprocal two-port network shown below, the following\r\nwere observed: (i) 1[latex]\\Omega[/latex] connected at port B draws a current of 3 A (ii) 2.5  [latex]\\Omega[/latex] connected at port B draws a current of 2 A For the same network, with 6 V dc connected at port A, 1 [latex]\\Omega[/latex] connected at port B draws 7/3 A. If 8 V dc is connected to port A, the open circuit voltage at port B is",
+    "html": "<div class=\"question_text\" data-value=\"1\">With 10 V dc connected at port A in the linear nonreciprocal two-port network shown below, the following\r\nwere observed: <br/> (i) 1[latex]\\Omega[/latex] connected at port B draws a current of 3 A <br/>\r\n(ii) 2.5  [latex]\\Omega[/latex] connected at port B draws a current of 2 A <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\07f4f5d56b4ee49ebc3f6c78a9f0cd12.jpg\" style=\"--smush-placeholder-width: 277px; --smush-placeholder-aspect-ratio: 277/91;\"/> <br/>For the same network, with 6 V dc connected at port A, 1 [latex]\\Omega[/latex] connected at port B draws 7/3 A. If 8 V dc is connected to port A, the open circuit voltage at port B is</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q48.jpg": "images\\07f4f5d56b4ee49ebc3f6c78a9f0cd12.jpg"
+    },
+    "type": "mcq",
+    "subject": "Network Theory - Two Port Networks",
+    "explanation_text": "Case (i): [latex] \\begin{aligned} V_{\\mathrm{DC}}&=10 \\mathrm{V}, R_{L}=1 \\Omega, I=3 \\mathrm{A} \\\\ V_{\\mathrm{Th}}&=I\\left(R_{\\mathrm{Th}}+R_{L}\\right)=3\\left(R_{\\mathrm{Th}}+1\\right)\\\\ \\Rightarrow \\quad V_{\\mathrm{Th}}&=3 R_{\\mathrm{Th}}+3 &\\ldots(i) \\end{aligned}[/latex] Case (ii): [latex] \\begin{aligned} R_{L}&=2.5 \\Omega, I=2 \\mathrm{A}, V_{\\mathrm{DC}}=10 \\mathrm{V} \\\\ V_{\\mathrm{Th}}&=2\\left(R_{\\mathrm{Th}}+2.5\\right) \\\\ V_{\\mathrm{Th}}&=2 R_{\\mathrm{Th}}+5 &\\ldots(ii) \\end{aligned}[/latex] From equations (i) and (ii) [latex] V_{\\mathrm{Th}}=9 \\mathrm{V} and R_{\\mathrm{TH}}=2 \\Omega \\quad\\ldots(iii)[/latex] Now, [latex]V_{Th}[/latex] depends on independent voltage source and varies with applied voltage. [latex]R_{Th}[/latex] does not depend on voltage source and is same for any applied voltage source, since voltage_ source is short circuited while calculating [latex]R_{Th}[/latex] [latex]\\begin{aligned} \\text{For }V_{\\mathrm{DC}}&=6 \\mathrm{V}, R_{\\mathrm{L}}=1 \\Omega, I=7 / 3 \\\\ V_{T h}&=I\\left(R_{T h}+R_{L}\\right) \\\\ V_{T h}&=\\frac{7}{3}(2+1)=7 V &\\ldots(iv) \\end{aligned}[/latex] [latex] \\because [/latex]The network is linear and non reciprocal, it may contain dependent voltage source [latex] \\begin{aligned} \\therefore \\quad V_{T h}&=a V+b \\\\ \\Rightarrow \\quad 9&=a 10+b \\quad \\text{from equation (iii)} \\\\ \\text{and }\\quad 7&=a 6+b \\quad\\text{from equation (iv)} \\\\ \\end{aligned}[/latex] Solving, we get a=1/2 and b=4 [latex] \\therefore \\quad V_{\\mathrm{Th}}=\\frac{V}{2}+4=\\frac{8}{2}+4=8 \\mathrm{V}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\86fedcafe9824480f1ae136de745b8da.jpg\" style=\"--smush-placeholder-width: 332px; --smush-placeholder-aspect-ratio: 332/88;\"/><br/>Case (i):<br/>[latex] \\begin{aligned} V_{\\mathrm{DC}}&amp;=10 \\mathrm{V}, R_{L}=1 \\Omega, I=3 \\mathrm{A} \\\\ V_{\\mathrm{Th}}&amp;=I\\left(R_{\\mathrm{Th}}+R_{L}\\right)=3\\left(R_{\\mathrm{Th}}+1\\right)\\\\ \\Rightarrow \\quad V_{\\mathrm{Th}}&amp;=3 R_{\\mathrm{Th}}+3 &amp;\\ldots(i) \\end{aligned}[/latex]<br/> Case (ii):<br/>[latex] \\begin{aligned} R_{L}&amp;=2.5 \\Omega, I=2 \\mathrm{A}, V_{\\mathrm{DC}}=10 \\mathrm{V} \\\\ V_{\\mathrm{Th}}&amp;=2\\left(R_{\\mathrm{Th}}+2.5\\right) \\\\ V_{\\mathrm{Th}}&amp;=2 R_{\\mathrm{Th}}+5 &amp;\\ldots(ii) \\end{aligned}[/latex]<br/> From equations (i) and (ii) <br/>[latex] V_{\\mathrm{Th}}=9 \\mathrm{V} and R_{\\mathrm{TH}}=2 \\Omega \\quad\\ldots(iii)[/latex]<br/> Now, [latex]V_{Th}[/latex] depends on independent voltage source and varies with applied voltage. [latex]R_{Th}[/latex] does not depend on voltage source and is same for any applied voltage source, since voltage_ source is short circuited while calculating [latex]R_{Th}[/latex]<br/>[latex]\\begin{aligned} \\text{For }V_{\\mathrm{DC}}&amp;=6 \\mathrm{V}, R_{\\mathrm{L}}=1 \\Omega, I=7 / 3 \\\\ V_{T h}&amp;=I\\left(R_{T h}+R_{L}\\right) \\\\ V_{T h}&amp;=\\frac{7}{3}(2+1)=7 V &amp;\\ldots(iv) \\end{aligned}[/latex]<br/>[latex] \\because [/latex]The network is linear and non reciprocal, it may<br/> contain dependent voltage source<br/>[latex] \\begin{aligned} \\therefore \\quad V_{T h}&amp;=a V+b \\\\ \\Rightarrow \\quad 9&amp;=a 10+b \\quad \\text{from equation (iii)} \\\\ \\text{and }\\quad 7&amp;=a 6+b \\quad\\text{from equation (iv)} \\\\ \\end{aligned}[/latex]<br/> Solving, we get a=1/2 and b=4 <br/>[latex] \\therefore \\quad V_{\\mathrm{Th}}=\\frac{V}{2}+4=\\frac{8}{2}+4=8 \\mathrm{V}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a49.jpg": "images\\86fedcafe9824480f1ae136de745b8da.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "6V",
+        "html": "<div class=\"option_data\">6V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "7V",
+        "html": "<div class=\"option_data\">7V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "8V",
+        "html": "<div class=\"option_data\">8V</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "9V",
+        "html": "<div class=\"option_data\">9V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=10"
+  },
+  {
+    "number": "Question 50",
+    "text": "In the three dimensional view of a silicon n-channel MOS transistor shown below, [latex]\\delta[/latex]=20nm. The\r\ntransistor is of width 1 [latex]\\mu[/latex]m. The depletion width formed at every p-n junction is 10 nm. The relative\r\npermittivities of Si and [latex]SiO_{2}[/latex], respectively, are 11.7 and 3.9, and [latex]\\varepsilon _{0}=8.9\\times 10^{-12}[/latex] F/m. The gate-source overlap capacitance is approximately",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the three dimensional view of a silicon n-channel MOS transistor shown below, [latex]\\delta[/latex]=20nm. The\r\ntransistor is of width 1 [latex]\\mu[/latex]m. The depletion width formed at every p-n junction is 10 nm. The relative\r\npermittivities of Si and [latex]SiO_{2}[/latex], respectively, are 11.7 and 3.9, and [latex]\\varepsilon _{0}=8.9\\times 10^{-12}[/latex] F/m.  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\5af000d8383da9ff4ba2b827ac003407.jpg\" style=\"--smush-placeholder-width: 756px; --smush-placeholder-aspect-ratio: 756/344;\"/> <br/> The gate-source overlap capacitance is approximately</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q50.jpg": "images\\5af000d8383da9ff4ba2b827ac003407.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electronic Devices - BJT and FET Basics",
+    "explanation_text": "Gate source capacitance [latex]C_{g}[/latex] is [latex] C_{g}=\\frac{\\epsilon_{1} A_{1}}{d_{1}}=\\frac{\\epsilon_{0} \\in_{r 1} A_{1}}{d_{1}}[/latex] [latex] \\epsilon_{r 1}=3.9 [/latex] as between gate and source there is [latex] \\mathrm{SiO}_{2}[/latex] [latex] \\begin{aligned} A_{1} &=1 \\mu m \\times \\delta=1 \\times 10^{-6} \\times 20 \\times 10^{-9} \\\\ &=2 \\times 10^{-14} \\mathrm{m}^{2} \\\\ d_{1} &=1 \\mathrm{nm}=10^{-9} \\mathrm{m}\\\\ So. C_{g}&=\\frac{8.9 \\times 10^{-12} \\times 3.9 \\times 2 \\times 10^{-14}}{10^{-9}} \\\\ C_{g}&=69.42 \\times 10^{-17} \\mathrm{F} \\\\ C_{g}&=0.69 \\times 10^{-15} \\\\ C_{g}&=0.7 \\mathrm{pF} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tGate source capacitance [latex]C_{g}[/latex] is<br/>[latex] C_{g}=\\frac{\\epsilon_{1} A_{1}}{d_{1}}=\\frac{\\epsilon_{0} \\in_{r 1} A_{1}}{d_{1}}[/latex]<br/>[latex] \\epsilon_{r 1}=3.9 [/latex] as between gate and source there is <br/>[latex] \\mathrm{SiO}_{2}[/latex]<br/>[latex] \\begin{aligned} A_{1} &amp;=1 \\mu m \\times \\delta=1 \\times 10^{-6} \\times 20 \\times 10^{-9} \\\\ &amp;=2 \\times 10^{-14} \\mathrm{m}^{2} \\\\ d_{1} &amp;=1 \\mathrm{nm}=10^{-9} \\mathrm{m}\\\\ So. C_{g}&amp;=\\frac{8.9 \\times 10^{-12} \\times 3.9 \\times 2 \\times 10^{-14}}{10^{-9}} \\\\ C_{g}&amp;=69.42 \\times 10^{-17} \\mathrm{F} \\\\ C_{g}&amp;=0.69 \\times 10^{-15} \\\\ C_{g}&amp;=0.7 \\mathrm{pF} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0.7 fF",
+        "html": "<div class=\"option_data\">0.7 fF</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "0.7 Pf",
+        "html": "<div class=\"option_data\">0.7 Pf</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0.35 fF",
+        "html": "<div class=\"option_data\">0.35 fF</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0.24 pF",
+        "html": "<div class=\"option_data\">0.24 pF</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=10"
+  },
+  {
+    "number": "Question 51",
+    "text": "In the three dimensional view of a silicon n-channel MOS transistor shown below, [latex]\\delta[/latex]=20nm. The\r\ntransistor is of width 1 [latex]\\mu[/latex]m. The depletion width formed at every p-n junction is 10 nm. The relative\r\npermittivities of Si and [latex]SiO_{2}[/latex], respectively, are 11.7 and 3.9, and [latex]\\varepsilon _{0}=8.9\\times 10^{-12}[/latex] F/m. The source-body junction capacitance is approximately",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the three dimensional view of a silicon n-channel MOS transistor shown below, [latex]\\delta[/latex]=20nm. The\r\ntransistor is of width 1 [latex]\\mu[/latex]m. The depletion width formed at every p-n junction is 10 nm. The relative\r\npermittivities of Si and [latex]SiO_{2}[/latex], respectively, are 11.7 and 3.9, and [latex]\\varepsilon _{0}=8.9\\times 10^{-12}[/latex] F/m.  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\5af000d8383da9ff4ba2b827ac003407.jpg\" style=\"--smush-placeholder-width: 756px; --smush-placeholder-aspect-ratio: 756/344;\"/> <br/>The source-body junction capacitance is approximately</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q50.jpg": "images\\5af000d8383da9ff4ba2b827ac003407.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electronic Devices - BJT and FET Basics",
+    "explanation_text": "Source body junction capacitor, [latex] \\begin{aligned} C_{j}&=\\frac{\\in A}{d}=\\frac{\\epsilon_{0} \\in_{T} A}{d}\\\\ \\text{here, }\\quad \\epsilon_{r}&=11.7 \\text{ as there is Si only y }\\\\ A&=1 \\mu \\mathrm{m} \\times 0.2 \\mu \\mathrm{m}=0.2 \\times 10^{-12} \\mathrm{m}^{2}\\\\ d&= \\text{depletion width of p-n junction}\\\\ d&=10 \\mathrm{nm}=10^{-8} \\mathrm{m} \\\\ \\text{So,}\\quad C_{j}&=\\frac{8.9 \\times 10^{-12} \\times 11.7 \\times 0.2 \\times 10^{-12}}{10^{-8}}\\\\ C_{j}&=2.082 \\times 10^{-15} \\mathrm{F} \\\\ C_{j} &\\cong 2 \\mathrm{pF} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tSource body junction capacitor,<br/>[latex] \\begin{aligned} C_{j}&amp;=\\frac{\\in A}{d}=\\frac{\\epsilon_{0} \\in_{T} A}{d}\\\\ \\text{here, }\\quad \\epsilon_{r}&amp;=11.7 \\text{ as there is Si only y }\\\\ A&amp;=1 \\mu \\mathrm{m} \\times 0.2 \\mu \\mathrm{m}=0.2 \\times 10^{-12} \\mathrm{m}^{2}\\\\ d&amp;= \\text{depletion width of p-n junction}\\\\ d&amp;=10 \\mathrm{nm}=10^{-8} \\mathrm{m} \\\\ \\text{So,}\\quad C_{j}&amp;=\\frac{8.9 \\times 10^{-12} \\times 11.7 \\times 0.2 \\times 10^{-12}}{10^{-8}}\\\\ C_{j}&amp;=2.082 \\times 10^{-15} \\mathrm{F} \\\\ C_{j} &amp;\\cong 2 \\mathrm{pF} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "2 fF",
+        "html": "<div class=\"option_data\">2 fF</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "7 fF",
+        "html": "<div class=\"option_data\">7 fF</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "2 PF",
+        "html": "<div class=\"option_data\">2 PF</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "7 PF",
+        "html": "<div class=\"option_data\">7 PF</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=11"
+  },
+  {
+    "number": "Question 52",
+    "text": "An infinitely long uniform solid wire of radius a carries a uniform dc current of density [latex]\\overrightarrow{j}[/latex]. The magnetic field at a distance [latex]r[/latex]  from the center of the wire is proportional to",
+    "html": "<div class=\"question_text\" data-value=\"1\">An infinitely long uniform solid wire of radius a carries a uniform dc current of density [latex]\\overrightarrow{j}[/latex]. <br/><br/>\r\nThe magnetic field at a distance [latex]r[/latex]  from the center of the wire is proportional to</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetics - Basics of Electromagnetics",
+    "explanation_text": "We know that magnetic flux density at a distance r from the wire is, [latex]\\begin{aligned} |B| &=\\frac{\\mu_{0} I}{2 \\pi r} \\\\ \\text { For } r \\lt a \\rightarrow I&=J \\cdot \\pi r^{2} \\\\ \\text { so } \\quad |B|&=\\frac{\\mu_{0} J r}{2}\\\\ |B| \\propto r \\text { for } r \\lt a \\\\ \\text { for } r \\gt a,\\quad I&=J \\times \\pi a^{2} \\\\ \\text { So, } |B|&=\\frac{\\mu_{0} J \\pi a^{2}}{2 \\pi r} \\\\ |B| \\propto \\frac{1}{r} \\text { for } r \\gt a \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tWe know that magnetic flux density at a distance r from the wire is, <br/>[latex]\\begin{aligned} |B| &amp;=\\frac{\\mu_{0} I}{2 \\pi r} \\\\ \\text { For } r \\lt a \\rightarrow I&amp;=J \\cdot \\pi r^{2} \\\\ \\text { so } \\quad |B|&amp;=\\frac{\\mu_{0} J r}{2}\\\\ |B| \\propto r \\text { for } r \\lt a \\\\ \\text { for } r \\gt a,\\quad I&amp;=J \\times \\pi a^{2} \\\\ \\text { So, } |B|&amp;=\\frac{\\mu_{0} J \\pi a^{2}}{2 \\pi r} \\\\ |B| \\propto \\frac{1}{r} \\text { for } r \\gt a \\end{aligned}[/latex]\r\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]r \\; for \\; r \\lt a \\; and \\; 1/r^{2}\\; for \\;r \\gt a[/latex]",
+        "html": "<div class=\"option_data\">[latex]r \\; for \\; r \\lt a \\; and \\; 1/r^{2}\\; for \\;r \\gt a[/latex]\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex] 0 \\; for \\; r  \\lt  a \\; and \\; 1 /r \\; for \\; r  \\gt  a [/latex]",
+        "html": "<div class=\"option_data\">[latex] 0 \\; for \\; r  \\lt  a \\; and \\; 1 /r \\; for \\; r  \\gt  a [/latex]\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex] r \\; for \\; r  \\lt  a \\; and \\; 1 /r \\; for \\; r  \\gt  a [/latex]",
+        "html": "<div class=\"option_data\">[latex] r \\; for \\; r  \\lt  a \\; and \\; 1 /r \\; for \\; r  \\gt  a [/latex]\r\n</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]0 \\; for\\; r \\lt a \\; and \\; 1/r^{2} \\;for \\; r \\gt a[/latex]",
+        "html": "<div class=\"option_data\">[latex]0 \\; for\\; r \\lt a \\; and \\; 1/r^{2} \\;for \\; r \\gt a[/latex]\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=11"
+  },
+  {
+    "number": "Question 53",
+    "text": "An infinitely long uniform solid wire of radius a carries a uniform dc current of density [latex]\\overrightarrow{j}[/latex]. A hole of radius [latex] b (b  \\lt  a) [/latex] is now drilled along the length of the wire at a distance d from the center\r\nof the wire as shown below. The magnetic field inside the hole is",
+    "html": "<div class=\"question_text\" data-value=\"1\">An infinitely long uniform solid wire of radius a carries a uniform dc current of density [latex]\\overrightarrow{j}[/latex]. <br/><br/>A hole of radius [latex] b (b  \\lt  a) [/latex] is now drilled along the length of the wire at a distance d from the center\r\nof the wire as shown below. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\7a7596ba231c02ccff4eccef8920303e.jpg\" style=\"--smush-placeholder-width: 629px; --smush-placeholder-aspect-ratio: 629/397;\"/> <br/> The magnetic field inside the hole is</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EC/20121/q53.jpg": "images\\7a7596ba231c02ccff4eccef8920303e.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electromagnetics - Basics of Electromagnetics",
+    "explanation_text": "The H field due to entire cylinder without hole. [latex] H\\left(r_{1}\\right)=\\frac{J r_{1}}{2}[/latex] The Hfield due to hole only. [latex] H\\left(r_{2}\\right)=\\frac{J r_{2}}{2}[/latex] Current inside the hole is zero means [latex] H(r)=\\frac{J r_{1}}{2}-\\frac{J r_{2}}{2} \\simeq \\frac{J d}{2}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ec_2012/images\\613525bf0277ca0692e7c6f7b15fed34.jpg\" style=\"--smush-placeholder-width: 238px; --smush-placeholder-aspect-ratio: 238/170;\"/><br/>The H field due to entire cylinder without hole.<br/>[latex] H\\left(r_{1}\\right)=\\frac{J r_{1}}{2}[/latex]<br/> The Hfield due to hole only.<br/>[latex] H\\left(r_{2}\\right)=\\frac{J r_{2}}{2}[/latex]<br/> Current inside the hole is zero means<br/>[latex] H(r)=\\frac{J r_{1}}{2}-\\frac{J r_{2}}{2} \\simeq \\frac{J d}{2}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EC/20121/a53.jpg": "images\\613525bf0277ca0692e7c6f7b15fed34.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "uniform and depends only on d",
+        "html": "<div class=\"option_data\">uniform and depends only on d</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "uniform and depends only on b",
+        "html": "<div class=\"option_data\">uniform and depends only on b</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "uniform and depends on both b and d",
+        "html": "<div class=\"option_data\">uniform and depends on both b and d</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "non uniform",
+        "html": "<div class=\"option_data\">non uniform</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=11"
+  },
+  {
+    "number": "Question 54",
+    "text": "The transfer function of a compensator is given as [latex]G_{c}(s)=\\frac{s+a}{s+b}[/latex] [latex]G_{c}(S)[/latex] is a lead compensator if",
+    "html": "<div class=\"question_text\" data-value=\"1\">The transfer function of a compensator is given as <br/>[latex]G_{c}(s)=\\frac{s+a}{s+b}[/latex]<br/>\n<br/>[latex]G_{c}(S)[/latex] is a lead compensator if</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - Compensators and Controllers",
+    "explanation_text": "[latex]G_{c}(s)=\\left(\\frac{s+a}{s+b}\\right)[/latex] Phase [latex]P=\\tan ^{-1}(\\omega / a)-\\tan ^{-1} \\omega / b [/latex] for lead comparators phase must be + ve. for this [latex]\\frac{\\omega}{a} \\gt \\frac{\\omega}{b} \\Rightarrow a \\lt b [/latex] So [latex]a=1, b=2[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]G_{c}(s)=\\left(\\frac{s+a}{s+b}\\right)[/latex]<br/> Phase [latex]P=\\tan ^{-1}(\\omega / a)-\\tan ^{-1} \\omega / b [/latex]<br/> for lead comparators phase must be + ve.<br/> for this [latex]\\frac{\\omega}{a} \\gt \\frac{\\omega}{b} \\Rightarrow a \\lt b [/latex]<br/> So [latex]a=1, b=2[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "a =1, b = 2",
+        "html": "<div class=\"option_data\">a =1, b = 2</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "a = 3, b = 2",
+        "html": "<div class=\"option_data\">a = 3, b = 2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "a = -3, b = -1",
+        "html": "<div class=\"option_data\">a = -3, b = -1\r\n</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "a = 3, b = 1",
+        "html": "<div class=\"option_data\">a = 3, b = 1</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=11"
+  },
+  {
+    "number": "Question 55",
+    "text": "The transfer function of a compensator is given as [latex]G_{c}(s)=\\frac{s+a}{s+b}[/latex] The phase of the above lead compensator is maximum at",
+    "html": "<div class=\"question_text\" data-value=\"1\">The transfer function of a compensator is given as <br/>[latex]G_{c}(s)=\\frac{s+a}{s+b}[/latex]<br/>\n<br/>The phase of the above lead compensator is maximum at</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - Compensators and Controllers",
+    "explanation_text": "For phase to be maximum, [latex] \\begin{aligned} \\frac{\\partial P}{\\partial \\omega}&=0 \\\\ \\frac{1}{1+\\frac{\\omega^{2}}{a^{2}}}- \\frac{1/b}{1+\\frac{\\omega^{2}}{b^{2}}}&=0 \\\\ \\frac{1}{1+\\omega^{2}}- \\frac{1/b}{1+\\frac{\\omega^{2}}{4}}&=0\\\\ \\frac{1}{1+\\omega^{2}}-\\frac{2}{\\omega^{2}+4} &=0 \\\\ \\omega^{2}+4-2-2 \\omega^{2} &=0 \\\\ \\omega^{2} &=2 \\\\ \\omega &=\\sqrt{2} \\mathrm{rad} / \\mathrm{sec} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor phase to be maximum,<br/>[latex] \\begin{aligned} \\frac{\\partial P}{\\partial \\omega}&amp;=0 \\\\ \\frac{1}{1+\\frac{\\omega^{2}}{a^{2}}}- \\frac{1/b}{1+\\frac{\\omega^{2}}{b^{2}}}&amp;=0 \\\\ \\frac{1}{1+\\omega^{2}}- \\frac{1/b}{1+\\frac{\\omega^{2}}{4}}&amp;=0\\\\ \\frac{1}{1+\\omega^{2}}-\\frac{2}{\\omega^{2}+4} &amp;=0 \\\\ \\omega^{2}+4-2-2 \\omega^{2} &amp;=0 \\\\ \\omega^{2} &amp;=2 \\\\ \\omega &amp;=\\sqrt{2} \\mathrm{rad} / \\mathrm{sec} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\sqrt{2}[/latex] rad/s",
+        "html": "<div class=\"option_data\">[latex]\\sqrt{2}[/latex] rad/s</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\sqrt{3}[/latex]rad/s",
+        "html": "<div class=\"option_data\">[latex]\\sqrt{3}[/latex]rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\sqrt{6}[/latex] rad/s",
+        "html": "<div class=\"option_data\">[latex]\\sqrt{6}[/latex] rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1/[latex]\\sqrt{3}[/latex] rad/s",
+        "html": "<div class=\"option_data\">1/[latex]\\sqrt{3}[/latex] rad/s</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ec/gate-ec-2012?page_no=11"
+  }
+]
