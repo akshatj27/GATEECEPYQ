@@ -258,6 +258,26 @@
             <p class="help-text">Hold Ctrl/Cmd to select multiple subtopics</p>
           </div>
 
+          <!-- Revision Mode selection -->
+          <div class="mb-4">
+            <label
+              for="revision-mode-select"
+              class="block text-sm font-medium text-gray-300 mb-1"
+              >Revision Mode</label
+            >
+            <select
+              id="revision-mode-select"
+              multiple
+              class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="all">All Questions</option>
+              <option value="marked">Marked for Review</option>
+              <option value="incorrect">Incorrectly Answered</option>
+              <option value="unanswered">Unanswered</option>
+            </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple modes</p>
+          </div>
+
           <!-- Reset filters button -->
           <button
             id="reset-filters"
@@ -319,6 +339,9 @@
           class="bg-gray-800 rounded-xl p-4 sticky top-4 max-h-[calc(100vh-32px)] overflow-y-auto"
         >
           <h2 class="text-lg font-bold mb-3 text-gray-100">Questions</h2>
+          <div id="statistics-display" class="text-xs text-gray-400 mb-3">
+            <!-- Statistics will be populated here -->
+          </div>
 
           <!-- Current year display -->
           <div class="mb-3 text-center bg-gray-700 py-1 px-2 rounded-md">
@@ -373,6 +396,7 @@
       let selectedTopics = [];
       let selectedSubtopics = [];
       let currentQuestionIndex = 0; // Track the current question index
+      let revisionMode = ["all"]; // "all", "marked", "incorrect", "unanswered" - now an array
       let markedQuestions = JSON.parse(
         localStorage.getItem("markedQuestions") || "[]"
       ); // Load marked questions from localStorage
@@ -454,7 +478,7 @@
         setupEventListeners();
 
         // Apply initial filtering
-        applyFilters();
+        applyFilters(); // This will call updateStatistics
 
         // Update year display on initial load
         updateYearDisplay();
@@ -470,11 +494,13 @@
           if (savedFilters) {
             selectedYears = savedFilters.years || [];
             selectedTopics = savedFilters.topics || [];
-            selectedSubtopics = [];
+            selectedSubtopics = []; // Subtopics will be repopulated
+            revisionMode = savedFilters.revisionMode || ["all"];
 
             // Apply saved selections to dropdowns
             setMultiSelectValues("year-select", selectedYears);
             setMultiSelectValues("topic-select", selectedTopics);
+            setMultiSelectValues("revision-mode-select", revisionMode);
 
             // Update subtopic filter based on selected topics
             updateSubtopicFilter();
@@ -513,6 +539,7 @@
             years: selectedYears,
             topics: selectedTopics,
             subtopics: selectedSubtopics,
+            revisionMode: revisionMode,
           };
 
           localStorage.setItem(
@@ -677,6 +704,32 @@
             applyFilters();
           });
 
+        // Revision Mode filter change
+        document
+          .getElementById("revision-mode-select")
+          .addEventListener("change", function () {
+            revisionMode = Array.from(this.selectedOptions).map(
+              (option) => option.value
+            );
+            if (revisionMode.length === 0) {
+              // Default to "all" if nothing is selected
+              revisionMode = ["all"];
+              setMultiSelectValues("revision-mode-select", revisionMode);
+            } else if (
+              revisionMode.length > 1 &&
+              revisionMode.includes("all")
+            ) {
+              // If "all" is selected with other options, prioritize "all" or remove others
+              // For simplicity, let's say if "all" is selected, it's the only active revision filter
+              revisionMode = ["all"];
+              setMultiSelectValues("revision-mode-select", revisionMode);
+            }
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+
         // Previous question button
         document
           .getElementById("prev-question")
@@ -727,6 +780,8 @@
 
               // Re-render question buttons
               renderQuestionButtons(filteredQuestions);
+              // Update statistics
+              updateStatistics(filteredQuestions);
             }
           });
 
@@ -737,11 +792,13 @@
             selectedYears = [];
             selectedTopics = [];
             selectedSubtopics = [];
+            revisionMode = ["all"];
 
             // Reset UI
             document.getElementById("year-select").selectedIndex = -1;
             document.getElementById("topic-select").selectedIndex = -1;
             document.getElementById("subtopic-select").selectedIndex = -1;
+            setMultiSelectValues("revision-mode-select", ["all"]); // Reset revision mode dropdown
             document.getElementById("current-year-display").textContent =
               "All Years";
 
@@ -796,7 +853,24 @@
             selectedSubtopics.includes("all") ||
             selectedSubtopics.includes(q.subtopic);
 
-          return yearMatch && topicMatch && subtopicMatch;
+          let revisionMatch = false;
+          if (revisionMode.includes("all") || revisionMode.length === 0) {
+            revisionMatch = true;
+          } else {
+            const questionState = questionStates[q.year + "-" + q.number];
+            const isMarked =
+              revisionMode.includes("marked") && markedQuestions.includes(q.id);
+            const isIncorrect =
+              revisionMode.includes("incorrect") &&
+              questionState &&
+              questionState.solved === "incorrect";
+            const isUnanswered =
+              revisionMode.includes("unanswered") &&
+              (!questionState || questionState.solved === "unsolved");
+            revisionMatch = isMarked || isIncorrect || isUnanswered;
+          }
+
+          return yearMatch && topicMatch && subtopicMatch && revisionMatch;
         });
 
         // Update question numbers for display
@@ -819,6 +893,8 @@
 
         // Update the mark review button
         updateMarkReviewButton();
+        // Update statistics
+        updateStatistics(filteredQuestions);
       }
 
       // Render the filtered questions
@@ -835,6 +911,7 @@
 
         // Get the current question
         const q = questions[currentQuestionIndex];
+        const isMultipleAnswerMcq = q.type === "mcq" && Array.isArray(q.answer);
 
         container.innerHTML = `
           <div id="question-${
@@ -873,7 +950,11 @@
                         .map(
                           (option) => `
                         <label class="flex items-center relative hover:bg-gray-600 p-1 rounded-md">
-                          <input type="checkbox" name="answer-${q.displayNumber}" value="${option.letter}" class="hidden peer">
+                          <input type="${
+                            isMultipleAnswerMcq ? "checkbox" : "radio"
+                          }" name="answer-${q.displayNumber}" value="${
+                            option.letter
+                          }" class="hidden peer">
                           <div class="w-5 h-5 rounded-md border border-gray-600 bg-gray-700 text-white mr-2 flex items-center justify-center peer-checked:bg-blue-600 peer-checked:border-blue-600">
                             ${option.letter}
                           </div>
@@ -994,6 +1075,64 @@
         });
       }
 
+      // Update Statistics Display
+      function updateStatistics(questions) {
+        const statsContainer = document.getElementById("statistics-display");
+        if (!statsContainer) return;
+
+        const total = questions.length;
+        if (total === 0) {
+          statsContainer.innerHTML = "No questions to display stats for.";
+          return;
+        }
+
+        let correctCount = 0;
+        let incorrectCount = 0;
+        let unansweredCount = 0;
+        let markedCount = 0;
+
+        questions.forEach((q) => {
+          const state = questionStates[q.year + "-" + q.number];
+          if (state) {
+            if (state.solved === "correct") correctCount++;
+            else if (state.solved === "incorrect") incorrectCount++;
+            else unansweredCount++; // Includes 'unsolved'
+          } else {
+            unansweredCount++; // No state means unsolved
+          }
+
+          if (markedQuestions.includes(q.id)) {
+            markedCount++;
+          }
+        });
+
+        // Ensure all questions are accounted for in solved/unsolved status if not in questionStates
+        // This part might be redundant if allQuestions are correctly processed with initial 'unsolved' state
+        // For safety, let's ensure counts add up, or rely on q.solved if available and up-to-date
+        // Re-evaluating counts based on q.solved for filtered questions for accuracy
+        correctCount = questions.filter((q) => q.solved === "correct").length;
+        incorrectCount = questions.filter(
+          (q) => q.solved === "incorrect"
+        ).length;
+        unansweredCount = questions.filter(
+          (q) => q.solved === "unsolved" || !q.solved
+        ).length;
+
+        const correctPercent =
+          total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+        const incorrectPercent =
+          total > 0 ? ((incorrectCount / total) * 100).toFixed(1) : 0;
+        const unansweredPercent =
+          total > 0 ? ((unansweredCount / total) * 100).toFixed(1) : 0;
+
+        statsContainer.innerHTML = `
+          <p>Correct: ${correctCount} (${correctPercent}%)</p>
+          <p>Incorrect: ${incorrectCount} (${incorrectPercent}%)</p>
+          <p>Unanswered: ${unansweredCount} (${unansweredPercent}%)</p>
+          <p>Marked: ${markedCount}</p>
+        `;
+      }
+
       // Check the answer
       function checkAnswer(questionNumber) {
         const question = filteredQuestions.find(
@@ -1104,6 +1243,7 @@
         }
 
         renderQuestionButtons(filteredQuestions);
+        updateStatistics(filteredQuestions); // Update statistics after answer submission
       }
 
       // Calculator Functionality
