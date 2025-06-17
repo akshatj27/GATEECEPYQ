@@ -125,8 +125,7 @@
             URL.revokeObjectURL(url);
 
             statusMessage.textContent = "Backup file generated successfully!";
-            statusMessage.className =
-              "mt-6 text-center text-sm text-green-400";
+            statusMessage.className = "mt-6 text-center text-sm text-green-400";
           } catch (error) {
             console.error("Backup failed:", error);
             statusMessage.textContent =
@@ -187,8 +186,7 @@
               console.error("Restore failed:", error);
               statusMessage.textContent =
                 "Error restoring progress. The file may be invalid or corrupted.";
-              statusMessage.className =
-                "mt-6 text-center text-sm text-red-400";
+              statusMessage.className = "mt-6 text-center text-sm text-red-400";
             }
           };
 
