@@ -450,6 +450,10 @@ class GATEScraper:
                 # Sleep to avoid overwhelming the server
                 time.sleep(1)
             
+            # Renumber questions sequentially to ensure unique numbering
+            for idx, q in enumerate(year_questions, start=1):
+                q["number"] = f"Question {idx}"
+            
             # Save year data to file
             year_file = os.path.join(year_dir, f"questions.json")
             with open(year_file, 'w', encoding='utf-8') as f:
@@ -511,6 +515,10 @@ class GATEScraper:
             all_scraped_aptitude_questions.extend(questions_from_this_source)
 
         if all_scraped_aptitude_questions:
+            # Renumber aptitude questions sequentially
+            for idx, q in enumerate(all_scraped_aptitude_questions, start=1):
+                q["number"] = f"Question {idx}"
+            
             # Post-processing to ensure consistent subjects
             for q in all_scraped_aptitude_questions:
                 # If a question doesn't have subject or only has main subject without subtopic
@@ -581,6 +589,10 @@ class GATEScraper:
             all_scraped_maths_questions.extend(questions_from_this_source)
 
         if all_scraped_maths_questions:
+            # Renumber maths questions sequentially
+            for idx, q in enumerate(all_scraped_maths_questions, start=1):
+                q["number"] = f"Question {idx}"
+            
             # Post-processing to ensure consistent subjects
             for q in all_scraped_maths_questions:
                 # If a question doesn't have subject or only has main subject without subtopic
