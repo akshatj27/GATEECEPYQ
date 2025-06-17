@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backup/Restore GATE Progress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body
+    class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center"
+  >
+    <div class="bg-gray-800 rounded-xl p-8 max-w-md w-full">
+      <h1 class="text-2xl font-bold mb-6 text-center">
+        Backup & Restore Progress
+      </h1>
+
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold mb-2">Backup</h2>
+        <p class="text-sm text-gray-400 mb-3">
+          Save your progress (marked questions and answered states) to a JSON
+          file.
+        </p>
+        <button
+          id="backup-btn"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200"
+        >
+          Download Backup File
+        </button>
+      </div>
+
+      <div class="border-t border-gray-700 pt-6">
+        <h2 class="text-lg font-semibold mb-2">Restore</h2>
+        <p class="text-sm text-gray-400 mb-3">
+          Restore your progress from a backup file. This will overwrite your
+          current saved progress.
+        </p>
+        <input
+          type="file"
+          id="restore-input"
+          accept=".json"
+          class="w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-700 file:text-gray-200 hover:file:bg-gray-600 mb-3"
+        />
+        <button
+          id="restore-btn"
+          class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md transition duration-200 disabled:bg-gray-500"
+          disabled
+        >
+          Restore from File
+        </button>
+      </div>
+
+      <div id="status-message" class="mt-6 text-center text-sm"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const backupBtn = document.getElementById("backup-btn");
+        const restoreInput = document.getElementById("restore-input");
+        const restoreBtn = document.getElementById("restore-btn");
+        const statusMessage = document.getElementById("status-message");
+
+        // Enable restore button only when a file is selected
+        restoreInput.addEventListener("change", () => {
+          restoreBtn.disabled = !restoreInput.files.length;
+        });
+
+        // Backup functionality
+        backupBtn.addEventListener("click", () => {
+          try {
+            const markedQuestions =
+              localStorage.getItem("markedQuestions") || "[]";
+            const questionStates =
+              localStorage.getItem("questionStates") || "{}";
+
+            const backupData = {
+              markedQuestions: JSON.parse(markedQuestions),
+              questionStates: JSON.parse(questionStates),
+              backupDate: new Date().toISOString(),
+            };
+
+            const blob = new Blob([JSON.stringify(backupData, null, 2)], {
+              type: "application/json",
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `gate_progress_backup_${
+              new Date().toISOString().split("T")[0]
+            }.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            statusMessage.textContent = "Backup file generated successfully!";
+            statusMessage.className =
+              "mt-6 text-center text-sm text-green-400";
+          } catch (error) {
+            console.error("Backup failed:", error);
+            statusMessage.textContent =
+              "Error creating backup file. Check console for details.";
+            statusMessage.className = "mt-6 text-center text-sm text-red-400";
+          }
+        });
+
+        // Restore functionality
+        restoreBtn.addEventListener("click", () => {
+          if (!restoreInput.files.length) {
+            alert("Please select a backup file first.");
+            return;
+          }
+
+          const file = restoreInput.files[0];
+          const reader = new FileReader();
+
+          reader.onload = (event) => {
+            try {
+              const backupData = JSON.parse(event.target.result);
+
+              if (backupData.markedQuestions && backupData.questionStates) {
+                // Merge marked questions
+                const existingMarked = JSON.parse(
+                  localStorage.getItem("markedQuestions") || "[]"
+                );
+                const backupMarked = backupData.markedQuestions || [];
+                const mergedMarked = Array.from(
+                  new Set([...existingMarked, ...backupMarked])
+                );
+                localStorage.setItem(
+                  "markedQuestions",
+                  JSON.stringify(mergedMarked)
+                );
+
+                // Merge question states, with backup data taking precedence
+                const existingStates = JSON.parse(
+                  localStorage.getItem("questionStates") || "{}"
+                );
+                const backupStates = backupData.questionStates || {};
+                const mergedStates = { ...existingStates, ...backupStates };
+                localStorage.setItem(
+                  "questionStates",
+                  JSON.stringify(mergedStates)
+                );
+
+                statusMessage.textContent =
+                  "Progress from file has been merged! Please refresh the main page.";
+                statusMessage.className =
+                  "mt-6 text-center text-sm text-green-400";
+                restoreInput.value = ""; // Clear file input
+                restoreBtn.disabled = true;
+              } else {
+                throw new Error("Invalid backup file format.");
+              }
+            } catch (error) {
+              console.error("Restore failed:", error);
+              statusMessage.textContent =
+                "Error restoring progress. The file may be invalid or corrupted.";
+              statusMessage.className =
+                "mt-6 text-center text-sm text-red-400";
+            }
+          };
+
+          reader.onerror = () => {
+            statusMessage.textContent = "Error reading the file.";
+            statusMessage.className = "mt-6 text-center text-sm text-red-400";
+          };
+
+          reader.readAsText(file);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -285,6 +285,13 @@
           >
             Reset Filters
           </button>
+          <a
+            href="backup.html"
+            target="_blank"
+            class="mt-4 block text-center w-full bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md transition duration-200"
+          >
+            Backup/Restore Progress
+          </a>
         </div>
       </aside>
 
@@ -1286,6 +1293,14 @@
           feedbackDiv.parentNode.appendChild(correctAnswerDiv);
         }
 
+        // Automatically open explanation
+        const detailsElement = document.querySelector(
+          `#question-${questionNumber} details`
+        );
+        if (detailsElement) {
+          detailsElement.open = true;
+        }
+
         renderQuestionButtons(filteredQuestions);
         updateStatistics(filteredQuestions); // Update statistics after answer submission
       }
@@ -1350,6 +1365,100 @@
         document.addEventListener("mouseup", function () {
           isDragging = false;
         });
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener("keydown", (event) => {
+        const activeElement = document.activeElement;
+        const isTypingInNonAnswerField =
+          (activeElement.tagName === "INPUT" ||
+            activeElement.tagName === "SELECT" ||
+            activeElement.tagName === "TEXTAREA") &&
+          !activeElement.id.startsWith("answer-");
+
+        if (isTypingInNonAnswerField) {
+          return;
+        }
+
+        const currentQuestion = filteredQuestions[currentQuestionIndex];
+        if (!currentQuestion) return;
+
+        // Handle Enter to submit
+        if (event.key === "Enter") {
+          event.preventDefault();
+          const submitButton = document.querySelector(
+            `.submit-answer[data-question="${currentQuestion.displayNumber}"]`
+          );
+          if (submitButton) {
+            submitButton.click();
+          }
+          return;
+        }
+
+        // If typing in a text-based answer input, allow typing and disable other shortcuts.
+        if (
+          activeElement.id.startsWith("answer-") &&
+          activeElement.type === "text"
+        ) {
+          return;
+        }
+
+        // Navigation: 'n' for next, 'p' for previous
+        if (event.key.toLowerCase() === "n") {
+          event.preventDefault();
+          document.getElementById("next-question").click();
+          return;
+        }
+        if (event.key.toLowerCase() === "p") {
+          event.preventDefault();
+          document.getElementById("prev-question").click();
+          return;
+        }
+
+        // Show explanation: 's'
+        if (event.key.toLowerCase() === "s") {
+          event.preventDefault();
+          const detailsElement = document.querySelector(
+            `#question-${currentQuestion.displayNumber} details`
+          );
+          if (detailsElement) {
+            detailsElement.open = !detailsElement.open;
+          }
+          return;
+        }
+
+        // MCQ option selection: 'a', 'b', 'c', 'd'
+        if (
+          currentQuestion.type === "mcq" &&
+          ["a", "b", "c", "d"].includes(event.key.toLowerCase())
+        ) {
+          event.preventDefault();
+          const optionLetter = event.key.toUpperCase();
+          const optionInput = document.querySelector(
+            `input[name="answer-${currentQuestion.displayNumber}"][value="${optionLetter}"]`
+          );
+          if (optionInput) {
+            if (optionInput.type === "radio") {
+              optionInput.checked = true;
+            } else {
+              optionInput.checked = !optionInput.checked;
+            }
+          }
+          return;
+        }
+
+        // Numerical input: focus and type
+        if (
+          currentQuestion.type === "numerical" &&
+          /^[0-9.-]$/.test(event.key)
+        ) {
+          const numericalInput = document.getElementById(
+            `answer-${currentQuestion.displayNumber}`
+          );
+          if (numericalInput && activeElement !== numericalInput) {
+            numericalInput.focus();
+          }
+        }
       });
 
       // Load questions when the document is ready
