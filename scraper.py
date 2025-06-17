@@ -227,7 +227,7 @@ class GATEScraper:
         
         return html_element, image_map
     
-    def extract_question_content(self, question_div, year_dir):
+    def extract_question_content(self, question_div, year_dir, override_subject=None): # Added override_subject
         """Extract the content of a question including images and maintain their positions"""
         try:
             # Extract question number
@@ -266,11 +266,36 @@ class GATEScraper:
             }
             
             # Extract subject/topic if available
-            subject_div = question_div.select_one(".year_sub_chap_link")
-            if subject_div:
-                subject_links = subject_div.find_all('a')
-                subject = ' - '.join([link.get_text(strip=True) for link in subject_links]) if subject_links else ""
-                question_data["subject"] = subject
+            if override_subject:
+                # Check if we still need to extract the subtopic part
+                subject_div = question_div.select_one(".year_sub_chap_link")
+                if subject_div and '-' not in override_subject:  # Only if override doesn't already have a subtopic
+                    # Extract subtopics from links
+                    subject_links = subject_div.find_all('a')
+                    if len(subject_links) >= 2:  # If we have at least 2 links (year and subtopic)
+                        # Use the text of the second link as subtopic
+                        subtopic = subject_links[1].get_text(strip=True)
+                        # Combine main subject with the subtopic
+                        question_data["subject"] = f"{override_subject} - {subtopic}"
+                    else:
+                        question_data["subject"] = override_subject
+                else:
+                    question_data["subject"] = override_subject
+            else:
+                subject_div = question_div.select_one(".year_sub_chap_link")
+                if subject_div:
+                    subject_links = subject_div.find_all('a')
+                    # Skip the first link if it contains year info (e.g., "GATE ME 2025")
+                    if subject_links and len(subject_links) > 1:
+                        # Filter out links that might be year links
+                        topic_links = [link for link in subject_links if not re.search(r'gate.*\d{4}', link.get_text(strip=True).lower())]
+                        if topic_links:
+                            subject = ' - '.join([link.get_text(strip=True) for link in topic_links])
+                            question_data["subject"] = subject
+                    else:
+                        # Fall back to joining all links if filtering fails
+                        subject = ' - '.join([link.get_text(strip=True) for link in subject_links]) if subject_links else ""
+                        question_data["subject"] = subject
             
             # Extract explanation if available
             explanation_div = question_div.select_one(".mtq_explanation-text")
@@ -373,7 +398,7 @@ class GATEScraper:
                 logger.exception(e)
             return None
     
-    def extract_questions(self, page_url, year_dir):
+    def extract_questions(self, page_url, year_dir, override_subject=None): # Added override_subject
         """Extract all questions from a page"""
         try:
             soup = self.get_soup(page_url)
@@ -388,7 +413,7 @@ class GATEScraper:
             
             questions = []
             for div in question_divs:
-                question_data = self.extract_question_content(div, year_dir)
+                question_data = self.extract_question_content(div, year_dir, override_subject=override_subject) # Pass override_subject
                 if question_data:
                     question_data["source_url"] = page_url
                     questions.append(question_data)
@@ -440,6 +465,156 @@ class GATEScraper:
                 logger.exception(e)
             return []
     
+    def scrape_aptitude_from_other_branches(self, aptitude_sources_config):
+        """
+        Scrapes General Aptitude questions from specified URLs and saves them
+        into a common dummy year folder.
+        aptitude_sources_config: List of dicts, e.g., [{'url': '...', 'subject': '...'}]
+        """
+        logger.info("Starting to scrape General Aptitude questions from other branches.")
+        
+        dummy_folder_name_segment = "dummy_aptitude_other_branches"
+        # Ensure the main output directory exists before creating subdirectories
+        if not os.path.exists(self.output_dir):
+            os.makedirs(self.output_dir)
+            logger.info(f"Created base output directory: {self.output_dir}")
+
+        year_dir = os.path.join(self.output_dir, f"gate_{dummy_folder_name_segment}")
+        os.makedirs(year_dir, exist_ok=True)
+        logger.info(f"Ensured dummy year directory exists: {year_dir}")
+        
+        all_scraped_aptitude_questions = []
+
+        for config in aptitude_sources_config:
+            url = config['url']
+            subject_name = config['subject'] # This will be "General Aptitude"
+
+            logger.info(f"Processing URL: {url} for subject: {subject_name}")
+            
+            page_count = self.get_page_count(url)
+            questions_from_this_source = []
+            
+            for page_num in range(1, page_count + 1):
+                page_url = f"{url}?page_no={page_num}" if page_num > 1 else url
+                
+                if self.debug:
+                    logger.info(f"Fetching page {page_num}/{page_count} from {page_url}")
+                
+                # Extract questions, images will be saved relative to year_dir
+                # The subject will be overridden by subject_name
+                questions_on_page = self.extract_questions(page_url, year_dir, override_subject=subject_name)
+                questions_from_this_source.extend(questions_on_page)
+                
+                time.sleep(0.5) # Be polite to the server
+
+            logger.info(f"Extracted {len(questions_from_this_source)} questions from {url}")
+            all_scraped_aptitude_questions.extend(questions_from_this_source)
+
+        if all_scraped_aptitude_questions:
+            # Post-processing to ensure consistent subjects
+            for q in all_scraped_aptitude_questions:
+                # If a question doesn't have subject or only has main subject without subtopic
+                if "subject" not in q or " - " not in q["subject"]:
+                    # Set at least the main subject
+                    if "subject" not in q:
+                        q["subject"] = "General Aptitude"
+                    
+                    # Try to infer subtopic from url if possible
+                    url = q.get("source_url", "")
+                    if "verbal-ability" in url:
+                        q["subject"] = "General Aptitude - Verbal Ability"
+                    elif "numerical-ability" in url:
+                        q["subject"] = "General Aptitude - Numerical Ability"
+            
+            output_file_path = os.path.join(year_dir, "questions.json")
+            with open(output_file_path, 'w', encoding='utf-8') as f:
+                json.dump(all_scraped_aptitude_questions, f, ensure_ascii=False, indent=2)
+            logger.info(f"Saved {len(all_scraped_aptitude_questions)} General Aptitude questions to {output_file_path}")
+        else:
+            logger.info("No General Aptitude questions were extracted from the provided URLs.")
+            
+        return all_scraped_aptitude_questions
+    def scrape_engineering_maths_from_other_branches(self, maths_sources_config):
+        """
+        Scrapes Engineering Mathematics questions from specified URLs and saves them
+        into a common dummy year folder.
+        maths_sources_config: List of dicts, e.g., [{'url': '...', 'branch': '...'}]
+        """
+        logger.info("Starting to scrape Engineering Mathematics questions from other branches.")
+        
+        dummy_folder_name_segment = "dummy_engineering_mathematics_other_branches"
+        # Ensure the main output directory exists before creating subdirectories
+        if not os.path.exists(self.output_dir):
+            os.makedirs(self.output_dir)
+            logger.info(f"Created base output directory: {self.output_dir}")
+
+        year_dir = os.path.join(self.output_dir, f"gate_{dummy_folder_name_segment}")
+        os.makedirs(year_dir, exist_ok=True)
+        logger.info(f"Ensured dummy engineering mathematics directory exists: {year_dir}")
+        
+        all_scraped_maths_questions = []
+
+        for config in maths_sources_config:
+            url = config['url']
+            branch = config.get('branch', 'unknown')  # Get branch info for logging
+            subject_name = "Engineering Mathematics"
+
+            logger.info(f"Processing URL: {url} for {branch.upper()} branch")
+            
+            page_count = self.get_page_count(url)
+            questions_from_this_source = []
+            
+            for page_num in range(1, page_count + 1):
+                page_url = f"{url}?page_no={page_num}" if page_num > 1 else url
+                
+                if self.debug:
+                    logger.info(f"Fetching page {page_num}/{page_count} from {page_url}")
+                
+                # Extract questions, images will be saved relative to year_dir
+                # The subject will be overridden by subject_name
+                questions_on_page = self.extract_questions(page_url, year_dir, override_subject=subject_name)
+                questions_from_this_source.extend(questions_on_page)
+                
+                time.sleep(0.5) # Be polite to the server
+
+            logger.info(f"Extracted {len(questions_from_this_source)} questions from {branch.upper()} branch")
+            all_scraped_maths_questions.extend(questions_from_this_source)
+
+        if all_scraped_maths_questions:
+            # Post-processing to ensure consistent subjects
+            for q in all_scraped_maths_questions:
+                # If a question doesn't have subject or only has main subject without subtopic
+                if "subject" not in q or " - " not in q["subject"]:
+                    # Set at least the main subject
+                    if "subject" not in q:
+                        q["subject"] = "Engineering Mathematics"
+                    
+                    # Try to infer subtopic from url if possible
+                    url = q.get("source_url", "")
+                    subtopic_patterns = {
+                        "linear-algebra": "Linear Algebra",
+                        "calculus": "Calculus",
+                        "differential-equations": "Differential Equations",
+                        "complex-variables": "Complex Variables",
+                        "probability-statistics": "Probability & Statistics",
+                        "transforms": "Transforms",
+                        "numerical-methods": "Numerical Methods"
+                    }
+                    
+                    for pattern, subtopic in subtopic_patterns.items():
+                        if pattern in url:
+                            q["subject"] = f"Engineering Mathematics - {subtopic}"
+                            break
+            
+            output_file_path = os.path.join(year_dir, "questions.json")
+            with open(output_file_path, 'w', encoding='utf-8') as f:
+                json.dump(all_scraped_maths_questions, f, ensure_ascii=False, indent=2)
+            logger.info(f"Saved {len(all_scraped_maths_questions)} Engineering Mathematics questions to {output_file_path}")
+        else:
+            logger.info("No Engineering Mathematics questions were extracted from the provided URLs.")
+            
+        return all_scraped_maths_questions
+
     def run(self):
         """Main method to run the scraper"""
         try:
@@ -566,7 +741,9 @@ if __name__ == "__main__":
     parser.add_argument("--debug-page", help="Debug a specific page URL")
     parser.add_argument("--year", help="Scrape a specific year only (e.g., 2024)")
     parser.add_argument("--set", help="Scrape a specific set number (e.g., 1)")
-    parser.add_argument("--threads", type=int, default=5, help="Maximum number of threads to use")
+    parser.add_argument("--threads", type=int, default=10, help="Maximum number of threads to use")
+    parser.add_argument("--scrape-extra-aptitude", action="store_true", help="Scrape General Aptitude from CE, ME, CSE branches")
+    parser.add_argument("--scrape-ee-maths", action="store_true", help="Scrape Engineering Mathematics from EE, ME, CSE branches")
     
     args = parser.parse_args()
     
@@ -576,6 +753,24 @@ if __name__ == "__main__":
     if args.debug_page:
         # Debug a specific page
         scraper.debug_page(args.debug_page)
+    elif args.scrape_extra_aptitude:
+        logger.info("Scraping General Aptitude from other branches as requested.")
+        aptitude_urls_to_scrape = [
+            {'url': 'https://practicepaper.in/gate-ce/general-aptitude', 'subject': 'General Aptitude'},
+            {'url': 'https://practicepaper.in/gate-me/general-aptitude', 'subject': 'General Aptitude'},
+            {'url': 'https://practicepaper.in/gate-cse/general-aptitude', 'subject': 'General Aptitude'}
+        ]
+        scraper.scrape_aptitude_from_other_branches(aptitude_urls_to_scrape)
+    elif args.scrape_ee_maths:
+        logger.info("Scraping Engineering Mathematics from other branches as requested.")
+        # Now including EE, ME, and CSE branches
+        math_sources = [
+            {'url': 'https://practicepaper.in/gate-ee/engineering-mathematics', 'branch': 'ee'},
+            {'url': 'https://practicepaper.in/gate-me/engineering-mathematics', 'branch': 'me'},
+            {'url': 'https://practicepaper.in/gate-cse/engineering-mathematics', 'branch': 'cse'}
+        ]
+        # Use the new aggregated approach that stores all mathematics questions in one folder
+        scraper.scrape_engineering_maths_from_other_branches(math_sources)
     elif args.year:
         # Scrape a specific year
         if args.set:

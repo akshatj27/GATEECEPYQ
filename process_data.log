@@ -106,3 +106,81 @@
 2025-04-01 15:17:05,367 - DataProcessor - INFO - Added 65 questions for 2024
 2025-04-01 15:17:05,493 - DataProcessor - INFO - Successfully compiled 32 years/sets of questions into gate_ec_all_years.json
 2025-04-01 15:17:05,498 - DataProcessor - INFO - Process completed
+2025-06-17 18:56:20,464 - DataProcessor - INFO - Starting compilation of JSON files from gate_questions
+2025-06-17 18:56:20,466 - DataProcessor - INFO - Found 33 year/special directories
+2025-06-17 18:56:20,466 - DataProcessor - INFO - Processing special directory: gate_dummy_aptitude_other_branches as dummy_aptitude
+2025-06-17 18:56:20,498 - DataProcessor - INFO - Added 801 questions for dummy_aptitude
+2025-06-17 18:56:20,512 - DataProcessor - INFO - Added 50 questions for 2001
+2025-06-17 18:56:20,523 - DataProcessor - INFO - Added 50 questions for 2002
+2025-06-17 18:56:20,535 - DataProcessor - INFO - Added 90 questions for 2003
+2025-06-17 18:56:20,550 - DataProcessor - INFO - Added 90 questions for 2004
+2025-06-17 18:56:20,563 - DataProcessor - INFO - Added 90 questions for 2005
+2025-06-17 18:56:20,576 - DataProcessor - INFO - Added 85 questions for 2006
+2025-06-17 18:56:20,590 - DataProcessor - INFO - Added 85 questions for 2007
+2025-06-17 18:56:20,601 - DataProcessor - INFO - Added 85 questions for 2008
+2025-06-17 18:56:20,613 - DataProcessor - INFO - Added 60 questions for 2009
+2025-06-17 18:56:20,625 - DataProcessor - INFO - Added 55 questions for 2010
+2025-06-17 18:56:20,636 - DataProcessor - INFO - Added 55 questions for 2011
+2025-06-17 18:56:20,646 - DataProcessor - INFO - Added 55 questions for 2012
+2025-06-17 18:56:20,658 - DataProcessor - INFO - Added 55 questions for 2013
+2025-06-17 18:56:20,674 - DataProcessor - INFO - Added 55 questions for 2014-set-1
+2025-06-17 18:56:20,685 - DataProcessor - INFO - Added 55 questions for 2014-set-2
+2025-06-17 18:56:20,695 - DataProcessor - INFO - Added 55 questions for 2014-set-3
+2025-06-17 18:56:20,709 - DataProcessor - INFO - Added 55 questions for 2014-set-4
+2025-06-17 18:56:20,720 - DataProcessor - INFO - Added 55 questions for 2015-set-1
+2025-06-17 18:56:20,731 - DataProcessor - INFO - Added 55 questions for 2015-set-2
+2025-06-17 18:56:20,741 - DataProcessor - INFO - Added 55 questions for 2015-set-3
+2025-06-17 18:56:20,753 - DataProcessor - INFO - Added 55 questions for 2016-set-1
+2025-06-17 18:56:20,768 - DataProcessor - INFO - Added 55 questions for 2016-set-2
+2025-06-17 18:56:20,781 - DataProcessor - INFO - Added 55 questions for 2016-set-3
+2025-06-17 18:56:20,792 - DataProcessor - INFO - Added 55 questions for 2017-set-1
+2025-06-17 18:56:20,802 - DataProcessor - INFO - Added 55 questions for 2017-set-2
+2025-06-17 18:56:20,813 - DataProcessor - INFO - Added 55 questions for 2018
+2025-06-17 18:56:20,824 - DataProcessor - INFO - Added 55 questions for 2019
+2025-06-17 18:56:20,837 - DataProcessor - INFO - Added 55 questions for 2020
+2025-06-17 18:56:20,848 - DataProcessor - INFO - Added 65 questions for 2021
+2025-06-17 18:56:20,859 - DataProcessor - INFO - Added 65 questions for 2022
+2025-06-17 18:56:20,861 - DataProcessor - INFO - Added 65 questions for 2023
+2025-06-17 18:56:20,874 - DataProcessor - INFO - Added 65 questions for 2024
+2025-06-17 18:56:20,998 - DataProcessor - INFO - Successfully compiled 33 years/sets of questions into gate_ec_all_years.json
+2025-06-17 18:56:21,006 - DataProcessor - INFO - Process completed
+2025-06-17 19:58:47,609 - DataProcessor - INFO - Starting compilation of JSON files from gate_questions
+2025-06-17 19:58:47,611 - DataProcessor - INFO - Found 34 year/special directories
+2025-06-17 19:58:47,611 - DataProcessor - INFO - Processing special directory: gate_dummy_aptitude_other_branches as dummy_aptitude
+2025-06-17 19:58:47,638 - DataProcessor - INFO - Added 801 questions for dummy_aptitude
+2025-06-17 19:58:47,638 - DataProcessor - INFO - Processing special directory: gate_dummy_engineering_mathematics_other_branches as dummy_engineering_mathematics
+2025-06-17 19:58:47,653 - DataProcessor - INFO - Added 785 questions for dummy_engineering_mathematics
+2025-06-17 19:58:47,668 - DataProcessor - INFO - Added 50 questions for 2001
+2025-06-17 19:58:47,678 - DataProcessor - INFO - Added 50 questions for 2002
+2025-06-17 19:58:47,688 - DataProcessor - INFO - Added 90 questions for 2003
+2025-06-17 19:58:47,699 - DataProcessor - INFO - Added 90 questions for 2004
+2025-06-17 19:58:47,711 - DataProcessor - INFO - Added 90 questions for 2005
+2025-06-17 19:58:47,722 - DataProcessor - INFO - Added 85 questions for 2006
+2025-06-17 19:58:47,736 - DataProcessor - INFO - Added 85 questions for 2007
+2025-06-17 19:58:47,748 - DataProcessor - INFO - Added 85 questions for 2008
+2025-06-17 19:58:47,759 - DataProcessor - INFO - Added 60 questions for 2009
+2025-06-17 19:58:47,769 - DataProcessor - INFO - Added 55 questions for 2010
+2025-06-17 19:58:47,780 - DataProcessor - INFO - Added 55 questions for 2011
+2025-06-17 19:58:47,794 - DataProcessor - INFO - Added 55 questions for 2012
+2025-06-17 19:58:47,804 - DataProcessor - INFO - Added 55 questions for 2013
+2025-06-17 19:58:47,815 - DataProcessor - INFO - Added 55 questions for 2014-set-1
+2025-06-17 19:58:47,824 - DataProcessor - INFO - Added 55 questions for 2014-set-2
+2025-06-17 19:58:47,835 - DataProcessor - INFO - Added 55 questions for 2014-set-3
+2025-06-17 19:58:47,847 - DataProcessor - INFO - Added 55 questions for 2014-set-4
+2025-06-17 19:58:47,857 - DataProcessor - INFO - Added 55 questions for 2015-set-1
+2025-06-17 19:58:47,868 - DataProcessor - INFO - Added 55 questions for 2015-set-2
+2025-06-17 19:58:47,878 - DataProcessor - INFO - Added 55 questions for 2015-set-3
+2025-06-17 19:58:47,889 - DataProcessor - INFO - Added 55 questions for 2016-set-1
+2025-06-17 19:58:47,901 - DataProcessor - INFO - Added 55 questions for 2016-set-2
+2025-06-17 19:58:47,913 - DataProcessor - INFO - Added 55 questions for 2016-set-3
+2025-06-17 19:58:47,923 - DataProcessor - INFO - Added 55 questions for 2017-set-1
+2025-06-17 19:58:47,934 - DataProcessor - INFO - Added 55 questions for 2017-set-2
+2025-06-17 19:58:47,944 - DataProcessor - INFO - Added 55 questions for 2018
+2025-06-17 19:58:47,954 - DataProcessor - INFO - Added 55 questions for 2019
+2025-06-17 19:58:47,966 - DataProcessor - INFO - Added 55 questions for 2020
+2025-06-17 19:58:47,978 - DataProcessor - INFO - Added 65 questions for 2021
+2025-06-17 19:58:47,988 - DataProcessor - INFO - Added 65 questions for 2022
+2025-06-17 19:58:48,002 - DataProcessor - INFO - Added 65 questions for 2023
+2025-06-17 19:58:48,018 - DataProcessor - INFO - Added 65 questions for 2024
+2025-06-17 19:58:48,200 - DataProcessor - INFO - Successfully compiled 34 years/sets of questions into gate_ec_all_years.json
+2025-06-17 19:58:48,209 - DataProcessor - INFO - Process completed

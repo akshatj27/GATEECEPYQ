@@ -431,6 +431,14 @@
         const questions = [];
 
         Object.entries(data).forEach(([year, yearQuestions]) => {
+          // Special handling for dummy sections - they need a better display name
+          let displayYear = year;
+          if (year === "dummy_aptitude") {
+            displayYear = "General Aptitude";
+          } else if (year === "dummy_engineering_mathematics") {
+            displayYear = "Engineering Mathematics";
+          }
+
           yearQuestions.forEach((question, index) => {
             // Skip entries without a proper question number or text
             if (!question.number || !question.text) return;
@@ -441,6 +449,7 @@
               number: question.number,
               displayNumber: index + 1, // This will be updated when filtering
               year: year,
+              displayYear: displayYear, // Add displayYear for better UI presentation
               text: question.text,
               html: question.html || `<div>${question.text}</div>`,
               subject: question.subject || "General",
@@ -566,9 +575,16 @@
       // Populate year filter dropdown
       function populateYearFilter(questions) {
         const yearSelect = document.getElementById("year-select");
-        const years = [...new Set(questions.map((q) => q.year))]
+        // Extract unique years and sort them, keeping real years at the top
+        const allYears = [...new Set(questions.map((q) => q.year))];
+
+        // Separate real years and dummy years
+        const realYears = allYears
+          .filter((year) => !year.startsWith("dummy_"))
           .sort()
           .reverse();
+
+        const dummyYears = allYears.filter((year) => year.startsWith("dummy_"));
 
         // Add "All Years" option
         const allYearsOption = document.createElement("option");
@@ -576,10 +592,29 @@
         allYearsOption.textContent = "All Years";
         yearSelect.appendChild(allYearsOption);
 
-        years.forEach((year) => {
+        // Add real years first
+        realYears.forEach((year) => {
           const option = document.createElement("option");
           option.value = year;
           option.textContent = `GATE ${year}`;
+          yearSelect.appendChild(option);
+        });
+
+        // Add a separator if we have dummy years
+        if (dummyYears.length > 0) {
+          const separator = document.createElement("option");
+          separator.disabled = true;
+          separator.textContent = "──────────────";
+          yearSelect.appendChild(separator);
+        }
+
+        // Add dummy years with descriptive names
+        dummyYears.forEach((year) => {
+          const displayName =
+            questions.find((q) => q.year === year)?.displayYear || year;
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = displayName;
           yearSelect.appendChild(option);
         });
       }
@@ -828,7 +863,16 @@
         ) {
           yearDisplay.textContent = "All Years";
         } else if (selectedYears.length === 1) {
-          yearDisplay.textContent = `GATE ${selectedYears[0]}`;
+          const year = selectedYears[0];
+          // If it's a dummy year, show its display name
+          if (year.startsWith("dummy_")) {
+            // Find a question with this year to get its displayYear
+            const sampleQuestion = allQuestions.find((q) => q.year === year);
+            yearDisplay.textContent = sampleQuestion?.displayYear || year;
+          } else {
+            // For real years, show "GATE YYYY"
+            yearDisplay.textContent = `GATE ${year}`;
+          }
         } else {
           yearDisplay.textContent = `Multiple Years (${selectedYears.length})`;
         }
