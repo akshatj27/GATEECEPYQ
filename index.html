@@ -506,11 +506,10 @@
           const savedFilters = JSON.parse(
             localStorage.getItem("gateQuestionFilters")
           );
-
           if (savedFilters) {
             selectedYears = savedFilters.years || [];
             selectedTopics = savedFilters.topics || [];
-            selectedSubtopics = []; // Subtopics will be repopulated
+            selectedSubtopics = savedFilters.subtopics || []; // restore saved subtopics
             revisionMode = savedFilters.revisionMode || ["all"];
 
             // Apply saved selections to dropdowns
@@ -1472,4 +1471,5 @@
       document.addEventListener("DOMContentLoaded", loadQuestions);
     </script>
   </body>
+</html>
 </html>
