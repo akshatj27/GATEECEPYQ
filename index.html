@@ -1415,6 +1415,13 @@
           return;
         }
 
+        // Mark for review: 'm'
+        if (event.key.toLowerCase() === "m") {
+          event.preventDefault();
+          document.getElementById("mark-review").click();
+          return;
+        }
+
         // Show explanation: 's'
         if (event.key.toLowerCase() === "s") {
           event.preventDefault();
