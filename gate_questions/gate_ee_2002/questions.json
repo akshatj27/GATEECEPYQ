@@ -1,0 +1,2212 @@
+[
+  {
+    "number": "Question 1",
+    "text": "A current impulse [latex]5\\delta \\left ( t \\right )[/latex], is forced through a capacitor C. The voltage [latex]V_{c}\\left ( t \\right )[/latex],\nacross the capacitor is given by",
+    "html": "<div class=\"question_text\" data-value=\"1\">A current impulse [latex]5\\delta \\left ( t \\right )[/latex], is forced through a capacitor C. The voltage [latex]V_{c}\\left ( t \\right )[/latex],\nacross the capacitor is given by</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Introduction of C.T. and D.T. Signals",
+    "explanation_text": "[latex]V_c(t)=\\frac{1}{C}\\int_{-\\infty }^{t}i(t)dt=\\frac{1}{C}\\int_{-\\infty }^{t}5\\delta (t)dt=\\frac{5}{C}u(t)[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]V_c(t)=\\frac{1}{C}\\int_{-\\infty }^{t}i(t)dt=\\frac{1}{C}\\int_{-\\infty }^{t}5\\delta (t)dt=\\frac{5}{C}u(t)[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "5t",
+        "html": "<div class=\"option_data\">5t</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "5u(t) - C",
+        "html": "<div class=\"option_data\">5u(t) - C</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{5}{C}t[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{5}{C}t[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{5u(t)}{C}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{5u(t)}{C}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002"
+  },
+  {
+    "number": "Question 2",
+    "text": "Fourier Series for the waveform, f(t) shown in figure is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Fourier Series for the waveform, f(t) shown in figure is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/5f6beb05bf676b8e462ee21fa34a7976.jpg\" style=\"--smush-placeholder-width: 433px; --smush-placeholder-aspect-ratio: 433/217;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.2.jpg": "gate_questions/gate_ee_2002/images/5f6beb05bf676b8e462ee21fa34a7976.jpg"
+    },
+    "type": "mcq",
+    "subject": "Signals and Systems - Fourier Series",
+    "explanation_text": "[latex]\\because[/latex] f(t) is an even function with half waves symmetry, [latex]\\therefore[/latex] dc term as well as sine terms=0 Only the cosine terms with odd harmonics will be present.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\because[/latex] f(t) is an even function with half waves symmetry,<br/>[latex]\\therefore[/latex] dc term as well as sine terms=0<br/>Only the cosine terms with odd harmonics will be present.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{8}{\\pi ^{2}}\\left [ \\sin \\left ( \\pi t \\right )+\\frac{1}{9}\\sin \\left ( 3\\pi t \\right )+\\frac{1}{25}\\sin \\left ( 5\\pi t \\right )+.... \\right ][/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{8}{\\pi ^{2}}\\left [ \\sin \\left ( \\pi t \\right )+\\frac{1}{9}\\sin \\left ( 3\\pi t \\right )+\\frac{1}{25}\\sin \\left ( 5\\pi t \\right )+.... \\right ][/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{8}{\\pi ^{2}}\\left [ \\sin \\left ( \\pi t \\right )-\\frac{1}{9}\\cos \\left ( 3\\pi t \\right )+\\frac{1}{25}\\sin \\left ( 5\\pi t \\right )+.... \\right ][/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{8}{\\pi ^{2}}\\left [ \\sin \\left ( \\pi t \\right )-\\frac{1}{9}\\cos \\left ( 3\\pi t \\right )+\\frac{1}{25}\\sin \\left ( 5\\pi t \\right )+.... \\right ][/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{8}{\\pi ^{2}}\\left [ \\cos \\left ( \\pi t \\right )+\\frac{1}{9}\\cos \\left ( 3\\pi t \\right )+\\frac{1}{25}\\cos \\left ( 5\\pi t \\right )+.... \\right ][/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{8}{\\pi ^{2}}\\left [ \\cos \\left ( \\pi t \\right )+\\frac{1}{9}\\cos \\left ( 3\\pi t \\right )+\\frac{1}{25}\\cos \\left ( 5\\pi t \\right )+.... \\right ][/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{8}{\\pi ^{2}}\\left [ \\cos \\left ( \\pi t \\right )-\\frac{1}{9}\\sin \\left ( 3\\pi t \\right )+\\frac{1}{25}\\sin \\left ( 5\\pi t \\right )+.... \\right ][/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{8}{\\pi ^{2}}\\left [ \\cos \\left ( \\pi t \\right )-\\frac{1}{9}\\sin \\left ( 3\\pi t \\right )+\\frac{1}{25}\\sin \\left ( 5\\pi t \\right )+.... \\right ][/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002"
+  },
+  {
+    "number": "Question 3",
+    "text": "The graph of an electrical network has N nodes and B branches. The number of\nlinks, L, with respect to the choice of a tree, is given by",
+    "html": "<div class=\"question_text\" data-value=\"1\">The graph of an electrical network has N nodes and B branches. The number of\nlinks, L, with respect to the choice of a tree, is given by</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electric Circuits - Magnetically Coupled Circuits, Network Topology and Filters",
+    "explanation_text": "Number of links =B-(N-1) =B-N+1",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tNumber of links =B-(N-1) =B-N+1\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "B - N + 1",
+        "html": "<div class=\"option_data\">B - N + 1</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "B + N",
+        "html": "<div class=\"option_data\">B + N</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "N - B + 1",
+        "html": "<div class=\"option_data\">N - B + 1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "N - 2B -1",
+        "html": "<div class=\"option_data\">N - 2B -1</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002"
+  },
+  {
+    "number": "Question 4",
+    "text": "Two in-phase, 50 Hz sinusoidal waveform of unit amplitude are fed into channel 1\nand channel 2 respectively of an oscilloscope. Assuming that the voltage scale,\ntime scale and other settings are exactly the same for both the channels, what\nwould be observed if the oscilloscope is operated in X-Y mode?",
+    "html": "<div class=\"question_text\" data-value=\"1\">Two in-phase, 50 Hz sinusoidal waveform of unit amplitude are fed into channel 1\nand channel 2 respectively of an oscilloscope. Assuming that the voltage scale,\ntime scale and other settings are exactly the same for both the channels, what\nwould be observed if the oscilloscope is operated in X-Y mode?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electrical and Electronic Measurements - CRO and Electronic Measurements",
+    "explanation_text": "[latex]\\therefore \\;\\; \\text{Phase difference}=0^{\\circ} \\text{also} f_x=f_y.[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\therefore \\;\\; \\text{Phase difference}=0^{\\circ} \\text{also} f_x=f_y.[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "A circle of unit radius",
+        "html": "<div class=\"option_data\">A circle of unit radius</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "An ellipse",
+        "html": "<div class=\"option_data\">An ellipse</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "A parabola",
+        "html": "<div class=\"option_data\">A parabola</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "A straight line inclined at [latex]45^{\\circ}[/latex] with respect to the x-axis",
+        "html": "<div class=\"option_data\">A straight line inclined at [latex]45^{\\circ}[/latex] with respect to the x-axis</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002"
+  },
+  {
+    "number": "Question 5",
+    "text": "Given a vector field [latex]\\vec{F}[/latex], the divergence theorem states that",
+    "html": "<div class=\"question_text\" data-value=\"1\">Given a vector field [latex]\\vec{F}[/latex], the divergence theorem states that</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electromagnetic Fields - Coordinate Systems and Vector Calculus",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\int _S\\vec{F}\\cdot d\\vec{S}=\\int _V\\vec{\\triangledown }\\cdot \\vec{F}dV[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int _S\\vec{F}\\cdot d\\vec{S}=\\int _V\\vec{\\triangledown }\\cdot \\vec{F}dV[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\int _S\\vec{F}\\cdot d\\vec{S}=\\int _V\\vec{\\triangledown }\\times \\vec{F}dV[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int _S\\vec{F}\\cdot d\\vec{S}=\\int _V\\vec{\\triangledown }\\times \\vec{F}dV[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\int _S\\vec{F}\\times d\\vec{S}=\\int _V\\vec{\\triangledown }\\cdot \\vec{F}dV[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int _S\\vec{F}\\times d\\vec{S}=\\int _V\\vec{\\triangledown }\\cdot \\vec{F}dV[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\int _S\\vec{F}\\times d\\vec{S}=\\int _V\\vec{\\triangledown }\\times \\vec{F}dV[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int _S\\vec{F}\\times d\\vec{S}=\\int _V\\vec{\\triangledown }\\times \\vec{F}dV[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002"
+  },
+  {
+    "number": "Question 6",
+    "text": "If a 400V, 50 Hz, star connected, 3 phase squirrel cage induction motor is\noperated from a 400 V, 75 Hz supply, the torque that the motor can now provide\nwhile drawing rated current from the supply?",
+    "html": "<div class=\"question_text\" data-value=\"1\">If a 400V, 50 Hz, star connected, 3 phase squirrel cage induction motor is\noperated from a 400 V, 75 Hz supply, the torque that the motor can now provide\nwhile drawing rated current from the supply?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electrical Machines - Three Phase Induction Machines",
+    "explanation_text": "[latex]T=3 I^2\\frac{R_2}{s}\\frac{60}{2 \\pi N_s} [/latex] As the motor is drawing rated current from the supply. [latex]\\begin{aligned} T &=\\propto \\frac{1}{N_s} \\\\ T & \\propto \\frac{1}{\\text{frequency}} \\;\\;\\left [ \\because \\; N_s=\\frac{120f}{P} \\right ] \\end{aligned}[/latex] Hence as frequency increases, torque decreases.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]T=3 I^2\\frac{R_2}{s}\\frac{60}{2 \\pi N_s} [/latex] <br/> As the motor is drawing rated current from the supply.  <br/> [latex]\\begin{aligned} T &amp;=\\propto \\frac{1}{N_s} \\\\ T &amp; \\propto \\frac{1}{\\text{frequency}} \\;\\;\\left [ \\because \\; N_s=\\frac{120f}{P} \\right ] \\end{aligned}[/latex]<br/> Hence as frequency increases, torque decreases.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "reduces",
+        "html": "<div class=\"option_data\">reduces</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "increases",
+        "html": "<div class=\"option_data\">increases</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "remains the same",
+        "html": "<div class=\"option_data\">remains the same</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "increase or reduces depending upon the rotor resistance",
+        "html": "<div class=\"option_data\">increase or reduces depending upon the rotor resistance</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=2"
+  },
+  {
+    "number": "Question 7",
+    "text": "A dc series motor fed from rated supply voltage is overloaded and its magnetic\r\ncircuit is saturated. The torque-speed characteristic of this motor will be\r\napproximately represented by which curve of below figure?",
+    "html": "<div class=\"question_text\" data-value=\"1\">A dc series motor fed from rated supply voltage is overloaded and its magnetic\r\ncircuit is saturated. The torque-speed characteristic of this motor will be\r\napproximately represented by which curve of below figure? <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/058cb293f074159d6b375233f4d7ba31.jpg\" style=\"--smush-placeholder-width: 347px; --smush-placeholder-aspect-ratio: 347/276;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.7.jpg": "gate_questions/gate_ee_2002/images/058cb293f074159d6b375233f4d7ba31.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electrical Machines - DC Machines",
+    "explanation_text": "At saturation , linear characteristic are observed.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tAt saturation , linear characteristic are observed.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "Curve A",
+        "html": "<div class=\"option_data\">Curve A</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "Curve B",
+        "html": "<div class=\"option_data\">Curve B</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "Curve C",
+        "html": "<div class=\"option_data\">Curve C</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "Curve D",
+        "html": "<div class=\"option_data\">Curve D</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=2"
+  },
+  {
+    "number": "Question 8",
+    "text": "A 1 kVA, 230V/100V, single phase, 50 Hz transformer having negligible winding\nresistance and leakage inductance is operating under saturation, while 250 V, 50\nHz sinusoidal supply is connected to the high voltage winding. A resistive load is\nconnected to the low voltage winding which draws rated current. Which one of\nthe following quantities will not be sinusoidal?",
+    "html": "<div class=\"question_text\" data-value=\"1\">A 1 kVA, 230V/100V, single phase, 50 Hz transformer having negligible winding\nresistance and leakage inductance is operating under saturation, while 250 V, 50\nHz sinusoidal supply is connected to the high voltage winding. A resistive load is\nconnected to the low voltage winding which draws rated current. Which one of\nthe following quantities will not be sinusoidal?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electrical Machines - Transformers",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "Voltage induced across the low voltage winding",
+        "html": "<div class=\"option_data\">Voltage induced across the low voltage winding</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "Core flux",
+        "html": "<div class=\"option_data\"> Core flux</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "Load current",
+        "html": "<div class=\"option_data\"> Load current</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "Current drawn from the source",
+        "html": "<div class=\"option_data\">Current drawn from the source</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=2"
+  },
+  {
+    "number": "Question 9",
+    "text": "A 400V/200V/200V, 50 Hz three winding transformer is connected as shown in\r\nfigure. The reading of the voltmeter, V, will be",
+    "html": "<div class=\"question_text\" data-value=\"1\">A 400V/200V/200V, 50 Hz three winding transformer is connected as shown in\r\nfigure. The reading of the voltmeter, V, will be<img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/2ca21b0d039ee2100f90696c12196874.jpg\" style=\"--smush-placeholder-width: 367px; --smush-placeholder-aspect-ratio: 367/173;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.9.jpg": "gate_questions/gate_ee_2002/images/2ca21b0d039ee2100f90696c12196874.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electrical Machines - Transformers",
+    "explanation_text": "The two 200 turns winding are connected in additive polarity. Hence the output voltage will be 400V. The difference of this 400 V and the voltage induced in first winding (i.e. 400 turn) is same.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tThe two 200 turns winding are connected in additive polarity. Hence the output voltage will be 400V. The difference of this 400 V and the voltage induced in first winding (i.e. 400 turn) is same.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0V",
+        "html": "<div class=\"option_data\">0V</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "400V",
+        "html": "<div class=\"option_data\">400V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "600V",
+        "html": "<div class=\"option_data\">600V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "800V",
+        "html": "<div class=\"option_data\">800V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=2"
+  },
+  {
+    "number": "Question 10",
+    "text": "The frequency of the clock signal applied to the rising edge triggered D flip-flop shown in figure is 10 kHz. The frequency of the signal available at Q is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The frequency of the clock signal applied to the rising edge triggered D flip-flop shown in figure is 10 kHz. The frequency of the signal available at Q is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/c53c5b46abb78e01316bc9d7cbbdbdf6.jpg\" style=\"--smush-placeholder-width: 320px; --smush-placeholder-aspect-ratio: 320/208;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.10.jpg": "gate_questions/gate_ee_2002/images/c53c5b46abb78e01316bc9d7cbbdbdf6.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Electronics - Sequential Logic Circuits",
+    "explanation_text": "In toggle mode [latex]f_{out}=\\frac{f_{in}}{2}=\\frac{10kHz}{2}=5kHz[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tIn toggle mode<br/>[latex]f_{out}=\\frac{f_{in}}{2}=\\frac{10kHz}{2}=5kHz[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "10 kHz",
+        "html": "<div class=\"option_data\">10 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "2.5 kHz",
+        "html": "<div class=\"option_data\">2.5 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "20 kHz",
+        "html": "<div class=\"option_data\"> 20 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "5 kHz",
+        "html": "<div class=\"option_data\"> 5 kHz</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=2"
+  },
+  {
+    "number": "Question 11",
+    "text": "The forward resistance of the diode shown in figure is 5[latex]\\Omega[/latex] and the remaining parameters are same as those of an ideal diode. The dc component of the source current is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The forward resistance of the diode shown in figure is 5[latex]\\Omega[/latex] and the remaining parameters are same as those of an ideal diode. The dc component of the source current is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/38ecd192691093eac7c2cd142f378715.jpg\" style=\"--smush-placeholder-width: 225px; --smush-placeholder-aspect-ratio: 225/102;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.11.jpg": "gate_questions/gate_ee_2002/images/38ecd192691093eac7c2cd142f378715.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Electronics - Diodes and their Applications",
+    "explanation_text": "[latex]V_{av}=\\frac{V_m}{\\pi} [/latex] [latex]\nI_{av}=\\frac{V_{av}}{R}=\\frac{V_{av}}{5+45}=\\frac{V_{av}}{50} [/latex] [latex]\n\\;\\; =\\frac{V_m}{50\\pi}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]V_{av}=\\frac{V_m}{\\pi} [/latex] <br/> [latex]\nI_{av}=\\frac{V_{av}}{R}=\\frac{V_{av}}{5+45}=\\frac{V_{av}}{50} [/latex] <br/> [latex]\n\\;\\; =\\frac{V_m}{50\\pi}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{V_{m}}{50\\pi }[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{V_{m}}{50\\pi }[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{V_{m}}{50\\pi \\sqrt{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{V_{m}}{50\\pi \\sqrt{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{V_{m}}{100\\pi \\sqrt{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{V_{m}}{100\\pi \\sqrt{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{2V_{m}}{50\\pi \\sqrt{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{2V_{m}}{50\\pi \\sqrt{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=3"
+  },
+  {
+    "number": "Question 12",
+    "text": "The cut-in voltage of both Zener diode [latex]D_{z}[/latex] and diode D shown in figure is 0.7 V, while break down voltage of [latex]D_{z}[/latex] is 3.3 V and reverse breakdown voltage of D is 50 V. the other parameters can be assumed to be the same as those of an ideal\r\ndiode. The values of the peak output voltage ([latex]V_{0}[/latex]) are",
+    "html": "<div class=\"question_text\" data-value=\"1\">The cut-in voltage of both Zener diode [latex]D_{z}[/latex] and diode D shown in figure is 0.7 V, while break down voltage of [latex]D_{z}[/latex] is 3.3 V and reverse breakdown voltage of D is 50 V. the other parameters can be assumed to be the same as those of an ideal\r\ndiode. The values of the peak output voltage ([latex]V_{0}[/latex]) are<img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/c0338c8f100cff7528824307cb3a43ee.jpg\" style=\"--smush-placeholder-width: 335px; --smush-placeholder-aspect-ratio: 335/157;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.12.jpg": "gate_questions/gate_ee_2002/images/c0338c8f100cff7528824307cb3a43ee.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Electronics - Diodes and their Applications",
+    "explanation_text": "For positive half cycle, at peak input voltage So, [latex]V_0= 4V[/latex] For negative half cycle, at peak input voltage So, [latex]V_o=10 \\times \\left ( \\frac{1}{1+1} \\right )=5V[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor positive half cycle, at peak input voltage<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/4706a38ded005f1119d5328727b54f61.jpg\" style=\"--smush-placeholder-width: 342px; --smush-placeholder-aspect-ratio: 342/190;\"/><br/>So, [latex]V_0= 4V[/latex]<br/> For negative half cycle, at peak input voltage<br/><br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/eb91ea91dff04adf5885886770582a3c.jpg\" style=\"--smush-placeholder-width: 317px; --smush-placeholder-aspect-ratio: 317/185;\"/><br/>So, [latex]V_o=10 \\times \\left ( \\frac{1}{1+1} \\right )=5V[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a12.jpg": "gate_questions/gate_ee_2002/images/4706a38ded005f1119d5328727b54f61.jpg",
+      "/wp-content/uploads/GATE/EE/20021/a12a.jpg": "gate_questions/gate_ee_2002/images/eb91ea91dff04adf5885886770582a3c.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "3.3 V in the positive half cycle and 1.4 V in the negative half cycle",
+        "html": "<div class=\"option_data\">3.3 V in the positive half cycle and 1.4 V in the negative half cycle</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "4 V in the positive half cycle and 5 V in the negative half cycle",
+        "html": "<div class=\"option_data\"> 4 V in the positive half cycle and 5 V in the negative half cycle</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "3.3 V in both positive and negative half cycles",
+        "html": "<div class=\"option_data\"> 3.3 V in both positive and negative half cycles</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "4 V in both positive and negative half cycles",
+        "html": "<div class=\"option_data\">4 V in both positive and negative half cycles</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=3"
+  },
+  {
+    "number": "Question 13",
+    "text": "The line-to-line input voltage to the 3 phase, 50 Hz, ac circuit shown in\r\nfigure is 100 V rms. Assuming that the phase sequence is RYB, the\r\nwattmeters would read.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The line-to-line input voltage to the 3 phase, 50 Hz, ac circuit shown in\r\nfigure is 100 V rms. Assuming that the phase sequence is RYB, the\r\nwattmeters would read. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/c0eac5c6985091b85a5332a7bd1c0765.jpg\" style=\"--smush-placeholder-width: 371px; --smush-placeholder-aspect-ratio: 371/333;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.13.jpg": "gate_questions/gate_ee_2002/images/c0eac5c6985091b85a5332a7bd1c0765.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electrical and Electronic Measurements - Measurement of Energy and Power",
+    "explanation_text": "[latex]\\begin{aligned}\r\n V_L=&= 100V\\\\ \r\nI_L &=I_p =\\frac{V_p}{Z}\\\\ \r\n &=\\frac{100}{\\sqrt{3} \\times 5\\angle 60^{\\circ}} \\\\ \r\n &= \\frac{20}{\\sqrt{3}} \\angle -60^{\\circ}\\\\ \r\n W_1&= V_LI_L \\cos (30^{\\circ} -\\phi )\\\\ \r\n &=100 \\times  \\frac{20}{\\sqrt{3}} \\cos (30^{\\circ}-(-60^{\\circ}))\\\\ \r\n &= \\frac{2000}{\\sqrt{3}} \\cos (90^{\\circ})\\\\ \r\n W_2&= V_LI_L \\cos (30^{\\circ} +\\phi )\\\\ \r\n &=100 \\times  \\frac{20}{\\sqrt{3}} \\cos (30^{\\circ}-60^{\\circ})\\\\\r\n&=1000W\r\n\\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned}\r\n V_L=&amp;= 100V\\\\ \r\nI_L &amp;=I_p =\\frac{V_p}{Z}\\\\ \r\n &amp;=\\frac{100}{\\sqrt{3} \\times 5\\angle 60^{\\circ}} \\\\ \r\n &amp;= \\frac{20}{\\sqrt{3}} \\angle -60^{\\circ}\\\\ \r\n W_1&amp;= V_LI_L \\cos (30^{\\circ} -\\phi )\\\\ \r\n &amp;=100 \\times  \\frac{20}{\\sqrt{3}} \\cos (30^{\\circ}-(-60^{\\circ}))\\\\ \r\n &amp;= \\frac{2000}{\\sqrt{3}} \\cos (90^{\\circ})\\\\ \r\n W_2&amp;= V_LI_L \\cos (30^{\\circ} +\\phi )\\\\ \r\n &amp;=100 \\times  \\frac{20}{\\sqrt{3}} \\cos (30^{\\circ}-60^{\\circ})\\\\\r\n&amp;=1000W\r\n\\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]W_{1}[/latex]= 886 W and [latex]W_{2}[/latex] = 886 W",
+        "html": "<div class=\"option_data\">[latex]W_{1}[/latex]= 886 W and [latex]W_{2}[/latex] = 886 W</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]W_{1}[/latex] = 500 W and [latex]W_{2}[/latex] = 500 W",
+        "html": "<div class=\"option_data\"> [latex]W_{1}[/latex] = 500 W and [latex]W_{2}[/latex] = 500 W</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]W_{1}[/latex] = 0 W and [latex]W_{2}[/latex] = 1000 W",
+        "html": "<div class=\"option_data\">[latex]W_{1}[/latex] = 0 W and [latex]W_{2}[/latex] = 1000 W</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]W_{1}[/latex] = 250 W and [latex]W_{2}[/latex] = 750 W",
+        "html": "<div class=\"option_data\">[latex]W_{1}[/latex] = 250 W and [latex]W_{2}[/latex] = 750 W</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=3"
+  },
+  {
+    "number": "Question 14",
+    "text": "The logic circuit used to generate the active low chip select (CS) by an 8085\nmicroprocessor to address a peripheral is shown in figure. The peripheral will\nrespond to addresses in the range.",
+    "html": "<div class=\"question_text\" data-value=\"1\">The logic circuit used to generate the active low chip select (CS) by an 8085\nmicroprocessor to address a peripheral is shown in figure. The peripheral will\nrespond to addresses in the range. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/56c3b263c084ea76f2224695cf84dcd5.jpg\" style=\"--smush-placeholder-width: 337px; --smush-placeholder-aspect-ratio: 337/136;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.14.jpg": "gate_questions/gate_ee_2002/images/56c3b263c084ea76f2224695cf84dcd5.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Electronics - Microprocessors",
+    "explanation_text": "[latex]\\begin{matrix} A_{15} &A_{14} & A_{13} & A_{12} & A_{11} & \\cdots & A_0\\\\ 1 & 1 & 1 & 0 & 0 &\\cdots & 0\\\\ 1 & 1 & 1 & 0 & 1 & \\cdots & 1 \\end{matrix} [/latex] [latex]\\Rightarrow \\;\\; E000-EFFF[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{matrix} A_{15} &amp;A_{14} &amp; A_{13} &amp; A_{12} &amp; A_{11} &amp; \\cdots &amp; A_0\\\\ 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp;\\cdots &amp; 0\\\\ 1 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; \\cdots &amp; 1 \\end{matrix} [/latex] <br/> [latex]\\Rightarrow \\;\\; E000-EFFF[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "E000-EFFF",
+        "html": "<div class=\"option_data\">E000-EFFF</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "000E-FFFE",
+        "html": "<div class=\"option_data\">000E-FFFE</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1000-FFFF",
+        "html": "<div class=\"option_data\"> 1000-FFFF</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0001-FFF1",
+        "html": "<div class=\"option_data\"> 0001-FFF1</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=3"
+  },
+  {
+    "number": "Question 15",
+    "text": "Consider a long, two-wire line composed of solid round conductors. The radius of\nboth conductors is 0.25 cm and the distance between their centers is 1m. If this\ndistance is doubled, then the inductance per unit length",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider a long, two-wire line composed of solid round conductors. The radius of\nboth conductors is 0.25 cm and the distance between their centers is 1m. If this\ndistance is doubled, then the inductance per unit length</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Systems - Performance of Transmission Lines, Line Parameters and Corona",
+    "explanation_text": "[latex]\\begin{aligned} L&\\propto \\ln\\left ( \\frac{d}{r'} \\right )\\\\ \\ln(2d) &\\gt \\ln d \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} L&amp;\\propto \\ln\\left ( \\frac{d}{r'} \\right )\\\\ \\ln(2d) &amp;\\gt \\ln d \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "doubles",
+        "html": "<div class=\"option_data\">doubles</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "halves",
+        "html": "<div class=\"option_data\">halves</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "increases but does not double",
+        "html": "<div class=\"option_data\">increases but does not double</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "decreases but does not halve",
+        "html": "<div class=\"option_data\">decreases but does not halve</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=3"
+  },
+  {
+    "number": "Question 16",
+    "text": "Consider a power system with three identical generators. The transmission losses\r\nare negligible. One generator [latex]\\left ( G_{1} \\right )[/latex] has a speed governor which maintains its speed constant at the rated value, while the other generators ([latex]G_{2}[/latex] and [latex]G_{3}[/latex]) have\r\ngovernors with a droop of 5%. If the load of the system is increased, then in\r\nsteady state.",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider a power system with three identical generators. The transmission losses\r\nare negligible. One generator [latex]\\left ( G_{1} \\right )[/latex] has a speed governor which maintains its speed constant at the rated value, while the other generators ([latex]G_{2}[/latex] and [latex]G_{3}[/latex]) have\r\ngovernors with a droop of 5%. If the load of the system is increased, then in\r\nsteady state.</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Systems - Economic Power Generation and Load Dispatch",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "generation of [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is increased equally while generation of [latex]G_{1}[/latex] is\nunchanged",
+        "html": "<div class=\"option_data\">generation of [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is increased equally while generation of [latex]G_{1}[/latex] is\nunchanged</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "generation of [latex]G_{1}[/latex] alone is increased while generation of [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is unchanged.",
+        "html": "<div class=\"option_data\">generation of [latex]G_{1}[/latex] alone is increased while generation of [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is unchanged.</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "generation of [latex]G_{1}[/latex], [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is increased equally.",
+        "html": "<div class=\"option_data\">generation of [latex]G_{1}[/latex], [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is increased equally.</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "generation of [latex]G_{1}[/latex], [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is increased in the ratio 0.5:0.25:0.25.",
+        "html": "<div class=\"option_data\"> generation of [latex]G_{1}[/latex], [latex]G_{2}[/latex] and [latex]G_{3}[/latex] is increased in the ratio 0.5:0.25:0.25.</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=4"
+  },
+  {
+    "number": "Question 17",
+    "text": "A long wire composed of a smooth round conductor runs above and parallel to\nthe ground (assumed to be a large conducting plane). A high voltage exists\nbetween the conductor and the ground. The maximum electric stress occurs at",
+    "html": "<div class=\"question_text\" data-value=\"1\">A long wire composed of a smooth round conductor runs above and parallel to\nthe ground (assumed to be a large conducting plane). A high voltage exists\nbetween the conductor and the ground. The maximum electric stress occurs at</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Systems - Performance of Transmission Lines, Line Parameters and Corona",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "the upper surface of the conductor",
+        "html": "<div class=\"option_data\">the upper surface of the conductor</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "the lower surface of the conductor",
+        "html": "<div class=\"option_data\">the lower surface of the conductor</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "the ground surface",
+        "html": "<div class=\"option_data\"> the ground surface</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "midway between the conductor and ground",
+        "html": "<div class=\"option_data\">midway between the conductor and ground</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=4"
+  },
+  {
+    "number": "Question 18",
+    "text": "Consider the problem of relay co-ordination for the distance relays R1 and R2 on\r\nadjacent lines of a transmission system figure. The Zone 1 and Zone 2 settings for both the relays are indicated on the diagram. Which of the following\r\nindicates the correct time setting for the Zone 2 of relays R1 and R2.",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider the problem of relay co-ordination for the distance relays R1 and R2 on\r\nadjacent lines of a transmission system figure. The Zone 1 and Zone 2 settings for both the relays are indicated on the diagram. Which of the following\r\nindicates the correct time setting for the Zone 2 of relays R1 and R2. <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/b2e8a888b2d8c79d759d925afa66c871.jpg\" style=\"--smush-placeholder-width: 425px; --smush-placeholder-aspect-ratio: 425/158;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.18.jpg": "gate_questions/gate_ee_2002/images/b2e8a888b2d8c79d759d925afa66c871.jpg"
+    },
+    "type": "mcq",
+    "subject": "Power Systems - Switch Gear and Protection",
+    "explanation_text": "Zone 2 time of [latex]R_1,R_2[/latex] are same.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tZone 2 time of [latex]R_1,R_2[/latex] are same.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]TZ2_{R1}[/latex]=0.6s, [latex]TZ2_{R2}[/latex]=0.3s",
+        "html": "<div class=\"option_data\">[latex]TZ2_{R1}[/latex]=0.6s, [latex]TZ2_{R2}[/latex]=0.3s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]TZ2_{R1}[/latex]=0.3s, [latex]TZ2_{R2}[/latex]=0.6s",
+        "html": "<div class=\"option_data\">[latex]TZ2_{R1}[/latex]=0.3s, [latex]TZ2_{R2}[/latex]=0.6s</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]TZ2_{R1}[/latex]=0.3s, [latex]TZ2_{R2}[/latex]=0.3s",
+        "html": "<div class=\"option_data\">[latex]TZ2_{R1}[/latex]=0.3s, [latex]TZ2_{R2}[/latex]=0.3s</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]TZ2_{R1}[/latex]=0.1s, [latex]TZ2_{R2}[/latex]=0.3s",
+        "html": "<div class=\"option_data\">[latex]TZ2_{R1}[/latex]=0.1s, [latex]TZ2_{R2}[/latex]=0.3s</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=4"
+  },
+  {
+    "number": "Question 19",
+    "text": "Let s(t) be the step response of a linear system with zero initial conditions; then\nthe response of this system to an input u(t) is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Let s(t) be the step response of a linear system with zero initial conditions; then\nthe response of this system to an input u(t) is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Linear Time Invariant Systems",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\int_{0}^{t}S\\left ( t-\\tau \\right )u\\left ( \\tau \\right )d\\tau[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int_{0}^{t}S\\left ( t-\\tau \\right )u\\left ( \\tau \\right )d\\tau[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{\\mathrm{d} }{\\mathrm{d} t}\\left [ \\int_{0}^{t}S(t-\\tau )u(\\tau )d\\tau \\right ][/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{\\mathrm{d} }{\\mathrm{d} t}\\left [ \\int_{0}^{t}S(t-\\tau )u(\\tau )d\\tau \\right ][/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\int_{0}^{t}S(t-\\tau )\\left [ \\int_{0}^{t}u(\\tau _{1})d\\tau _{1} \\right ]d\\tau[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int_{0}^{t}S(t-\\tau )\\left [ \\int_{0}^{t}u(\\tau _{1})d\\tau _{1} \\right ]d\\tau[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\int_{0}^{t}S\\left ( t-\\tau \\right )^{2}u\\left ( \\tau \\right )d\\tau[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\int_{0}^{t}S\\left ( t-\\tau \\right )^{2}u\\left ( \\tau \\right )d\\tau[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=4"
+  },
+  {
+    "number": "Question 20",
+    "text": "Let Y(s) be the Laplace transformation of the function y(t), then the final value of\nthe function is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Let Y(s) be the Laplace transformation of the function y(t), then the final value of\nthe function is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Signals and Systems - Laplace Transform",
+    "explanation_text": "[latex]\\text{Final value}=\\lim_{s \\to 0}sY(s)[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\text{Final value}=\\lim_{s \\to 0}sY(s)[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\lim_{s\\rightarrow 0}Y\\left ( s \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\lim_{s\\rightarrow 0}Y\\left ( s \\right )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\lim_{s\\rightarrow \\infty }Y\\left ( s \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\lim_{s\\rightarrow \\infty }Y\\left ( s \\right )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\lim_{s\\rightarrow 0}sY\\left ( s \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\lim_{s\\rightarrow 0}sY\\left ( s \\right )[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\lim_{x\\rightarrow \\infty }sY\\left ( s \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\lim_{x\\rightarrow \\infty }sY\\left ( s \\right )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=4"
+  },
+  {
+    "number": "Question 21",
+    "text": "The determinant of the matrix [latex]\\begin{bmatrix} 1 & 0& 0 & 0\\\\ 100& 1 &0 & 0\\\\ 100 &200 & 1 & 0\\\\ 100 & 200 & 300&1 \\end{bmatrix}[/latex] is:",
+    "html": "<div class=\"question_text\" data-value=\"1\">The determinant of the matrix [latex]\\begin{bmatrix} 1 &amp; 0&amp; 0 &amp; 0\\\\ 100&amp; 1 &amp;0 &amp; 0\\\\ 100 &amp;200 &amp; 1 &amp; 0\\\\ 100 &amp; 200 &amp; 300&amp;1 \\end{bmatrix}[/latex] is:</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Linear Algebra",
+    "explanation_text": "The given matrix is alower traingular matrix Therefore, |A|= Product of its leading diagonal elemetns = (1)(1)(1)(1)=1",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tThe given matrix is alower traingular matrix<br/>Therefore, |A|= Product of its leading diagonal elemetns = (1)(1)(1)(1)=1\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "100",
+        "html": "<div class=\"option_data\">100</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "200",
+        "html": "<div class=\"option_data\">200</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "1",
+        "html": "<div class=\"option_data\">1</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "300",
+        "html": "<div class=\"option_data\">300</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=5"
+  },
+  {
+    "number": "Question 22",
+    "text": "The state transition matrix for the system [latex]\\dot{X}=AX[/latex] with initial state X(0) is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The state transition matrix for the system [latex]\\dot{X}=AX[/latex] with initial state X(0) is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - State Variable Analysis",
+    "explanation_text": "[latex]e^{At}=L^{-1}[sI-A]^{-1}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]e^{At}=L^{-1}[sI-A]^{-1}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\left ( sI-A \\right )^{-1}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\left ( sI-A \\right )^{-1}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]e^{At}X\\left ( 0 \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]e^{At}X\\left ( 0 \\right )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "Laplace inverse of [latex]\\left [ \\left ( sI-A \\right )^{-1} \\right ][/latex]",
+        "html": "<div class=\"option_data\">Laplace inverse of [latex]\\left [ \\left ( sI-A \\right )^{-1} \\right ][/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "Laplace inverse of [latex][ ( sI-A)^{-1} X(0)][/latex]",
+        "html": "<div class=\"option_data\">Laplace inverse of [latex][ ( sI-A)^{-1} X(0)][/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=5"
+  },
+  {
+    "number": "Question 23",
+    "text": "A six pulse thyristor rectifier bridge is connected to a balanced 50 Hz three phase\nac source. Assuming that the dc output current of the rectifier is constant, the\nlowest frequency harmonic component in the ac source line current is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A six pulse thyristor rectifier bridge is connected to a balanced 50 Hz three phase\nac source. Assuming that the dc output current of the rectifier is constant, the\nlowest frequency harmonic component in the ac source line current is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Electronics - Phase Controlled Rectifiers",
+    "explanation_text": "[latex]\\begin{aligned} i_s\\propto \\frac{I_a}{n}\\cdot \\cos \\frac{n \\pi}{6}&\\; \\;where\\; n \\in 1,3,5 \\\\ \\text{For, }n&=3\\\\ i_s&=0\\\\ \\text{For, }n&=5\\\\ i_s&\\propto -\\frac{I_a}{5} \\end{aligned}[/latex] Lowest harmonic present is fifth harmonic. Its frequency = 50x5=250 Hz.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} i_s\\propto \\frac{I_a}{n}\\cdot \\cos \\frac{n \\pi}{6}&amp;\\; \\;where\\; n \\in 1,3,5 \\\\ \\text{For, }n&amp;=3\\\\ i_s&amp;=0\\\\ \\text{For, }n&amp;=5\\\\ i_s&amp;\\propto -\\frac{I_a}{5} \\end{aligned}[/latex]<br/>Lowest harmonic present is fifth harmonic. Its frequency = 50x5=250 Hz.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "100Hz",
+        "html": "<div class=\"option_data\">100Hz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "150Hz",
+        "html": "<div class=\"option_data\">150Hz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "250Hz",
+        "html": "<div class=\"option_data\">250Hz</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "300Hz",
+        "html": "<div class=\"option_data\">300Hz</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=5"
+  },
+  {
+    "number": "Question 24",
+    "text": "What is the rms value of the voltage waveform shown in figure?",
+    "html": "<div class=\"question_text\" data-value=\"1\">What is the rms value of the voltage waveform shown in figure? <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/7d6d11bfb8b2ac6419ebcd3d0f152043.jpg\" style=\"--smush-placeholder-width: 390px; --smush-placeholder-aspect-ratio: 390/258;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q1.24.jpg": "gate_questions/gate_ee_2002/images/7d6d11bfb8b2ac6419ebcd3d0f152043.jpg"
+    },
+    "type": "mcq",
+    "subject": "Signals and Systems - Introduction of C.T. and D.T. Signals",
+    "explanation_text": "RMS value [latex]=\\left [ \\frac{1}{\\pi}\\left (\\int_{0}^{\\pi/3} (100)^2 dt+\\int_{\\pi/3}^{2\\pi/3} (-100)^2 dt+\\int_{2 \\pi /3}^{\\pi} (100)^2 dt \\right )\\right ]^{1/2}[/latex] [latex]=\\left [ \\frac{1}{\\pi} 100^2 \\pi\\right ]^{1/2}=100V[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tRMS value<br/>[latex]=\\left [ \\frac{1}{\\pi}\\left (\\int_{0}^{\\pi/3} (100)^2 dt+\\int_{\\pi/3}^{2\\pi/3} (-100)^2 dt+\\int_{2 \\pi /3}^{\\pi} (100)^2 dt \\right )\\right ]^{1/2}[/latex]\n<br/>[latex]=\\left [ \\frac{1}{\\pi} 100^2 \\pi\\right ]^{1/2}=100V[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{200}{\\pi }V[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{200}{\\pi }V[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{100}{\\pi }V[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{100}{\\pi }V[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "200V",
+        "html": "<div class=\"option_data\">200V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "100V",
+        "html": "<div class=\"option_data\">100V</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=5"
+  },
+  {
+    "number": "Question 25",
+    "text": "A step down chopper is operated in the continuous conduction mode in steady\r\nstate with a constant duty ratio D. If [latex]V_{o}[/latex] is the magnitude of the dc output voltage\r\nand if [latex]V_{s}[/latex] is the magnitude of the dc input voltage, the ratio [latex]\\frac{V_{o}}{V_{s}}[/latex] is given by",
+    "html": "<div class=\"question_text\" data-value=\"1\">A step down chopper is operated in the continuous conduction mode in steady\r\nstate with a constant duty ratio D. If [latex]V_{o}[/latex] is the magnitude of the dc output voltage\r\nand if [latex]V_{s}[/latex] is the magnitude of the dc input voltage, the ratio [latex]\\frac{V_{o}}{V_{s}}[/latex] is given by</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Electronics - Choppers",
+    "explanation_text": "[latex]\\begin{aligned} V_0&=DV_s \\\\ \\frac{V_0}{V_s}&=D \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\begin{aligned} V_0&amp;=DV_s \\\\ \\frac{V_0}{V_s}&amp;=D \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "D",
+        "html": "<div class=\"option_data\">D</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1-D",
+        "html": "<div class=\"option_data\">1-D</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{1}{1-D}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{1}{1-D}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{D}{1-D}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{D}{1-D}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=5"
+  },
+  {
+    "number": "Question 26",
+    "text": "A two port network, shown in figure is described by the following equations [latex]I_1=Y_{11}E_1+Y_{12}E_2[/latex] [latex]I_2=Y_{21}E_1+Y_{22}E_2[/latex] The admittance parameters [latex]Y_{11}, Y_{12},Y_{21},Y_{22}[/latex] for the network shown are",
+    "html": "<div class=\"question_text\" data-value=\"1\">A two port network, shown in figure is described by the following equations<br/>[latex]I_1=Y_{11}E_1+Y_{12}E_2[/latex]<br/>[latex]I_2=Y_{21}E_1+Y_{22}E_2[/latex] <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/aafcfe910a18f1e91812e81e1a2d9496.jpg\" style=\"--smush-placeholder-width: 370px; --smush-placeholder-aspect-ratio: 370/166;\"/><br/> The admittance parameters [latex]Y_{11}, Y_{12},Y_{21},Y_{22}[/latex] for the network shown are</div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.1.jpg": "gate_questions/gate_ee_2002/images/aafcfe910a18f1e91812e81e1a2d9496.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electric Circuits - Two Port Network and Network Functions",
+    "explanation_text": "Using KVL, [latex]E_1=2I_1+2(I_1+I_2) [/latex] Again using KVL, [latex]E_2=2I_2+2(I_1+I_2) [/latex] [latex]\\Rightarrow \\;\\; [z]=\\begin{bmatrix} 4 & 2\\\\ 2 & 4 \\end{bmatrix}[/latex] [latex] [y]=[z]^{-1} [/latex] [latex]\\;\\;=\\frac{1}{(4 \\times 4 )-(2 \\times 2)}\\begin{bmatrix} 4 & -2\\\\ -2 & 4 \\end{bmatrix} [/latex] [latex]\\begin{bmatrix} Y_{11} & Y_{12}\\\\ Y_{21} & Y_{22} \\end{bmatrix}=\\begin{bmatrix} 1/3 & -1/6\\\\ -1/6 & 1/3 \\end{bmatrix}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tUsing KVL,<br/>[latex]E_1=2I_1+2(I_1+I_2) [/latex] <br/> Again using KVL,  <br/> [latex]E_2=2I_2+2(I_1+I_2) [/latex] <br/> [latex]\\Rightarrow \\;\\; [z]=\\begin{bmatrix} 4 &amp; 2\\\\ 2 &amp; 4 \\end{bmatrix}[/latex] <br/> [latex] [y]=[z]^{-1} [/latex] <br/> [latex]\\;\\;=\\frac{1}{(4 \\times 4 )-(2 \\times 2)}\\begin{bmatrix} 4 &amp; -2\\\\ -2 &amp; 4 \\end{bmatrix} [/latex] <br/> [latex]\\begin{bmatrix} Y_{11} &amp; Y_{12}\\\\ Y_{21} &amp; Y_{22} \\end{bmatrix}=\\begin{bmatrix} 1/3 &amp; -1/6\\\\ -1/6 &amp; 1/3 \\end{bmatrix}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0.5 mho, 1 mho, 2 mho and 1 mho respectively",
+        "html": "<div class=\"option_data\">0.5 mho, 1 mho, 2 mho and 1 mho respectively</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1/3 mho, -1/6 mho, -1/6 mho and 1/3 mho respectively",
+        "html": "<div class=\"option_data\">1/3 mho, -1/6 mho, -1/6 mho and 1/3 mho respectively</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0.5 mho, 0.5 mho, 1.5 mho and 2 mho respectively",
+        "html": "<div class=\"option_data\">0.5 mho, 0.5 mho, 1.5 mho and 2 mho respectively</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "-2/5 mho, -3/7 mho, 3/7 mho and 2/5 mho respectively",
+        "html": "<div class=\"option_data\">-2/5 mho, -3/7 mho, 3/7 mho and 2/5 mho respectively</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=6"
+  },
+  {
+    "number": "Question 27",
+    "text": "In the circuit shown in figure, what value of C will cause a unity power factor at\r\nthe ac source?",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown in figure, what value of C will cause a unity power factor at\r\nthe ac source? <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/81e929b28d29e7686b7895ac4709dc94.jpg\" style=\"--smush-placeholder-width: 330px; --smush-placeholder-aspect-ratio: 330/128;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.2.jpg": "gate_questions/gate_ee_2002/images/81e929b28d29e7686b7895ac4709dc94.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electric Circuits - Resonance and Locus Diagrams",
+    "explanation_text": "[latex]Y=j\\omega C+\\frac{1}{30\\angle 40^{\\circ}} [/latex] [latex]\\;\\;=j\\omega C+0.0255-j0.0214 [/latex] [latex]\\;\\;=0.0255+j(\\omega C-0.0214) [/latex] [latex]\\;\\;=Real(Y)+k Img(Y) [/latex] To have unity power factor at ac source i.e. resonance condition, [latex]Img(Y)=0 [/latex] [latex]\\Rightarrow \\;\\omega C-0.0214=0 [/latex] [latex]\\because \\; \\omega =2 \\pi \\times 50[/latex] [latex] \\therefore \\; C=\\frac{0.0214}{100 \\pi}=68.1\\mu F[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]Y=j\\omega C+\\frac{1}{30\\angle 40^{\\circ}} [/latex] <br/> [latex]\\;\\;=j\\omega C+0.0255-j0.0214 [/latex] <br/> [latex]\\;\\;=0.0255+j(\\omega C-0.0214) [/latex] <br/> [latex]\\;\\;=Real(Y)+k Img(Y) [/latex] <br/> To have unity power factor at ac source i.e. resonance condition,  <br/> [latex]Img(Y)=0 [/latex] <br/> [latex]\\Rightarrow \\;\\omega C-0.0214=0 [/latex] <br/> [latex]\\because \\; \\omega =2 \\pi \\times 50[/latex] <br/> [latex] \\therefore \\; C=\\frac{0.0214}{100 \\pi}=68.1\\mu F[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]68.1\\mu F[/latex]",
+        "html": "<div class=\"option_data\">[latex]68.1\\mu F[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]165\\mu F[/latex]",
+        "html": "<div class=\"option_data\">[latex]165\\mu F[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]0.681\\mu F[/latex]",
+        "html": "<div class=\"option_data\">[latex]0.681\\mu F[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]6.81\\mu F[/latex]",
+        "html": "<div class=\"option_data\">[latex]6.81\\mu F[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=6"
+  },
+  {
+    "number": "Question 28",
+    "text": "A first order, low pass filter is given with R=50 [latex]\\Omega[/latex] and C=[latex]5\\mu F[/latex]. What is the\r\nfrequency at which the gain of the voltage transfer function of the filter is 0.25?",
+    "html": "<div class=\"question_text\" data-value=\"1\">A first order, low pass filter is given with R=50 [latex]\\Omega[/latex] and C=[latex]5\\mu F[/latex]. What is the\r\nfrequency at which the gain of the voltage transfer function of the filter is 0.25?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electric Circuits - Magnetically Coupled Circuits, Network Topology and Filters",
+    "explanation_text": "[latex]T.F.=\\frac{V_o}{V_i}=\\frac{\\frac{1}{j\\omega C}}{R+\\frac{1}{j\\omega C}}[/latex] [latex]\\;\\;\\;=\\frac{1}{1+j\\omega CR} [/latex] [latex]\\therefore \\; \\; |Gain|=\\frac{1}{\\sqrt{1+(\\omega CR)^2}} [/latex] [latex]\\;\\;0.25=\\frac{1}{\\sqrt{1+(\\omega \\times 5 \\times 10^{-6} \\times 50)^2}} [/latex] On solving, [latex]\\omega =15.49 \\times 10^3 r/s [/latex] [latex]\\Rightarrow \\;\\; f=\\frac{15.49}{2 \\pi}=2.46 kHz[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/aa75b763a5641d74837e7aa7d721b855.jpg\" style=\"--smush-placeholder-width: 276px; --smush-placeholder-aspect-ratio: 276/158;\"/><br/>[latex]T.F.=\\frac{V_o}{V_i}=\\frac{\\frac{1}{j\\omega C}}{R+\\frac{1}{j\\omega C}}[/latex] <br/> [latex]\\;\\;\\;=\\frac{1}{1+j\\omega CR} [/latex] <br/> [latex]\\therefore \\; \\; |Gain|=\\frac{1}{\\sqrt{1+(\\omega CR)^2}} [/latex] <br/> [latex]\\;\\;0.25=\\frac{1}{\\sqrt{1+(\\omega \\times 5 \\times 10^{-6} \\times 50)^2}} [/latex] <br/> On solving,  <br/> [latex]\\omega =15.49 \\times 10^3 r/s [/latex] <br/> [latex]\\Rightarrow \\;\\; f=\\frac{15.49}{2 \\pi}=2.46 kHz[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a28.jpg": "gate_questions/gate_ee_2002/images/aa75b763a5641d74837e7aa7d721b855.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "4.92 kHz",
+        "html": "<div class=\"option_data\">4.92 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "0.49 kHz",
+        "html": "<div class=\"option_data\">0.49 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "2.46 kHz",
+        "html": "<div class=\"option_data\">2.46 kHz</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "24.6 kHz",
+        "html": "<div class=\"option_data\">24.6 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=6"
+  },
+  {
+    "number": "Question 29",
+    "text": "A series R-L-C circuit has R=[latex]50\\Omega[/latex], L=[latex]100\\mu [/latex] and C=[latex]1\\mu[/latex]. The lower half power frequency of the circuit is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A series R-L-C circuit has R=[latex]50\\Omega[/latex], L=[latex]100\\mu [/latex] and C=[latex]1\\mu[/latex]. The lower half power frequency of the circuit is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electric Circuits - Resonance and Locus Diagrams",
+    "explanation_text": "[latex]\\omega _0=\\frac{1}{\\sqrt{LC}}[/latex] [latex]\\;\\;=\\frac{1}{\\sqrt{100 \\times 10^{-6} \\times 10^{-6}}}=10^5 r/s [/latex] [latex]\\Delta \\omega =\\frac{R}{L}=\\frac{50}{100 \\times 10^{-6}}[/latex] [latex]\\;\\;=50 \\times 10^4 r/s [/latex] [latex]\\omega _{lower}=\\left [ \\sqrt{\\omega _0^2+\\left ( \\frac{\\Delta \\omega }{2} \\right )^2}- \\frac{\\Delta \\omega }{2}\\right ] [/latex] [latex]\\;\\;=\\left [ \\sqrt{(10^5)^2+\\left ( \\frac{5 \\times 10^5}{2} \\right )^2}-\\frac{5 \\times 10^5}{2} \\right ] [/latex] [latex]\\;\\;=10^5\\left [ \\sqrt{1+6.25}-2.5 \\right ] [/latex] [latex]\\;\\;=0.193 \\times 10^5 r/s [/latex] Hence, [latex] f_{lower}=\\frac{\\omega _{lower}}{2 \\pi}[/latex] [latex]\\;\\;=\\frac{0.193 \\times 10^5}{2 \\pi} [/latex] [latex]\\;\\;=3065 Hz\\approx 3.055kHz[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\omega _0=\\frac{1}{\\sqrt{LC}}[/latex] <br/> [latex]\\;\\;=\\frac{1}{\\sqrt{100 \\times 10^{-6} \\times 10^{-6}}}=10^5 r/s [/latex] <br/> [latex]\\Delta \\omega =\\frac{R}{L}=\\frac{50}{100 \\times 10^{-6}}[/latex] <br/> [latex]\\;\\;=50 \\times 10^4 r/s [/latex] <br/> [latex]\\omega _{lower}=\\left [ \\sqrt{\\omega _0^2+\\left ( \\frac{\\Delta \\omega }{2} \\right )^2}- \\frac{\\Delta \\omega }{2}\\right ] [/latex] <br/> [latex]\\;\\;=\\left [ \\sqrt{(10^5)^2+\\left ( \\frac{5 \\times 10^5}{2} \\right )^2}-\\frac{5 \\times 10^5}{2} \\right ] [/latex] <br/> [latex]\\;\\;=10^5\\left [ \\sqrt{1+6.25}-2.5 \\right ] [/latex] <br/> [latex]\\;\\;=0.193 \\times 10^5 r/s [/latex] <br/> Hence, [latex] f_{lower}=\\frac{\\omega _{lower}}{2 \\pi}[/latex] <br/> [latex]\\;\\;=\\frac{0.193 \\times 10^5}{2 \\pi} [/latex] <br/> [latex]\\;\\;=3065 Hz\\approx 3.055kHz[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "30.55 kHz",
+        "html": "<div class=\"option_data\">30.55 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "3.055 kHz",
+        "html": "<div class=\"option_data\">3.055 kHz</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "51.92 kHz",
+        "html": "<div class=\"option_data\">51.92 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1.92 kHz",
+        "html": "<div class=\"option_data\">1.92 kHz</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=6"
+  },
+  {
+    "number": "Question 30",
+    "text": "A 200 V, 2000 rpm, 10A, separately excited dc motor has an armature resistance\nof [latex]2\\Omega[/latex]. Rated dc voltage is applied to both the armature and field winding of the motor. If the armature drawn 5A from the source, the torque developed by the\nmotor is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A 200 V, 2000 rpm, 10A, separately excited dc motor has an armature resistance\nof [latex]2\\Omega[/latex]. Rated dc voltage is applied to both the armature and field winding of the motor. If the armature drawn 5A from the source, the torque developed by the\nmotor is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electrical Machines - DC Machines",
+    "explanation_text": "[latex]\\begin{aligned} (E_b)_{rated} &=200 -2 \\times 10=180V \\\\ \\text{Rated power}&= 180 \\times 10=1800W\\\\ \\text {Rated torque}&= \\frac{1800 \\times 60}{2 \\pi \\times 2000}=8.598Nm \\\\ \\text{Torque at} 5A, & \\\\ \\frac{T_2}{T_1}&=\\frac{I_{a_2}}{I_{a_1}} \\\\ T_2&= \\frac{5}{10} \\times 8.598=4.299Nm \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/64150cee2e200af94399207116da5476.jpg\" style=\"--smush-placeholder-width: 307px; --smush-placeholder-aspect-ratio: 307/129;\"/><br/>[latex]\\begin{aligned} (E_b)_{rated} &amp;=200 -2 \\times 10=180V \\\\ \\text{Rated power}&amp;= 180 \\times 10=1800W\\\\ \\text {Rated torque}&amp;= \\frac{1800 \\times 60}{2 \\pi \\times 2000}=8.598Nm \\\\ \\text{Torque at} 5A, &amp; \\\\ \\frac{T_2}{T_1}&amp;=\\frac{I_{a_2}}{I_{a_1}} \\\\ T_2&amp;= \\frac{5}{10} \\times 8.598=4.299Nm \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a30.jpg": "gate_questions/gate_ee_2002/images/64150cee2e200af94399207116da5476.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "4.30 Nm",
+        "html": "<div class=\"option_data\">4.30 Nm</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "4.77 Nm",
+        "html": "<div class=\"option_data\">4.77 Nm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0.45 Nm",
+        "html": "<div class=\"option_data\">0.45 Nm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0.50 Nm",
+        "html": "<div class=\"option_data\">0.50 Nm</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=6"
+  },
+  {
+    "number": "Question 31",
+    "text": "The rotor of a three phase, 5 kW, 400V, 50 Hz, slip ring induction motor is wound\nfor 6 poles while its stator is wound for 4 poles. The approximate average no load\nsteady state speed when this motor is connected to 400V, 50 Hz supply is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The rotor of a three phase, 5 kW, 400V, 50 Hz, slip ring induction motor is wound\nfor 6 poles while its stator is wound for 4 poles. The approximate average no load\nsteady state speed when this motor is connected to 400V, 50 Hz supply is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electrical Machines - Three Phase Induction Machines",
+    "explanation_text": "Induction motor will not work in this condition.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tInduction motor will not work in this condition.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "1500 rpm",
+        "html": "<div class=\"option_data\">1500 rpm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "500 rpm",
+        "html": "<div class=\"option_data\">500 rpm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0 rpm",
+        "html": "<div class=\"option_data\">0 rpm</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1000 rpm",
+        "html": "<div class=\"option_data\">1000 rpm</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=7"
+  },
+  {
+    "number": "Question 32",
+    "text": "The flux per pole in a synchronous motor with the field circuit ON and the stator\ndisconnected from the supply is found to be 25 mWb. When the stator is\nconnected to the rated supply with the field excitation unchanged, the flux per\npole in the machine is found to be 20 mWb while the motor is running on no load.\nAssuming no load losses to be zero, the no load current down by the motor from\nthe supply",
+    "html": "<div class=\"question_text\" data-value=\"1\">The flux per pole in a synchronous motor with the field circuit ON and the stator\ndisconnected from the supply is found to be 25 mWb. When the stator is\nconnected to the rated supply with the field excitation unchanged, the flux per\npole in the machine is found to be 20 mWb while the motor is running on no load.\nAssuming no load losses to be zero, the no load current down by the motor from\nthe supply</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Electrical Machines - Synchronous Machines",
+    "explanation_text": "Armature reaction is trying to deteriorate the main flux. So motor must be operating with leading power factor.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tArmature reaction is trying to deteriorate the main flux. So motor must be operating with leading power factor.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "lags the supply voltage",
+        "html": "<div class=\"option_data\">lags the supply voltage</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "leads the supply voltage",
+        "html": "<div class=\"option_data\">leads the supply voltage</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "is in phase with the supply voltage",
+        "html": "<div class=\"option_data\">is in phase with the supply voltage</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "is zero",
+        "html": "<div class=\"option_data\">is zero</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=7"
+  },
+  {
+    "number": "Question 33",
+    "text": "An 11 V pulse of 10 [latex]\\mu s[/latex] duration is applied to the circuit shown in figure.\r\nAssuming that the capacitor is completely discharged prior to applying the pulse,\r\nthe peak value of the capacitor voltage is",
+    "html": "<div class=\"question_text\" data-value=\"1\">An 11 V pulse of 10 [latex]\\mu s[/latex] duration is applied to the circuit shown in figure.\r\nAssuming that the capacitor is completely discharged prior to applying the pulse,\r\nthe peak value of the capacitor voltage is  <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/a532ca598fae62064a48ae88e2457296.jpg\" style=\"--smush-placeholder-width: 336px; --smush-placeholder-aspect-ratio: 336/136;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.8.jpg": "gate_questions/gate_ee_2002/images/a532ca598fae62064a48ae88e2457296.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electric Circuits - Transients and Steady State Response",
+    "explanation_text": "[latex]V_c(t)=V_c(\\infty )-[V_c(\\infty )-V_c(0 )]e^{-t/RC} [/latex] [latex]V_c(peak)=10-(10-0)e^{\\frac{10 \\times 10^{-6}}{\\frac{10}{11} \\times 10^3 \\times 11 \\times 10^{-9}}} \r\n =10(1-e^{-1})=6.32V[/latex] [latex] (Where \\;\\;R_{net}=10||1=\\frac{10}{11}k\\Omega ) [/latex] [latex]V_c(\\infty )=11 \\times \\frac{10}{10+1}=10V [/latex] and [latex]\\because[/latex] pulse of duration [latex]10\\mu s[/latex] is applies. Hence, capacitor charges till [latex]10\\mu s[/latex]  and then starts discharging, so [latex]V_c[/latex] will be maximum at [latex]t=10\\mu s[/latex].",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]V_c(t)=V_c(\\infty )-[V_c(\\infty )-V_c(0 )]e^{-t/RC} [/latex] <br/> [latex]V_c(peak)=10-(10-0)e^{\\frac{10 \\times 10^{-6}}{\\frac{10}{11} \\times 10^3 \\times 11 \\times 10^{-9}}} \r\n =10(1-e^{-1})=6.32V[/latex] <br/> [latex] (Where \\;\\;R_{net}=10||1=\\frac{10}{11}k\\Omega ) [/latex] <br/> [latex]V_c(\\infty )=11 \\times \\frac{10}{10+1}=10V [/latex] <br/> and<br/> [latex]\\because[/latex] pulse of duration [latex]10\\mu s[/latex] is applies. Hence, capacitor charges till [latex]10\\mu s[/latex]  and then starts discharging, so [latex]V_c[/latex] will be maximum at [latex]t=10\\mu s[/latex].\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "11 V",
+        "html": "<div class=\"option_data\">11 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "5.5 V",
+        "html": "<div class=\"option_data\">5.5 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "6.32 V",
+        "html": "<div class=\"option_data\">6.32 V</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "0.96 V",
+        "html": "<div class=\"option_data\">0.96 V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=7"
+  },
+  {
+    "number": "Question 34",
+    "text": "The output voltage ([latex]V_{0}[/latex]) of the Schmitt trigger shown in figure swings between +15V and -15V. Assume that the operational amplifier is ideal. The output\r\nwill change from +15V to -15V when the instantaneous value of the input\r\nsine wave is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The output voltage ([latex]V_{0}[/latex]) of the Schmitt trigger shown in figure swings between +15V and -15V. Assume that the operational amplifier is ideal. The output\r\nwill change from +15V to -15V when the instantaneous value of the input\r\nsine wave is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/b5b1a8e79ead2f77d6edafcb42c0beae.jpg\" style=\"--smush-placeholder-width: 402px; --smush-placeholder-aspect-ratio: 402/306;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.9.jpg": "gate_questions/gate_ee_2002/images/b5b1a8e79ead2f77d6edafcb42c0beae.jpg"
+    },
+    "type": "mcq",
+    "subject": "Analog Electronics - Oscillators and Feedback Amplifiers",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "5 V in the positive slope only",
+        "html": "<div class=\"option_data\">5 V in the positive slope only</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "5 V in the negative slope only",
+        "html": "<div class=\"option_data\">5 V in the negative slope only</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "5 V in the positive and negative slopes",
+        "html": "<div class=\"option_data\">5 V in the positive and negative slopes</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "3 V in the positive and negative slopes",
+        "html": "<div class=\"option_data\">3 V in the positive and negative slopes</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=7"
+  },
+  {
+    "number": "Question 35",
+    "text": "For the circuit shown in figure, the Boolean expression for the output Y in\r\nterms of inputs P, Q, R and S is",
+    "html": "<div class=\"question_text\" data-value=\"1\">For the circuit shown in figure, the Boolean expression for the output Y in\r\nterms of inputs P, Q, R and S is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/bc1dd868ebfefcbd8160f88ae3b0a0b9.jpg\" style=\"--smush-placeholder-width: 411px; --smush-placeholder-aspect-ratio: 411/185;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.10.jpg": "gate_questions/gate_ee_2002/images/bc1dd868ebfefcbd8160f88ae3b0a0b9.jpg"
+    },
+    "type": "mcq",
+    "subject": "Digital Electronics - Logic Gates",
+    "explanation_text": "[latex]Y=\\overline{(\\bar{P}\\cdot \\bar{Q})\\cdot (\\bar{R}\\cdot \\bar{S})}  [/latex]  [latex]\\because \\;\\; \\overline{\\bar{A}\\cdot \\bar{B}}=(A+B) [/latex] [latex]\\therefore \\;Y=\\overline{\\bar{P}\\cdot \\bar{Q}}+\\overline{\\bar{R}\\cdot \\bar{S}} [/latex] [latex]\\Rightarrow \\;Y=(P+Q+R+S)[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]Y=\\overline{(\\bar{P}\\cdot \\bar{Q})\\cdot (\\bar{R}\\cdot \\bar{S})}  [/latex]  [latex]\\because \\;\\; \\overline{\\bar{A}\\cdot \\bar{B}}=(A+B) [/latex] <br/> [latex]\\therefore \\;Y=\\overline{\\bar{P}\\cdot \\bar{Q}}+\\overline{\\bar{R}\\cdot \\bar{S}} [/latex] <br/> [latex]\\Rightarrow \\;Y=(P+Q+R+S)[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\bar{P}+\\bar{Q}+\\bar{R}+\\bar{S}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\bar{P}+\\bar{Q}+\\bar{R}+\\bar{S}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]P+Q+R+S[/latex]",
+        "html": "<div class=\"option_data\">[latex]P+Q+R+S[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\left ( \\bar{P}+\\bar{Q} \\right )+\\left ( \\bar{R}+\\bar{S} \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\left ( \\bar{P}+\\bar{Q} \\right )+\\left ( \\bar{R}+\\bar{S} \\right )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\left ( P+Q \\right )\\left ( R+S \\right )[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\left ( P+Q \\right )\\left ( R+S \\right )[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=7"
+  },
+  {
+    "number": "Question 36",
+    "text": "In the circuit shown in figure, it is found that the input ac voltage [latex]\\left ( V_{i} \\right )[/latex]  and current i are in phase. The coupling coefficient is [latex]K=\\frac{M}{\\sqrt{L_{1}L_{2}}}[/latex], where M is the mutual inductance between the two coils. The value of K and the dot polarity of\r\nthe coil P-Q are",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown in figure, it is found that the input ac voltage [latex]\\left ( V_{i} \\right )[/latex]  and current i are in phase. The coupling coefficient is [latex]K=\\frac{M}{\\sqrt{L_{1}L_{2}}}[/latex], where M is the mutual inductance between the two coils. The value of K and the dot polarity of\r\nthe coil P-Q are <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/e415a78465e7f0a59e0fdb065eb9162a.jpg\" style=\"--smush-placeholder-width: 460px; --smush-placeholder-aspect-ratio: 460/187;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.11.jpg": "gate_questions/gate_ee_2002/images/e415a78465e7f0a59e0fdb065eb9162a.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electric Circuits - Magnetically Coupled Circuits, Network Topology and Filters",
+    "explanation_text": "Input ac voltage and current will be in phase only at resonance condition, i.e. [latex]X_C=X_L [/latex] [latex]|-j12|=|j8+j8+2k\\sqrt{(j8)\\times (j8)}|[/latex] [latex] 12=8+8+16k [/latex] [latex]\\Rightarrow \\; k=-\\frac{4}{16}=-0.25[/latex] Hence, coupling will be opposite. Therefore, Dot will be at Q.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tInput ac voltage and current will be in phase only at resonance condition,<br/>i.e. [latex]X_C=X_L [/latex] <br/> [latex]|-j12|=|j8+j8+2k\\sqrt{(j8)\\times (j8)}|[/latex] <br/> [latex] 12=8+8+16k [/latex] <br/> [latex]\\Rightarrow \\; k=-\\frac{4}{16}=-0.25[/latex]<br/>Hence, coupling will be opposite.<br/> Therefore, Dot will be at Q.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "K = 0.25 and dot at P",
+        "html": "<div class=\"option_data\">K = 0.25 and dot at P</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "K = 0.5 and dot at P",
+        "html": "<div class=\"option_data\">K = 0.5 and dot at P</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "K = 0.25 and dot at Q",
+        "html": "<div class=\"option_data\">K = 0.25 and dot at Q</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "K = 0.5 and dot at Q",
+        "html": "<div class=\"option_data\">K = 0.5 and dot at Q</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=8"
+  },
+  {
+    "number": "Question 37",
+    "text": "Consider the circuit shown in figure. If the frequency of the source is 50 Hz,\r\nthen a value of [latex]t_{0}[/latex] which results in a transient free response is",
+    "html": "<div class=\"question_text\" data-value=\"1\">Consider the circuit shown in figure. If the frequency of the source is 50 Hz,\r\nthen a value of [latex]t_{0}[/latex] which results in a transient free response is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/18d15a12ff64d2bb01a8969a96c8b0c7.jpg\" style=\"--smush-placeholder-width: 458px; --smush-placeholder-aspect-ratio: 458/152;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.12.jpg": "gate_questions/gate_ee_2002/images/18d15a12ff64d2bb01a8969a96c8b0c7.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electric Circuits - Transients and Steady State Response",
+    "explanation_text": "For transient free response, [latex]\\tan(\\omega t_0)=\\frac{\\omega L}{R} [/latex] [latex]\\tan(2 \\pi \\times 50 \\times t_0)=\\frac{2 \\pi \\times 50 \\times 0.01}{5} [/latex] [latex]2 \\pi \\times 50 \\times t_0=\\tan ^{-1}\\left ( \\frac{\\pi}{5} \\right ) [/latex] [latex]\\;\\;=32.14^{\\circ}=0.561 rad [/latex] [latex]t_0=\\frac{0.561}{100 \\pi}=1.786ms[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor transient free response,<br/>[latex]\\tan(\\omega t_0)=\\frac{\\omega L}{R} [/latex] <br/> [latex]\\tan(2 \\pi \\times 50 \\times t_0)=\\frac{2 \\pi \\times 50 \\times 0.01}{5} [/latex] <br/> [latex]2 \\pi \\times 50 \\times t_0=\\tan ^{-1}\\left ( \\frac{\\pi}{5} \\right ) [/latex] <br/> [latex]\\;\\;=32.14^{\\circ}=0.561 rad [/latex] <br/> [latex]t_0=\\frac{0.561}{100 \\pi}=1.786ms[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0 ms",
+        "html": "<div class=\"option_data\">0 ms</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1.78 ms",
+        "html": "<div class=\"option_data\">1.78 ms</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "2.71 ms",
+        "html": "<div class=\"option_data\">2.71 ms</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "2.91 ms",
+        "html": "<div class=\"option_data\">2.91 ms</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=8"
+  },
+  {
+    "number": "Question 38",
+    "text": "A three phase thyristor bridge rectifier is used in a HVDC link. The firing angle a\r\n(as measured from the point of natural commutation) is constrained to lie\r\nbetween 5[latex]^\\circ[/latex] and 30[latex]^\\circ[/latex]. If the dc side current and ac side voltage magnitudes are\r\nconstant, which of the following statements is true (neglect harmonics in the ac\r\nside currents and commutation overlap in your analysis)",
+    "html": "<div class=\"question_text\" data-value=\"1\">A three phase thyristor bridge rectifier is used in a HVDC link. The firing angle a\r\n(as measured from the point of natural commutation) is constrained to lie\r\nbetween 5[latex]^\\circ[/latex] and 30[latex]^\\circ[/latex]. If the dc side current and ac side voltage magnitudes are\r\nconstant, which of the following statements is true (neglect harmonics in the ac\r\nside currents and commutation overlap in your analysis)</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Electronics - Phase Controlled Rectifiers",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =5^{\\circ}[/latex]",
+        "html": "<div class=\"option_data\">Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =5^{\\circ}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =30^{\\circ}[/latex]",
+        "html": "<div class=\"option_data\"> Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =30^{\\circ}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =15^{\\circ}[/latex]",
+        "html": "<div class=\"option_data\">Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =15^{\\circ}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =10^{\\circ}[/latex]",
+        "html": "<div class=\"option_data\">Reactive power absorbed by the rectifier is maximum when [latex]\\alpha =10^{\\circ}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=8"
+  },
+  {
+    "number": "Question 39",
+    "text": "A power system consists of 2 areas (Area 1 and Area 2) connected by a single tie\nline. It is required to carry out a load flow study on this system. While\nentering the network data, the tie-line data (connectivity and parameters) is\ninadvertently left out. If the load flow program is run with this incomplete data",
+    "html": "<div class=\"question_text\" data-value=\"1\">A power system consists of 2 areas (Area 1 and Area 2) connected by a single tie\nline. It is required to carry out a load flow study on this system. While\nentering the network data, the tie-line data (connectivity and parameters) is\ninadvertently left out. If the load flow program is run with this incomplete data</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Systems - Load Flow Studies",
+    "explanation_text": "For load flow study to converge there must be one slack bus in the system. As while entering the network data the tie-line data is not considered, two areas will now be treated as separate areas, hence, two slack bus (one in each area) is required.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tFor load flow study to converge there must be one slack bus in the system. As while entering the network data the tie-line data is not considered, two areas will now be treated as separate areas, hence, two slack bus (one in each area) is required.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "The load-flow will converge only if the slack bus is specified in Area 1",
+        "html": "<div class=\"option_data\">The load-flow will converge only if the slack bus is specified in Area 1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "The load-flow will converge only if the slack bus is specified in Area 2",
+        "html": "<div class=\"option_data\">The load-flow will converge only if the slack bus is specified in Area 2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "The load-flow will converge if the slack bus is specified in either Area 1 or\nArea 2",
+        "html": "<div class=\"option_data\">The load-flow will converge if the slack bus is specified in either Area 1 or\nArea 2</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "The load-flow will not converge if only one slack bus is specified.",
+        "html": "<div class=\"option_data\">The load-flow will not converge if only one slack bus is specified.</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=8"
+  },
+  {
+    "number": "Question 40",
+    "text": "A transmission line has a total series reactance of 0.2 pu. Reactive power\ncompensation is applied at the midpoint of the line and it is controlled such that\nthe midpoint voltage of the transmission line is always maintained at 0.98 pu. If\nvoltage at both ends of the line are maintained at 1.0 pu, then the steady state\npower transfer limit of the transmission line is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A transmission line has a total series reactance of 0.2 pu. Reactive power\ncompensation is applied at the midpoint of the line and it is controlled such that\nthe midpoint voltage of the transmission line is always maintained at 0.98 pu. If\nvoltage at both ends of the line are maintained at 1.0 pu, then the steady state\npower transfer limit of the transmission line is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Power Systems - Power System Stability",
+    "explanation_text": "[latex]P_{ss}=\\frac{1 \\times 0.98}{0.1}=9.8\\;pu[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/1c1349d37150fb0501729c0c224351cf.jpg\" style=\"--smush-placeholder-width: 334px; --smush-placeholder-aspect-ratio: 334/141;\"/><br/>[latex]P_{ss}=\\frac{1 \\times 0.98}{0.1}=9.8\\;pu[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a40.jpg": "gate_questions/gate_ee_2002/images/1c1349d37150fb0501729c0c224351cf.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "9.8 pu",
+        "html": "<div class=\"option_data\">9.8 pu</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "4.9 pu",
+        "html": "<div class=\"option_data\">4.9 pu</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "19.6 pu",
+        "html": "<div class=\"option_data\">19.6 pu</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "5 pu",
+        "html": "<div class=\"option_data\">5 pu</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=8"
+  },
+  {
+    "number": "Question 41",
+    "text": "A generator is connected to a transformer which feeds another transformer\r\nthrough a short feeder(as shown in figure). The zero sequence impedance values are\r\nexpressed in pu on a common base and are indicated in figure. The Thevenin\r\nequivalent zero sequence impedance at point B is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A generator is connected to a transformer which feeds another transformer\r\nthrough a short feeder(as shown in figure). The zero sequence impedance values are\r\nexpressed in pu on a common base and are indicated in figure. The Thevenin\r\nequivalent zero sequence impedance at point B is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/3aa6dd77faba5b2128e5885d8aa25f5f.jpg\" style=\"--smush-placeholder-width: 631px; --smush-placeholder-aspect-ratio: 631/222;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.16.jpg": "gate_questions/gate_ee_2002/images/3aa6dd77faba5b2128e5885d8aa25f5f.jpg"
+    },
+    "type": "mcq",
+    "subject": "Power Systems - Fault Analysis",
+    "explanation_text": "[latex]Z_{Th}=0.75+j0.22[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/947c5fe13ec9f85bd1d5b681ee50876c.jpg\" style=\"--smush-placeholder-width: 483px; --smush-placeholder-aspect-ratio: 483/195;\"/><br/>[latex]Z_{Th}=0.75+j0.22[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a41.jpg": "gate_questions/gate_ee_2002/images/947c5fe13ec9f85bd1d5b681ee50876c.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "0.8 + j0.6",
+        "html": "<div class=\"option_data\">0.8 + j0.6</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "0.75 + j0.22",
+        "html": "<div class=\"option_data\">0.75 + j0.22</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0.75 + j0.25",
+        "html": "<div class=\"option_data\">0.75 + j0.25</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1.5 + j0.25",
+        "html": "<div class=\"option_data\">1.5 + j0.25</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=9"
+  },
+  {
+    "number": "Question 42",
+    "text": "For the system [latex]\\dot{x}=\\begin{bmatrix} 2 & 3\\\\ 0&5 \\end{bmatrix} X +\\begin{bmatrix} 1\\\\ 0 \\end{bmatrix}u[/latex], which of the following statements is true?",
+    "html": "<div class=\"question_text\" data-value=\"1\">For the system [latex]\\dot{x}=\\begin{bmatrix} 2 &amp; 3\\\\ 0&amp;5 \\end{bmatrix} X +\\begin{bmatrix} 1\\\\ 0 \\end{bmatrix}u[/latex], which of the following statements is true?</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - State Variable Analysis",
+    "explanation_text": "[latex]|Q_C|=\\begin{bmatrix} 1& 2\\\\ 0 & 0 \\end{bmatrix}=0 [/latex] [latex]\\Rightarrow[/latex]  Uncontrollable. Characteristic equation: [latex]|sI-A|=0 [/latex] [latex]\\begin{bmatrix} s-2& -3\\\\ 0 & s-5 \\end{bmatrix}=0 [/latex] [latex]s^2-7s+13=0 [/latex] [latex]\\Rightarrow[/latex] eigen values, [latex]s =3.5 \\pm j0.866[/latex] i.e. roots lies on right side of s-plane . [latex]\\Rightarrow [/latex]  unstable.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]|Q_C|=\\begin{bmatrix} 1&amp; 2\\\\ 0 &amp; 0 \\end{bmatrix}=0 [/latex] <br/> [latex]\\Rightarrow[/latex]  Uncontrollable. <br/>Characteristic equation: <br/> [latex]|sI-A|=0 [/latex] <br/> [latex]\\begin{bmatrix} s-2&amp; -3\\\\ 0 &amp; s-5 \\end{bmatrix}=0 [/latex] <br/> [latex]s^2-7s+13=0 [/latex] <br/> [latex]\\Rightarrow[/latex] eigen values, [latex]s =3.5 \\pm j0.866[/latex] <br/>  i.e. roots lies on right side of s-plane .  <br/> [latex]\\Rightarrow [/latex]  unstable.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "The system is controllable but unstable",
+        "html": "<div class=\"option_data\">The system is controllable but unstable</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "The system is uncontrollable but unstable",
+        "html": "<div class=\"option_data\">The system is uncontrollable but unstable</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "The system is controllable but stable",
+        "html": "<div class=\"option_data\">The system is controllable but stable</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "The system is uncontrollable but stable",
+        "html": "<div class=\"option_data\">The system is uncontrollable but stable</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=9"
+  },
+  {
+    "number": "Question 43",
+    "text": "A unity feedback system has an open loop transfer function, [latex]G(s)=\\frac{K}{s^{2}}[/latex]. The root locus plot is",
+    "html": "<div class=\"question_text\" data-value=\"1\">A unity feedback system has an open loop transfer function, [latex]G(s)=\\frac{K}{s^{2}}[/latex]. The root locus plot is<img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/cd0610d738524d95080098bb395dc0ca.jpg\" style=\"--smush-placeholder-width: 550px; --smush-placeholder-aspect-ratio: 550/275;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.18a.jpg": "gate_questions/gate_ee_2002/images/cd0610d738524d95080098bb395dc0ca.jpg"
+    },
+    "type": "mcq",
+    "subject": "Control Systems - Root Locus Techniques",
+    "explanation_text": "[latex]G(s)H(s)=\\frac{K}{s^2}[/latex] [latex] \\therefore \\;\\;P_Z=2 [/latex] [latex]Centroid=\\frac{0}{2}=0 [/latex] Angle of asymptotes[latex]=90^{\\circ},270^{\\circ}[/latex] [latex] \\therefore \\;\\;[/latex] Option (B) is correct.",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]G(s)H(s)=\\frac{K}{s^2}[/latex] <br/> [latex] \\therefore \\;\\;P_Z=2 [/latex] <br/> [latex]Centroid=\\frac{0}{2}=0 [/latex] <br/> Angle of asymptotes[latex]=90^{\\circ},270^{\\circ}[/latex] <br/> [latex] \\therefore \\;\\;[/latex] Option (B) is correct.\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "a",
+        "html": "<div class=\"option_data\">a</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "b",
+        "html": "<div class=\"option_data\">b</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "c",
+        "html": "<div class=\"option_data\">c</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "d",
+        "html": "<div class=\"option_data\">d</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=9"
+  },
+  {
+    "number": "Question 44",
+    "text": "The transfer function of the system described by [latex]\\frac{d^{2}y}{dt^{2}}+\\frac{dy}{dt}=\\frac{du}{dt}+2u[/latex] with u as\ninput and y as output is",
+    "html": "<div class=\"question_text\" data-value=\"1\">The transfer function of the system described by [latex]\\frac{d^{2}y}{dt^{2}}+\\frac{dy}{dt}=\\frac{du}{dt}+2u[/latex] with u as\ninput and y as output is</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - Mathematical Models of Physical Systems",
+    "explanation_text": "[latex]\\frac{d^2y}{dt^2}+\\frac{dy}{dt}=\\frac{du}{dt}+2u [/latex] [latex]\\Rightarrow s^2Y(s)+sY(s)=sU(s)+2U(s)[/latex] [latex] \\therefore \\;\\; \\frac{Y(s)}{U(s)}=\\frac{s+2}{(s^2+s)}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]\\frac{d^2y}{dt^2}+\\frac{dy}{dt}=\\frac{du}{dt}+2u [/latex] <br/> [latex]\\Rightarrow s^2Y(s)+sY(s)=sU(s)+2U(s)[/latex] <br/> [latex] \\therefore \\;\\; \\frac{Y(s)}{U(s)}=\\frac{s+2}{(s^2+s)}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{\\left ( s+2 \\right )}{\\left ( s^{2}+s \\right )}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{\\left ( s+2 \\right )}{\\left ( s^{2}+s \\right )}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{\\left ( s+1 \\right )}{\\left ( s^{2}+s \\right )}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{\\left ( s+1 \\right )}{\\left ( s^{2}+s \\right )}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]\\frac{2}{\\left ( s^{2}+s \\right )}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{2}{\\left ( s^{2}+s \\right )}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{2s}{\\left ( s^{2}+s \\right )}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{2s}{\\left ( s^{2}+s \\right )}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "A",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=9"
+  },
+  {
+    "number": "Question 45",
+    "text": "For the system [latex]\\dot{x}=\\begin{bmatrix} 2 & 0\\\\ 0&4 \\end{bmatrix}+\\begin{bmatrix} 1\\\\ 1 \\end{bmatrix} u; y=\\begin{bmatrix} 4 & 0 \\end{bmatrix}X[/latex], with u as unit impulse and with zero initial state, the output, y, becomes",
+    "html": "<div class=\"question_text\" data-value=\"1\">For the system [latex]\\dot{x}=\\begin{bmatrix} 2 &amp; 0\\\\ 0&amp;4 \\end{bmatrix}+\\begin{bmatrix} 1\\\\ 1 \\end{bmatrix} u; y=\\begin{bmatrix} 4 &amp; 0 \\end{bmatrix}X[/latex], with u as unit impulse and with zero initial state, the output, y, becomes</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Control Systems - State Variable Analysis",
+    "explanation_text": "[latex]x(t)=e^{At}X(0)+\\int_{0}^{t}e^{A(t-\\tau) }BU(\\tau )d\\tau [/latex] [latex]\\because \\;\\; X(0)=0[/latex]  (as given) [latex]\\therefore \\;\\; x(t)=0+\\int_{0}^{t}\\begin{bmatrix} e^{2(t-\\tau )} &0 \\\\ 0 & e^{4(t-\\tau )} \\end{bmatrix}\\begin{bmatrix} 1\\\\ 1 \\end{bmatrix}\\delta (t)dt [/latex] [latex]\\;\\;=\\int_{0}^{t}\\begin{bmatrix} e^{2(t-\\tau )}\\\\ e^{2(t-\\tau )} \\end{bmatrix}\\delta (t)dt [/latex] [latex]\\;\\;=\\begin{bmatrix} e^{2t}\\\\ e^{4t} \\end{bmatrix} [/latex] Output  [latex]y(t)=\\begin{bmatrix} 4 &0 \\end{bmatrix}x(t) [/latex] [latex]\\;\\;=\\begin{bmatrix} 4 &0 \\end{bmatrix}\\begin{bmatrix} e^{2t}\\\\ e^{4t} \\end{bmatrix} [/latex] Hence, [latex]y(t)=4e^{2t}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]x(t)=e^{At}X(0)+\\int_{0}^{t}e^{A(t-\\tau) }BU(\\tau )d\\tau [/latex] <br/> [latex]\\because \\;\\; X(0)=0[/latex]  (as given) <br/> [latex]\\therefore \\;\\; x(t)=0+\\int_{0}^{t}\\begin{bmatrix} e^{2(t-\\tau )} &amp;0 \\\\ 0 &amp; e^{4(t-\\tau )} \\end{bmatrix}\\begin{bmatrix} 1\\\\ 1 \\end{bmatrix}\\delta (t)dt [/latex] <br/> [latex]\\;\\;=\\int_{0}^{t}\\begin{bmatrix} e^{2(t-\\tau )}\\\\ e^{2(t-\\tau )} \\end{bmatrix}\\delta (t)dt [/latex] <br/> [latex]\\;\\;=\\begin{bmatrix} e^{2t}\\\\ e^{4t} \\end{bmatrix} [/latex] <br/> Output  [latex]y(t)=\\begin{bmatrix} 4 &amp;0 \\end{bmatrix}x(t) [/latex] <br/> [latex]\\;\\;=\\begin{bmatrix} 4 &amp;0 \\end{bmatrix}\\begin{bmatrix} e^{2t}\\\\ e^{4t} \\end{bmatrix} [/latex] <br/> Hence, [latex]y(t)=4e^{2t}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "2[latex]e^{2t}[/latex]",
+        "html": "<div class=\"option_data\">2[latex]e^{2t}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "4[latex]e^{2t}[/latex]",
+        "html": "<div class=\"option_data\">4[latex]e^{2t}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "2[latex]e^{4t}[/latex]",
+        "html": "<div class=\"option_data\">2[latex]e^{4t}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "4[latex]e^{4t}[/latex]",
+        "html": "<div class=\"option_data\">4[latex]e^{4t}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=9"
+  },
+  {
+    "number": "Question 46",
+    "text": "The eigen values of the system represented by [latex]\\dot{X}=\\begin{bmatrix} 0 & 1&0 & 0\\\\ 0& 0& 1 &0 \\\\ 0 & 0 & 0& 1\\\\ 0 &0 & 0&1 \\end{bmatrix}[/latex] X are",
+    "html": "<div class=\"question_text\" data-value=\"1\">The eigen values of the system represented by [latex]\\dot{X}=\\begin{bmatrix} 0 &amp; 1&amp;0 &amp; 0\\\\ 0&amp; 0&amp; 1 &amp;0 \\\\ 0 &amp; 0 &amp; 0&amp; 1\\\\ 0 &amp;0 &amp; 0&amp;1 \\end{bmatrix}[/latex] X are</div>",
+    "images": {},
+    "type": "mcq",
+    "subject": "Engineering Mathematics - Linear Algebra",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0, 0, 0, 0",
+        "html": "<div class=\"option_data\">0, 0, 0, 0</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "1, 1, 1, 1",
+        "html": "<div class=\"option_data\">1, 1, 1, 1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "0, 0, 0, -1",
+        "html": "<div class=\"option_data\">0, 0, 0, -1</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "1, 0, 0, 0",
+        "html": "<div class=\"option_data\">1, 0, 0, 0</div>",
+        "is_correct": true,
+        "images": {}
+      }
+    ],
+    "answer": "D",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=10"
+  },
+  {
+    "number": "Question 47",
+    "text": "In the chopper circuit shown in figure, the input dc voltage has a constant value [latex]V_{s}[/latex]. The output voltage [latex]V_{o}[/latex] is assumed ripple-free. The switch S is operated with a switching time period T and a duty ratio D. what is the value of D at the boundary of continuous and\r\ndiscontinuous conduction of the inductor current [latex]i_L[/latex]?",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the chopper circuit shown in figure, the input dc voltage has a constant value [latex]V_{s}[/latex]. The output voltage [latex]V_{o}[/latex] is assumed ripple-free. The switch S is operated with a switching time period T and a duty ratio D. what is the value of D at the boundary of continuous and\r\ndiscontinuous conduction of the inductor current [latex]i_L[/latex]? <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/bf9f237323336eb3acb4f91c9ef80cb4.jpg\" style=\"--smush-placeholder-width: 449px; --smush-placeholder-aspect-ratio: 449/174;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.22.jpg": "gate_questions/gate_ee_2002/images/bf9f237323336eb3acb4f91c9ef80cb4.jpg"
+    },
+    "type": "mcq",
+    "subject": "Power Electronics - Choppers",
+    "explanation_text": "As the given chopper is buck chopper. [latex]\\begin{aligned} V_0&=\\alpha V_s\\\\ \\Delta I&=\\frac{V_0T_{off}}{L}=\\frac{\\alpha V_s(1-\\alpha )}{Lf}\\\\ \\Delta I&=2I_L=2I_0\\\\ \\Delta I&=2I_0=\\frac{\\alpha V_s(1-\\alpha )}{Lf} \\end{aligned}[/latex] [latex]\\frac{\\Delta L}{2}=I_{L(avg)}=I_{0(avg)}[/latex] this is applicable only at the boundary of continuous and discontinuous [latex]\\begin{aligned} L_c &=\\frac{\\alpha V_s(1-\\alpha )}{2I_0f} \\\\ L_c&=\\frac{\\alpha V_sR(1-\\alpha )}{R2I_0f} \\\\ (\\because & \\text{ multiplying and dividing by R}) \\\\ L_c&=\\frac{V_0 R(1-\\alpha )}{RI_02f} \\\\ L_c&= \\frac{I_0R(1-\\alpha )}{I_02f}\\\\ L_c&=\\frac{R(1-\\alpha )}{2f} \\\\ \\therefore &= \\text{ Boundary value of duty cycle is,}\\\\ \\frac{2fL}{R}&=1-\\alpha \\\\ \\alpha &= 1-\\frac{2fL}{R}=1-\\frac{2L}{RT} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\tAs the given chopper is buck chopper.<br/>[latex]\\begin{aligned} V_0&amp;=\\alpha V_s\\\\ \\Delta I&amp;=\\frac{V_0T_{off}}{L}=\\frac{\\alpha V_s(1-\\alpha )}{Lf}\\\\ \\Delta I&amp;=2I_L=2I_0\\\\ \\Delta I&amp;=2I_0=\\frac{\\alpha V_s(1-\\alpha )}{Lf} \\end{aligned}[/latex]<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/2e0e35040aa4255def94920d4ab6374e.jpg\" style=\"--smush-placeholder-width: 347px; --smush-placeholder-aspect-ratio: 347/158;\"/><br/>\n[latex]\\frac{\\Delta L}{2}=I_{L(avg)}=I_{0(avg)}[/latex]<br/>this is applicable only at the boundary of continuous and discontinuous<br/>[latex]\\begin{aligned} L_c &amp;=\\frac{\\alpha V_s(1-\\alpha )}{2I_0f} \\\\ L_c&amp;=\\frac{\\alpha V_sR(1-\\alpha )}{R2I_0f} \\\\ (\\because &amp; \\text{ multiplying and dividing by R}) \\\\ L_c&amp;=\\frac{V_0 R(1-\\alpha )}{RI_02f} \\\\ L_c&amp;= \\frac{I_0R(1-\\alpha )}{I_02f}\\\\ L_c&amp;=\\frac{R(1-\\alpha )}{2f} \\\\ \\therefore &amp;= \\text{ Boundary value of duty cycle is,}\\\\ \\frac{2fL}{R}&amp;=1-\\alpha \\\\ \\alpha &amp;= 1-\\frac{2fL}{R}=1-\\frac{2L}{RT} \\end{aligned}[/latex]\n\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a47.jpg": "gate_questions/gate_ee_2002/images/2e0e35040aa4255def94920d4ab6374e.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]D= 1-\\frac{V_{s}}{V_{0}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]D= 1-\\frac{V_{s}}{V_{0}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]D= \\frac{2L}{RT}[/latex]",
+        "html": "<div class=\"option_data\">[latex]D= \\frac{2L}{RT}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]D= 1-\\frac{2L}{RT}[/latex]",
+        "html": "<div class=\"option_data\">[latex]D= 1-\\frac{2L}{RT}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]D= \\frac{RT}{L}[/latex]",
+        "html": "<div class=\"option_data\">[latex]D= \\frac{RT}{L}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=10"
+  },
+  {
+    "number": "Question 48",
+    "text": "Figure shows an inverter circuit with a dc source voltage [latex]V_{s}[/latex]. The\r\nsemiconductor switches of the inverter are operated in such a manner that the\r\npole voltages [latex]V_{10}[/latex] and [latex]V_{20}[/latex] are as shown in figure. What is the rms value of\r\nthe pole-to-pole voltage [latex]V_{12}[/latex]?",
+    "html": "<div class=\"question_text\" data-value=\"1\">Figure shows an inverter circuit with a dc source voltage [latex]V_{s}[/latex]. The\r\nsemiconductor switches of the inverter are operated in such a manner that the\r\npole voltages [latex]V_{10}[/latex] and [latex]V_{20}[/latex] are as shown in figure. What is the rms value of\r\nthe pole-to-pole voltage [latex]V_{12}[/latex]? <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/4fc3b62cdaf0e3f0bff0374746debeb7.jpg\" style=\"--smush-placeholder-width: 652px; --smush-placeholder-aspect-ratio: 652/233;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.23.jpg": "gate_questions/gate_ee_2002/images/4fc3b62cdaf0e3f0bff0374746debeb7.jpg"
+    },
+    "type": "mcq",
+    "subject": "Power Electronics - Inverters",
+    "explanation_text": "[latex]\\begin{aligned} V_{12}&=V_{10}-V_{20} \\\\ V_{rms}&=V_s\\sqrt{\\frac{\\phi }{\\pi}} \\end{aligned}[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n<br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/bb0e7b3d5cecbb6ed80e61b5a8105fd8.jpg\" style=\"--smush-placeholder-width: 318px; --smush-placeholder-aspect-ratio: 318/273;\"/><br/>[latex]\\begin{aligned} V_{12}&amp;=V_{10}-V_{20} \\\\ V_{rms}&amp;=V_s\\sqrt{\\frac{\\phi }{\\pi}} \\end{aligned}[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {
+      "/wp-content/uploads/GATE/EE/20021/a48.jpg": "gate_questions/gate_ee_2002/images/bb0e7b3d5cecbb6ed80e61b5a8105fd8.jpg"
+    },
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{V_{s}\\phi }{\\pi \\sqrt{2}}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{V_{s}\\phi }{\\pi \\sqrt{2}}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]V_{s}\\sqrt{\\frac{\\phi }{\\pi }}[/latex]",
+        "html": "<div class=\"option_data\">[latex]V_{s}\\sqrt{\\frac{\\phi }{\\pi }}[/latex]</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "[latex]V_{s}\\sqrt{\\frac{\\phi }{2\\pi }}[/latex]",
+        "html": "<div class=\"option_data\">[latex]V_{s}\\sqrt{\\frac{\\phi }{2\\pi }}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "[latex]\\frac{V_{s}}{\\pi}[/latex]",
+        "html": "<div class=\"option_data\">[latex]\\frac{V_{s}}{\\pi}[/latex]</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "B",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=10"
+  },
+  {
+    "number": "Question 49",
+    "text": "In the circuit shown in figure, the switch is closed at time t=0.\r\nThe steady state value of the voltage [latex]V_c[/latex] is",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the circuit shown in figure, the switch is closed at time t=0.\r\nThe steady state value of the voltage [latex]V_c[/latex] is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/6ce62862ba67b965de12c9290d4de8f0.jpg\" style=\"--smush-placeholder-width: 395px; --smush-placeholder-aspect-ratio: 395/319;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.24.jpg": "gate_questions/gate_ee_2002/images/6ce62862ba67b965de12c9290d4de8f0.jpg"
+    },
+    "type": "mcq",
+    "subject": "Electric Circuits - Network Theorems",
+    "explanation_text": "",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\n</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "0 V",
+        "html": "<div class=\"option_data\">0 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "10 V",
+        "html": "<div class=\"option_data\">10 V</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "5 V",
+        "html": "<div class=\"option_data\">5 V</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "2.5 V",
+        "html": "<div class=\"option_data\">2.5 V</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=10"
+  },
+  {
+    "number": "Question 50",
+    "text": "In the single phase diode bridge rectifier shown in figure, the load resistor is\nR = 50[latex]\\Omega[/latex]. The source voltage is V=200 [latex]\\sin \\omega t[/latex], where [latex]\\omega =2\\pi \\times 50[/latex]\n radians per\nsecond. The power dissipated in the load resistor R is",
+    "html": "<div class=\"question_text\" data-value=\"1\">In the single phase diode bridge rectifier shown in figure, the load resistor is\nR = 50[latex]\\Omega[/latex]. The source voltage is V=200 [latex]\\sin \\omega t[/latex], where [latex]\\omega =2\\pi \\times 50[/latex]\n radians per\nsecond. The power dissipated in the load resistor R is <br/><img class=\"lazyload\" decoding=\"async\" src=\"gate_questions/gate_ee_2002/images/02f5440d60bc636fd8ecf8c850931c63.jpg\" style=\"--smush-placeholder-width: 308px; --smush-placeholder-aspect-ratio: 308/180;\"/></div>",
+    "images": {
+      "/wp-content/uploads/GATE/EE/20021/q2.25.jpg": "gate_questions/gate_ee_2002/images/02f5440d60bc636fd8ecf8c850931c63.jpg"
+    },
+    "type": "mcq",
+    "subject": "Power Electronics - Phase Controlled Rectifiers",
+    "explanation_text": "[latex]V_{rms}=\\frac{V_m}{\\sqrt{2}} [/latex] [latex]P=\\frac{V^2_{rms}}{R}=\\frac{V^2_{m}}{2R}[/latex] [latex]\\;\\;=\\frac{200^2}{2 \\times 50}=400W[/latex]",
+    "explanation_html": "<div class=\"mtq_explanation-text\">\t\r\n\t\t\t[latex]V_{rms}=\\frac{V_m}{\\sqrt{2}} [/latex] <br/> [latex]P=\\frac{V^2_{rms}}{R}=\\frac{V^2_{m}}{2R}[/latex] <br/> [latex]\\;\\;=\\frac{200^2}{2 \\times 50}=400W[/latex]\r\n\t\t\t</div>",
+    "explanation_images": {},
+    "options": [
+      {
+        "letter": "A",
+        "text": "[latex]\\frac{3200}{\\pi }[/latex] W",
+        "html": "<div class=\"option_data\">[latex]\\frac{3200}{\\pi }[/latex] W</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "B",
+        "text": "[latex]\\frac{400}{\\pi }[/latex] W",
+        "html": "<div class=\"option_data\">[latex]\\frac{400}{\\pi }[/latex] W</div>",
+        "is_correct": false,
+        "images": {}
+      },
+      {
+        "letter": "C",
+        "text": "400 W",
+        "html": "<div class=\"option_data\">400 W</div>",
+        "is_correct": true,
+        "images": {}
+      },
+      {
+        "letter": "D",
+        "text": "800 W",
+        "html": "<div class=\"option_data\">800 W</div>",
+        "is_correct": false,
+        "images": {}
+      }
+    ],
+    "answer": "C",
+    "source_url": "https://www.practicepaper.in/gate-ee/gate-ee-2002?page_no=10"
+  }
+]

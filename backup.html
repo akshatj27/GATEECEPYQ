@@ -49,8 +49,7 @@
       <div class="mb-6">
         <h2 class="text-lg font-semibold mb-2">Backup</h2>
         <p class="text-sm text-gray-400 mb-3">
-          Save your progress (marked questions and answered states) to a JSON
-          file.
+          Save your progress for both EC and EE (marked questions, answered states, and filters) to a JSON file.
         </p>
         <button
           id="backup-btn"
@@ -63,8 +62,7 @@
       <div class="border-t border-gray-700 pt-6">
         <h2 class="text-lg font-semibold mb-2">Restore</h2>
         <p class="text-sm text-gray-400 mb-3">
-          Restore your progress from a backup file. This will overwrite your
-          current saved progress.
+          Restore your progress from a backup file. This will merge with your current saved progress for both EC and EE.
         </p>
         <input
           type="file"
@@ -99,15 +97,25 @@
         // Backup functionality
         backupBtn.addEventListener("click", () => {
           try {
-            const markedQuestions =
-              localStorage.getItem("markedQuestions") || "[]";
-            const questionStates =
-              localStorage.getItem("questionStates") || "{}";
-
+            // Collect all GATE-related data from localStorage
             const backupData = {
-              markedQuestions: JSON.parse(markedQuestions),
-              questionStates: JSON.parse(questionStates),
+              // EC data (original keys for backward compatibility)
+              markedQuestions: JSON.parse(localStorage.getItem("markedQuestions") || "[]"),
+              questionStates: JSON.parse(localStorage.getItem("questionStates") || "{}"),
+              gateQuestionFilters: JSON.parse(localStorage.getItem("gateQuestionFilters") || "{}"),
+              
+              // EE data (with ee- prefix)
+              "ee-markedQuestions": JSON.parse(localStorage.getItem("ee-markedQuestions") || "[]"),
+              "ee-questionStates": JSON.parse(localStorage.getItem("ee-questionStates") || "{}"),
+              "ee-gateQuestionFilters": JSON.parse(localStorage.getItem("ee-gateQuestionFilters") || "{}"),
+              
+              // Calculator state (shared between both)
+              calculatorVisible: localStorage.getItem("calculatorVisible") || "false",
+              
+              // Metadata
               backupDate: new Date().toISOString(),
+              version: "2.0",
+              subjects: ["EC", "EE"]
             };
 
             const blob = new Blob([JSON.stringify(backupData, null, 2)], {
@@ -124,7 +132,7 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
 
-            statusMessage.textContent = "Backup file generated successfully!";
+            statusMessage.textContent = "Backup file generated successfully! Includes data for both EC and EE.";
             statusMessage.className = "mt-6 text-center text-sm text-green-400";
           } catch (error) {
             console.error("Backup failed:", error);
@@ -148,8 +156,11 @@
             try {
               const backupData = JSON.parse(event.target.result);
 
-              if (backupData.markedQuestions && backupData.questionStates) {
-                // Merge marked questions
+              // Handle both old format (v1.0) and new format (v2.0)
+              let restoredCount = 0;
+
+              // EC data restoration
+              if (backupData.markedQuestions) {
                 const existingMarked = JSON.parse(
                   localStorage.getItem("markedQuestions") || "[]"
                 );
@@ -161,8 +172,10 @@
                   "markedQuestions",
                   JSON.stringify(mergedMarked)
                 );
+                restoredCount++;
+              }
 
-                // Merge question states, with backup data taking precedence
+              if (backupData.questionStates) {
                 const existingStates = JSON.parse(
                   localStorage.getItem("questionStates") || "{}"
                 );
@@ -172,15 +185,76 @@
                   "questionStates",
                   JSON.stringify(mergedStates)
                 );
+                restoredCount++;
+              }
+
+              if (backupData.gateQuestionFilters) {
+                localStorage.setItem(
+                  "gateQuestionFilters",
+                  JSON.stringify(backupData.gateQuestionFilters)
+                );
+                restoredCount++;
+              }
+
+              // EE data restoration
+              if (backupData["ee-markedQuestions"]) {
+                const existingEEMarked = JSON.parse(
+                  localStorage.getItem("ee-markedQuestions") || "[]"
+                );
+                const backupEEMarked = backupData["ee-markedQuestions"] || [];
+                const mergedEEMarked = Array.from(
+                  new Set([...existingEEMarked, ...backupEEMarked])
+                );
+                localStorage.setItem(
+                  "ee-markedQuestions",
+                  JSON.stringify(mergedEEMarked)
+                );
+                restoredCount++;
+              }
+
+              if (backupData["ee-questionStates"]) {
+                const existingEEStates = JSON.parse(
+                  localStorage.getItem("ee-questionStates") || "{}"
+                );
+                const backupEEStates = backupData["ee-questionStates"] || {};
+                const mergedEEStates = { ...existingEEStates, ...backupEEStates };
+                localStorage.setItem(
+                  "ee-questionStates",
+                  JSON.stringify(mergedEEStates)
+                );
+                restoredCount++;
+              }
+
+              if (backupData["ee-gateQuestionFilters"]) {
+                localStorage.setItem(
+                  "ee-gateQuestionFilters",
+                  JSON.stringify(backupData["ee-gateQuestionFilters"])
+                );
+                restoredCount++;
+              }
+
+              // Calculator state restoration
+              if (backupData.calculatorVisible) {
+                localStorage.setItem("calculatorVisible", backupData.calculatorVisible);
+              }
+
+              if (restoredCount > 0) {
+                const subjects = [];
+                if (backupData.markedQuestions || backupData.questionStates) {
+                  subjects.push("EC");
+                }
+                if (backupData["ee-markedQuestions"] || backupData["ee-questionStates"]) {
+                  subjects.push("EE");
+                }
 
                 statusMessage.textContent =
-                  "Progress from file has been merged! Please refresh the main page.";
+                  `Progress restored successfully for ${subjects.join(" and ")}! Please refresh the main page(s).`;
                 statusMessage.className =
                   "mt-6 text-center text-sm text-green-400";
                 restoreInput.value = ""; // Clear file input
                 restoreBtn.disabled = true;
               } else {
-                throw new Error("Invalid backup file format.");
+                throw new Error("No valid data found in backup file.");
               }
             } catch (error) {
               console.error("Restore failed:", error);

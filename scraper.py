@@ -21,8 +21,9 @@ logging.basicConfig(
 logger = logging.getLogger("GATEScraper")
 
 class GATEScraper:
-    def __init__(self, base_url, output_dir="gate_questions", debug=False, max_threads=5):
-        self.base_url = base_url
+    def __init__(self, branch='ec', output_dir="gate_questions", debug=False, max_threads=5):
+        self.branch = branch.lower()
+        self.base_url = f"https://practicepaper.in/gate-{self.branch}/gate-{self.branch}-year-wise-questions"
         self.output_dir = output_dir
         self.debug = debug
         self.max_threads = max_threads
@@ -70,8 +71,8 @@ class GATEScraper:
             year_links = []
             links = soup.find_all('a')
             
-            # Regular expression to match year and set links
-            pattern = re.compile(r'gate-ec-\d{4}(?:-set-\d+)?$')
+            # Regular expression to match year and set links for the specified branch
+            pattern = re.compile(rf'gate-{self.branch}-\d{{4}}(?:-set-\d+)?$')
             
             for link in links:
                 href = link.get('href')
@@ -97,7 +98,7 @@ class GATEScraper:
             if not year_links:
                 logger.warning("No year links found, using predefined range")
                 years = list(range(2010, 2025))
-                year_links = [(str(year), str(year), f"https://practicepaper.in/gate-ec/gate-ec-{year}") for year in years]
+                year_links = [(str(year), str(year), f"https://practicepaper.in/gate-{self.branch}/gate-{self.branch}-{year}") for year in years]
             
             return year_links
         except Exception as e:
@@ -168,7 +169,8 @@ class GATEScraper:
                 if self.debug:
                     logger.info(f"Image already exists: {image_path}")
                 self.downloaded_images.add(image_url)
-                return os.path.join(image_folder, image_filename)
+                # Return relative path from the main output directory
+                return os.path.join(os.path.basename(year_dir), image_folder, image_filename)
             
             # Download and save the image
             response = requests.get(full_image_url, headers=self.headers, stream=True)
@@ -185,7 +187,8 @@ class GATEScraper:
             # Add to downloaded set
             self.downloaded_images.add(image_url)
             
-            return os.path.join(image_folder, image_filename)
+            # Return relative path from the main output directory
+            return os.path.join(os.path.basename(year_dir), image_folder, image_filename)
         except Exception as e:
             logger.error(f"Error downloading image {image_url}: {e}")
             if self.debug:
@@ -214,16 +217,17 @@ class GATEScraper:
             if not img_url or img_url.startswith('data:'):
                 continue
             
-            # Download the image
-            local_path = self.download_image(img_url, year_dir)
-            if local_path:
-                # Update the image attributes
-                img['src'] = f'gate_questions/{os.path.basename(year_dir)}/{local_path}'
+            # Download the image and get the relative path
+            relative_path = self.download_image(img_url, year_dir)
+            if relative_path:
+                # Update the image attributes to be relative to the root output folder
+                final_path = os.path.join(os.path.basename(self.output_dir), relative_path).replace("\\", "/")
+                img['src'] = final_path
                 if 'data-src' in img.attrs:
                     del img['data-src']  # Remove data-src to prevent lazyloading issues
                 
                 # Store mapping of original URL to local path
-                image_map[img_url] = local_path
+                image_map[img_url] = final_path
         
         return html_element, image_map
     
@@ -428,8 +432,8 @@ class GATEScraper:
     def download_year_questions(self, year, year_set_key, year_url):
         """Download questions for a specific year/set"""
         try:
-            # Create year directory (include set info in directory name if present)
-            year_dir = os.path.join(self.output_dir, f"gate_ec_{year_set_key}")
+            # Create branch-specific year directory
+            year_dir = os.path.join(self.output_dir, f"gate_{self.branch}_{year_set_key}")
             os.makedirs(year_dir, exist_ok=True)
             
             # Get the number of pages for this year
@@ -630,6 +634,7 @@ class GATEScraper:
     def run(self):
         """Main method to run the scraper"""
         try:
+            logger.info(f"Starting scraper for branch: {self.branch.upper()}")
             # Get all year links
             year_links = self.get_year_links()
             
@@ -659,13 +664,12 @@ class GATEScraper:
                     except Exception as e:
                         logger.error(f"Error processing year {year_set_key}: {e}")
             
-            # Save all data to a combined file
-            all_data_file = os.path.join(self.output_dir, "gate_ec_all_years.json")
+            # Save all data to a branch-specific combined file
+            all_data_file = os.path.join(self.output_dir, f"gate_{self.branch}_all_years.json")
             with open(all_data_file, 'w', encoding='utf-8') as f:
                 json.dump(all_data, f, ensure_ascii=False, indent=2)
             
-            if self.debug:
-                logger.info(f"All data saved successfully")
+            logger.info(f"All data for branch {self.branch.upper()} saved successfully to {all_data_file}")
             
             return True
         except Exception as e:
@@ -747,7 +751,8 @@ class GATEScraper:
 if __name__ == "__main__":
     import argparse
     
-    parser = argparse.ArgumentParser(description="Scrape GATE EC questions with images")
+    parser = argparse.ArgumentParser(description="Scrape GATE questions with images for a specific branch.")
+    parser.add_argument("--branch", default="ec", help="Specify the GATE branch to scrape (e.g., ec, ee, me, cse)")
     parser.add_argument("--output", default="gate_questions", help="Output directory for questions")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     parser.add_argument("--debug-page", help="Debug a specific page URL")
@@ -755,12 +760,12 @@ if __name__ == "__main__":
     parser.add_argument("--set", help="Scrape a specific set number (e.g., 1)")
     parser.add_argument("--threads", type=int, default=10, help="Maximum number of threads to use")
     parser.add_argument("--scrape-extra-aptitude", action="store_true", help="Scrape General Aptitude from CE, ME, CSE branches")
-    parser.add_argument("--scrape-ee-maths", action="store_true", help="Scrape Engineering Mathematics from EE, ME, CSE branches")
+    parser.add_argument("--scrape-extra-maths", action="store_true", help="Scrape Engineering Mathematics from EE, ME, CSE branches")
     
     args = parser.parse_args()
     
-    base_url = "https://practicepaper.in/gate-ec/gate-ec-year-wise-questions"
-    scraper = GATEScraper(base_url, output_dir=args.output, debug=args.debug, max_threads=args.threads)
+    # Instantiate the scraper with the specified branch
+    scraper = GATEScraper(branch=args.branch, output_dir=args.output, debug=args.debug, max_threads=args.threads)
     
     if args.debug_page:
         # Debug a specific page
@@ -773,39 +778,37 @@ if __name__ == "__main__":
             {'url': 'https://practicepaper.in/gate-cse/general-aptitude', 'subject': 'General Aptitude'}
         ]
         scraper.scrape_aptitude_from_other_branches(aptitude_urls_to_scrape)
-    elif args.scrape_ee_maths:
+    elif args.scrape_extra_maths:
         logger.info("Scraping Engineering Mathematics from other branches as requested.")
-        # Now including EE, ME, and CSE branches
         math_sources = [
             {'url': 'https://practicepaper.in/gate-ee/engineering-mathematics', 'branch': 'ee'},
             {'url': 'https://practicepaper.in/gate-me/engineering-mathematics', 'branch': 'me'},
             {'url': 'https://practicepaper.in/gate-cse/engineering-mathematics', 'branch': 'cse'}
         ]
-        # Use the new aggregated approach that stores all mathematics questions in one folder
         scraper.scrape_engineering_maths_from_other_branches(math_sources)
     elif args.year:
         # Scrape a specific year
         if args.set:
-            year_url = f"https://practicepaper.in/gate-ec/gate-ec-{args.year}-set-{args.set}"
+            year_url = f"https://practicepaper.in/gate-{args.branch}/gate-{args.branch}-{args.year}-set-{args.set}"
             year_set_key = f"{args.year}-set-{args.set}"
         else:
-            year_url = f"https://practicepaper.in/gate-ec/gate-ec-{args.year}"
+            year_url = f"https://practicepaper.in/gate-{args.branch}/gate-{args.branch}-{args.year}"
             year_set_key = args.year
             
         logger.info(f"Scraping specific year: {year_set_key} from {year_url}")
         
-        # Create year directory
-        year_dir = os.path.join(args.output, f"gate_ec_{year_set_key}")
+        # Create year directory (branch-specific)
+        year_dir = os.path.join(args.output, f"gate_{args.branch}_{year_set_key}")
         os.makedirs(year_dir, exist_ok=True)
         
         year_questions = scraper.download_year_questions(args.year, year_set_key, year_url)
         
-        logger.info(f"Saved {len(year_questions)} questions for year {year_set_key}")
+        logger.info(f"Saved {len(year_questions)} questions for year {year_set_key} of branch {args.branch.upper()}")
     else:
-        # Run the full scraper
+        # Run the full scraper for the specified branch
         success = scraper.run()
         
         if success:
-            print(f"Successfully scraped questions with images to {args.output}")
+            print(f"Successfully scraped {args.branch.upper()} questions with images to {args.output}")
         else:
-            print("Failed to scrape questions. Check scraper.log for details.")
+            print(f"Failed to scrape questions for {args.branch.upper()}. Check scraper.log for details.")

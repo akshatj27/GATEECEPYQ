@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=width=device-width, initial-scale=1.0"
+    />
+    <title>GATE EE Question Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              gray: {
+                50: "#FAFAFA",
+                100: "#F4F4F5",
+                200: "#E4E4E7",
+                300: "#D4D4D8",
+                400: "#A1A1AA",
+                500: "#71717A",
+                600: "#52525B",
+                700: "#3F3F46",
+                800: "#27272A",
+                950: "#09090B",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      /* Custom scrollbar styles */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+
+      /* Questions panel styling */
+      .question-btn {
+        transition: all 0.2s;
+      }
+      .question-btn:hover {
+        transform: translateY(-2px);
+      }
+      .question-btn.active {
+        background-color: #2563eb;
+        color: white;
+      }
+
+      /* LaTeX rendering fixes */
+      .katex {
+        font-size: 1.1em;
+      }
+      .katex-display {
+        overflow-x: auto;
+        padding: 0.5em 0;
+      }
+
+      /* Multiple select styling */
+      select[multiple] {
+        height: auto;
+        min-height: 120px;
+      }
+
+      select[multiple] option {
+        padding: 8px 12px;
+        margin-bottom: 2px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      select[multiple] option:checked {
+        background-color: #2563eb !important;
+        color: white;
+      }
+
+      /* Help text for multi-select */
+      .help-text {
+        font-size: 0.75rem;
+        color: #9ca3af;
+        margin-top: 0.25rem;
+        font-style: italic;
+      }
+
+      /* Floating Calculator Styles */
+      #calculatorContainer {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 480px;
+        height: 420px;
+        background-color: #1f2937;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        display: none;
+        overflow: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      #calculatorContainer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      #calculatorToggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3b82f6;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        border: none;
+        font-size: 20px;
+      }
+
+      #calculatorToggle:hover {
+        background-color: #2563eb;
+      }
+
+      .calculator-header {
+        padding: 8px;
+        background-color: #374151;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .calculator-header h3 {
+        margin: 0;
+        color: white;
+        font-size: 14px;
+      }
+
+      .calculator-close {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row">
+      <!-- Left sidebar for filters -->
+      <aside class="w-full lg:w-64 flex-shrink-0 mb-6 lg:mb-0 lg:mr-6">
+        <div class="bg-gray-800 rounded-xl p-4 sticky top-4">
+          <h2 class="text-xl font-bold mb-4 text-gray-100">Filters</h2>
+
+          <!-- Year selection -->
+          <div class="mb-4">
+            <label
+              for="year-select"
+              class="block text-sm font-medium text-gray-300 mb-1"
+              >Year</label
+            >
+            <select
+              id="year-select"
+              multiple
+              class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <!-- Years will be populated dynamically -->
+            </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple years</p>
+          </div>
+
+          <!-- Topic selection -->
+          <div class="mb-4">
+            <label
+              for="topic-select"
+              class="block text-sm font-medium text-gray-300 mb-1"
+              >Topic</label
+            >
+            <select
+              id="topic-select"
+              multiple
+              class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <!-- Topics will be populated dynamically -->
+            </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple topics</p>
+          </div>
+
+          <!-- Subtopic selection (dependent on topic) -->
+          <div class="mb-4">
+            <label
+              for="subtopic-select"
+              class="block text-sm font-medium text-gray-300 mb-1"
+              >Subtopic</label
+            >
+            <select
+              id="subtopic-select"
+              multiple
+              class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <!-- Subtopics will be populated based on selected topic -->
+            </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple subtopics</p>
+          </div>
+
+          <!-- Revision Mode selection -->
+          <div class="mb-4">
+            <label
+              for="revision-mode-select"
+              class="block text-sm font-medium text-gray-300 mb-1"
+              >Revision Mode</label
+            >
+            <select
+              id="revision-mode-select"
+              multiple
+              class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="all">All Questions</option>
+              <option value="marked">Marked for Review</option>
+              <option value="incorrect">Incorrectly Answered</option>
+              <option value="unanswered">Unanswered</option>
+            </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple modes</p>
+          </div>
+
+          <!-- Reset filters button -->
+          <button
+            id="reset-filters"
+            class="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200"
+          >
+            Reset Filters
+          </button>
+          <a
+            href="backup.html"
+            target="_blank"
+            class="mt-4 block text-center w-full bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md transition duration-200"
+          >
+            Backup/Restore Progress
+          </a>
+          <a
+            href="index.html"
+            class="mt-2 block text-center w-full text-xs text-gray-400 hover:text-gray-300 transition duration-200"
+          >
+            ← Switch to EC Questions
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main class="flex-grow">
+        <!-- Question display area -->
+        <div class="bg-gray-800 rounded-xl p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold">GATE EE Questions</h1>
+            <div class="text-sm text-gray-400">
+              Displaying <span id="question-count">0</span> questions
+            </div>
+          </div>
+
+          <!-- Questions container -->
+          <div id="questions-container" class="space-y-8">
+            <!-- Questions will be loaded here dynamically -->
+            <div class="text-center py-10 text-gray-400">
+              Loading questions...
+            </div>
+          </div>
+
+          <!-- Question Navigation Buttons -->
+          <div class="flex justify-between mt-6">
+            <button
+              id="prev-question"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-md transition duration-200"
+            >
+              Previous
+            </button>
+            <div>
+              <button
+                id="mark-review"
+                class="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md transition duration-200 mr-2"
+              >
+                Mark for Review
+              </button>
+              <button
+                id="next-question"
+                class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-md transition duration-200"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right sidebar for question selection -->
+      <aside class="w-full lg:w-48 flex-shrink-0 mt-6 lg:mt-0 lg:ml-6">
+        <div
+          class="bg-gray-800 rounded-xl p-4 sticky top-4 max-h-[calc(100vh-32px)] overflow-y-auto"
+        >
+          <h2 class="text-lg font-bold mb-3 text-gray-100">Questions</h2>
+          <div id="statistics-display" class="text-xs text-gray-400 mb-3">
+            <!-- Statistics will be populated here -->
+          </div>
+
+          <!-- Current year display -->
+          <div class="mb-3 text-center bg-gray-700 py-1 px-2 rounded-md">
+            <span id="current-year-display">All Years</span>
+          </div>
+
+          <!-- Question number buttons -->
+          <div id="question-buttons" class="grid grid-cols-4 gap-2">
+            <!-- Question buttons will be generated here -->
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Floating Calculator Container -->
+    <div id="calculatorContainer">
+      <div class="calculator-header">
+        <h3>Scientific Calculator</h3>
+        <button class="calculator-close" id="closeCalculator">×</button>
+      </div>
+      <iframe id="calculatorFrame" src="calc/index.html"></iframe>
+    </div>
+
+    <!-- Calculator Toggle Button -->
+    <button id="calculatorToggle" title="Toggle Calculator">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+        <line x1="12" y1="10" x2="12" y2="10"></line>
+        <line x1="8" y1="14" x2="8" y2="14"></line>
+        <line x1="16" y1="14" x2="16" y2="14"></line>
+        <line x1="8" y1="18" x2="8" y2="18"></line>
+        <line x1="16" y1="18" x2="16" y2="18"></line>
+        <line x1="12" y1="18" x2="12" y2="18"></line>
+      </svg>
+    </button>
+
+    <script>
+      // Global state for EE questions
+      let allQuestions = [];
+      let filteredQuestions = [];
+      let selectedYears = [];
+      let selectedTopics = [];
+      let selectedSubtopics = [];
+      let currentQuestionIndex = 0;
+      let revisionMode = ["all"];
+      let markedQuestions = JSON.parse(
+        localStorage.getItem("ee-markedQuestions") || "[]"
+      );
+      let questionStates = JSON.parse(
+        localStorage.getItem("ee-questionStates") || "{}"
+      );
+
+      // Fetch the EE questions data
+      async function loadQuestions() {
+        try {
+          const response = await fetch("gate_ee_all_years.json");
+          const data = await response.json();
+
+          // Process the data for the app
+          allQuestions = processQuestionData(data);
+
+          // Initialize the app
+          initializeApp(allQuestions);
+        } catch (error) {
+          console.error("Error loading EE questions:", error);
+          document.getElementById(
+            "questions-container"
+          ).innerHTML = `<div class="text-center py-10 text-red-500">
+              <p>Failed to load EE questions. Please try refreshing the page.</p>
+              <p class="text-sm mt-2">${error.message}</p>
+             </div>`;
+        }
+      }
+
+      // Process the raw question data into a flat array with metadata
+      function processQuestionData(data) {
+        const questions = [];
+
+        Object.entries(data).forEach(([year, yearQuestions]) => {
+          // Special handling for dummy sections - they need a better display name
+          let displayYear = year;
+          if (year === "dummy_aptitude") {
+            displayYear = "General Aptitude";
+          } else if (year === "dummy_engineering_mathematics") {
+            displayYear = "Engineering Mathematics";
+          }
+
+          yearQuestions.forEach((question, index) => {
+            // Skip entries without a proper question number or text
+            if (!question.number || !question.text) return;
+
+            // Create a processed question object
+            questions.push({
+              id: `${year}-${index}`,
+              number: question.number,
+              displayNumber: index + 1, // This will be updated when filtering
+              year: year,
+              displayYear: displayYear, // Add displayYear for better UI presentation
+              text: question.text,
+              html: question.html || `<div>${question.text}</div>`,
+              subject: question.subject || "General",
+              topic: question.subject?.split(" - ")?.[0] || "General",
+              subtopic: question.subject?.split(" - ")?.[1] || "General",
+              explanation:
+                question.explanation_html || question.explanation_text || "",
+              images: question.images || {},
+              answer: question.answer || "",
+              source_url: question.source_url || "",
+              type: question.type || "text", // Added type for numerical/text
+              answer_min: question.answer_min || null, // Added for numerical range
+              answer_max: question.answer_max || null, // Added for numerical range
+              options: question.options || [], // Added for mcq options
+              solved:
+                questionStates[year + "-" + question.number]?.solved ||
+                "unsolved", // Added solved status
+            });
+          });
+        });
+
+        return questions;
+      }
+
+      // Initialize the application
+      function initializeApp(questions) {
+        // Populate filter dropdowns
+        populateYearFilter(questions);
+        populateTopicFilter(questions);
+
+        // Load saved filters from localStorage
+        loadSavedFilters();
+
+        // Set up event listeners
+        setupEventListeners();
+
+        // Apply initial filtering
+        applyFilters(); // This will call updateStatistics
+
+        // Update year display on initial load
+        updateYearDisplay();
+      }
+
+      // Load saved filters from localStorage for EE
+      function loadSavedFilters() {
+        try {
+          const savedFilters = JSON.parse(
+            localStorage.getItem("ee-gateQuestionFilters")
+          );
+          if (savedFilters) {
+            selectedYears = savedFilters.years || [];
+            selectedTopics = savedFilters.topics || [];
+            selectedSubtopics = savedFilters.subtopics || [];
+            revisionMode = savedFilters.revisionMode || ["all"];
+
+            // Apply saved selections to dropdowns
+            setMultiSelectValues("year-select", selectedYears);
+            setMultiSelectValues("topic-select", selectedTopics);
+            setMultiSelectValues("revision-mode-select", revisionMode);
+
+            // Update subtopic filter based on selected topics
+            updateSubtopicFilter();
+
+            // Set saved subtopics (after updating the filter)
+            setMultiSelectValues("subtopic-select", selectedSubtopics);
+          } else {
+            // Default to 2024 if no saved filters
+            const yearSelect = document.getElementById("year-select");
+            for (let i = 0; i < yearSelect.options.length; i++) {
+              if (yearSelect.options[i].value === "2024") {
+                yearSelect.options[i].selected = true;
+                selectedYears = ["2024"];
+                break;
+              }
+            }
+          }
+        } catch (error) {
+          console.error("Error loading saved filters:", error);
+          // Default to 2024 if error
+          const yearSelect = document.getElementById("year-select");
+          for (let i = 0; i < yearSelect.options.length; i++) {
+            if (yearSelect.options[i].value === "2024") {
+              yearSelect.options[i].selected = true;
+              selectedYears = ["2024"];
+              break;
+            }
+          }
+        }
+      }
+
+      // Save filters to localStorage for EE
+      function saveFiltersToLocalStorage() {
+        try {
+          const filtersToSave = {
+            years: selectedYears,
+            topics: selectedTopics,
+            subtopics: selectedSubtopics,
+            revisionMode: revisionMode,
+          };
+
+          localStorage.setItem(
+            "ee-gateQuestionFilters",
+            JSON.stringify(filtersToSave)
+          );
+        } catch (error) {
+          console.error("Error saving filters to localStorage:", error);
+        }
+      }
+
+      // Helper function to set multiple values in a select element
+      function setMultiSelectValues(selectId, values) {
+        const selectElement = document.getElementById(selectId);
+        if (!selectElement || !values.length) return;
+
+        for (let i = 0; i < selectElement.options.length; i++) {
+          selectElement.options[i].selected = values.includes(
+            selectElement.options[i].value
+          );
+        }
+      }
+
+      // Populate year filter dropdown
+      function populateYearFilter(questions) {
+        const yearSelect = document.getElementById("year-select");
+        // Extract unique years and sort them, keeping real years at the top
+        const allYears = [...new Set(questions.map((q) => q.year))];
+
+        // Separate real years and dummy years
+        const realYears = allYears
+          .filter((year) => !year.startsWith("dummy_"))
+          .sort()
+          .reverse();
+
+        const dummyYears = allYears.filter((year) => year.startsWith("dummy_"));
+
+        // Add "All Years" option
+        const allYearsOption = document.createElement("option");
+        allYearsOption.value = "all";
+        allYearsOption.textContent = "All Years";
+        yearSelect.appendChild(allYearsOption);
+
+        // Add real years first
+        realYears.forEach((year) => {
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = `GATE ${year}`;
+          yearSelect.appendChild(option);
+        });
+
+        // Add a separator if we have dummy years
+        if (dummyYears.length > 0) {
+          const separator = document.createElement("option");
+          separator.disabled = true;
+          separator.textContent = "──────────────";
+          yearSelect.appendChild(separator);
+        }
+
+        // Add dummy years with descriptive names
+        dummyYears.forEach((year) => {
+          const displayName =
+            questions.find((q) => q.year === year)?.displayYear || year;
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = displayName;
+          yearSelect.appendChild(option);
+        });
+      }
+
+      // Populate topic filter dropdown
+      function populateTopicFilter(questions) {
+        const topicSelect = document.getElementById("topic-select");
+        const topics = [...new Set(questions.map((q) => q.topic))].sort();
+
+        // Add "All Topics" option
+        const allTopicsOption = document.createElement("option");
+        allTopicsOption.value = "all";
+        allTopicsOption.textContent = "All Topics";
+        topicSelect.appendChild(allTopicsOption);
+
+        topics.forEach((topic) => {
+          if (!topic) return; // Skip empty topics
+
+          const option = document.createElement("option");
+          option.value = topic;
+          option.textContent = topic;
+          topicSelect.appendChild(option);
+        });
+      }
+
+      // Update subtopic filter based on selected topics
+      function updateSubtopicFilter() {
+        const subtopicSelect = document.getElementById("subtopic-select");
+
+        // Clear current options
+        while (subtopicSelect.options.length > 0) {
+          subtopicSelect.remove(0);
+        }
+
+        // Add "All Subtopics" option
+        const allSubtopicsOption = document.createElement("option");
+        allSubtopicsOption.value = "all";
+        allSubtopicsOption.textContent = "All Subtopics";
+        subtopicSelect.appendChild(allSubtopicsOption);
+
+        // If no specific topics are selected or "all" is selected, disable the subtopic selector
+        if (
+          selectedTopics.length === 0 ||
+          (selectedTopics.length === 1 && selectedTopics[0] === "all")
+        ) {
+          subtopicSelect.disabled = true;
+          return;
+        }
+
+        // Enable the subtopic selector
+        subtopicSelect.disabled = false;
+
+        // Get unique subtopics for the selected topics
+        const subtopics = [
+          ...new Set(
+            allQuestions
+              .filter(
+                (q) =>
+                  selectedTopics.includes(q.topic) ||
+                  selectedTopics.includes("all")
+              )
+              .map((q) => q.subtopic)
+          ),
+        ].sort();
+
+        // Add the subtopics as options
+        subtopics.forEach((subtopic) => {
+          if (!subtopic) return; // Skip empty subtopics
+
+          const option = document.createElement("option");
+          option.value = subtopic;
+          option.textContent = subtopic;
+          subtopicSelect.appendChild(option);
+        });
+      }
+
+      // Update the year display based on selected years
+      function updateYearDisplay() {
+        const yearDisplay = document.getElementById("current-year-display");
+
+        if (
+          selectedYears.length === 0 ||
+          (selectedYears.length === 1 && selectedYears[0] === "all")
+        ) {
+          yearDisplay.textContent = "All Years";
+        } else if (selectedYears.length === 1) {
+          const year = selectedYears[0];
+          // If it's a dummy year, show its display name
+          if (year.startsWith("dummy_")) {
+            // Find a question with this year to get its displayYear
+            const sampleQuestion = allQuestions.find((q) => q.year === year);
+            yearDisplay.textContent = sampleQuestion?.displayYear || year;
+          } else {
+            // For real years, show "GATE YYYY"
+            yearDisplay.textContent = `GATE ${year}`;
+          }
+        } else {
+          yearDisplay.textContent = `Multiple Years (${selectedYears.length})`;
+        }
+      }
+
+      // Apply filters and render questions
+      function applyFilters() {
+        // Filter questions based on current selections
+        filteredQuestions = allQuestions.filter((q) => {
+          const yearMatch =
+            selectedYears.length === 0 ||
+            selectedYears.includes("all") ||
+            selectedYears.includes(q.year);
+
+          const topicMatch =
+            selectedTopics.length === 0 ||
+            selectedTopics.includes("all") ||
+            selectedTopics.includes(q.topic);
+
+          const subtopicMatch =
+            selectedSubtopics.length === 0 ||
+            selectedSubtopics.includes("all") ||
+            selectedSubtopics.includes(q.subtopic);
+
+          let revisionMatch = false;
+          if (revisionMode.includes("all") || revisionMode.length === 0) {
+            revisionMatch = true;
+          } else {
+            const questionState = questionStates[q.year + "-" + q.number];
+            const isMarked =
+              revisionMode.includes("marked") && markedQuestions.includes(q.id);
+            const isIncorrect =
+              revisionMode.includes("incorrect") &&
+              questionState &&
+              questionState.solved === "incorrect";
+            const isUnanswered =
+              revisionMode.includes("unanswered") &&
+              (!questionState || questionState.solved === "unsolved");
+            revisionMatch = isMarked || isIncorrect || isUnanswered;
+          }
+
+          return yearMatch && topicMatch && subtopicMatch && revisionMatch;
+        });
+
+        // Update question numbers for display
+        filteredQuestions.forEach((q, index) => {
+          q.displayNumber = index + 1;
+        });
+
+        // Update question count
+        document.getElementById("question-count").textContent =
+          filteredQuestions.length;
+
+        // Reset current question index
+        currentQuestionIndex = 0;
+
+        // Render the questions
+        renderQuestions(filteredQuestions);
+
+        // Render the question selection buttons
+        renderQuestionButtons(filteredQuestions);
+
+        // Update the mark review button
+        updateMarkReviewButton();
+        // Update statistics
+        updateStatistics(filteredQuestions);
+      }
+
+      // Render the filtered questions
+      function renderQuestions(questions) {
+        const container = document.getElementById("questions-container");
+
+        if (questions.length === 0) {
+          container.innerHTML = `
+            <div class="text-center py-10 text-gray-400">
+              No questions match the selected filters. Try different filter options.
+            </div>`;
+          return;
+        }
+
+        // Get the current question
+        const q = questions[currentQuestionIndex];
+        const isMultipleAnswerMcq = q.type === "mcq" && Array.isArray(q.answer);
+
+        container.innerHTML = `
+          <div id="question-${
+            q.displayNumber
+          }" class="question-card bg-gray-700 rounded-lg p-5 shadow-lg">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold">Q${q.displayNumber}. ${q.year}</h3>
+              <div>
+                <span class="bg-blue-600 text-white text-xs py-1 px-2 rounded mr-1">${
+                  q.topic
+                }</span>
+                ${
+                  q.subtopic
+                    ? `<span class="bg-purple-600 text-white text-xs py-1 px-2 rounded">${q.subtopic}</span>`
+                    : ""
+                }
+              </div>
+            </div>
+            
+            <div class="question-content mb-4">
+              ${q.html}
+            </div>
+
+            <!-- Answer Input -->
+            <div class="mb-3">
+              <label for="answer-${
+                q.displayNumber
+              }" class="block text-sm font-medium text-gray-300 mb-1">Your Answer:</label>
+              ${
+                q.type === "numerical"
+                  ? `<input type="number" id="answer-${q.displayNumber}" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter numerical answer">`
+                  : q.type === "mcq"
+                  ? `
+                    <div class="space-y-2">
+                      ${q.options
+                        .map(
+                          (option) => `
+                        <label class="flex items-center relative hover:bg-gray-600 p-1 rounded-md">
+                          <input type="${
+                            isMultipleAnswerMcq ? "checkbox" : "radio"
+                          }" name="answer-${q.displayNumber}" value="${
+                            option.letter
+                          }" class="hidden peer">
+                          <div class="w-5 h-5 rounded-md border border-gray-600 bg-gray-700 text-white mr-2 flex items-center justify-center peer-checked:bg-blue-600 peer-checked:border-blue-600">
+                            ${option.letter}
+                          </div>
+                          ${option.text}
+                        </label>
+                      `
+                        )
+                        .join("")}
+                    </div>
+                  `
+                  : `<input type="text" id="answer-${q.displayNumber}" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter answer">`
+              }
+            </div>
+
+            <!-- Submit Button -->
+            <button class="submit-answer bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200" data-question="${
+              q.displayNumber
+            }">Submit Answer</button>
+            
+            <!-- Feedback Area -->
+            <div id="feedback-${q.displayNumber}" class="mt-3 text-sm"></div>
+            
+            <!-- Explanation (Hidden by default) -->
+            <details class="mt-4 pt-4 border-t border-gray-600">
+              <summary class="font-semibold text-gray-400 cursor-pointer">Show Explanation</summary>
+              <div class="explanation-content text-gray-300 mt-2">
+                ${q.explanation}
+                ${
+                  q.type === "numerical"
+                    ? `<div class="mt-2 font-medium">Correct Range: <span class="text-green-400">${q.answer_min} - ${q.answer_max}</span></div>`
+                    : q.answer
+                    ? `<div class="mt-2 font-medium">Correct Answer: <span class="text-green-400">${q.answer}</span></div>`
+                    : ""
+                }
+              </div>
+            </details>
+            
+            <div class="flex justify-between items-center mt-4 pt-3 border-t border-gray-600 text-sm text-gray-400">
+              
+              
+            </div>
+          </div>
+        `;
+
+        // Render LaTeX after inserting content
+        renderMathInElement(container, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "[latex]", right: "[/latex]", display: false },
+          ],
+        });
+
+        // Add event listeners to submit buttons
+        const submitButtons = document.querySelectorAll(".submit-answer");
+        submitButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const questionNumber = this.dataset.question;
+            checkAnswer(questionNumber);
+          });
+        });
+      }
+
+      // Render question selection buttons
+      function renderQuestionButtons(questions) {
+        const container = document.getElementById("question-buttons");
+
+        if (questions.length === 0) {
+          container.innerHTML = `<div class="col-span-4 text-center text-gray-400 py-2">No questions</div>`;
+          return;
+        }
+
+        container.innerHTML = questions
+          .map(
+            (q) => `
+          <button 
+            class="question-btn bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium rounded-md py-2" 
+            data-question="${q.displayNumber}"
+            style="${
+              markedQuestions.includes(q.id)
+                ? "background-color: orange;"
+                : q.solved === "correct"
+                ? "background-color: green;"
+                : q.solved === "incorrect"
+                ? "background-color: red;"
+                : ""
+            }">
+            ${q.displayNumber}
+          </button>
+        `
+          )
+          .join("");
+
+        // Add event listeners to buttons
+        const buttons = container.querySelectorAll(".question-btn");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const questionNumber = parseInt(this.dataset.question);
+            currentQuestionIndex = questionNumber - 1; // Adjust index
+            renderQuestions(filteredQuestions); // Re-render questions
+            updateMarkReviewButton();
+          });
+        });
+      }
+
+      // Update Statistics Display
+      function updateStatistics(questions) {
+        const statsContainer = document.getElementById("statistics-display");
+        if (!statsContainer) return;
+
+        const total = questions.length;
+        if (total === 0) {
+          statsContainer.innerHTML = "No questions to display stats for.";
+          return;
+        }
+
+        let correctCount = 0;
+        let incorrectCount = 0;
+        let unansweredCount = 0;
+        let markedCount = 0;
+
+        questions.forEach((q) => {
+          const state = questionStates[q.year + "-" + q.number];
+          if (state) {
+            if (state.solved === "correct") correctCount++;
+            else if (state.solved === "incorrect") incorrectCount++;
+            else unansweredCount++; // Includes 'unsolved'
+          } else {
+            unansweredCount++; // No state means unsolved
+          }
+
+          if (markedQuestions.includes(q.id)) {
+            markedCount++;
+          }
+        });
+
+        // Ensure all questions are accounted for in solved/unsolved status if not in questionStates
+        correctCount = questions.filter((q) => q.solved === "correct").length;
+        incorrectCount = questions.filter(
+          (q) => q.solved === "incorrect"
+        ).length;
+        unansweredCount = questions.filter(
+          (q) => q.solved === "unsolved" || !q.solved
+        ).length;
+
+        const correctPercent =
+          total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+        const incorrectPercent =
+          total > 0 ? ((incorrectCount / total) * 100).toFixed(1) : 0;
+        const unansweredPercent =
+          total > 0 ? ((unansweredCount / total) * 100).toFixed(1) : 0;
+
+        statsContainer.innerHTML = `
+          <p>Correct: ${correctCount} (${correctPercent}%)</p>
+          <p>Incorrect: ${incorrectCount} (${incorrectPercent}%)</p>
+          <p>Unanswered: ${unansweredCount} (${unansweredPercent}%)</p>
+          <p>Marked: ${markedCount}</p>
+        `;
+      }
+
+      // Check the answer for EE questions
+      function checkAnswer(questionNumber) {
+        const question = filteredQuestions.find(
+          (q) => q.displayNumber == questionNumber
+        );
+        let userAnswer = "";
+        const feedbackDiv = document.getElementById(
+          `feedback-${questionNumber}`
+        );
+
+        let isCorrect = false;
+
+        if (question.type === "numerical") {
+          userAnswer = document.getElementById(
+            `answer-${questionNumber}`
+          ).value;
+          const answerMin = question.answer_min;
+          const answerMax = question.answer_max;
+
+          if (userAnswer !== "" && !isNaN(userAnswer)) {
+            const userAnswerNum = parseFloat(userAnswer);
+            if (userAnswerNum >= answerMin && userAnswerNum <= answerMax) {
+              isCorrect = true;
+            }
+          }
+        } else if (question.type === "mcq") {
+          // Get selected checkbox values
+          const selectedOptions = document.querySelectorAll(
+            `input[name="answer-${questionNumber}"]:checked`
+          );
+          userAnswer = Array.from(selectedOptions).map(
+            (option) => option.value
+          );
+
+          if (question.answer) {
+            if (Array.isArray(question.answer)) {
+              // Multiple correct answers
+              isCorrect =
+                question.answer.every((correctAnswer) =>
+                  userAnswer
+                    .map((ua) => ua.trim().toLowerCase())
+                    .includes(correctAnswer.trim().toLowerCase())
+                ) && userAnswer.length === question.answer.length;
+            } else {
+              // Single correct answer (treat as text)
+              isCorrect =
+                userAnswer.length === 1 &&
+                userAnswer[0].trim().toLowerCase() ===
+                  question.answer.trim().toLowerCase();
+            }
+          }
+        } else {
+          userAnswer = document.getElementById(
+            `answer-${questionNumber}`
+          ).value;
+          // Handle text-based answers and multiple correct answers
+          if (question.answer) {
+            if (Array.isArray(question.answer)) {
+              isCorrect = question.answer.some(
+                (correctAnswer) =>
+                  correctAnswer.trim().toLowerCase() ===
+                  userAnswer.trim().toLowerCase()
+              );
+            } else {
+              isCorrect =
+                userAnswer.trim().toLowerCase() ===
+                question.answer.trim().toLowerCase();
+            }
+          }
+        }
+
+        if (isCorrect) {
+          feedbackDiv.textContent = "Correct!";
+          feedbackDiv.className = "mt-3 text-sm text-green-500";
+          question.solved = "correct";
+        } else {
+          feedbackDiv.textContent = "Incorrect. Please try again.";
+          feedbackDiv.className = "mt-3 text-sm text-red-500";
+          question.solved = "incorrect";
+        }
+
+        // Save question state to local storage with EE prefix
+        questionStates[question.year + "-" + question.number] = {
+          solved: question.solved,
+        };
+        localStorage.setItem("ee-questionStates", JSON.stringify(questionStates));
+
+        // Display correct answer after submission
+        // Remove any existing correct answer divs
+        const existingCorrectAnswerDiv =
+          feedbackDiv.parentNode.querySelector(".correct-answer");
+        if (existingCorrectAnswerDiv) {
+          existingCorrectAnswerDiv.remove();
+        }
+
+        if (question.type === "numerical") {
+          const correctAnswerDiv = document.createElement("div");
+          correctAnswerDiv.className =
+            "mt-2 text-sm text-gray-400 correct-answer";
+          correctAnswerDiv.innerHTML = `Correct Range: <span class="text-green-400">${question.answer_min} - ${question.answer_max}</span>`;
+          feedbackDiv.parentNode.appendChild(correctAnswerDiv);
+        } else if (question.answer) {
+          const correctAnswerDiv = document.createElement("div");
+          correctAnswerDiv.className =
+            "mt-2 text-sm text-gray-400 correct-answer";
+          correctAnswerDiv.innerHTML = `Correct Answer: <span class="text-green-400">${question.answer}</span>`;
+          feedbackDiv.parentNode.appendChild(correctAnswerDiv);
+        }
+
+        // Automatically open explanation
+        const detailsElement = document.querySelector(
+          `#question-${questionNumber} details`
+        );
+        if (detailsElement) {
+          detailsElement.open = true;
+        }
+
+        renderQuestionButtons(filteredQuestions);
+        updateStatistics(filteredQuestions);
+      }
+
+      // Set up event listeners for EE questions
+      function setupEventListeners() {
+        // Year filter change
+        document
+          .getElementById("year-select")
+          .addEventListener("change", function () {
+            selectedYears = Array.from(this.selectedOptions).map(
+              (option) => option.value
+            );
+
+            // Update year display
+            updateYearDisplay();
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+
+        // Topic filter change
+        document
+          .getElementById("topic-select")
+          .addEventListener("change", function () {
+            selectedTopics = Array.from(this.selectedOptions).map(
+              (option) => option.value
+            );
+            selectedSubtopics = []; // Reset subtopics when topics change
+
+            // Update subtopic filter based on selected topics
+            updateSubtopicFilter();
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+
+        // Subtopic filter change
+        document
+          .getElementById("subtopic-select")
+          .addEventListener("change", function () {
+            selectedSubtopics = Array.from(this.selectedOptions).map(
+              (option) => option.value
+            );
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+
+        // Revision Mode filter change
+        document
+          .getElementById("revision-mode-select")
+          .addEventListener("change", function () {
+            revisionMode = Array.from(this.selectedOptions).map(
+              (option) => option.value
+            );
+            if (revisionMode.length === 0) {
+              // Default to "all" if nothing is selected
+              revisionMode = ["all"];
+              setMultiSelectValues("revision-mode-select", revisionMode);
+            } else if (
+              revisionMode.length > 1 &&
+              revisionMode.includes("all")
+            ) {
+              // If "all" is selected with other options, prioritize "all"
+              revisionMode = ["all"];
+              setMultiSelectValues("revision-mode-select", revisionMode);
+            }
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+
+        // Previous question button
+        document
+          .getElementById("prev-question")
+          .addEventListener("click", function () {
+            if (currentQuestionIndex > 0) {
+              currentQuestionIndex--;
+              renderQuestions(filteredQuestions);
+              updateMarkReviewButton();
+            }
+          });
+
+        // Next question button
+        document
+          .getElementById("next-question")
+          .addEventListener("click", function () {
+            if (currentQuestionIndex < filteredQuestions.length - 1) {
+              currentQuestionIndex++;
+              renderQuestions(filteredQuestions);
+              updateMarkReviewButton();
+            }
+          });
+
+        // Mark for review button for EE
+        document
+          .getElementById("mark-review")
+          .addEventListener("click", function () {
+            const currentQuestion = filteredQuestions[currentQuestionIndex];
+            if (currentQuestion) {
+              const questionId = currentQuestion.id;
+              if (markedQuestions.includes(questionId)) {
+                // Unmark the question
+                markedQuestions = markedQuestions.filter(
+                  (id) => id !== questionId
+                );
+              } else {
+                // Mark the question
+                markedQuestions.push(questionId);
+              }
+
+              // Save marked questions to localStorage with EE prefix
+              localStorage.setItem(
+                "ee-markedQuestions",
+                JSON.stringify(markedQuestions)
+              );
+
+              // Update button text
+              updateMarkReviewButton();
+
+              // Re-render question buttons
+              renderQuestionButtons(filteredQuestions);
+              // Update statistics
+              updateStatistics(filteredQuestions);
+            }
+          });
+
+        // Reset filters button
+        document
+          .getElementById("reset-filters")
+          .addEventListener("click", function () {
+            selectedYears = [];
+            selectedTopics = [];
+            selectedSubtopics = [];
+            revisionMode = ["all"];
+
+            // Reset UI
+            document.getElementById("year-select").selectedIndex = -1;
+            document.getElementById("topic-select").selectedIndex = -1;
+            document.getElementById("subtopic-select").selectedIndex = -1;
+            setMultiSelectValues("revision-mode-select", ["all"]);
+            document.getElementById("current-year-display").textContent =
+              "All Years";
+
+            // Set default to 2024
+            const yearSelect = document.getElementById("year-select");
+            for (let i = 0; i < yearSelect.options.length; i++) {
+              if (yearSelect.options[i].value === "2024") {
+                yearSelect.options[i].selected = true;
+                selectedYears = ["2024"];
+                break;
+              }
+            }
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+      }
+
+      // Update the mark review button for EE questions
+      function updateMarkReviewButton() {
+        const markReviewButton = document.getElementById("mark-review");
+        const currentQuestion = filteredQuestions[currentQuestionIndex];
+        if (currentQuestion) {
+          const questionId = currentQuestion.id;
+          if (markedQuestions.includes(questionId)) {
+            markReviewButton.textContent = "Unmark for Review";
+          } else {
+            markReviewButton.textContent = "Mark for Review";
+          }
+        }
+      }
+
+      // Update Statistics Display
+      function updateStatistics(questions) {
+        const statsContainer = document.getElementById("statistics-display");
+        if (!statsContainer) return;
+
+        const total = questions.length;
+        if (total === 0) {
+          statsContainer.innerHTML = "No questions to display stats for.";
+          return;
+        }
+
+        let correctCount = 0;
+        let incorrectCount = 0;
+        let unansweredCount = 0;
+        let markedCount = 0;
+
+        questions.forEach((q) => {
+          const state = questionStates[q.year + "-" + q.number];
+          if (state) {
+            if (state.solved === "correct") correctCount++;
+            else if (state.solved === "incorrect") incorrectCount++;
+            else unansweredCount++; // Includes 'unsolved'
+          } else {
+            unansweredCount++; // No state means unsolved
+          }
+
+          if (markedQuestions.includes(q.id)) {
+            markedCount++;
+          }
+        });
+
+        // Ensure all questions are accounted for in solved/unsolved status if not in questionStates
+        correctCount = questions.filter((q) => q.solved === "correct").length;
+        incorrectCount = questions.filter(
+          (q) => q.solved === "incorrect"
+        ).length;
+        unansweredCount = questions.filter(
+          (q) => q.solved === "unsolved" || !q.solved
+        ).length;
+
+        const correctPercent =
+          total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+        const incorrectPercent =
+          total > 0 ? ((incorrectCount / total) * 100).toFixed(1) : 0;
+        const unansweredPercent =
+          total > 0 ? ((unansweredCount / total) * 100).toFixed(1) : 0;
+
+        statsContainer.innerHTML = `
+          <p>Correct: ${correctCount} (${correctPercent}%)</p>
+          <p>Incorrect: ${incorrectCount} (${incorrectPercent}%)</p>
+          <p>Unanswered: ${unansweredCount} (${unansweredPercent}%)</p>
+          <p>Marked: ${markedCount}</p>
+        `;
+      }
+
+      // Calculator Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const calculatorToggle = document.getElementById("calculatorToggle");
+        const calculatorContainer = document.getElementById(
+          "calculatorContainer"
+        );
+        const closeCalculator = document.getElementById("closeCalculator");
+
+        // Check if calculator state is stored
+        const calculatorVisible =
+          localStorage.getItem("calculatorVisible") === "true";
+        if (calculatorVisible) {
+          calculatorContainer.style.display = "block";
+        }
+
+        // Toggle calculator visibility
+        calculatorToggle.addEventListener("click", function () {
+          const isVisible = calculatorContainer.style.display === "block";
+          calculatorContainer.style.display = isVisible ? "none" : "block";
+          localStorage.setItem("calculatorVisible", !isVisible);
+        });
+
+        // Close calculator
+        closeCalculator.addEventListener("click", function () {
+          calculatorContainer.style.display = "none";
+          localStorage.setItem("calculatorVisible", false);
+        });
+
+        // Make calculator draggable
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        const calculatorHeader = document.querySelector(".calculator-header");
+        calculatorHeader.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          offsetX =
+            e.clientX - calculatorContainer.getBoundingClientRect().left;
+          offsetY = e.clientY - calculatorContainer.getBoundingClientRect().top;
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (!isDragging) return;
+
+          const x = e.clientX - offsetX;
+          const y = e.clientY - offsetY;
+
+          // Keep within window boundaries
+          const maxX = window.innerWidth - calculatorContainer.offsetWidth;
+          const maxY = window.innerHeight - calculatorContainer.offsetHeight;
+
+          calculatorContainer.style.left =
+            Math.min(maxX, Math.max(0, x)) + "px";
+          calculatorContainer.style.top = Math.min(maxY, Math.max(0, y)) + "px";
+          calculatorContainer.style.right = "auto";
+          calculatorContainer.style.bottom = "auto";
+        });
+
+        document.addEventListener("mouseup", function () {
+          isDragging = false;
+        });
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener("keydown", (event) => {
+        const activeElement = document.activeElement;
+        const isTypingInNonAnswerField =
+          (activeElement.tagName === "INPUT" ||
+            activeElement.tagName === "SELECT" ||
+            activeElement.tagName === "TEXTAREA") &&
+          !activeElement.id.startsWith("answer-");
+
+        if (isTypingInNonAnswerField) {
+          return;
+        }
+
+        const currentQuestion = filteredQuestions[currentQuestionIndex];
+        if (!currentQuestion) return;
+
+        // Handle Enter to submit
+        if (event.key === "Enter") {
+          event.preventDefault();
+          const submitButton = document.querySelector(
+            `.submit-answer[data-question="${currentQuestion.displayNumber}"]`
+          );
+          if (submitButton) {
+            submitButton.click();
+          }
+          return;
+        }
+
+        // If typing in a text-based answer input, allow typing and disable other shortcuts.
+        if (
+          activeElement.id.startsWith("answer-") &&
+          activeElement.type === "text"
+        ) {
+          return;
+        }
+
+        // Navigation: 'n' for next, 'p' for previous
+        if (event.key.toLowerCase() === "n") {
+          event.preventDefault();
+          document.getElementById("next-question").click();
+          return;
+        }
+        if (event.key.toLowerCase() === "p") {
+          event.preventDefault();
+          document.getElementById("prev-question").click();
+          return;
+        }
+
+        // Mark for review: 'm'
+        if (event.key.toLowerCase() === "m") {
+          event.preventDefault();
+          document.getElementById("mark-review").click();
+          return;
+        }
+
+        // Show explanation: 's'
+        if (event.key.toLowerCase() === "s") {
+          event.preventDefault();
+          const detailsElement = document.querySelector(
+            `#question-${currentQuestion.displayNumber} details`
+          );
+          if (detailsElement) {
+            detailsElement.open = !detailsElement.open;
+          }
+          return;
+        }
+
+        // MCQ option selection: 'a', 'b', 'c', 'd'
+        if (
+          currentQuestion.type === "mcq" &&
+          ["a", "b", "c", "d"].includes(event.key.toLowerCase())
+        ) {
+          event.preventDefault();
+          const optionLetter = event.key.toUpperCase();
+          const optionInput = document.querySelector(
+            `input[name="answer-${currentQuestion.displayNumber}"][value="${optionLetter}"]`
+          );
+          if (optionInput) {
+            if (optionInput.type === "radio") {
+              optionInput.checked = true;
+            } else {
+              optionInput.checked = !optionInput.checked;
+            }
+          }
+          return;
+        }
+
+        // Numerical input: focus and type
+        if (
+          currentQuestion.type === "numerical" &&
+          /^[0-9.-]$/.test(event.key)
+        ) {
+          const numericalInput = document.getElementById(
+            `answer-${currentQuestion.displayNumber}`
+          );
+          if (numericalInput && activeElement !== numericalInput) {
+            numericalInput.focus();
+          }
+        }
+      });
+
+      // Load questions when the document is ready
+      document.addEventListener("DOMContentLoaded", loadQuestions);
+    </script>
+  </body>
+</html>
