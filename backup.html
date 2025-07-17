@@ -49,7 +49,8 @@
       <div class="mb-6">
         <h2 class="text-lg font-semibold mb-2">Backup</h2>
         <p class="text-sm text-gray-400 mb-3">
-          Save your progress for both EC and EE (marked questions, answered states, and filters) to a JSON file.
+          Save your progress for both EC and EE (marked questions, answered
+          states, and filters) to a JSON file.
         </p>
         <button
           id="backup-btn"
@@ -62,7 +63,8 @@
       <div class="border-t border-gray-700 pt-6">
         <h2 class="text-lg font-semibold mb-2">Restore</h2>
         <p class="text-sm text-gray-400 mb-3">
-          Restore your progress from a backup file. This will merge with your current saved progress for both EC and EE.
+          Restore your progress from a backup file. This will merge with your
+          current saved progress for both EC and EE.
         </p>
         <input
           type="file"
@@ -100,22 +102,35 @@
             // Collect all GATE-related data from localStorage
             const backupData = {
               // EC data (original keys for backward compatibility)
-              markedQuestions: JSON.parse(localStorage.getItem("markedQuestions") || "[]"),
-              questionStates: JSON.parse(localStorage.getItem("questionStates") || "{}"),
-              gateQuestionFilters: JSON.parse(localStorage.getItem("gateQuestionFilters") || "{}"),
-              
+              markedQuestions: JSON.parse(
+                localStorage.getItem("markedQuestions") || "[]"
+              ),
+              questionStates: JSON.parse(
+                localStorage.getItem("questionStates") || "{}"
+              ),
+              gateQuestionFilters: JSON.parse(
+                localStorage.getItem("gateQuestionFilters") || "{}"
+              ),
+
               // EE data (with ee- prefix)
-              "ee-markedQuestions": JSON.parse(localStorage.getItem("ee-markedQuestions") || "[]"),
-              "ee-questionStates": JSON.parse(localStorage.getItem("ee-questionStates") || "{}"),
-              "ee-gateQuestionFilters": JSON.parse(localStorage.getItem("ee-gateQuestionFilters") || "{}"),
-              
+              "ee-markedQuestions": JSON.parse(
+                localStorage.getItem("ee-markedQuestions") || "[]"
+              ),
+              "ee-questionStates": JSON.parse(
+                localStorage.getItem("ee-questionStates") || "{}"
+              ),
+              "ee-gateQuestionFilters": JSON.parse(
+                localStorage.getItem("ee-gateQuestionFilters") || "{}"
+              ),
+
               // Calculator state (shared between both)
-              calculatorVisible: localStorage.getItem("calculatorVisible") || "false",
-              
+              calculatorVisible:
+                localStorage.getItem("calculatorVisible") || "false",
+
               // Metadata
               backupDate: new Date().toISOString(),
               version: "2.0",
-              subjects: ["EC", "EE"]
+              subjects: ["EC", "EE"],
             };
 
             const blob = new Blob([JSON.stringify(backupData, null, 2)], {
@@ -132,7 +147,8 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
 
-            statusMessage.textContent = "Backup file generated successfully! Includes data for both EC and EE.";
+            statusMessage.textContent =
+              "Backup file generated successfully! Includes data for both EC and EE.";
             statusMessage.className = "mt-6 text-center text-sm text-green-400";
           } catch (error) {
             console.error("Backup failed:", error);
@@ -217,7 +233,10 @@
                   localStorage.getItem("ee-questionStates") || "{}"
                 );
                 const backupEEStates = backupData["ee-questionStates"] || {};
-                const mergedEEStates = { ...existingEEStates, ...backupEEStates };
+                const mergedEEStates = {
+                  ...existingEEStates,
+                  ...backupEEStates,
+                };
                 localStorage.setItem(
                   "ee-questionStates",
                   JSON.stringify(mergedEEStates)
@@ -235,7 +254,10 @@
 
               // Calculator state restoration
               if (backupData.calculatorVisible) {
-                localStorage.setItem("calculatorVisible", backupData.calculatorVisible);
+                localStorage.setItem(
+                  "calculatorVisible",
+                  backupData.calculatorVisible
+                );
               }
 
               if (restoredCount > 0) {
@@ -243,12 +265,16 @@
                 if (backupData.markedQuestions || backupData.questionStates) {
                   subjects.push("EC");
                 }
-                if (backupData["ee-markedQuestions"] || backupData["ee-questionStates"]) {
+                if (
+                  backupData["ee-markedQuestions"] ||
+                  backupData["ee-questionStates"]
+                ) {
                   subjects.push("EE");
                 }
 
-                statusMessage.textContent =
-                  `Progress restored successfully for ${subjects.join(" and ")}! Please refresh the main page(s).`;
+                statusMessage.textContent = `Progress restored successfully for ${subjects.join(
+                  " and "
+                )}! Please refresh the main page(s).`;
                 statusMessage.className =
                   "mt-6 text-center text-sm text-green-400";
                 restoreInput.value = ""; // Clear file input

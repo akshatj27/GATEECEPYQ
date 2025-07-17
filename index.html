@@ -278,6 +278,23 @@
             <p class="help-text">Hold Ctrl/Cmd to select multiple modes</p>
           </div>
 
+          <!-- Sort by selection -->
+          <div class="mb-4">
+            <label
+              for="sort-by-select"
+              class="block text-sm font-medium text-gray-300 mb-1"
+              >Sort By</label
+            >
+            <select
+              id="sort-by-select"
+              class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="default">Default Order</option>
+              <option value="year-asc">Year (Oldest to Newest)</option>
+              <option value="year-desc">Year (Newest to Oldest)</option>
+            </select>
+          </div>
+
           <!-- Reset filters button -->
           <button
             id="reset-filters"
@@ -416,6 +433,7 @@
       let questionStates = JSON.parse(
         localStorage.getItem("questionStates") || "{}"
       ); // Load question states from localStorage
+      let sortBy = "default"; // Default sort order
 
       // Fetch the questions data
       async function loadQuestions() {
@@ -515,13 +533,17 @@
           if (savedFilters) {
             selectedYears = savedFilters.years || [];
             selectedTopics = savedFilters.topics || [];
-            selectedSubtopics = savedFilters.subtopics || []; // restore saved subtopics
+            selectedSubtopics = savedFilters.subtopics || [];
             revisionMode = savedFilters.revisionMode || ["all"];
+            sortBy = savedFilters.sortBy || "default"; // Load saved sort preference
 
             // Apply saved selections to dropdowns
             setMultiSelectValues("year-select", selectedYears);
             setMultiSelectValues("topic-select", selectedTopics);
             setMultiSelectValues("revision-mode-select", revisionMode);
+
+            // Set sort dropdown
+            document.getElementById("sort-by-select").value = sortBy;
 
             // Update subtopic filter based on selected topics
             updateSubtopicFilter();
@@ -561,6 +583,7 @@
             topics: selectedTopics,
             subtopics: selectedSubtopics,
             revisionMode: revisionMode,
+            sortBy: sortBy, // Save the sort preference
           };
 
           localStorage.setItem(
@@ -777,6 +800,17 @@
             applyFilters();
           });
 
+        // Sort by change
+        document
+          .getElementById("sort-by-select")
+          .addEventListener("change", function () {
+            sortBy = this.value;
+
+            // Save and apply filters
+            saveFiltersToLocalStorage();
+            applyFilters();
+          });
+
         // Previous question button
         document
           .getElementById("prev-question")
@@ -840,6 +874,7 @@
             selectedTopics = [];
             selectedSubtopics = [];
             revisionMode = ["all"];
+            sortBy = "default"; // Reset sort option
 
             // Reset UI
             document.getElementById("year-select").selectedIndex = -1;
@@ -848,6 +883,7 @@
             setMultiSelectValues("revision-mode-select", ["all"]); // Reset revision mode dropdown
             document.getElementById("current-year-display").textContent =
               "All Years";
+            document.getElementById("sort-by-select").value = "default"; // Reset sort dropdown
 
             // Set default to 2024
             const yearSelect = document.getElementById("year-select");
@@ -929,6 +965,9 @@
           return yearMatch && topicMatch && subtopicMatch && revisionMatch;
         });
 
+        // Sort questions based on sort preference
+        sortQuestions();
+
         // Update question numbers for display
         filteredQuestions.forEach((q, index) => {
           q.displayNumber = index + 1;
@@ -951,6 +990,51 @@
         updateMarkReviewButton();
         // Update statistics
         updateStatistics(filteredQuestions);
+      }
+
+      // Sort questions based on the selected sort option
+      function sortQuestions() {
+        switch (sortBy) {
+          case "year-asc": // Oldest to newest
+            filteredQuestions.sort((a, b) => {
+              // Convert year to number for comparison, handling special cases
+              const yearA = a.year.startsWith("dummy_")
+                ? 9999
+                : parseInt(a.year);
+              const yearB = b.year.startsWith("dummy_")
+                ? 9999
+                : parseInt(b.year);
+
+              if (yearA === yearB) {
+                // If same year, maintain original order
+                return allQuestions.indexOf(a) - allQuestions.indexOf(b);
+              }
+              return yearA - yearB;
+            });
+            break;
+
+          case "year-desc": // Newest to oldest
+            filteredQuestions.sort((a, b) => {
+              // Convert year to number for comparison, handling special cases
+              const yearA = a.year.startsWith("dummy_") ? -1 : parseInt(a.year);
+              const yearB = b.year.startsWith("dummy_") ? -1 : parseInt(b.year);
+
+              if (yearA === yearB) {
+                // If same year, maintain original order
+                return allQuestions.indexOf(a) - allQuestions.indexOf(b);
+              }
+              return yearB - yearA;
+            });
+            break;
+
+          case "default":
+          default:
+            // Default order - preserve the original order from allQuestions
+            filteredQuestions.sort((a, b) => {
+              return allQuestions.indexOf(a) - allQuestions.indexOf(b);
+            });
+            break;
+        }
       }
 
       // Render the filtered questions
@@ -1477,5 +1561,4 @@
       document.addEventListener("DOMContentLoaded", loadQuestions);
     </script>
   </body>
-</html>
 </html>
