@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=width=device-width, initial-scale=1.0"
+    />
+    <title>GATE Test Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              gray: {
+                50: "#FAFAFA",
+                100: "#F4F4F5",
+                200: "#E4E4E7",
+                300: "#D4D4D8",
+                400: "#A1A1AA",
+                500: "#71717A",
+                600: "#52525B",
+                700: "#3F3F46",
+                800: "#27272A",
+                950: "#09090B",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+
+      .katex {
+        font-size: 1.1em;
+      }
+      .katex-display {
+        overflow-x: auto;
+        padding: 0.5em 0;
+      }
+
+      .question-btn {
+        transition: all 0.2s;
+        font-size: 0.875rem;
+        padding: 0.5rem;
+      }
+      .question-btn:hover {
+        transform: translateY(-2px);
+      }
+      .question-btn.answered {
+        background-color: #10b981;
+        color: white;
+      }
+      .question-btn.marked {
+        background-color: #f59e0b;
+        color: white;
+      }
+      .question-btn.answered-marked {
+        background: linear-gradient(135deg, #10b981 50%, #f59e0b 50%);
+        color: white;
+      }
+      .question-btn.current {
+        border: 2px solid #3b82f6;
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+      }
+
+      #calculatorContainer {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 480px;
+        height: 420px;
+        background-color: #1f2937;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        display: none;
+        overflow: hidden;
+      }
+
+      #calculatorContainer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      #calculatorToggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3b82f6;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        border: none;
+        font-size: 20px;
+      }
+
+      #calculatorToggle:hover {
+        background-color: #2563eb;
+      }
+
+      .calculator-header {
+        padding: 8px;
+        background-color: #374151;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .calculator-header h3 {
+        margin: 0;
+        color: white;
+        font-size: 14px;
+      }
+
+      .calculator-close {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .timer {
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: 'Courier New', monospace;
+      }
+
+      .timer.warning {
+        color: #f59e0b;
+      }
+
+      .timer.danger {
+        color: #ef4444;
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal.show {
+        display: flex;
+      }
+
+      .modal-content {
+        background-color: #1f2937;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .legend-box {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Year Selection Screen -->
+    <div id="year-selection-screen" class="min-h-screen flex items-center justify-center p-4">
+      <div class="bg-gray-800 rounded-xl p-8 max-w-2xl w-full">
+        <h1 class="text-3xl font-bold mb-6 text-center">GATE Test Simulator</h1>
+        <p class="text-gray-400 mb-6 text-center">
+          Simulate the actual GATE exam experience with a 3-hour time limit, calculator, and detailed analysis.
+        </p>
+
+        <div class="mb-6">
+          <label for="subject-select" class="block text-sm font-medium text-gray-300 mb-2">
+            Select Subject
+          </label>
+          <select
+            id="subject-select"
+            class="w-full bg-gray-700 text-white rounded-md py-3 px-4 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="ec">Electronics and Communication (EC)</option>
+            <option value="ee">Electrical Engineering (EE)</option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <label for="year-select-start" class="block text-sm font-medium text-gray-300 mb-2">
+            Select Year
+          </label>
+          <select
+            id="year-select-start"
+            class="w-full bg-gray-700 text-white rounded-md py-3 px-4 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">-- Select a Year --</option>
+          </select>
+        </div>
+
+        <div class="mb-6 p-4 bg-gray-700 rounded-lg">
+          <h3 class="font-bold mb-2">Instructions:</h3>
+          <ul class="text-sm text-gray-300 space-y-1">
+            <li>• You will have 3 hours to complete the test</li>
+            <li>• The test will auto-submit when time expires</li>
+            <li>• You can use the scientific calculator during the test</li>
+            <li>• Navigate between questions using the question panel</li>
+            <li>• Mark questions for review if unsure</li>
+            <li>• You can submit the test early if you finish before time</li>
+          </ul>
+        </div>
+
+        <div class="flex gap-4">
+          <button
+            id="start-test-btn"
+            class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-md font-bold transition duration-200 disabled:bg-gray-600 disabled:cursor-not-allowed"
+            disabled
+          >
+            Start Test
+          </button>
+          <a
+            href="index.html"
+            class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-md font-bold transition duration-200 text-center"
+          >
+            Back to Practice
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="test-screen" class="hidden">
+      <!-- Top Bar -->
+      <div class="bg-gray-800 border-b border-gray-700 px-4 py-3 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+          <h1 class="text-xl font-bold">GATE Test Simulator</h1>
+          <span id="test-year" class="text-sm text-gray-400"></span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="text-center">
+            <div class="text-xs text-gray-400">Time Remaining</div>
+            <div id="timer" class="timer text-green-400">03:00:00</div>
+          </div>
+          <button
+            id="submit-test-btn"
+            class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md font-bold transition duration-200"
+          >
+            Submit Test
+          </button>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 py-6 flex gap-6">
+        <!-- Main Question Area -->
+        <main class="flex-grow">
+          <div class="bg-gray-800 rounded-xl p-6">
+            <div id="question-container">
+              <!-- Question will be loaded here -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between mt-6 pt-6 border-t border-gray-700">
+              <div class="flex gap-2">
+                <button
+                  id="mark-for-review-btn"
+                  class="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-md transition duration-200"
+                >
+                  Mark for Review
+                </button>
+                <button
+                  id="clear-response-btn"
+                  class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-md transition duration-200"
+                >
+                  Clear Response
+                </button>
+              </div>
+              <div class="flex gap-2">
+                <button
+                  id="save-next-btn"
+                  class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200"
+                >
+                  Save & Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="w-80 flex-shrink-0">
+          <div class="bg-gray-800 rounded-xl p-4 sticky top-20">
+            <h2 class="text-lg font-bold mb-4">Question Palette</h2>
+            
+            <!-- Statistics -->
+            <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+              <div class="bg-gray-700 p-2 rounded">
+                <div class="text-gray-400 text-xs">Answered</div>
+                <div id="answered-count" class="text-xl font-bold text-green-400">0</div>
+              </div>
+              <div class="bg-gray-700 p-2 rounded">
+                <div class="text-gray-400 text-xs">Not Answered</div>
+                <div id="not-answered-count" class="text-xl font-bold text-gray-400">0</div>
+              </div>
+              <div class="bg-gray-700 p-2 rounded">
+                <div class="text-gray-400 text-xs">Marked</div>
+                <div id="marked-count" class="text-xl font-bold text-yellow-400">0</div>
+              </div>
+              <div class="bg-gray-700 p-2 rounded">
+                <div class="text-gray-400 text-xs">Not Visited</div>
+                <div id="not-visited-count" class="text-xl font-bold text-gray-500">0</div>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="mb-4 text-xs">
+              <div class="legend-item">
+                <div class="legend-box bg-green-600 text-white">1</div>
+                <span>Answered</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box bg-yellow-600 text-white">2</div>
+                <span>Marked for Review</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box" style="background: linear-gradient(135deg, #10b981 50%, #f59e0b 50%);">
+                  <span class="text-white">3</span>
+                </div>
+                <span>Answered & Marked</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box bg-gray-700 text-white">4</div>
+                <span>Not Answered</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box bg-gray-600 text-white">5</div>
+                <span>Not Visited</span>
+              </div>
+            </div>
+
+            <!-- Question Buttons -->
+            <div id="question-buttons" class="grid grid-cols-5 gap-2 max-h-96 overflow-y-auto">
+              <!-- Buttons will be generated here -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="hidden min-h-screen p-4">
+      <div class="container mx-auto max-w-6xl">
+        <div class="bg-gray-800 rounded-xl p-8">
+          <h1 class="text-3xl font-bold mb-6 text-center">Test Results</h1>
+          
+          <!-- Summary Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-gray-700 p-6 rounded-lg text-center">
+              <div class="text-4xl font-bold text-green-400" id="result-correct">0</div>
+              <div class="text-sm text-gray-400 mt-2">Correct</div>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg text-center">
+              <div class="text-4xl font-bold text-red-400" id="result-incorrect">0</div>
+              <div class="text-sm text-gray-400 mt-2">Incorrect</div>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg text-center">
+              <div class="text-4xl font-bold text-gray-400" id="result-unanswered">0</div>
+              <div class="text-sm text-gray-400 mt-2">Unanswered</div>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg text-center">
+              <div class="text-4xl font-bold text-blue-400" id="result-score">0%</div>
+              <div class="text-sm text-gray-400 mt-2">Score</div>
+            </div>
+          </div>
+
+          <!-- Topic-wise Analysis -->
+          <div class="bg-gray-700 rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Topic-wise Performance</h2>
+            <div id="topic-analysis" class="space-y-3">
+              <!-- Topic analysis will be generated here -->
+            </div>
+          </div>
+
+          <!-- Question Review -->
+          <div class="bg-gray-700 rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Question Review</h2>
+            <div id="question-review" class="space-y-4">
+              <!-- Question review will be generated here -->
+            </div>
+          </div>
+
+          <div class="flex gap-4 justify-center">
+            <button
+              id="review-answers-btn"
+              class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-md font-bold transition duration-200"
+            >
+              Review Answers
+            </button>
+            <button
+              id="retry-test-btn"
+              class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-md font-bold transition duration-200"
+            >
+              Retry Test
+            </button>
+            <a
+              href="index.html"
+              class="bg-gray-600 hover:bg-gray-500 text-white py-3 px-6 rounded-md font-bold transition duration-200"
+            >
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Confirmation Modal -->
+    <div id="submit-modal" class="modal">
+      <div class="modal-content">
+        <h2 class="text-2xl font-bold mb-4">Confirm Submission</h2>
+        <div class="mb-6">
+          <p class="mb-4">Are you sure you want to submit the test?</p>
+          <div class="bg-gray-700 p-4 rounded-lg space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span>Answered:</span>
+              <span id="modal-answered" class="font-bold text-green-400">0</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Not Answered:</span>
+              <span id="modal-not-answered" class="font-bold text-gray-400">0</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Marked for Review:</span>
+              <span id="modal-marked" class="font-bold text-yellow-400">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <button
+            id="confirm-submit-btn"
+            class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md font-bold transition duration-200"
+          >
+            Yes, Submit
+          </button>
+          <button
+            id="cancel-submit-btn"
+            class="flex-1 bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md font-bold transition duration-200"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Calculator Container -->
+    <div id="calculatorContainer">
+      <div class="calculator-header">
+        <h3>Scientific Calculator</h3>
+        <button class="calculator-close" id="closeCalculator">×</button>
+      </div>
+      <iframe id="calculatorFrame" src="calc/index.html"></iframe>
+    </div>
+
+    <!-- Calculator Toggle Button -->
+    <button id="calculatorToggle" title="Toggle Calculator">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+        <line x1="12" y1="10" x2="12" y2="10"></line>
+        <line x1="8" y1="14" x2="8" y2="14"></line>
+        <line x1="16" y1="14" x2="16" y2="14"></line>
+        <line x1="8" y1="18" x2="8" y2="18"></line>
+        <line x1="16" y1="18" x2="16" y2="18"></line>
+        <line x1="12" y1="18" x2="12" y2="18"></line>
+      </svg>
+    </button>
+
+    <script>
+      // Global state
+      let allQuestions = [];
+      let currentQuestionIndex = 0;
+      let selectedYear = "";
+      let selectedSubject = "ec";
+      let testStartTime = null;
+      let timerInterval = null;
+      let timeRemaining = 3 * 60 * 60; // 3 hours in seconds
+      let userResponses = {}; // { questionId: { answer: ..., marked: bool, visited: bool } }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function() {
+        setupYearSelection();
+        setupCalculator();
+        setupEventListeners();
+      });
+
+      // Setup year selection
+      async function setupYearSelection() {
+        const subjectSelect = document.getElementById("subject-select");
+        const yearSelect = document.getElementById("year-select-start");
+        const startBtn = document.getElementById("start-test-btn");
+
+        subjectSelect.addEventListener("change", async function() {
+          selectedSubject = this.value;
+          await populateYears();
+        });
+
+        yearSelect.addEventListener("change", function() {
+          selectedYear = this.value;
+          startBtn.disabled = !selectedYear;
+        });
+
+        await populateYears();
+      }
+
+      async function populateYears() {
+        const yearSelect = document.getElementById("year-select-start");
+        const dataFile = selectedSubject === "ec" ? "gate_ec_all_years.json" : "gate_ee_all_years.json";
+
+        try {
+          const response = await fetch(dataFile);
+          const data = await response.json();
+          
+          yearSelect.innerHTML = '<option value="">-- Select a Year --</option>';
+          
+          const years = Object.keys(data).filter(year => !year.startsWith("dummy_")).sort().reverse();
+          
+          years.forEach(year => {
+            const option = document.createElement("option");
+            option.value = year;
+            option.textContent = `GATE ${year}`;
+            yearSelect.appendChild(option);
+          });
+        } catch (error) {
+          console.error("Error loading years:", error);
+        }
+      }
+
+      // Setup event listeners
+      function setupEventListeners() {
+        document.getElementById("start-test-btn").addEventListener("click", startTest);
+        document.getElementById("submit-test-btn").addEventListener("click", showSubmitModal);
+        document.getElementById("confirm-submit-btn").addEventListener("click", submitTest);
+        document.getElementById("cancel-submit-btn").addEventListener("click", hideSubmitModal);
+        document.getElementById("mark-for-review-btn").addEventListener("click", toggleMarkForReview);
+        document.getElementById("clear-response-btn").addEventListener("click", clearResponse);
+        document.getElementById("save-next-btn").addEventListener("click", saveAndNext);
+        document.getElementById("review-answers-btn").addEventListener("click", reviewAnswers);
+        document.getElementById("retry-test-btn").addEventListener("click", retryTest);
+      }
+
+      // Start test
+      async function startTest() {
+        const dataFile = selectedSubject === "ec" ? "gate_ec_all_years.json" : "gate_ee_all_years.json";
+        
+        try {
+          const response = await fetch(dataFile);
+          const data = await response.json();
+          
+          if (!data[selectedYear]) {
+            alert("No questions found for the selected year.");
+            return;
+          }
+
+          allQuestions = data[selectedYear].map((q, index) => ({
+            ...q,
+            id: `${selectedYear}-${index}`,
+            displayNumber: index + 1,
+            topic: q.subject?.split(" - ")?.[0] || "General",
+          })).filter(q => q.number && q.text);
+
+          if (allQuestions.length === 0) {
+            alert("No valid questions found for the selected year.");
+            return;
+          }
+
+          // Initialize user responses
+          userResponses = {};
+          allQuestions.forEach(q => {
+            userResponses[q.id] = {
+              answer: null,
+              marked: false,
+              visited: false
+            };
+          });
+
+          // Hide year selection, show test screen
+          document.getElementById("year-selection-screen").classList.add("hidden");
+          document.getElementById("test-screen").classList.remove("hidden");
+          document.getElementById("test-year").textContent = `GATE ${selectedYear} (${selectedSubject.toUpperCase()})`;
+
+          // Start timer
+          testStartTime = Date.now();
+          startTimer();
+
+          // Render questions
+          currentQuestionIndex = 0;
+          renderQuestionButtons();
+          loadQuestion(0);
+          updateStats();
+        } catch (error) {
+          console.error("Error starting test:", error);
+          alert("Error loading test. Please try again.");
+        }
+      }
+
+      // Timer
+      function startTimer() {
+        updateTimerDisplay();
+        
+        timerInterval = setInterval(() => {
+          timeRemaining--;
+          updateTimerDisplay();
+
+          if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            alert("Time's up! Your test will be submitted automatically.");
+            submitTest();
+          }
+        }, 1000);
+      }
+
+      function updateTimerDisplay() {
+        const hours = Math.floor(timeRemaining / 3600);
+        const minutes = Math.floor((timeRemaining % 3600) / 60);
+        const seconds = timeRemaining % 60;
+
+        const timerEl = document.getElementById("timer");
+        timerEl.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        // Change color based on time remaining
+        timerEl.classList.remove("text-green-400", "warning", "danger");
+        if (timeRemaining > 1800) {
+          timerEl.classList.add("text-green-400");
+        } else if (timeRemaining > 600) {
+          timerEl.classList.add("warning");
+        } else {
+          timerEl.classList.add("danger");
+        }
+      }
+
+      // Load question
+      function loadQuestion(index) {
+        currentQuestionIndex = index;
+        const question = allQuestions[index];
+        
+        // Mark as visited
+        userResponses[question.id].visited = true;
+
+        const container = document.getElementById("question-container");
+        const isMultipleAnswerMcq = question.type === "mcq" && Array.isArray(question.answer);
+        
+        const savedResponse = userResponses[question.id].answer;
+
+        container.innerHTML = `
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="text-xl font-bold">Question ${question.displayNumber}</h2>
+              <span class="bg-blue-600 text-white text-xs py-1 px-3 rounded">${question.topic}</span>
+            </div>
+          </div>
+
+          <div class="question-content mb-6 text-gray-100">
+            ${question.html}
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-300 mb-2">Your Answer:</label>
+            ${renderAnswerInput(question, savedResponse)}
+          </div>
+        `;
+
+        // Render LaTeX
+        renderMathInElement(container, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "[latex]", right: "[/latex]", display: false },
+          ],
+        });
+
+        // Update mark button
+        updateMarkButton();
+        renderQuestionButtons();
+        updateStats();
+      }
+
+      function renderAnswerInput(question, savedResponse) {
+        const isMultipleAnswerMcq = question.type === "mcq" && Array.isArray(question.answer);
+        
+        if (question.type === "numerical") {
+          return `<input type="number" step="any" id="answer-input" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter numerical answer" value="${savedResponse || ''}">`;
+        } else if (question.type === "mcq" && question.options) {
+          return `
+            <div class="space-y-2">
+              ${question.options.map(option => {
+                const isChecked = savedResponse 
+                  ? (Array.isArray(savedResponse) ? savedResponse.includes(option.letter) : savedResponse === option.letter)
+                  : false;
+                return `
+                  <label class="flex items-center relative hover:bg-gray-700 p-3 rounded-md cursor-pointer">
+                    <input 
+                      type="${isMultipleAnswerMcq ? 'checkbox' : 'radio'}" 
+                      name="answer-input" 
+                      value="${option.letter}" 
+                      class="hidden peer"
+                      ${isChecked ? 'checked' : ''}
+                    >
+                    <div class="w-6 h-6 rounded-md border-2 border-gray-600 bg-gray-700 text-white mr-3 flex items-center justify-center peer-checked:bg-blue-600 peer-checked:border-blue-600 font-bold">
+                      ${option.letter}
+                    </div>
+                    <span class="text-gray-100">${option.text}</span>
+                  </label>
+                `;
+              }).join('')}
+            </div>
+          `;
+        } else {
+          return `<input type="text" id="answer-input" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter answer" value="${savedResponse || ''}">`;
+        }
+      }
+
+      // Save current answer
+      function saveCurrentAnswer() {
+        const question = allQuestions[currentQuestionIndex];
+        let answer = null;
+
+        if (question.type === "mcq") {
+          const checked = document.querySelectorAll('input[name="answer-input"]:checked');
+          if (checked.length > 0) {
+            answer = Array.from(checked).map(el => el.value);
+            if (answer.length === 1) answer = answer[0];
+          }
+        } else {
+          const input = document.getElementById("answer-input");
+          if (input && input.value.trim()) {
+            answer = input.value.trim();
+          }
+        }
+
+        userResponses[question.id].answer = answer;
+        updateStats();
+      }
+
+      // Clear response
+      function clearResponse() {
+        const question = allQuestions[currentQuestionIndex];
+        userResponses[question.id].answer = null;
+        loadQuestion(currentQuestionIndex);
+      }
+
+      // Toggle mark for review
+      function toggleMarkForReview() {
+        const question = allQuestions[currentQuestionIndex];
+        userResponses[question.id].marked = !userResponses[question.id].marked;
+        updateMarkButton();
+        renderQuestionButtons();
+        updateStats();
+      }
+
+      function updateMarkButton() {
+        const question = allQuestions[currentQuestionIndex];
+        const btn = document.getElementById("mark-for-review-btn");
+        if (userResponses[question.id].marked) {
+          btn.textContent = "Unmark for Review";
+          btn.classList.remove("bg-yellow-600", "hover:bg-yellow-700");
+          btn.classList.add("bg-orange-600", "hover:bg-orange-700");
+        } else {
+          btn.textContent = "Mark for Review";
+          btn.classList.remove("bg-orange-600", "hover:bg-orange-700");
+          btn.classList.add("bg-yellow-600", "hover:bg-yellow-700");
+        }
+      }
+
+      // Save and next
+      function saveAndNext() {
+        saveCurrentAnswer();
+        if (currentQuestionIndex < allQuestions.length - 1) {
+          loadQuestion(currentQuestionIndex + 1);
+        }
+      }
+
+      // Render question buttons
+      function renderQuestionButtons() {
+        const container = document.getElementById("question-buttons");
+        container.innerHTML = allQuestions.map((q, index) => {
+          const response = userResponses[q.id];
+          let className = "question-btn bg-gray-600";
+          
+          if (!response.visited) {
+            className = "question-btn bg-gray-600";
+          } else if (response.answer && response.marked) {
+            className = "question-btn answered-marked";
+          } else if (response.answer) {
+            className = "question-btn answered";
+          } else if (response.marked) {
+            className = "question-btn marked";
+          } else {
+            className = "question-btn bg-gray-700";
+          }
+
+          if (index === currentQuestionIndex) {
+            className += " current";
+          }
+
+          return `
+            <button 
+              class="${className}" 
+              onclick="saveCurrentAnswer(); loadQuestion(${index})"
+            >
+              ${q.displayNumber}
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Update statistics
+      function updateStats() {
+        let answered = 0;
+        let marked = 0;
+        let notAnswered = 0;
+        let notVisited = 0;
+
+        allQuestions.forEach(q => {
+          const response = userResponses[q.id];
+          if (!response.visited) {
+            notVisited++;
+          } else if (response.answer) {
+            answered++;
+            if (response.marked) marked++;
+          } else {
+            notAnswered++;
+            if (response.marked) marked++;
+          }
+        });
+
+        document.getElementById("answered-count").textContent = answered;
+        document.getElementById("not-answered-count").textContent = notAnswered;
+        document.getElementById("marked-count").textContent = marked;
+        document.getElementById("not-visited-count").textContent = notVisited;
+      }
+
+      // Submit modal
+      function showSubmitModal() {
+        saveCurrentAnswer();
+        
+        let answered = 0;
+        let notAnswered = 0;
+        let marked = 0;
+
+        allQuestions.forEach(q => {
+          const response = userResponses[q.id];
+          if (response.answer) answered++;
+          else notAnswered++;
+          if (response.marked) marked++;
+        });
+
+        document.getElementById("modal-answered").textContent = answered;
+        document.getElementById("modal-not-answered").textContent = notAnswered;
+        document.getElementById("modal-marked").textContent = marked;
+
+        document.getElementById("submit-modal").classList.add("show");
+      }
+
+      function hideSubmitModal() {
+        document.getElementById("submit-modal").classList.remove("show");
+      }
+
+      // Submit test
+      function submitTest() {
+        clearInterval(timerInterval);
+        hideSubmitModal();
+
+        // Calculate results
+        let correct = 0;
+        let incorrect = 0;
+        let unanswered = 0;
+        const topicStats = {};
+
+        allQuestions.forEach(q => {
+          const userAnswer = userResponses[q.id].answer;
+          let isCorrect = false;
+
+          if (!userAnswer) {
+            unanswered++;
+          } else {
+            // Check answer
+            if (q.type === "numerical") {
+              const userNum = parseFloat(userAnswer);
+              if (!isNaN(userNum) && userNum >= q.answer_min && userNum <= q.answer_max) {
+                isCorrect = true;
+              }
+            } else if (q.type === "mcq") {
+              if (Array.isArray(q.answer)) {
+                const userAns = Array.isArray(userAnswer) ? userAnswer : [userAnswer];
+                isCorrect = q.answer.length === userAns.length && 
+                           q.answer.every(a => userAns.includes(a));
+              } else {
+                isCorrect = userAnswer === q.answer;
+              }
+            } else {
+              if (Array.isArray(q.answer)) {
+                isCorrect = q.answer.some(a => a.toLowerCase() === userAnswer.toLowerCase());
+              } else {
+                isCorrect = q.answer.toLowerCase() === userAnswer.toLowerCase();
+              }
+            }
+
+            if (isCorrect) correct++;
+            else incorrect++;
+          }
+
+          // Track topic stats
+          if (!topicStats[q.topic]) {
+            topicStats[q.topic] = { total: 0, correct: 0, incorrect: 0, unanswered: 0 };
+          }
+          topicStats[q.topic].total++;
+          if (isCorrect) topicStats[q.topic].correct++;
+          else if (userAnswer) topicStats[q.topic].incorrect++;
+          else topicStats[q.topic].unanswered++;
+
+          // Store result
+          userResponses[q.id].isCorrect = isCorrect;
+          userResponses[q.id].correctAnswer = q.answer;
+        });
+
+        // Display results
+        const total = allQuestions.length;
+        const score = total > 0 ? ((correct / total) * 100).toFixed(1) : 0;
+
+        document.getElementById("result-correct").textContent = correct;
+        document.getElementById("result-incorrect").textContent = incorrect;
+        document.getElementById("result-unanswered").textContent = unanswered;
+        document.getElementById("result-score").textContent = `${score}%`;
+
+        // Topic-wise analysis
+        const topicAnalysisHtml = Object.entries(topicStats).map(([topic, stats]) => {
+          const topicScore = stats.total > 0 ? ((stats.correct / stats.total) * 100).toFixed(1) : 0;
+          return `
+            <div class="bg-gray-800 p-4 rounded-lg">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-bold">${topic}</h3>
+                <span class="text-blue-400 font-bold">${topicScore}%</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="text-green-400">Correct: ${stats.correct}</span>
+                <span class="text-red-400">Incorrect: ${stats.incorrect}</span>
+                <span class="text-gray-400">Unanswered: ${stats.unanswered}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+        document.getElementById("topic-analysis").innerHTML = topicAnalysisHtml;
+
+        // Question review
+        const questionReviewHtml = allQuestions.map(q => {
+          const response = userResponses[q.id];
+          const statusColor = !response.answer ? "gray" : response.isCorrect ? "green" : "red";
+          const statusText = !response.answer ? "Not Answered" : response.isCorrect ? "Correct" : "Incorrect";
+          
+          return `
+            <div class="bg-gray-800 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <span class="font-bold">Q${q.displayNumber}</span>
+                <span class="text-${statusColor}-400 font-bold">${statusText}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+        document.getElementById("question-review").innerHTML = questionReviewHtml;
+
+        // Show results screen
+        document.getElementById("test-screen").classList.add("hidden");
+        document.getElementById("results-screen").classList.remove("hidden");
+      }
+
+      // Review answers
+      function reviewAnswers() {
+        currentQuestionIndex = 0;
+        document.getElementById("results-screen").classList.add("hidden");
+        document.getElementById("test-screen").classList.remove("hidden");
+        
+        // Disable editing and timer
+        clearInterval(timerInterval);
+        document.getElementById("submit-test-btn").disabled = true;
+        document.getElementById("mark-for-review-btn").disabled = true;
+        document.getElementById("clear-response-btn").disabled = true;
+        document.getElementById("save-next-btn").textContent = "Next Question";
+        
+        loadQuestionReview(0);
+      }
+
+      function loadQuestionReview(index) {
+        currentQuestionIndex = index;
+        const question = allQuestions[index];
+        const response = userResponses[question.id];
+        
+        const container = document.getElementById("question-container");
+        const statusColor = !response.answer ? "gray" : response.isCorrect ? "green" : "red";
+        const statusText = !response.answer ? "Not Answered" : response.isCorrect ? "Correct ✓" : "Incorrect ✗";
+        
+        container.innerHTML = `
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="text-xl font-bold">Question ${question.displayNumber}</h2>
+              <span class="bg-${statusColor}-600 text-white text-sm py-1 px-3 rounded font-bold">${statusText}</span>
+            </div>
+          </div>
+
+          <div class="question-content mb-6 text-gray-100">
+            ${question.html}
+          </div>
+
+          <div class="mb-4 p-4 bg-gray-700 rounded-lg">
+            <div class="mb-2">
+              <span class="font-bold">Your Answer: </span>
+              <span class="text-${response.answer ? 'white' : 'gray-400'}">${response.answer || 'Not answered'}</span>
+            </div>
+            <div>
+              <span class="font-bold">Correct Answer: </span>
+              <span class="text-green-400">${formatCorrectAnswer(question)}</span>
+            </div>
+          </div>
+
+          ${question.explanation_html || question.explanation_text ? `
+            <div class="bg-gray-700 p-4 rounded-lg">
+              <h3 class="font-bold mb-2">Explanation:</h3>
+              <div class="text-gray-300">
+                ${question.explanation_html || question.explanation_text}
+              </div>
+            </div>
+          ` : ''}
+        `;
+
+        renderMathInElement(container, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "[latex]", right: "[/latex]", display: false },
+          ],
+        });
+
+        // Update save & next button for review mode
+        const saveNextBtn = document.getElementById("save-next-btn");
+        saveNextBtn.onclick = () => {
+          if (currentQuestionIndex < allQuestions.length - 1) {
+            loadQuestionReview(currentQuestionIndex + 1);
+          }
+        };
+      }
+
+      function formatCorrectAnswer(question) {
+        if (question.type === "numerical") {
+          return `${question.answer_min} to ${question.answer_max}`;
+        } else if (Array.isArray(question.answer)) {
+          return question.answer.join(", ");
+        } else {
+          return question.answer;
+        }
+      }
+
+      // Retry test
+      function retryTest() {
+        location.reload();
+      }
+
+      // Setup calculator
+      function setupCalculator() {
+        const calculatorToggle = document.getElementById("calculatorToggle");
+        const calculatorContainer = document.getElementById("calculatorContainer");
+        const closeCalculator = document.getElementById("closeCalculator");
+
+        calculatorToggle.addEventListener("click", function () {
+          const isVisible = calculatorContainer.style.display === "block";
+          calculatorContainer.style.display = isVisible ? "none" : "block";
+        });
+
+        closeCalculator.addEventListener("click", function () {
+          calculatorContainer.style.display = "none";
+        });
+
+        // Make calculator draggable
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        const calculatorHeader = document.querySelector(".calculator-header");
+        calculatorHeader.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          offsetX = e.clientX - calculatorContainer.getBoundingClientRect().left;
+          offsetY = e.clientY - calculatorContainer.getBoundingClientRect().top;
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (!isDragging) return;
+
+          const x = e.clientX - offsetX;
+          const y = e.clientY - offsetY;
+
+          const maxX = window.innerWidth - calculatorContainer.offsetWidth;
+          const maxY = window.innerHeight - calculatorContainer.offsetHeight;
+
+          calculatorContainer.style.left = Math.min(maxX, Math.max(0, x)) + "px";
+          calculatorContainer.style.top = Math.min(maxY, Math.max(0, y)) + "px";
+          calculatorContainer.style.right = "auto";
+          calculatorContainer.style.bottom = "auto";
+        });
+
+        document.addEventListener("mouseup", function () {
+          isDragging = false;
+        });
+      }
+    </script>
+  </body>
+</html>
