@@ -758,15 +758,17 @@
         `;
 
         // Render LaTeX
-        renderMathInElement(container, {
-          delimiters: [
-            { left: "$$", right: "$$", display: true },
-            { left: "$", right: "$", display: false },
-            { left: "\\(", right: "\\)", display: false },
-            { left: "\\[", right: "\\]", display: true },
-            { left: "[latex]", right: "[/latex]", display: false },
-          ],
-        });
+        if (typeof renderMathInElement !== 'undefined') {
+          renderMathInElement(container, {
+            delimiters: [
+              { left: "$$", right: "$$", display: true },
+              { left: "$", right: "$", display: false },
+              { left: "\\(", right: "\\)", display: false },
+              { left: "\\[", right: "\\]", display: true },
+              { left: "[latex]", right: "[/latex]", display: false },
+            ],
+          });
+        }
 
         // Update mark button
         updateMarkButton();
@@ -1121,15 +1123,17 @@
           ` : ''}
         `;
 
-        renderMathInElement(container, {
-          delimiters: [
-            { left: "$$", right: "$$", display: true },
-            { left: "$", right: "$", display: false },
-            { left: "\\(", right: "\\)", display: false },
-            { left: "\\[", right: "\\]", display: true },
-            { left: "[latex]", right: "[/latex]", display: false },
-          ],
-        });
+        if (typeof renderMathInElement !== 'undefined') {
+          renderMathInElement(container, {
+            delimiters: [
+              { left: "$$", right: "$$", display: true },
+              { left: "$", right: "$", display: false },
+              { left: "\\(", right: "\\)", display: false },
+              { left: "\\[", right: "\\]", display: true },
+              { left: "[latex]", right: "[/latex]", display: false },
+            ],
+          });
+        }
 
         // Update save & next button for review mode
         const saveNextBtn = document.getElementById("save-next-btn");
