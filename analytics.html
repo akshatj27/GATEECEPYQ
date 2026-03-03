@@ -156,7 +156,7 @@
         </div>
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
           <h3 class="text-sm font-semibold text-gray-400 mb-2">Attempted</h3>
-          <p id="total-attempted" class="text-2xl font-bold">0</p>
+          <p class="text-2xl font-bold"><span id="total-attempted">0</span> <span id="percent-attempted" class="text-sm font-normal text-gray-500 ml-1">(0%)</span></p>
         </div>
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
           <h3 class="text-sm font-semibold text-green-400 mb-2">Correct</h3>
@@ -172,7 +172,7 @@
         </div>
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
           <h3 class="text-sm font-semibold text-yellow-400 mb-2">Marked</h3>
-          <p id="total-marked" class="text-2xl font-bold">0</p>
+          <p class="text-2xl font-bold"><span id="total-marked">0</span> <span id="percent-marked" class="text-sm font-normal text-gray-500 ml-1">(0%)</span></p>
         </div>
       </div>
 
@@ -193,20 +193,27 @@
       </div>
 
       <div class="bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
-        <h2 class="text-xl font-bold mb-4">Performance by Topic</h2>
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold">Performance Breakdown</h2>
+          <select id="breakdown-type" class="bg-gray-700 text-white rounded-md py-1 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="topic">By Topic</option>
+            <option value="subtopic">By Subtopic</option>
+          </select>
+        </div>
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="border-b border-gray-700">
-                <th class="py-3 px-4 font-semibold text-gray-300">Topic</th>
+                <th id="breakdown-header" class="py-3 px-4 font-semibold text-gray-300">Topic</th>
                 <th class="py-3 px-4 font-semibold text-gray-300">Total</th>
                 <th class="py-3 px-4 font-semibold text-gray-300">Attempted</th>
+                <th class="py-3 px-4 font-semibold text-gray-300">% Attempted</th>
                 <th class="py-3 px-4 font-semibold text-green-400">Correct</th>
                 <th class="py-3 px-4 font-semibold text-red-400">Incorrect</th>
                 <th class="py-3 px-4 font-semibold text-blue-400">Accuracy</th>
               </tr>
             </thead>
-            <tbody id="topic-table-body">
+            <tbody id="breakdown-table-body">
               <!-- Rows will be populated here -->
             </tbody>
           </table>
@@ -228,6 +235,9 @@
       let questionStates = {};
       let markedQuestions = [];
       let charts = {};
+      let currentTopicData = {};
+      let currentSubtopicData = {};
+      let breakdownType = "topic";
 
       let selectedYears = ["all"];
       let selectedTopics = ["all"];
@@ -240,6 +250,12 @@
       const topicFilter = document.getElementById("topic-filter");
       const subtopicFilter = document.getElementById("subtopic-filter");
       const resetFiltersBtn = document.getElementById("reset-filters");
+      const breakdownTypeSelect = document.getElementById("breakdown-type");
+
+      breakdownTypeSelect.addEventListener("change", (e) => {
+        breakdownType = e.target.value;
+        updateBreakdownTable();
+      });
 
       branchBtn.addEventListener("click", () => {
         currentBranch = currentBranch === "EC" ? "EE" : "EC";
@@ -463,6 +479,7 @@
         };
 
         let topicData = {};
+        let subtopicData = {};
         let yearData = {};
 
         filteredQuestions.forEach((q) => {
@@ -492,6 +509,17 @@
           if (isCorrect) topicData[q.topic].correct++;
           if (isIncorrect) topicData[q.topic].incorrect++;
 
+          // Subtopic analytics
+          if (q.subtopic) {
+            if (!subtopicData[q.subtopic]) {
+              subtopicData[q.subtopic] = { total: 0, attempted: 0, correct: 0, incorrect: 0 };
+            }
+            subtopicData[q.subtopic].total++;
+            if (isAttempted) subtopicData[q.subtopic].attempted++;
+            if (isCorrect) subtopicData[q.subtopic].correct++;
+            if (isIncorrect) subtopicData[q.subtopic].incorrect++;
+          }
+
           // Year analytics
           const y = q.displayYear;
           if (!yearData[y]) {
@@ -505,18 +533,25 @@
 
         // Update Summary
         const accuracy = totalAttempted > 0 ? ((totalCorrect / totalAttempted) * 100).toFixed(1) : 0;
+        const attemptedPercent = totalQuestions > 0 ? ((totalAttempted / totalQuestions) * 100).toFixed(1) : 0;
+        const markedPercent = totalQuestions > 0 ? ((totalMarked / totalQuestions) * 100).toFixed(1) : 0;
+
         document.getElementById("total-questions").textContent = totalQuestions;
         document.getElementById("total-attempted").textContent = totalAttempted;
+        document.getElementById("percent-attempted").textContent = `(${attemptedPercent}%)`;
         document.getElementById("total-correct").textContent = totalCorrect;
         document.getElementById("total-incorrect").textContent = totalIncorrect;
         document.getElementById("total-accuracy").textContent = `${accuracy}%`;
         document.getElementById("total-marked").textContent = totalMarked;
+        document.getElementById("percent-marked").textContent = `(${markedPercent}%)`;
 
         // Update Charts
         updateCharts(totalQuestions, totalAttempted, totalCorrect, totalIncorrect, marksData, yearData);
 
-        // Update Topic Table
-        updateTopicTable(topicData);
+        // Update Breakdown Table
+        currentTopicData = topicData;
+        currentSubtopicData = subtopicData;
+        updateBreakdownTable();
       }
 
       function updateCharts(total, attempted, correct, incorrect, marksData, yearData) {
@@ -616,22 +651,34 @@
         });
       }
 
-      function updateTopicTable(topicData) {
-        const tbody = document.getElementById("topic-table-body");
+      function updateBreakdownTable() {
+        const tbody = document.getElementById("breakdown-table-body");
+        const header = document.getElementById("breakdown-header");
         tbody.innerHTML = "";
 
-        const topics = Object.keys(topicData).sort();
+        let dataToUse, labels;
+        if (breakdownType === "topic") {
+          dataToUse = currentTopicData;
+          labels = Object.keys(currentTopicData).sort();
+          header.textContent = "Topic";
+        } else {
+          dataToUse = currentSubtopicData;
+          labels = Object.keys(currentSubtopicData).sort();
+          header.textContent = "Subtopic";
+        }
 
-        topics.forEach((topic) => {
-          const data = topicData[topic];
+        labels.forEach((label) => {
+          const data = dataToUse[label];
           const accuracy = data.attempted > 0 ? ((data.correct / data.attempted) * 100).toFixed(1) : 0;
+          const attemptedPercent = data.total > 0 ? ((data.attempted / data.total) * 100).toFixed(1) : 0;
 
           const tr = document.createElement("tr");
           tr.className = "border-b border-gray-700 hover:bg-gray-750";
           tr.innerHTML = `
-            <td class="py-3 px-4">${topic}</td>
+            <td class="py-3 px-4">${label}</td>
             <td class="py-3 px-4">${data.total}</td>
             <td class="py-3 px-4">${data.attempted}</td>
+            <td class="py-3 px-4">${attemptedPercent}%</td>
             <td class="py-3 px-4 text-green-400">${data.correct}</td>
             <td class="py-3 px-4 text-red-400">${data.incorrect}</td>
             <td class="py-3 px-4 text-blue-400">${accuracy}%</td>
