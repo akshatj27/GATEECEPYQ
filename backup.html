@@ -127,6 +127,10 @@
               calculatorVisible:
                 localStorage.getItem("calculatorVisible") || "false",
 
+              gateAppSettings: JSON.parse(
+                localStorage.getItem("gateAppSettings") || "{}"
+              ),
+
               // Metadata
               backupDate: new Date().toISOString(),
               version: "2.0",
@@ -257,6 +261,13 @@
                 localStorage.setItem(
                   "calculatorVisible",
                   backupData.calculatorVisible
+                );
+              }
+
+              if (backupData.gateAppSettings) {
+                localStorage.setItem(
+                  "gateAppSettings",
+                  JSON.stringify(backupData.gateAppSettings)
                 );
               }
 

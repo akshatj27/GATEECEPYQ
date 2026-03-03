@@ -302,16 +302,32 @@
           >
             Reset Filters
           </button>
+
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <a
+              href="analytics.html"
+              class="block text-center w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-2 rounded-md transition duration-200 text-sm"
+            >
+              Analytics
+            </a>
+            <a
+              href="settings.html"
+              class="block text-center w-full bg-gray-600 hover:bg-gray-700 text-white py-2 px-2 rounded-md transition duration-200 text-sm"
+            >
+              Settings
+            </a>
+          </div>
+
           <a
             href="backup.html"
             target="_blank"
-            class="mt-4 block text-center w-full bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md transition duration-200"
+            class="mt-2 block text-center w-full bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md transition duration-200 text-sm"
           >
             Backup/Restore Progress
           </a>
           <a
             href="/EE.html"
-            class="mt-2 block text-center w-full text-xs text-gray-400 hover:text-gray-300 transition duration-200"
+            class="mt-4 block text-center w-full text-xs text-gray-400 hover:text-gray-300 transition duration-200"
           >
             Switch to EE Questions →
           </a>
@@ -474,10 +490,20 @@
             // Skip entries without a proper question number or text
             if (!question.number || !question.text) return;
 
+            // Extract marks from html
+            let marks = null;
+            if (question.html) {
+              const match = question.html.match(/data-value="([^"]+)"/);
+              if (match && match[1]) {
+                marks = match[1];
+              }
+            }
+
             // Create a processed question object
             questions.push({
               id: `${year}-${index}`,
               number: question.number,
+              marks: marks,
               displayNumber: index + 1, // This will be updated when filtering
               year: year,
               displayYear: displayYear, // Add displayYear for better UI presentation
@@ -1058,7 +1084,10 @@
             q.displayNumber
           }" class="question-card bg-gray-700 rounded-lg p-5 shadow-lg">
             <div class="flex justify-between items-start mb-3">
-              <h3 class="text-xl font-bold">Q${q.displayNumber}. ${q.year}</h3>
+              <h3 class="text-xl font-bold">
+                Q${q.displayNumber}. ${q.year}
+                ${q.marks ? `<span class="ml-2 text-sm font-normal text-gray-400">(${q.marks} Mark${q.marks > 1 ? 's' : ''})</span>` : ''}
+              </h3>
               <div>
                 <span class="bg-blue-600 text-white text-xs py-1 px-2 rounded mr-1">${
                   q.topic
@@ -1386,7 +1415,11 @@
         const detailsElement = document.querySelector(
           `#question-${questionNumber} details`
         );
-        if (detailsElement) {
+
+        const settings = JSON.parse(localStorage.getItem("gateAppSettings") || "{}");
+        const autoOpen = settings.autoOpenExplanation !== false; // Default to true
+
+        if (detailsElement && autoOpen) {
           detailsElement.open = true;
         }
 
