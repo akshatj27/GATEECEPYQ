@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              gray: {
+                50: "#FAFAFA",
+                100: "#F4F4F5",
+                200: "#E4E4E7",
+                300: "#D4D4D8",
+                400: "#A1A1AA",
+                500: "#71717A",
+                600: "#52525B",
+                700: "#3F3F46",
+                800: "#27272A",
+                950: "#09090B",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-gray-800 rounded-xl p-8 max-w-md w-full">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold text-center flex-grow">Settings</h1>
+        <a
+          href="index.html"
+          id="back-link"
+          class="text-gray-400 hover:text-white transition duration-200"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold text-gray-200">Auto-open Explanation</h2>
+            <p class="text-sm text-gray-400 mt-1">Automatically open the explanation when you mark or submit an answer.</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="auto-open-explanation" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-600 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="mt-8">
+        <button
+          id="save-settings"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200"
+        >
+          Save Settings
+        </button>
+        <div id="status-message" class="mt-4 text-center text-sm hidden"></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const autoOpenCheckbox = document.getElementById("auto-open-explanation");
+        const saveBtn = document.getElementById("save-settings");
+        const statusMessage = document.getElementById("status-message");
+
+        // Load settings
+        const settings = JSON.parse(localStorage.getItem("gateAppSettings") || "{}");
+
+        // Default to true if not set
+        if (settings.autoOpenExplanation !== undefined) {
+           autoOpenCheckbox.checked = settings.autoOpenExplanation;
+        } else {
+           autoOpenCheckbox.checked = true; // Default behavior
+        }
+
+        saveBtn.addEventListener("click", () => {
+          const newSettings = {
+            autoOpenExplanation: autoOpenCheckbox.checked
+          };
+
+          localStorage.setItem("gateAppSettings", JSON.stringify(newSettings));
+
+          statusMessage.textContent = "Settings saved successfully!";
+          statusMessage.className = "mt-4 text-center text-sm text-green-400 block";
+
+          setTimeout(() => {
+            statusMessage.className = "mt-4 text-center text-sm hidden";
+          }, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>

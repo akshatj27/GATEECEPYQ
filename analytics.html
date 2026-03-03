@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detailed Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              gray: {
+                50: "#FAFAFA",
+                100: "#F4F4F5",
+                200: "#E4E4E7",
+                300: "#D4D4D8",
+                400: "#A1A1AA",
+                500: "#71717A",
+                600: "#52525B",
+                700: "#3F3F46",
+                800: "#27272A",
+                950: "#09090B",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <style>
+      /* Custom scrollbar styles */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold">Detailed Analytics</h1>
+        <div>
+          <button
+            id="switch-branch"
+            class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200 mr-2"
+          >
+            Switch to EE
+          </button>
+          <a
+            href="index.html"
+            id="back-link"
+            class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-md transition duration-200"
+          >
+            Back to Practice
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h3 class="text-lg font-semibold text-gray-400 mb-2">
+            Total Questions
+          </h3>
+          <p id="total-questions" class="text-3xl font-bold">0</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h3 class="text-lg font-semibold text-gray-400 mb-2">Attempted</h3>
+          <p id="total-attempted" class="text-3xl font-bold">0</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h3 class="text-lg font-semibold text-green-400 mb-2">Correct</h3>
+          <p id="total-correct" class="text-3xl font-bold">0</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h3 class="text-lg font-semibold text-red-400 mb-2">Incorrect</h3>
+          <p id="total-incorrect" class="text-3xl font-bold">0</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h2 class="text-xl font-bold mb-4">Overall Performance</h2>
+          <div class="relative h-64">
+            <canvas id="overallChart"></canvas>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h2 class="text-xl font-bold mb-4">Performance by Marks</h2>
+          <div class="relative h-64">
+            <canvas id="marksChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
+        <h2 class="text-xl font-bold mb-4">Performance by Topic</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-gray-700">
+                <th class="py-3 px-4 font-semibold text-gray-300">Topic</th>
+                <th class="py-3 px-4 font-semibold text-gray-300">Total</th>
+                <th class="py-3 px-4 font-semibold text-gray-300">Attempted</th>
+                <th class="py-3 px-4 font-semibold text-green-400">Correct</th>
+                <th class="py-3 px-4 font-semibold text-red-400">Incorrect</th>
+                <th class="py-3 px-4 font-semibold text-blue-400">Accuracy</th>
+              </tr>
+            </thead>
+            <tbody id="topic-table-body">
+              <!-- Rows will be populated here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+       <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+        <h2 class="text-xl font-bold mb-4">Performance by Year</h2>
+        <div class="relative h-80">
+          <canvas id="yearChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentBranch = "EC";
+      let allQuestions = [];
+      let questionStates = {};
+      let charts = {};
+
+      const branchBtn = document.getElementById("switch-branch");
+      const backLink = document.getElementById("back-link");
+
+      branchBtn.addEventListener("click", () => {
+        currentBranch = currentBranch === "EC" ? "EE" : "EC";
+        branchBtn.textContent = `Switch to ${currentBranch === "EC" ? "EE" : "EC"}`;
+        backLink.href = currentBranch === "EC" ? "index.html" : "EE.html";
+        loadData();
+      });
+
+      // Process the raw question data into a flat array with metadata
+      function processQuestionData(data) {
+        const questions = [];
+
+        Object.entries(data).forEach(([year, yearQuestions]) => {
+          let displayYear = year;
+          if (year === "dummy_aptitude") {
+            displayYear = "General Aptitude";
+          } else if (year === "dummy_engineering_mathematics") {
+            displayYear = "Engineering Mathematics";
+          }
+
+          yearQuestions.forEach((question, index) => {
+            if (!question.number || !question.text) return;
+
+            let marks = null;
+            if (question.html) {
+              const match = question.html.match(/data-value="([^"]+)"/);
+              if (match && match[1]) {
+                marks = match[1];
+              }
+            }
+
+            questions.push({
+              id: `${year}-${index}`,
+              number: question.number,
+              marks: marks,
+              year: year,
+              displayYear: displayYear,
+              topic: question.subject?.split(" - ")?.[0] || "General",
+            });
+          });
+        });
+
+        return questions;
+      }
+
+      async function loadData() {
+        try {
+          const file = currentBranch === "EC" ? "gate_ec_all_years.json" : "gate_ee_all_years.json";
+          const response = await fetch(file);
+          const data = await response.json();
+          allQuestions = processQuestionData(data);
+
+          const stateKey = currentBranch === "EC" ? "questionStates" : "ee-questionStates";
+          questionStates = JSON.parse(localStorage.getItem(stateKey) || "{}");
+
+          updateAnalytics();
+        } catch (error) {
+          console.error("Error loading data:", error);
+        }
+      }
+
+      function updateAnalytics() {
+        let totalQuestions = allQuestions.length;
+        let totalAttempted = 0;
+        let totalCorrect = 0;
+        let totalIncorrect = 0;
+
+        let marksData = {
+          "1": { total: 0, correct: 0, incorrect: 0 },
+          "2": { total: 0, correct: 0, incorrect: 0 },
+          "Unknown": { total: 0, correct: 0, incorrect: 0 },
+        };
+
+        let topicData = {};
+        let yearData = {};
+
+        allQuestions.forEach((q) => {
+          const state = questionStates[`${q.year}-${q.number}`];
+          const isAttempted = state && state.solved !== "unsolved";
+          const isCorrect = state && state.solved === "correct";
+          const isIncorrect = state && state.solved === "incorrect";
+
+          if (isAttempted) totalAttempted++;
+          if (isCorrect) totalCorrect++;
+          if (isIncorrect) totalIncorrect++;
+
+          // Marks analytics
+          const m = q.marks || "Unknown";
+          if (!marksData[m]) marksData[m] = { total: 0, correct: 0, incorrect: 0 };
+          marksData[m].total++;
+          if (isCorrect) marksData[m].correct++;
+          if (isIncorrect) marksData[m].incorrect++;
+
+          // Topic analytics
+          if (!topicData[q.topic]) {
+            topicData[q.topic] = { total: 0, attempted: 0, correct: 0, incorrect: 0 };
+          }
+          topicData[q.topic].total++;
+          if (isAttempted) topicData[q.topic].attempted++;
+          if (isCorrect) topicData[q.topic].correct++;
+          if (isIncorrect) topicData[q.topic].incorrect++;
+
+          // Year analytics
+          const y = q.displayYear;
+          if (!yearData[y]) {
+             yearData[y] = { total: 0, attempted: 0, correct: 0, incorrect: 0 };
+          }
+          yearData[y].total++;
+          if (isAttempted) yearData[y].attempted++;
+          if (isCorrect) yearData[y].correct++;
+          if (isIncorrect) yearData[y].incorrect++;
+        });
+
+        // Update Summary
+        document.getElementById("total-questions").textContent = totalQuestions;
+        document.getElementById("total-attempted").textContent = totalAttempted;
+        document.getElementById("total-correct").textContent = totalCorrect;
+        document.getElementById("total-incorrect").textContent = totalIncorrect;
+
+        // Update Charts
+        updateCharts(totalAttempted, totalCorrect, totalIncorrect, marksData, yearData);
+
+        // Update Topic Table
+        updateTopicTable(topicData);
+      }
+
+      function updateCharts(attempted, correct, incorrect, marksData, yearData) {
+        const unattempted = allQuestions.length - attempted;
+
+        Chart.defaults.color = '#9ca3af';
+
+        // Overall Chart
+        if (charts.overall) charts.overall.destroy();
+        const ctxOverall = document.getElementById("overallChart").getContext("2d");
+        charts.overall = new Chart(ctxOverall, {
+          type: "doughnut",
+          data: {
+            labels: ["Correct", "Incorrect", "Unattempted"],
+            datasets: [
+              {
+                data: [correct, incorrect, unattempted],
+                backgroundColor: ["#4ade80", "#f87171", "#4b5563"],
+                borderWidth: 0,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: "bottom" },
+            },
+          },
+        });
+
+        // Marks Chart
+        if (charts.marks) charts.marks.destroy();
+        const ctxMarks = document.getElementById("marksChart").getContext("2d");
+        const marksLabels = Object.keys(marksData);
+        charts.marks = new Chart(ctxMarks, {
+          type: "bar",
+          data: {
+            labels: marksLabels.map(m => m === "Unknown" ? m : `${m} Mark(s)`),
+            datasets: [
+              {
+                label: "Correct",
+                data: marksLabels.map(m => marksData[m].correct),
+                backgroundColor: "#4ade80",
+              },
+              {
+                label: "Incorrect",
+                data: marksLabels.map(m => marksData[m].incorrect),
+                backgroundColor: "#f87171",
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: { stacked: true },
+              y: { stacked: true },
+            },
+          },
+        });
+
+        // Year Chart
+        if (charts.year) charts.year.destroy();
+        const ctxYear = document.getElementById("yearChart").getContext("2d");
+        const years = Object.keys(yearData).sort().reverse();
+        charts.year = new Chart(ctxYear, {
+           type: "bar",
+           data: {
+               labels: years,
+               datasets: [
+                 {
+                   label: "Correct",
+                   data: years.map(y => yearData[y].correct),
+                   backgroundColor: "#4ade80",
+                 },
+                 {
+                   label: "Incorrect",
+                   data: years.map(y => yearData[y].incorrect),
+                   backgroundColor: "#f87171",
+                 },
+                 {
+                   label: "Unattempted",
+                   data: years.map(y => yearData[y].total - yearData[y].attempted),
+                   backgroundColor: "#4b5563",
+                 }
+               ]
+           },
+           options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: { stacked: true },
+              y: { stacked: true },
+            },
+          },
+        });
+      }
+
+      function updateTopicTable(topicData) {
+        const tbody = document.getElementById("topic-table-body");
+        tbody.innerHTML = "";
+
+        const topics = Object.keys(topicData).sort();
+
+        topics.forEach((topic) => {
+          const data = topicData[topic];
+          const accuracy = data.attempted > 0 ? ((data.correct / data.attempted) * 100).toFixed(1) : 0;
+
+          const tr = document.createElement("tr");
+          tr.className = "border-b border-gray-700 hover:bg-gray-750";
+          tr.innerHTML = `
+            <td class="py-3 px-4">${topic}</td>
+            <td class="py-3 px-4">${data.total}</td>
+            <td class="py-3 px-4">${data.attempted}</td>
+            <td class="py-3 px-4 text-green-400">${data.correct}</td>
+            <td class="py-3 px-4 text-red-400">${data.incorrect}</td>
+            <td class="py-3 px-4 text-blue-400">${accuracy}%</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      // Initial load
+      document.addEventListener("DOMContentLoaded", loadData);
+    </script>
+  </body>
+</html>
