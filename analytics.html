@@ -51,6 +51,32 @@
     />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <style>
+      /* Multiple select styling */
+      select[multiple] {
+        height: auto;
+        min-height: 120px;
+      }
+
+      select[multiple] option {
+        padding: 8px 12px;
+        margin-bottom: 2px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      select[multiple] option:checked {
+        background-color: #2563eb !important;
+        color: white;
+      }
+
+      /* Help text for multi-select */
+      .help-text {
+        font-size: 0.75rem;
+        color: #9ca3af;
+        margin-top: 0.25rem;
+        font-style: italic;
+      }
+
       /* Custom scrollbar styles */
       ::-webkit-scrollbar {
         width: 8px;
@@ -94,23 +120,26 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
             <label class="block text-sm font-medium text-gray-300 mb-1">Year</label>
-            <select id="year-filter" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select id="year-filter" multiple class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="all">All Years</option>
             </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple years</p>
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-300 mb-1">Topic</label>
-            <select id="topic-filter" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select id="topic-filter" multiple class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="all">All Topics</option>
             </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple topics</p>
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-300 mb-1">Subtopic</label>
-            <select id="subtopic-filter" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select id="subtopic-filter" multiple class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="all">All Subtopics</option>
             </select>
+            <p class="help-text">Hold Ctrl/Cmd to select multiple subtopics</p>
           </div>
-          <div class="flex items-end">
+          <div class="flex items-start mt-6">
             <button id="reset-filters" class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md transition duration-200">
               Reset Filters
             </button>
@@ -200,9 +229,9 @@
       let markedQuestions = [];
       let charts = {};
 
-      let selectedYear = "all";
-      let selectedTopic = "all";
-      let selectedSubtopic = "all";
+      let selectedYears = ["all"];
+      let selectedTopics = ["all"];
+      let selectedSubtopics = ["all"];
 
       const branchBtn = document.getElementById("switch-branch");
       const backLink = document.getElementById("back-link");
@@ -257,6 +286,18 @@
         return questions;
       }
 
+      // Helper function to set multiple values in a select element
+      function setMultiSelectValues(selectId, values) {
+        const selectElement = document.getElementById(selectId);
+        if (!selectElement || !values.length) return;
+
+        for (let i = 0; i < selectElement.options.length; i++) {
+          selectElement.options[i].selected = values.includes(
+            selectElement.options[i].value
+          );
+        }
+      }
+
       function populateFilters() {
         // Years
         const years = [...new Set(allQuestions.map((q) => q.year))];
@@ -282,60 +323,106 @@
           if (topic) topicFilter.insertAdjacentHTML('beforeend', `<option value="${topic}">${topic}</option>`);
         });
 
+        // Set default selections
+        selectedYears = realYears;
+        setMultiSelectValues("year-filter", selectedYears);
+
+        selectedTopics = ["all"];
+        setMultiSelectValues("topic-filter", selectedTopics);
+
         updateSubtopicFilter();
       }
 
       function updateSubtopicFilter() {
         subtopicFilter.innerHTML = '<option value="all">All Subtopics</option>';
-        if (selectedTopic === "all") {
+        if (
+          selectedTopics.length === 0 ||
+          (selectedTopics.length === 1 && selectedTopics[0] === "all")
+        ) {
           subtopicFilter.disabled = true;
-          selectedSubtopic = "all";
+          selectedSubtopics = ["all"];
+          setMultiSelectValues("subtopic-filter", selectedSubtopics);
           return;
         }
 
         subtopicFilter.disabled = false;
-        const subtopics = [...new Set(allQuestions.filter(q => q.topic === selectedTopic).map((q) => q.subtopic))].sort();
+        const subtopics = [
+          ...new Set(
+            allQuestions
+              .filter(
+                (q) =>
+                  selectedTopics.includes(q.topic) ||
+                  selectedTopics.includes("all")
+              )
+              .map((q) => q.subtopic)
+          ),
+        ].sort();
+
         subtopics.forEach((subtopic) => {
           if (subtopic) subtopicFilter.insertAdjacentHTML('beforeend', `<option value="${subtopic}">${subtopic}</option>`);
         });
+
+        // Set default selection
+        selectedSubtopics = ["all"];
+        setMultiSelectValues("subtopic-filter", selectedSubtopics);
       }
 
       function setupFilterListeners() {
-        yearFilter.addEventListener("change", (e) => {
-          selectedYear = e.target.value;
+        yearFilter.addEventListener("change", function () {
+          selectedYears = Array.from(this.selectedOptions).map(
+              (option) => option.value
+          );
+          if (selectedYears.length === 0) {
+             selectedYears = ["all"];
+             setMultiSelectValues("year-filter", selectedYears);
+          }
           applyFilters();
         });
 
-        topicFilter.addEventListener("change", (e) => {
-          selectedTopic = e.target.value;
-          selectedSubtopic = "all"; // Reset subtopic when topic changes
+        topicFilter.addEventListener("change", function () {
+          selectedTopics = Array.from(this.selectedOptions).map(
+              (option) => option.value
+          );
+          if (selectedTopics.length === 0) {
+             selectedTopics = ["all"];
+             setMultiSelectValues("topic-filter", selectedTopics);
+          }
+          selectedSubtopics = []; // Reset subtopic when topic changes
           updateSubtopicFilter();
           applyFilters();
         });
 
-        subtopicFilter.addEventListener("change", (e) => {
-          selectedSubtopic = e.target.value;
+        subtopicFilter.addEventListener("change", function () {
+          selectedSubtopics = Array.from(this.selectedOptions).map(
+              (option) => option.value
+          );
+          if (selectedSubtopics.length === 0) {
+             selectedSubtopics = ["all"];
+             setMultiSelectValues("subtopic-filter", selectedSubtopics);
+          }
           applyFilters();
         });
 
         resetFiltersBtn.addEventListener("click", () => {
-          selectedYear = "all";
-          selectedTopic = "all";
-          selectedSubtopic = "all";
+          // Reset to default
+          const years = [...new Set(allQuestions.map((q) => q.year))];
+          const realYears = years.filter((y) => !y.startsWith("dummy_")).sort().reverse();
+          selectedYears = realYears;
+          setMultiSelectValues("year-filter", selectedYears);
 
-          yearFilter.value = "all";
-          topicFilter.value = "all";
+          selectedTopics = ["all"];
+          setMultiSelectValues("topic-filter", selectedTopics);
+
           updateSubtopicFilter();
-
           applyFilters();
         });
       }
 
       function applyFilters() {
         filteredQuestions = allQuestions.filter((q) => {
-          const yearMatch = selectedYear === "all" || q.year === selectedYear;
-          const topicMatch = selectedTopic === "all" || q.topic === selectedTopic;
-          const subtopicMatch = selectedSubtopic === "all" || q.subtopic === selectedSubtopic;
+          const yearMatch = selectedYears.includes("all") || selectedYears.includes(q.year);
+          const topicMatch = selectedTopics.includes("all") || selectedTopics.includes(q.topic);
+          const subtopicMatch = selectedSubtopics.includes("all") || selectedSubtopics.includes(q.subtopic);
           return yearMatch && topicMatch && subtopicMatch;
         });
 
