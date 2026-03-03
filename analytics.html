@@ -89,24 +89,61 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div class="bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
+        <h2 class="text-xl font-bold mb-4">Filters</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Year</label>
+            <select id="year-filter" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="all">All Years</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Topic</label>
+            <select id="topic-filter" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="all">All Topics</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Subtopic</label>
+            <select id="subtopic-filter" class="w-full bg-gray-700 text-white rounded-md py-2 px-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="all">All Subtopics</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button id="reset-filters" class="w-full bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded-md transition duration-200">
+              Reset Filters
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mb-8">
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-          <h3 class="text-lg font-semibold text-gray-400 mb-2">
+          <h3 class="text-sm font-semibold text-gray-400 mb-2 whitespace-nowrap">
             Total Questions
           </h3>
-          <p id="total-questions" class="text-3xl font-bold">0</p>
+          <p id="total-questions" class="text-2xl font-bold">0</p>
         </div>
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-          <h3 class="text-lg font-semibold text-gray-400 mb-2">Attempted</h3>
-          <p id="total-attempted" class="text-3xl font-bold">0</p>
+          <h3 class="text-sm font-semibold text-gray-400 mb-2">Attempted</h3>
+          <p id="total-attempted" class="text-2xl font-bold">0</p>
         </div>
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-          <h3 class="text-lg font-semibold text-green-400 mb-2">Correct</h3>
-          <p id="total-correct" class="text-3xl font-bold">0</p>
+          <h3 class="text-sm font-semibold text-green-400 mb-2">Correct</h3>
+          <p id="total-correct" class="text-2xl font-bold">0</p>
         </div>
         <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
-          <h3 class="text-lg font-semibold text-red-400 mb-2">Incorrect</h3>
-          <p id="total-incorrect" class="text-3xl font-bold">0</p>
+          <h3 class="text-sm font-semibold text-red-400 mb-2">Incorrect</h3>
+          <p id="total-incorrect" class="text-2xl font-bold">0</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h3 class="text-sm font-semibold text-blue-400 mb-2">Accuracy</h3>
+          <p id="total-accuracy" class="text-2xl font-bold">0%</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+          <h3 class="text-sm font-semibold text-yellow-400 mb-2">Marked</h3>
+          <p id="total-marked" class="text-2xl font-bold">0</p>
         </div>
       </div>
 
@@ -158,11 +195,22 @@
     <script>
       let currentBranch = "EC";
       let allQuestions = [];
+      let filteredQuestions = [];
       let questionStates = {};
+      let markedQuestions = [];
       let charts = {};
+
+      let selectedYear = "all";
+      let selectedTopic = "all";
+      let selectedSubtopic = "all";
 
       const branchBtn = document.getElementById("switch-branch");
       const backLink = document.getElementById("back-link");
+
+      const yearFilter = document.getElementById("year-filter");
+      const topicFilter = document.getElementById("topic-filter");
+      const subtopicFilter = document.getElementById("subtopic-filter");
+      const resetFiltersBtn = document.getElementById("reset-filters");
 
       branchBtn.addEventListener("click", () => {
         currentBranch = currentBranch === "EC" ? "EE" : "EC";
@@ -201,11 +249,97 @@
               year: year,
               displayYear: displayYear,
               topic: question.subject?.split(" - ")?.[0] || "General",
+              subtopic: question.subject?.split(" - ")?.[1] || "General",
             });
           });
         });
 
         return questions;
+      }
+
+      function populateFilters() {
+        // Years
+        const years = [...new Set(allQuestions.map((q) => q.year))];
+        const realYears = years.filter((y) => !y.startsWith("dummy_")).sort().reverse();
+        const dummyYears = years.filter((y) => y.startsWith("dummy_"));
+
+        yearFilter.innerHTML = '<option value="all">All Years</option>';
+        realYears.forEach((year) => {
+          yearFilter.insertAdjacentHTML('beforeend', `<option value="${year}">GATE ${year}</option>`);
+        });
+        if (dummyYears.length > 0) {
+           yearFilter.insertAdjacentHTML('beforeend', `<option disabled>──────────────</option>`);
+           dummyYears.forEach((year) => {
+               const displayName = allQuestions.find((q) => q.year === year)?.displayYear || year;
+               yearFilter.insertAdjacentHTML('beforeend', `<option value="${year}">${displayName}</option>`);
+           });
+        }
+
+        // Topics
+        const topics = [...new Set(allQuestions.map((q) => q.topic))].sort();
+        topicFilter.innerHTML = '<option value="all">All Topics</option>';
+        topics.forEach((topic) => {
+          if (topic) topicFilter.insertAdjacentHTML('beforeend', `<option value="${topic}">${topic}</option>`);
+        });
+
+        updateSubtopicFilter();
+      }
+
+      function updateSubtopicFilter() {
+        subtopicFilter.innerHTML = '<option value="all">All Subtopics</option>';
+        if (selectedTopic === "all") {
+          subtopicFilter.disabled = true;
+          selectedSubtopic = "all";
+          return;
+        }
+
+        subtopicFilter.disabled = false;
+        const subtopics = [...new Set(allQuestions.filter(q => q.topic === selectedTopic).map((q) => q.subtopic))].sort();
+        subtopics.forEach((subtopic) => {
+          if (subtopic) subtopicFilter.insertAdjacentHTML('beforeend', `<option value="${subtopic}">${subtopic}</option>`);
+        });
+      }
+
+      function setupFilterListeners() {
+        yearFilter.addEventListener("change", (e) => {
+          selectedYear = e.target.value;
+          applyFilters();
+        });
+
+        topicFilter.addEventListener("change", (e) => {
+          selectedTopic = e.target.value;
+          selectedSubtopic = "all"; // Reset subtopic when topic changes
+          updateSubtopicFilter();
+          applyFilters();
+        });
+
+        subtopicFilter.addEventListener("change", (e) => {
+          selectedSubtopic = e.target.value;
+          applyFilters();
+        });
+
+        resetFiltersBtn.addEventListener("click", () => {
+          selectedYear = "all";
+          selectedTopic = "all";
+          selectedSubtopic = "all";
+
+          yearFilter.value = "all";
+          topicFilter.value = "all";
+          updateSubtopicFilter();
+
+          applyFilters();
+        });
+      }
+
+      function applyFilters() {
+        filteredQuestions = allQuestions.filter((q) => {
+          const yearMatch = selectedYear === "all" || q.year === selectedYear;
+          const topicMatch = selectedTopic === "all" || q.topic === selectedTopic;
+          const subtopicMatch = selectedSubtopic === "all" || q.subtopic === selectedSubtopic;
+          return yearMatch && topicMatch && subtopicMatch;
+        });
+
+        updateAnalytics();
       }
 
       async function loadData() {
@@ -218,15 +352,20 @@
           const stateKey = currentBranch === "EC" ? "questionStates" : "ee-questionStates";
           questionStates = JSON.parse(localStorage.getItem(stateKey) || "{}");
 
-          updateAnalytics();
+          const markedKey = currentBranch === "EC" ? "markedQuestions" : "ee-markedQuestions";
+          markedQuestions = JSON.parse(localStorage.getItem(markedKey) || "[]");
+
+          populateFilters();
+          applyFilters(); // This calls updateAnalytics
         } catch (error) {
           console.error("Error loading data:", error);
         }
       }
 
       function updateAnalytics() {
-        let totalQuestions = allQuestions.length;
+        let totalQuestions = filteredQuestions.length;
         let totalAttempted = 0;
+        let totalMarked = 0;
         let totalCorrect = 0;
         let totalIncorrect = 0;
 
@@ -239,7 +378,7 @@
         let topicData = {};
         let yearData = {};
 
-        allQuestions.forEach((q) => {
+        filteredQuestions.forEach((q) => {
           const state = questionStates[`${q.year}-${q.number}`];
           const isAttempted = state && state.solved !== "unsolved";
           const isCorrect = state && state.solved === "correct";
@@ -248,6 +387,7 @@
           if (isAttempted) totalAttempted++;
           if (isCorrect) totalCorrect++;
           if (isIncorrect) totalIncorrect++;
+          if (markedQuestions.includes(q.id)) totalMarked++;
 
           // Marks analytics
           const m = q.marks || "Unknown";
@@ -277,20 +417,23 @@
         });
 
         // Update Summary
+        const accuracy = totalAttempted > 0 ? ((totalCorrect / totalAttempted) * 100).toFixed(1) : 0;
         document.getElementById("total-questions").textContent = totalQuestions;
         document.getElementById("total-attempted").textContent = totalAttempted;
         document.getElementById("total-correct").textContent = totalCorrect;
         document.getElementById("total-incorrect").textContent = totalIncorrect;
+        document.getElementById("total-accuracy").textContent = `${accuracy}%`;
+        document.getElementById("total-marked").textContent = totalMarked;
 
         // Update Charts
-        updateCharts(totalAttempted, totalCorrect, totalIncorrect, marksData, yearData);
+        updateCharts(totalQuestions, totalAttempted, totalCorrect, totalIncorrect, marksData, yearData);
 
         // Update Topic Table
         updateTopicTable(topicData);
       }
 
-      function updateCharts(attempted, correct, incorrect, marksData, yearData) {
-        const unattempted = allQuestions.length - attempted;
+      function updateCharts(total, attempted, correct, incorrect, marksData, yearData) {
+        const unattempted = total - attempted;
 
         Chart.defaults.color = '#9ca3af';
 
@@ -411,7 +554,10 @@
       }
 
       // Initial load
-      document.addEventListener("DOMContentLoaded", loadData);
+      document.addEventListener("DOMContentLoaded", () => {
+        setupFilterListeners();
+        loadData();
+      });
     </script>
   </body>
 </html>
