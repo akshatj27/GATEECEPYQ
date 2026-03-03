@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE Online Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <style>
+        /* Custom Styles for TCS iON Interface Lookalike */
+        body { font-family: 'Verdana', sans-serif; overflow: hidden; background-color: #f1f2f3; }
+        .header { height: 60px; background: #fff; border-bottom: 1px solid #ccc; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-weight: bold; font-size: 1.2rem; color: #000; }
+        .timer-enc { background: #3c3c3c; color: #fff; padding: 5px 10px; border-radius: 4px; font-weight: bold; }
+        .main-container { display: flex; height: calc(100vh - 110px); }
+        .question-area { flex: 7; background: #fff; padding: 0; overflow-y: auto; display: flex; flex-direction: column; }
+        .question-header { background: #e5e7eb; padding: 10px; font-weight: bold; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; }
+        .question-content { padding: 20px; font-size: 16px; flex-grow: 1; overflow-y: auto; }
+        .palette-area { flex: 2; background: #eef3f7; border-left: 1px solid #ccc; display: flex; flex-direction: column; }
+        .palette-header { background: #e5e7eb; padding: 10px; font-weight: bold; text-align: center; }
+        .candidate-img { width: 80px; height: 80px; background: #ccc; margin: 10px auto; display: block; }
+        .palette-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; padding: 10px; overflow-y: auto; max-height: 400px; }
+        .q-btn { width: 35px; height: 35px; border: 1px solid #ccc; background: #fff; display: flex; justify-content: center; align-items: center; cursor: pointer; border-radius: 4px; font-size: 14px; position: relative; }
+        
+        /* Status Colors */
+        .status-not-visited { background: #fff; color: #000; } /* 0 */
+        .status-not-answered { background: #e74c3c; color: #fff; border-color: #c0392b; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);} /* 1 */
+        .status-answered { background: #27ae60; color: #fff; border-color: #219150; clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); } /* 2 */
+        .status-marked { background: #8e44ad; color: #fff; border-radius: 50%; } /* 3 */
+        .status-ans-marked { background: #8e44ad; color: #fff; border-radius: 50%; position: relative; } /* 4 */
+        .status-ans-marked::after { content: '✔'; position: absolute; bottom: 0; right: -2px; font-size: 10px; color: #27ae60; background: #fff; border-radius: 50%; width: 12px; height: 12px; display: flex; justify-content: center; align-items: center; }
+        
+        .footer { height: 50px; background: #f0f0f0; border-top: 1px solid #ccc; display: flex; align-items: center; justify-content: space-between; padding: 0 15px; position: fixed; bottom: 0; width: 100%; box-sizing: border-box; }
+        .btn-action { padding: 8px 15px; border: 1px solid #ccc; background: #fff; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 13px; margin-right: 5px; }
+        .btn-primary { background: #3498db; color: #fff; border-color: #2980b9; }
+        .btn-success { background: #2ecc71; color: #fff; border-color: #27ae60; }
+        .btn-danger { background: #e74c3c; color: #fff; border-color: #c0392b; }
+        .active-q-btn { border: 2px solid #000; }
+
+        /* Latex fixes */
+        .katex { font-size: 1.1em; } 
+        img.lazyload { max-width: 100%; height: auto; }
+
+        #selection-screen, #result-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hidden { display: none !important; }
+        
+        .option-row { display: flex; margin-bottom: 10px; cursor: pointer; align-items: flex-start; }
+        .option-radio { margin-top: 5px; margin-right: 10px; }
+        .option-content { flex: 1; }
+        .legend { font-size: 10px; padding: 5px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+        .legend-item { display: flex; align-items: center; }
+        .legend-box { width: 20px; height: 20px; margin-right: 5px; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center; font-size: 10px; }
+    
+        /* Floating Calculator Styles */
+        #calculatorContainer {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px; /* Reduced width for iframe compatibility */
+            height: 480px;
+            background-color: #2d3748;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            z-index: 50;
+            display: none; /* Hidden by default */
+            overflow: hidden;
+            border: 1px solid #4a5568;
+            resize: both;
+        }
+
+        #calculatorContainer iframe {
+            width: 100%;
+            height: calc(100% - 40px);
+            border: none;
+            background-color: #fff;
+        }
+
+        .calculator-header {
+            padding: 10px 15px;
+            background-color: #1a202c;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+            border-bottom: 1px solid #4a5568;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        .calculator-header h3 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        .calculator-close {
+            background: none;
+            border: none;
+            color: #a0aec0;
+            font-size: 20px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+        }
+        
+        .calculator-close:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Selection Screen -->
+    <div id="selection-screen">
+        <h1 class="text-3xl font-bold mb-8">GATE Pattern Test</h1>
+        <div class="bg-white p-8 rounded shadow-lg border w-96">
+            <label class="block mb-2 font-bold">Select Paper:</label>
+            <select id="paper-select" class="w-full p-2 border rounded mb-4">
+                <option value="">Loading papers...</option>
+            </select>
+            <button id="start-btn" class="w-full bg-blue-600 text-white p-2 rounded font-bold hover:bg-blue-700" disabled>Start Test</button>
+        </div>
+    </div>
+
+    <!-- Test Interface -->
+    <div id="test-interface" class="hidden h-screen flex flex-col">
+        <!-- Header -->
+        <div class="header">
+            <div class="text-lg font-bold">GATE Online Test</div>
+            <div class="flex items-center gap-4">
+                <button id="calculatorToggle" class="flex items-center gap-2 bg-gray-200 px-3 py-1 rounded border hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                    Calculator
+                </button>
+                <div class="text-sm font-bold" id="subject-name">Subject</div>
+                <div class="text-sm">Time Left: <span id="timer" class="timer-enc">180:00</span></div>
+            </div>
+        </div>
+
+        <!-- Main Body -->
+        <div class="main-container">
+            <!-- Left: Question -->
+            <div class="question-area">
+                <div class="question-header">
+                    <span id="q-no">Question No. 1</span>
+                    <span class="text-xs text-gray-600">Marks: <span id="q-marks">1.00</span> | Neg: <span id="q-neg">0.00</span></span>
+                </div>
+                <div class="question-content" id="q-content">
+                    <!-- Question Text & Options render here -->
+                </div>
+            </div>
+
+            <!-- Right: Palette -->
+            <div class="palette-area">
+                <div class="palette-header">Question Palette</div>
+                <div class="flex justify-center p-2">
+                    <div class="bg-gray-300 w-16 h-16 rounded flex items-center justify-center text-xs">Profile</div>
+                </div>
+                <div class="legend border-b border-t border-gray-300 bg-white">
+                     <div class="legend-item"><span class="legend-box status-answered">2</span> Answered</div>
+                     <div class="legend-item"><span class="legend-box status-not-answered">1</span> Not Answered</div>
+                     <div class="legend-item"><span class="legend-box status-not-visited">0</span> Not Visited</div>
+                     <div class="legend-item"><span class="legend-box status-marked">3</span> Marked Review</div>
+                     <div class="legend-item"><span class="legend-box status-ans-marked">4</span> Ans & Marked</div>
+                </div>
+                <div class="palette-grid" id="palette-grid">
+                    <!-- Grid items -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div>
+                <button class="btn-action" onclick="app.markForReview()">Mark for Review & Next</button>
+                <button class="btn-action" onclick="app.clearResponse()">Clear Response</button>
+            </div>
+            <div>
+                <button class="btn-action btn-primary" onclick="app.saveAndNext()">Save & Next</button>
+            </div>
+            <div>
+                <button class="btn-action btn-success" onclick="app.submitTest()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="hidden">
+        <h2 class="text-3xl font-bold mb-4">Test Analysis</h2>
+        <div class="bg-white p-6 rounded shadow-lg border w-2/3 max-h-[90vh] overflow-y-auto">
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="p-4 bg-gray-100 rounded text-center">
+                    <div class="text-gray-600">Total Score</div>
+                    <div class="text-4xl font-bold text-blue-600" id="res-score">0</div>
+                </div>
+                <div class="p-4 bg-gray-100 rounded text-center">
+                    <div class="text-gray-600">Attempted</div>
+                    <div class="text-2xl font-bold" id="res-attempted">0</div>
+                </div>
+            </div>
+            
+            <table class="w-full text-sm text-left text-gray-500 mb-4 border">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3">Section</th>
+                        <th class="px-6 py-3">Correct</th>
+                        <th class="px-6 py-3">Wrong</th>
+                        <th class="px-6 py-3">Marks</th>
+                    </tr>
+                </thead>
+                <tbody id="res-body">
+                    <!-- Rows -->
+                </tbody>
+            </table>
+            
+            <div class="flex gap-4 mt-4">
+                <button onclick="app.reviewSolutions()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Review Solutions</button>
+                <button onclick="app.generateReport()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Download Report</button>
+                <button onclick="location.reload()" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">Exit / New Test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Calculator Container -->
+    <div id="calculatorContainer">
+      <div class="calculator-header">
+        <h3>Scientific Calculator</h3>
+        <button class="calculator-close" id="closeCalculator">×</button>
+      </div>
+      <iframe id="calculatorFrame" src="calc/index.html"></iframe>
+    </div>
+
+    <script>
+    // --- Calculator Scripts --- 
+    document.addEventListener("DOMContentLoaded", function () {
+        const calculatorToggle = document.getElementById("calculatorToggle");
+        const calculatorContainer = document.getElementById(
+          "calculatorContainer"
+        );
+        const closeCalculator = document.getElementById("closeCalculator");
+
+        // Toggle calculator visibility
+        calculatorToggle.addEventListener("click", function () {
+          const isVisible = calculatorContainer.style.display === "block";
+          calculatorContainer.style.display = isVisible ? "none" : "block";
+        });
+
+        // Close calculator
+        closeCalculator.addEventListener("click", function () {
+          calculatorContainer.style.display = "none";
+        });
+
+        // Make calculator draggable
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        const calculatorHeader = document.querySelector(".calculator-header");
+        calculatorHeader.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          // Calculate offset relative to the calculator container
+          const rect = calculatorContainer.getBoundingClientRect();
+          offsetX = e.clientX - rect.left;
+          offsetY = e.clientY - rect.top;
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (!isDragging) return;
+
+          const x = e.clientX - offsetX;
+          const y = e.clientY - offsetY;
+          
+          // No boundaries enforcement for now, just basic drag
+          calculatorContainer.style.left = x + "px";
+          calculatorContainer.style.top = y + "px";
+          calculatorContainer.style.transform = 'none'; // remove center transform once dragged
+        });
+
+        document.addEventListener("mouseup", function () {
+          isDragging = false;
+        });
+    });
+
+    // --- Data & State ---
+    const availablePapers = [
+        "gate_ec_2001", "gate_ec_2002", "gate_ec_2003", "gate_ec_2004", "gate_ec_2005", "gate_ec_2006", 
+        "gate_ec_2007", "gate_ec_2008", "gate_ec_2009", "gate_ec_2010", "gate_ec_2011", "gate_ec_2012", 
+        "gate_ec_2013", 
+        "gate_ec_2014-set-1", "gate_ec_2014-set-2", "gate_ec_2014-set-3", "gate_ec_2014-set-4",
+        "gate_ec_2015-set-1", "gate_ec_2015-set-2", "gate_ec_2015-set-3",
+        "gate_ec_2016-set-1", "gate_ec_2016-set-2", "gate_ec_2016-set-3",
+        "gate_ec_2017-set-1", "gate_ec_2017-set-2",
+        "gate_ec_2018", "gate_ec_2019", "gate_ec_2020", "gate_ec_2021", "gate_ec_2022", "gate_ec_2023", "gate_ec_2024", "gate_ec_2025",
+        "gate_ee_2001", "gate_ee_2002", "gate_ee_2003", "gate_ee_2004", "gate_ee_2005", "gate_ee_2006", 
+        "gate_ee_2007", "gate_ee_2008", "gate_ee_2009", "gate_ee_2010", "gate_ee_2011", "gate_ee_2012", 
+        "gate_ee_2013", 
+        "gate_ee_2014-set-1", "gate_ee_2014-set-2", "gate_ee_2014-set-3",
+        "gate_ee_2015-set-1", "gate_ee_2015-set-2",
+        "gate_ee_2016-set-1", "gate_ee_2016-set-2",
+        "gate_ee_2017-set-1", "gate_ee_2017-set-2",
+        "gate_ee_2018", "gate_ee_2019", "gate_ee_2020", "gate_ee_2021", "gate_ee_2022", "gate_ee_2023", "gate_ee_2024", "gate_ee_2025"
+    ];
+
+    const app = {
+        questions: [],
+        currentQIndex: 0,
+        timerInterval: null,
+        timeLeft: 180 * 60, // 3 hours in seconds
+        paperName: '',
+        reviewMode: false,
+
+        init: () => {
+             console.log("App init started");
+             try {
+                 const select = document.getElementById('paper-select');
+                 if (!select) {
+                     console.error("Select element not found!");
+                     alert("Critical Error: Select element not found");
+                     return;
+                 }
+                 select.innerHTML = '<option value="">Select Paper</option>';
+                 
+                 if (!availablePapers || !Array.isArray(availablePapers)) {
+                      console.error("availablePapers not found");
+                      alert("Critical Error: availablePapers data missing");
+                      return;
+                 }
+
+                 availablePapers.forEach(p => {
+                     const opt = document.createElement('option');
+                     opt.value = p;
+                     opt.textContent = p.replace('gate_', '').replace(/_/g, ' ').toUpperCase();
+                     select.appendChild(opt);
+                 });
+                 
+                 select.addEventListener('change', (e) => {
+                     document.getElementById('start-btn').disabled = !e.target.value;
+                 });
+
+                 document.getElementById('start-btn').addEventListener('click', app.startTest);
+                 console.log("App init completed");
+             } catch (e) {
+                 console.error("Error in app.init:", e);
+                 alert("Error in app.init: " + e.message);
+             }
+        },
+
+        startTest: async () => {
+            const paper = document.getElementById('paper-select').value;
+            app.paperName = paper;
+            document.getElementById('selection-screen').classList.add('hidden');
+            document.getElementById('test-interface').classList.remove('hidden');
+
+            // Fetch Data
+            try {
+                const res = await fetch(`gate_questions/${paper}/questions.json`);
+                const data = await res.json();
+                app.processData(data);
+                app.startTimer();
+                app.renderPalette();
+                app.loadQuestion(0);
+                document.getElementById('subject-name').textContent = paper.toUpperCase().replace(/_/g, ' ');
+            } catch (err) {
+                alert("Error loading paper: " + err);
+                location.reload();
+            }
+        },
+
+        processData: (data) => {
+             // Add state to each question
+             app.questions = data.map((q, idx) => {
+                 // Extract marks from HTML data-value attribute
+                 let marks = 1; // Default
+                 if (q.html) {
+                     const match = q.html.match(/data-value="([\d\.]+)"/);
+                     if (match) marks = parseFloat(match[1]);
+                 }
+
+                 // Identify MSQ: explicitly typed 'msq' OR 'mcq' with array answer
+                 let type = q.type;
+                 if (type === 'mcq' && Array.isArray(q.answer) && q.answer.length > 1) {
+                     type = 'msq';
+                 }
+                 
+                 // Normalize numerical types
+                 if (type === 'numerical' || type === 'nat') return {
+                     ...q,
+                     id: idx,
+                     marks: marks,
+                     type: 'nat',
+                     negMark: 0,
+                     userAnswer: null,
+                     status: 0,
+                     visited: false
+                 };
+
+                 // If type is explicitly msq from source
+                 if (type === 'msq') type = 'msq';
+
+                 let negMark = 0;
+                 if (type === 'mcq') negMark = marks / 3;
+                 // MSQ and NAT have 0 negative marks
+
+                 return {
+                     ...q,
+                     id: idx,
+                     marks: marks,
+                     type: type, // logic updated
+                     negMark: negMark,
+                     userAnswer: null, // { value: 'A' or ['A','B'] or '12.5', type: 'mcq'|'msq'|'nat' }
+                     status: 0, // 0: Not Visited, 1: Not Answered, 2: Answered, 3: Marked, 4: Ans & Marked
+                     visited: false
+                 };
+             });
+        },
+
+        startTimer: () => {
+            const display = document.getElementById('timer');
+            app.timerInterval = setInterval(() => {
+                app.timeLeft--;
+                if(app.timeLeft <= 0) {
+                    app.submitTest();
+                }
+                const hrs = Math.floor(app.timeLeft / 3600);
+                const mins = Math.floor((app.timeLeft % 3600) / 60);
+                const secs = app.timeLeft % 60;
+                display.textContent = `${hrs}:${mins < 10 ? '0'+mins : mins}:${secs < 10 ? '0'+secs : secs}`;
+            }, 1000);
+        },
+
+        loadQuestion: (index) => {
+            if (index < 0 || index >= app.questions.length) return;
+            
+            // Update previous question status if it was visited but not answered or marked
+            const prevQ = app.questions[app.currentQIndex];
+            if(prevQ.visited && prevQ.status === 0) {
+                prevQ.status = 1; // Not Answered
+            }
+
+            app.currentQIndex = index;
+            const q = app.questions[index];
+            q.visited = true;
+            if (q.status === 0) q.status = 1; // Mark as Not Answered (Red) initially on visit
+
+            // Update UI
+            document.getElementById('q-no').textContent = `Question ${index + 1}`;
+            document.getElementById('q-marks').textContent = q.marks.toFixed(2);
+            document.getElementById('q-neg').textContent = q.negMark.toFixed(2);
+            app.renderQuestionContent(q);
+            app.updatePalette();
+        },
+
+        renderQuestionContent: (q) => {
+            const container = document.getElementById('q-content');
+            container.innerHTML = '';
+            
+            // Question Text
+            const textDiv = document.createElement('div');
+            textDiv.innerHTML = q.html;
+            container.appendChild(textDiv);
+            
+            // Image Path Fixer
+             const imgs = textDiv.querySelectorAll('img');
+             imgs.forEach(img => {
+                 let src = img.getAttribute('src');
+                 if(src && !src.startsWith('http') && !src.startsWith('data:')) {
+                    // Fix backslashes
+                    src = src.replace(/\\/g, '/');
+                    
+                    // Prepend path if missing
+                    if (!src.includes('gate_questions/')) {
+                         img.src = `gate_questions/${app.paperName}/${src}`;
+                    } else {
+                        img.src = src;
+                    }
+                 }
+            });
+
+            // Input Area
+            const inputArea = document.createElement('div');
+            inputArea.className = 'mt-4 border-t pt-4';
+            
+            const isReview = app.reviewMode;
+
+            if (q.type === 'mcq' || q.type === 'msq') {
+                const isMsq = q.type === 'msq';
+                const inputType = isMsq ? 'checkbox' : 'radio';
+                
+                 // Determine correct answers as Set
+                let correctSet = new Set();
+                if (Array.isArray(q.answer)) q.answer.forEach(a => correctSet.add(a));
+                else if (typeof q.answer === 'string') {
+                    if (q.answer.includes(',') || q.answer.includes(';')) q.answer.split(/[;,]/).forEach(a => correctSet.add(a.trim()));
+                    else correctSet.add(q.answer.trim());
+                } else {
+                    correctSet.add(String(q.answer));
+                }
+
+                q.options.forEach(opt => {
+                    const row = document.createElement('label');
+                    row.className = 'option-row hover:bg-gray-100 p-2 rounded border border-transparent';
+                    
+                    let isChecked = false;
+                    if (q.userAnswer) {
+                        if (isMsq && Array.isArray(q.userAnswer.value)) {
+                            isChecked = q.userAnswer.value.includes(opt.letter);
+                        } else if (!isMsq) {
+                            isChecked = q.userAnswer.value === opt.letter;
+                        }
+                    }
+                    
+                    if (isReview) {
+                        const isCorrectOpt = correctSet.has(opt.letter);
+                        if (isCorrectOpt) {
+                            row.classList.add('bg-green-100', 'border-green-500');
+                        }
+                        if (isChecked && !isCorrectOpt) {
+                             row.classList.add('bg-red-100', 'border-red-500'); 
+                        }
+                    }
+
+                    const disabledAttr = isReview ? 'disabled' : '';
+                    const onchangeAttr = isReview ? '' : `onchange="app.selectOption('${opt.letter}', ${isMsq})"`;
+
+                    row.innerHTML = `
+                        <input type="${inputType}" name="opt" class="option-radio" value="${opt.letter}" ${isChecked ? 'checked' : ''} ${disabledAttr} ${onchangeAttr}>
+                        <div class="option-content">${opt.html}</div>
+                    `;
+                    // Fix option images too
+                    row.querySelectorAll('img').forEach(img => {
+                         let src = img.getAttribute('src');
+                         if(src && !src.startsWith('http') && !src.startsWith('data:')) {
+                            src = src.replace(/\\/g, '/');
+                            if (!src.includes('gate_questions/')) {
+                                img.src = `gate_questions/${app.paperName}/${src}`;
+                            } else {
+                                img.src = src;
+                            }
+                         }
+                    });
+                    inputArea.appendChild(row);
+                });
+            } else {
+                // NAT
+                const val = q.userAnswer?.value || '';
+                const disabledAttr = isReview ? 'disabled' : '';
+                const onchangeAttr = isReview ? '' : `onchange="app.enterNat(this.value)"`;
+                
+                inputArea.innerHTML = `
+                    <label class="block font-bold mb-2">My Answer:</label>
+                    <input type="text" class="border p-2 rounded w-full" value="${val}" ${disabledAttr} ${onchangeAttr} placeholder="Enter Number">
+                `;
+                
+                if (isReview) {
+                    let ranges = '';
+                    if (q.answer_min !== undefined) ranges = `Range: ${q.answer_min} - ${q.answer_max}`;
+                    else ranges = `Value: ${q.answer}`;
+                    inputArea.innerHTML += `<div class="mt-2 font-bold text-green-700">Correct Answer: ${ranges}</div>`;
+                }
+            }
+
+            container.appendChild(inputArea);
+
+            if (isReview && q.explanation_html) {
+                 const explDiv = document.createElement('div');
+                 explDiv.className = 'mt-4 p-4 bg-blue-50 border border-blue-200 rounded';
+                 explDiv.innerHTML = '<div class="font-bold mb-2">Explanation:</div>' + q.explanation_html;
+                 
+                 // Fix images in explanation
+                 explDiv.querySelectorAll('img').forEach(img => {
+                     let src = img.getAttribute('src');
+                     if(src && !src.startsWith('http') && !src.startsWith('data:')) {
+                        src = src.replace(/\\/g, '/');
+                        if (!src.includes('gate_questions/')) {
+                            img.src = `gate_questions/${app.paperName}/${src}`;
+                        } else {
+                            img.src = src;
+                        }
+                     }
+                });
+                 
+                 container.appendChild(explDiv);
+            }
+            renderMathInElement(container, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "[latex]", right: "[/latex]", display: false},
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
+                ]
+            });
+        },
+
+        selectOption: (val, isMsq) => {
+            const q = app.questions[app.currentQIndex];
+            if (isMsq) {
+                // Initialize if null
+                if (!q.userAnswer || !Array.isArray(q.userAnswer.value)) {
+                    q.userAnswer = { value: [], type: 'msq' };
+                }
+                
+                const idx = q.userAnswer.value.indexOf(val);
+                if (idx > -1) {
+                    q.userAnswer.value.splice(idx, 1);
+                } else {
+                    q.userAnswer.value.push(val);
+                }
+                
+                // If empty, set back to null? TCS usually keeps state even if empty checkboxes but technically that's "not answered"
+                // But for logic sake, if array empty, maybe equivalent to nothing selected?
+                if (q.userAnswer.value.length === 0) q.userAnswer = null;
+                else q.userAnswer.value.sort();
+
+            } else {
+                q.userAnswer = { value: val, type: 'mcq' };
+            }
+        },
+
+        enterNat: (val) => {
+            if (!val.trim()) {
+                app.questions[app.currentQIndex].userAnswer = null;
+            } else {
+                app.questions[app.currentQIndex].userAnswer = { value: val, type: 'nat' };
+            }
+        },
+
+        saveAndNext: () => {
+            const q = app.questions[app.currentQIndex];
+            if (q.userAnswer) {
+                q.status = 2; // Answered
+            } else {
+                q.status = 1; // Not Answered
+            }
+            app.updatePalette();
+            if (app.currentQIndex < app.questions.length - 1) {
+                app.loadQuestion(app.currentQIndex + 1);
+            }
+        },
+
+        markForReview: () => {
+            const q = app.questions[app.currentQIndex];
+            if (q.userAnswer) {
+                q.status = 4; // Answered & Marked
+            } else {
+                q.status = 3; // Marked for review
+            }
+            app.updatePalette();
+            if (app.currentQIndex < app.questions.length - 1) {
+                app.loadQuestion(app.currentQIndex + 1);
+            }
+        },
+
+        clearResponse: () => {
+            const q = app.questions[app.currentQIndex];
+            q.userAnswer = null;
+            q.status = 1; // Not answered
+            app.loadQuestion(app.currentQIndex); // Re-render
+        },
+
+        renderPalette: () => {
+            const grid = document.getElementById('palette-grid');
+            grid.innerHTML = '';
+            app.questions.forEach((q, i) => {
+                const btn = document.createElement('div');
+                btn.className = `q-btn status-not-visited`; // default
+                btn.textContent = i + 1;
+                btn.id = `pal-${i}`;
+                btn.onclick = () => app.loadQuestion(i);
+                grid.appendChild(btn);
+            });
+        },
+
+        updatePalette: () => {
+            app.questions.forEach((q, i) => {
+                const btn = document.getElementById(`pal-${i}`);
+                if (!btn) return;
+                
+                // Remove all status classes
+                btn.classList.remove('status-not-visited', 'status-not-answered', 'status-answered', 'status-marked', 'status-ans-marked', 'active-q-btn');
+                
+                // Add active class
+                if (i === app.currentQIndex) btn.classList.add('active-q-btn');
+                
+                if (app.reviewMode) {
+                     // Clear previous inline styles first
+                    btn.removeAttribute('style');
+
+                    if (q.isCorrect) {
+                        btn.classList.add('status-answered'); // Re-use green class or apply style
+                        btn.style.backgroundColor = '#27ae60'; 
+                        btn.style.color = '#fff';
+                    } else if (q.isWrong) {
+                         btn.classList.add('status-not-answered'); // Re-use red class
+                         btn.style.backgroundColor = '#e74c3c';
+                         btn.style.color = '#fff';
+                    } else {
+                        btn.classList.add('status-not-visited');
+                    }
+                } else {
+                    // Normal Mode
+                    btn.removeAttribute('style'); // Clear review styles
+                    switch(q.status) {
+                        case 0: btn.classList.add('status-not-visited'); break;
+                        case 1: btn.classList.add('status-not-answered'); break;
+                        case 2: btn.classList.add('status-answered'); break;
+                        case 3: btn.classList.add('status-marked'); break;
+                        case 4: btn.classList.add('status-ans-marked'); break;
+                    }
+                }
+            });
+        },
+
+        submitTest: () => {
+            clearInterval(app.timerInterval);
+            let score = 0;
+            let correct = 0;
+            let wrong = 0;
+            let attempted = 0;
+
+            const rows = [];
+
+            app.questions.forEach(q => {
+                let isCorrect = false;
+                let isWrong = false;
+                
+                // Logic to check answer
+                if (q.userAnswer) {
+                    attempted++;
+                    
+                    if (q.type === 'msq') {
+                        // MSQ Logic: value is array. q.answer should be array or single string?
+                        // If q.answer is string "A,B", split it. If array ["A","B"], use it.
+                        let correctArr = [];
+                        if (Array.isArray(q.answer)) correctArr = q.answer;
+                        else if (typeof q.answer === 'string') {
+                            // Sometimes marked as "A; B" or "A, B"
+                            correctArr = q.answer.split(/[;,]/).map(s => s.trim());
+                            // If just "A", it becomes ["A"]
+                        }
+                        
+                        // User answer is array
+                        const userArr = q.userAnswer.value;
+                        
+                        // Compare sorted string versions
+                        const uStr = userArr.slice().sort().join(',').toLowerCase();
+                        const cStr = correctArr.slice().sort().join(',').toLowerCase();
+                        
+                        if (uStr === cStr) isCorrect = true;
+                        else isWrong = true; // 0 marks, but check if negative applies (usually 0 for MSQ)
+
+                    } else if (q.type === 'mcq') {
+                         // Normalize answers
+                        const userVal = String(q.userAnswer.value).trim().toLowerCase();
+                        let correctVal = "";
+                        if (Array.isArray(q.answer)) correctVal = q.answer[0]; // Should rely on type logic
+                        else correctVal = String(q.answer).trim();
+                        
+                        correctVal = correctVal.toLowerCase();
+
+                        if (userVal === correctVal) {
+                            isCorrect = true;
+                        } else {
+                            isWrong = true;
+                        }
+                    } else {
+                        // NAT
+                        const userVal = String(q.userAnswer.value).trim().toLowerCase();
+                        
+                        // Check range
+                        if (q.answer_min !== undefined && q.answer_max !== undefined) {
+                            const u = parseFloat(userVal);
+                            if (!isNaN(u) && u >= q.answer_min && u <= q.answer_max) {
+                                isCorrect = true;
+                            } else {
+                                isWrong = true;
+                            }
+                        } else {
+                             // Fallback to old parsing if answer_min missing
+                             const correctVal = String(q.answer).trim().toLowerCase();
+                             if (correctVal.includes(':')) {
+                                 const [min, max] = correctVal.split(':').map(Number);
+                                 const u = Number(userVal);
+                                 if (u >= min && u <= max) isCorrect = true;
+                                 else isWrong = true;
+                             } else {
+                                  if (Number(userVal) === Number(correctVal)) isCorrect = true;
+                                  else isWrong = true;
+                             }
+                        }
+                    }
+                }
+                
+                q.isCorrect = isCorrect;
+                q.isWrong = isWrong;
+
+                if (isCorrect) {
+                    correct++;
+                    score += q.marks;
+                }
+                if (isWrong) {
+                    wrong++;
+                    score -= q.negMark; // negMark is 0 for MSQ/NAT
+                }
+            });
+
+            // Show Result
+            document.getElementById('test-interface').classList.add('hidden');
+            document.getElementById('result-screen').classList.remove('hidden');
+            
+            document.getElementById('res-score').textContent = score.toFixed(2);
+            document.getElementById('res-attempted').textContent = attempted;
+            
+            const tbody = document.getElementById('res-body');
+            tbody.innerHTML = `
+                <tr class="bg-white border-b">
+                     <td class="px-6 py-4 font-medium text-gray-900">Total</td>
+                     <td class="px-6 py-4 text-green-600 font-bold">${correct}</td>
+                     <td class="px-6 py-4 text-red-600 font-bold">${wrong}</td>
+                     <td class="px-6 py-4">${score.toFixed(2)}</td>
+                </tr>
+            `;
+
+            // Detailed Analysis
+            const detailContainer = document.createElement('div');
+            detailContainer.className = 'mt-8';
+            detailContainer.innerHTML = '<h3 class="text-xl font-bold mb-2">Question breakdown</h3>';
+            
+            const table = document.createElement('table');
+            table.className = 'w-full text-sm text-left text-gray-500 border';
+            table.innerHTML = `
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-2">Q.No</th>
+                        <th class="px-4 py-2">Status</th>
+                        <th class="px-4 py-2">Your Answer</th>
+                        <th class="px-4 py-2">Correct Answer</th>
+                        <th class="px-4 py-2">Marks</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            `;
+            const listBody = table.querySelector('tbody');
+            
+            app.questions.forEach((q, i) => {
+                let status = 'Skipped';
+                let rowClass = '';
+                let marks = 0;
+                
+                let userValStr = '-';
+                if (q.userAnswer) {
+                    if (Array.isArray(q.userAnswer.value)) userValStr = q.userAnswer.value.join(', ');
+                    else userValStr = String(q.userAnswer.value);
+                }
+                
+                let correctValStr = Array.isArray(q.answer) ? q.answer.join(', ') : String(q.answer);
+
+                if (q.userAnswer) {
+                     // We need to check correctness again or store it during submitTest loop
+                     // For brevity, let's reuse logic or assume we can derive. 
+                     // Let's verify simply against stored score logic if we had stored it.
+                     // But we didn't store per-question result in the previous loop.
+                     // It's cleaner to DRY this up, but for now let's copy the check logic or trust the user wants to see what happened.
+                     
+                     let isCorrect = false;
+                     // ... (Repeat logic shortened for display) ...
+                     if (q.type === 'msq') {
+                        let cArr = Array.isArray(q.answer) ? q.answer : (typeof q.answer === 'string' ? q.answer.split(/[;,]/) : [String(q.answer)]);
+                        cArr = cArr.map(s => s.trim().toLowerCase()).sort();
+                        const uArr = q.userAnswer.value.map(s => s.trim().toLowerCase()).sort();
+                        if (JSON.stringify(cArr) === JSON.stringify(uArr)) isCorrect = true;
+                     } else if (q.type === 'mcq') {
+                        let cVal = Array.isArray(q.answer) ? q.answer[0] : String(q.answer);
+                        if (String(q.userAnswer.value).toLowerCase().trim() === cVal.toLowerCase().trim()) isCorrect = true;
+                     } else {
+                         // NAT
+                         const uv = parseFloat(q.userAnswer.value);
+                         if (q.answer_min !== undefined) {
+                             // Display range in correct answer column?
+                             // Just check correctness for status
+                             if (uv >= q.answer_min && uv <= q.answer_max) isCorrect = true;
+                             correctValStr = `${q.answer_min} - ${q.answer_max}`;
+                         } else {
+                             const cVal = String(q.answer).toLowerCase().trim();
+                             if (cVal.includes(':')) {
+                                const [min, max] = cVal.split(':').map(Number);
+                                if (uv >= min && uv <= max) isCorrect = true;
+                             } else {
+                                if (Number(uv) === Number(cVal)) isCorrect = true;
+                             }
+                         }
+                     }
+
+                    if (isCorrect) {
+                        status = 'Correct';
+                        rowClass = 'bg-green-50 text-green-700';
+                        marks = q.marks;
+                    } else {
+                        status = 'Wrong';
+                        rowClass = 'bg-red-50 text-red-700';
+                        marks = -q.negMark;
+                    }
+                }
+
+                listBody.innerHTML += `
+                    <tr class="border-b ${rowClass}">
+                        <td class="px-4 py-2">${i+1}</td>
+                        <td class="px-4 py-2 font-bold">${status}</td>
+                        <td class="px-4 py-2">${userValStr}</td>
+                        <td class="px-4 py-2">${correctValStr}</td>
+                        <td class="px-4 py-2">${marks.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+            
+            detailContainer.appendChild(table);
+            document.querySelector('#result-screen .bg-white').appendChild(detailContainer);
+        },
+
+        reviewSolutions: () => {
+             app.reviewMode = true;
+             document.getElementById('result-screen').classList.add('hidden');
+             document.getElementById('test-interface').classList.remove('hidden');
+             
+             // Update Header
+             document.querySelector('.header .text-lg').textContent = 'Test Review Mode';
+             document.querySelector('.header .text-sm').innerHTML = ''; // Hide timer
+             
+             // Update Footer and disable buttons if not needed
+             const footerDivs = document.querySelectorAll('.footer > div');
+             footerDivs[0].innerHTML = ''; // Hide Mark/Clear
+             footerDivs[1].innerHTML = ''; // Hide Save Next
+             footerDivs[2].innerHTML = '<button class="btn-action btn-danger" onclick="location.reload()">Exit Review</button>';
+
+             app.loadQuestion(0);
+        },
+
+        generateReport: () => {
+            const win = window.open('', '_blank');
+            win.document.write('<!DOCTYPE html>');
+            win.document.write('<html><head><title>Test Report</title>');
+            win.document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+            win.document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css">');
+            win.document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"><\/script>');
+            win.document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"><\/script>');
+            win.document.write('</head><body class="p-8">');
+            
+            win.document.write('<h1 class="text-3xl font-bold mb-4">Test Report: ' + app.paperName.toUpperCase() + '</h1>');
+            
+            const score = document.getElementById('res-score').textContent;
+            const attempted = document.getElementById('res-attempted').textContent;
+            win.document.write(`<div class="mb-6 p-4 bg-gray-100 rounded">
+                <h2 class="text-xl font-bold">Score: ${score}</h2>
+                <p>Attempted: ${attempted}</p>
+            </div>`);
+
+            app.questions.forEach((q, i) => {
+                let statusColor = 'text-gray-600';
+                let statusText = 'Unanswered';
+                let correctVal = '';
+                
+                let userValStr = '-';
+                
+                if (q.userAnswer) {
+                     statusText = 'Wrong'; 
+                     statusColor = 'text-red-600';
+                     if (q.type === 'msq') {
+                        let cArr = Array.isArray(q.answer) ? q.answer : (typeof q.answer === 'string' ? q.answer.split(/[;,]/) : [String(q.answer)]);
+                        cArr = cArr.map(s => s.trim().toLowerCase()).sort();
+                        const uArr = q.userAnswer.value.map(s => s.trim().toLowerCase()).sort();
+                        if (JSON.stringify(cArr) === JSON.stringify(uArr)) { statusText = 'Correct'; statusColor = 'text-green-600'; }
+                        userValStr = q.userAnswer.value.join(', ');
+                     } else if (q.type === 'mcq') {
+                        let cVal = Array.isArray(q.answer) ? q.answer[0] : String(q.answer);
+                        if (String(q.userAnswer.value).toLowerCase().trim() === cVal.toLowerCase().trim()) { statusText = 'Correct'; statusColor = 'text-green-600';}
+                        userValStr = q.userAnswer.value;
+                     } else {
+                         const uv = parseFloat(q.userAnswer.value);
+                         userValStr = q.userAnswer.value;
+                         if (q.answer_min !== undefined) {
+                             if (uv >= q.answer_min && uv <= q.answer_max) { statusText = 'Correct'; statusColor = 'text-green-600'; }
+                             correctVal = `${q.answer_min} - ${q.answer_max}`;
+                         } else {
+                             const cVal = String(q.answer).toLowerCase().trim();
+                             if (Number(uv) === Number(cVal)) { statusText = 'Correct'; statusColor = 'text-green-600'; }
+                             else if (cVal.includes(':')) {
+                                const [min, max] = cVal.split(':').map(Number);
+                                if (uv >= min && uv <= max) { statusText = 'Correct'; statusColor = 'text-green-600'; }
+                             }
+                         }
+                     }
+                }
+                
+                // Fix for Unanswered Numerical Questions
+                if (q.type === 'nat' && !correctVal) {
+                     if (q.answer_min !== undefined) {
+                         correctVal = `${q.answer_min} - ${q.answer_max}`;
+                     } else {
+                         correctVal = String(q.answer);
+                     }
+                }
+                
+                if (q.type !== 'nat' && !correctVal) {
+                    correctVal = Array.isArray(q.answer) ? q.answer.join(', ') : String(q.answer);
+                }
+
+                let qHtml = q.html;
+                // Fix images for report
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = qHtml;
+                tempDiv.querySelectorAll('img').forEach(img => {
+                    let src = img.getAttribute('src');
+                    if(src && !src.startsWith('http') && !src.startsWith('data:')) {
+                        src = src.replace(/\\/g, '/');
+                        if (!src.includes('gate_questions/')) {
+                             img.src = `gate_questions/${app.paperName}/${src}`;
+                        }
+                    }
+                });
+                qHtml = tempDiv.innerHTML;
+                
+                let explHtml = q.explanation_html || 'No Explanation';
+                 const tempDiv2 = document.createElement('div');
+                tempDiv2.innerHTML = explHtml;
+                tempDiv2.querySelectorAll('img').forEach(img => {
+                    let src = img.getAttribute('src');
+                    if(src && !src.startsWith('http') && !src.startsWith('data:')) {
+                        src = src.replace(/\\/g, '/');
+                        if (!src.includes('gate_questions/')) {
+                             img.src = `gate_questions/${app.paperName}/${src}`;
+                        }
+                    }
+                });
+                explHtml = tempDiv2.innerHTML;
+
+
+                win.document.write(`
+                    <div class="mb-8 border-b pb-4 break-inside-avoid">
+                        <div class="flex justify-between items-start mb-2">
+                             <h3 class="font-bold">Q${i+1} (${q.type.toUpperCase()})</h3>
+                             <span class="${statusColor} font-bold">${statusText}</span>
+                        </div>
+                        <div class="mb-4 text-justify">${qHtml}</div>
+                        <div class="grid grid-cols-2 gap-4 bg-gray-50 p-2 rounded text-sm mb-2">
+                            <div><span class="font-bold">Your Answer:</span> ${userValStr}</div>
+                            <div><span class="font-bold">Correct Answer:</span> ${correctVal}</div>
+                        </div>
+                        <div class="p-4 bg-blue-50 text-sm rounded border border-blue-100">
+                            <div class="font-bold mb-1">Explanation:</div>
+                            <div class="text-justify">${explHtml}</div>
+                        </div>
+                    </div>
+                `);
+            });
+
+            win.document.write(`
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true},
+                                {left: "[latex]", right: "[/latex]", display: false},
+                                {left: "\\(", right: "\\)", display: false},
+                                {left: "\\[", right: "\\]", display: true}
+                            ]
+                        });
+                    });
+                <\/script>
+            `);
+            win.document.write('</body></html>');
+            win.document.close();
+        }
+    };
+
+    try {
+        window.onload = () => {
+             console.log("Window loaded. Initializing app...");
+             if (app && app.init) {
+                 app.init();
+             } else {
+                 console.error("App not defined");
+                 document.body.innerHTML += '<div style="color:red; padding:20px;">Error: App not initialized.</div>';
+             }
+        };
+    } catch(e) {
+        console.error("Critical Error:", e);
+        document.body.innerHTML += '<div style="color:red; padding:20px;">Critical Error: ' + e.message + '</div>';
+    }
+</script>
+</body>
+</html>

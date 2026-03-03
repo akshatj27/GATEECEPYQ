@@ -13324,3 +13324,106 @@ requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://prac
 2025-06-29 23:56:20,142 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EE/20031/a88.jpg to gate_questions\gate_ee_2003\images\12c63b927d29ea1004c2f74ec2a5b1d4.jpg
 2025-06-29 23:56:21,157 - GATEScraper - INFO - Saved 90 questions for year 2003
 2025-06-29 23:56:21,278 - GATEScraper - INFO - All data for branch EE saved successfully to gate_questions\gate_ee_all_years.json
+2026-01-10 04:52:25,766 - GATEScraper - INFO - Scraping specific year: 2025 from https://practicepaper.in/gate-ec/gate-ec-2025
+2026-01-10 04:52:25,768 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025
+2026-01-10 04:52:27,133 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:52:27,149 - GATEScraper - INFO - Found 13 pages for https://practicepaper.in/gate-ec/gate-ec-2025
+2026-01-10 04:52:27,149 - GATEScraper - INFO - Processing year 2025, page 1/13: https://practicepaper.in/gate-ec/gate-ec-2025
+2026-01-10 04:52:27,149 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025
+2026-01-10 04:52:27,961 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:52:27,974 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025
+2026-01-10 04:52:29,052 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q5.webp to gate_questions\gate_ec_2025\images\4ed2503404eaddaa0279f0db7c2d0136.webp
+2026-01-10 04:52:30,055 - GATEScraper - INFO - Processing year 2025, page 2/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=2
+2026-01-10 04:52:30,055 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=2
+2026-01-10 04:52:32,767 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:52:32,781 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=2
+2026-01-10 04:52:33,816 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q6.webp to gate_questions\gate_ec_2025\images\c2319b56ad988bfb78025dba3fbbd2b0.webp
+2026-01-10 04:52:34,885 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q7.webp to gate_questions\gate_ec_2025\images\b98f30ecd4c7970b71e4fe064076091e.webp
+2026-01-10 04:52:35,963 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q9.webp to gate_questions\gate_ec_2025\images\102b0a2b49c1ed3dd886624608da77b6.webp
+2026-01-10 04:52:37,002 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a9.webp to gate_questions\gate_ec_2025\images\9d1166d5b0440cbc083ca959a36cd4a6.webp
+2026-01-10 04:52:38,098 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q10.webp to gate_questions\gate_ec_2025\images\44ad2fcaf45e0156c6df71a6939dfdfc.webp
+2026-01-10 04:52:39,103 - GATEScraper - INFO - Processing year 2025, page 3/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=3
+2026-01-10 04:52:39,103 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=3
+2026-01-10 04:52:41,790 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:52:41,805 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=3
+2026-01-10 04:52:42,868 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q11.webp to gate_questions\gate_ec_2025\images\cb73f1a34d46b4b6a75835962a46307f.webp
+2026-01-10 04:52:43,905 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a11.webp to gate_questions\gate_ec_2025\images\401db96a127091cdf7809f8e895f4ee5.webp
+2026-01-10 04:52:45,016 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q12.webp to gate_questions\gate_ec_2025\images\8135cb5f04ab6eb225a289b94f7b9c1c.webp
+2026-01-10 04:52:46,065 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a13.webp to gate_questions\gate_ec_2025\images\283a6751b65a82a957aeeb8a90b8fa39.webp
+2026-01-10 04:52:47,126 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q14.webp to gate_questions\gate_ec_2025\images\1d2e166e65e9235513210d74cbb0c1b5.webp
+2026-01-10 04:52:48,132 - GATEScraper - INFO - Processing year 2025, page 4/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=4
+2026-01-10 04:52:48,132 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=4
+2026-01-10 04:52:50,807 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:52:50,820 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=4
+2026-01-10 04:52:51,865 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q16.webp to gate_questions\gate_ec_2025\images\56c2b70a7cfb631be9f4160ba88b6162.webp
+2026-01-10 04:52:52,874 - GATEScraper - INFO - Processing year 2025, page 5/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=5
+2026-01-10 04:52:52,874 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=5
+2026-01-10 04:52:55,636 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:52:55,648 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=5
+2026-01-10 04:52:56,648 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q24.webp to gate_questions\gate_ec_2025\images\e1b8e8ab52a95032f4f3dc3bfba32a81.webp
+2026-01-10 04:52:57,677 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q25.webp to gate_questions\gate_ec_2025\images\90850355d496404856e32f688d7faad6.webp
+2026-01-10 04:52:58,680 - GATEScraper - INFO - Processing year 2025, page 6/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=6
+2026-01-10 04:52:58,680 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=6
+2026-01-10 04:53:01,350 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:01,363 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=6
+2026-01-10 04:53:02,419 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q26.webp to gate_questions\gate_ec_2025\images\e5da35200fcf1c9de930a952d9bc6b47.webp
+2026-01-10 04:53:03,470 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q29.webp to gate_questions\gate_ec_2025\images\b8ce2fb5deb808ab65610671c4d7fc0f.webp
+2026-01-10 04:53:04,506 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q30.webp to gate_questions\gate_ec_2025\images\268bc5f68a93f17cbbfdad1e5a5bec48.webp
+2026-01-10 04:53:05,551 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a30.webp to gate_questions\gate_ec_2025\images\4ffa37360629106a51c626a4f411683d.webp
+2026-01-10 04:53:06,554 - GATEScraper - INFO - Processing year 2025, page 7/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=7
+2026-01-10 04:53:06,554 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=7
+2026-01-10 04:53:09,278 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:09,293 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=7
+2026-01-10 04:53:10,432 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q33.webp to gate_questions\gate_ec_2025\images\9453bf4f8e4cc4a33879f6ba5a6dceab.webp
+2026-01-10 04:53:11,609 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a33a.webp to gate_questions\gate_ec_2025\images\886f961c84fae749c4ff6e2a34dd1a08.webp
+2026-01-10 04:53:12,773 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a33b.webp to gate_questions\gate_ec_2025\images\6146c2493e56324311e4d849cddf17c6.webp
+2026-01-10 04:53:13,983 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q35.webp to gate_questions\gate_ec_2025\images\ce2048a86fa42fd6c4ce16214979369e.webp
+2026-01-10 04:53:15,135 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a35.webp to gate_questions\gate_ec_2025\images\91693376b7d04dc512de5b857904493f.webp
+2026-01-10 04:53:16,139 - GATEScraper - INFO - Processing year 2025, page 8/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=8
+2026-01-10 04:53:16,139 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=8
+2026-01-10 04:53:18,977 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:18,995 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=8
+2026-01-10 04:53:20,125 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q37.webp to gate_questions\gate_ec_2025\images\6bd84d99aa69251e28c844d98090a3f0.webp
+2026-01-10 04:53:21,237 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a37.webp to gate_questions\gate_ec_2025\images\5d5984f6bd7ce2b73181ae15015c8c3d.webp
+2026-01-10 04:53:22,276 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q39.webp to gate_questions\gate_ec_2025\images\fa8dd5abd2363bcb68307b0eb007221e.webp
+2026-01-10 04:53:23,281 - GATEScraper - INFO - Processing year 2025, page 9/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=9
+2026-01-10 04:53:23,281 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=9
+2026-01-10 04:53:26,141 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:26,169 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=9
+2026-01-10 04:53:27,201 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a43.webp to gate_questions\gate_ec_2025\images\98725fe68733b0d3fcda3fb77ed08585.webp
+2026-01-10 04:53:28,268 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a44.webp to gate_questions\gate_ec_2025\images\248126c391e3d812a8acb46791272901.webp
+2026-01-10 04:53:29,273 - GATEScraper - INFO - Processing year 2025, page 10/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=10
+2026-01-10 04:53:29,273 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=10
+2026-01-10 04:53:32,217 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:32,231 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=10
+2026-01-10 04:53:33,220 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q46a.webp to gate_questions\gate_ec_2025\images\314f7f444832c0458ada204c4e13109d.webp
+2026-01-10 04:53:34,278 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q46b.webp to gate_questions\gate_ec_2025\images\440254cb9a23364ac3060d0a3e86892f.webp
+2026-01-10 04:53:35,305 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q47a.webp to gate_questions\gate_ec_2025\images\e159a94ef63081fa853e0baa7fe8b10c.webp
+2026-01-10 04:53:36,359 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q47b.webp to gate_questions\gate_ec_2025\images\7719adfc718068736fa314c34fa91ba6.webp
+2026-01-10 04:53:37,383 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a47a.webp to gate_questions\gate_ec_2025\images\46e039d2193fe19de055733fb5cf9688.webp
+2026-01-10 04:53:38,423 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a47b.webp to gate_questions\gate_ec_2025\images\0409aef70f0c3f1f53e3c79f05b7506e.webp
+2026-01-10 04:53:39,429 - GATEScraper - INFO - Processing year 2025, page 11/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=11
+2026-01-10 04:53:39,429 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=11
+2026-01-10 04:53:41,994 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:42,006 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=11
+2026-01-10 04:53:43,028 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q51.webp to gate_questions\gate_ec_2025\images\c11826543f3c6c9e6e5475f4bbc3b7e7.webp
+2026-01-10 04:53:44,049 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a51a.webp to gate_questions\gate_ec_2025\images\8ce97f18942a0f308195b1f9883f521d.webp
+2026-01-10 04:53:45,071 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a51b.webp to gate_questions\gate_ec_2025\images\94da7a7e2513c7dcff00231edfeab242.webp
+2026-01-10 04:53:46,136 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a51c.webp to gate_questions\gate_ec_2025\images\f67dd6c56721ee2749f91c30a227b34c.webp
+2026-01-10 04:53:47,222 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/a51d.webp to gate_questions\gate_ec_2025\images\46e242016b5c38d99d8a1e3c0c0bb2bc.webp
+2026-01-10 04:53:48,251 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q52.webp to gate_questions\gate_ec_2025\images\d3e3102fc908a5e6a588f72bc82b7033.webp
+2026-01-10 04:53:49,332 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q55.webp to gate_questions\gate_ec_2025\images\e7b0c5694407e91fdf71c3b623638c18.webp
+2026-01-10 04:53:50,335 - GATEScraper - INFO - Processing year 2025, page 12/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=12
+2026-01-10 04:53:50,336 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=12
+2026-01-10 04:53:53,016 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:53,030 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=12
+2026-01-10 04:53:54,047 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q59.webp to gate_questions\gate_ec_2025\images\f99a6ada227441cd21d9b8d5fd55dc8b.webp
+2026-01-10 04:53:55,074 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q60.webp to gate_questions\gate_ec_2025\images\c2a3c12939e559426d80876f9e9ff89f.webp
+2026-01-10 04:53:56,078 - GATEScraper - INFO - Processing year 2025, page 13/13: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=13
+2026-01-10 04:53:56,078 - GATEScraper - INFO - Fetching: https://practicepaper.in/gate-ec/gate-ec-2025?page_no=13
+2026-01-10 04:53:58,507 - GATEScraper - INFO - Status code: 200
+2026-01-10 04:53:58,521 - GATEScraper - INFO - Found 5 questions on https://practicepaper.in/gate-ec/gate-ec-2025?page_no=13
+2026-01-10 04:53:59,291 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q62.webp to gate_questions\gate_ec_2025\images\a3a569af94be8d6d6ade620367a8e770.webp
+2026-01-10 04:54:00,084 - GATEScraper - INFO - Downloaded image: /wp-content/uploads/GATE/EC/20251/q63.webp to gate_questions\gate_ec_2025\images\d4a9932c8c92346b12569bb139d5e79d.webp
+2026-01-10 04:54:01,096 - GATEScraper - INFO - Saved 65 questions for year 2025
+2026-01-10 04:54:01,096 - GATEScraper - INFO - Saved 65 questions for year 2025 of branch EC
