@@ -263,14 +263,14 @@
         transform: translateX(-50%);
         width: 320px; /* Reduced width for iframe compatibility */
         height: 480px;
-        background-color: #2d3748;
-        border-radius: 8px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        background-color: transparent;
+        /* border-radius: 8px; */
+        /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); */
         z-index: 50;
         display: none; /* Hidden by default */
         overflow: hidden;
-        border: 1px solid #4a5568;
-        resize: both;
+        border: none;
+        /* resize: both; */
       }
 
       #calculatorContainer iframe {
@@ -503,10 +503,7 @@
 
     <!-- Floating Calculator Container -->
     <div id="calculatorContainer">
-      <div class="calculator-header">
-        <h3>Scientific Calculator</h3>
-        <button class="calculator-close" id="closeCalculator">×</button>
-      </div>
+      <div id="dragOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: none; cursor: move;"></div>
       <iframe id="calculatorFrame" src="calc/index.html"></iframe>
     </div>
 
@@ -517,48 +514,70 @@
         const calculatorContainer = document.getElementById(
           "calculatorContainer",
         );
-        const closeCalculator = document.getElementById("closeCalculator");
-
-        // Toggle calculator visibility
+                // Toggle calculator visibility
         calculatorToggle.addEventListener("click", function () {
           const isVisible = calculatorContainer.style.display === "block";
           calculatorContainer.style.display = isVisible ? "none" : "block";
         });
 
-        // Close calculator
-        closeCalculator.addEventListener("click", function () {
-          calculatorContainer.style.display = "none";
+
+
+        // Calculator drag and minimize via postMessage
+        let isIframeDragging = false;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+        const dragOverlay = document.getElementById("dragOverlay");
+
+        window.addEventListener('message', function(e) {
+            if (!e.data || typeof e.data !== 'object') return;
+
+            if (e.data.action === 'closeCalculator') {
+                calculatorContainer.style.display = "none";
+                if (typeof localStorage !== 'undefined') {
+                    localStorage.setItem("calculatorVisible", "false");
+                }
+            } else if (e.data.action === 'minimizeCalculator') {
+                calculatorContainer.style.height = '34px'; // Header height
+            } else if (e.data.action === 'maximizeCalculator') {
+                calculatorContainer.style.height = '480px';
+
+                // Ensure it doesn't go off-screen when expanded
+                const rect = calculatorContainer.getBoundingClientRect();
+                const maxY = window.innerHeight - calculatorContainer.offsetHeight;
+                if (rect.top > maxY && maxY > 0) {
+                    calculatorContainer.style.top = Math.max(0, maxY) + "px";
+                }
+            } else if (e.data.action === 'dragStart') {
+                isIframeDragging = true;
+                dragOffsetX = e.data.clientX;
+                dragOffsetY = e.data.clientY;
+                dragOverlay.style.display = 'block';
+            }
         });
 
-        // Make calculator draggable
-        let isDragging = false;
-        let offsetX, offsetY;
+        document.addEventListener('mousemove', function(e) {
+            if (isIframeDragging) {
+                const rect = calculatorContainer.getBoundingClientRect();
+                const x = e.clientX - dragOffsetX;
+                const y = e.clientY - dragOffsetY;
 
-        const calculatorHeader = document.querySelector(".calculator-header");
-        calculatorHeader.addEventListener("mousedown", function (e) {
-          isDragging = true;
-          // Calculate offset relative to the calculator container
-          const rect = calculatorContainer.getBoundingClientRect();
-          offsetX = e.clientX - rect.left;
-          offsetY = e.clientY - rect.top;
+                const maxX = window.innerWidth - calculatorContainer.offsetWidth;
+                const maxY = window.innerHeight - calculatorContainer.offsetHeight;
+
+                calculatorContainer.style.left = Math.min(maxX, Math.max(0, x)) + "px";
+                calculatorContainer.style.top = Math.min(maxY, Math.max(0, y)) + "px";
+                calculatorContainer.style.right = "auto";
+                calculatorContainer.style.bottom = "auto";
+                calculatorContainer.style.transform = "none";
+            }
         });
 
-        document.addEventListener("mousemove", function (e) {
-          if (!isDragging) return;
-
-          const x = e.clientX - offsetX;
-          const y = e.clientY - offsetY;
-
-          // No boundaries enforcement for now, just basic drag
-          calculatorContainer.style.left = x + "px";
-          calculatorContainer.style.top = y + "px";
-          calculatorContainer.style.transform = "none"; // remove center transform once dragged
+        document.addEventListener('mouseup', function(e) {
+            if (isIframeDragging) {
+                isIframeDragging = false;
+                dragOverlay.style.display = 'none';
+            }
         });
-
-        document.addEventListener("mouseup", function () {
-          isDragging = false;
-        });
-      });
 
       // --- Data & State ---
       const availablePapers = [

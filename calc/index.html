@@ -19,6 +19,30 @@
 </script>
 	<script type="text/javascript">
             $(function() {
+        // Calculator Drag & Controls via postMessage
+        let isDragging = false;
+
+        $('#helptopDiv').mousedown(function(e) {
+            if ($(e.target).closest('.help_back, .calc_min, .calc_max, .calc_close').length > 0) return;
+            isDragging = true;
+            if (window.parent) {
+                window.parent.postMessage({
+                    action: 'dragStart',
+                    clientX: e.clientX,
+                    clientY: e.clientY
+                }, '*');
+            }
+        });
+
+        $(document).mousemove(function(e) {
+            // Parent will handle the actual dragging overlay, but we can also notify if needed
+        });
+
+        $(document).mouseup(function() {
+            isDragging = false;
+            // Parent handles mouseup on the overlay
+        });
+
     <!--  $("#keyPad").draggable({ -->
       <!--    start: function() { -->
       <!--   $(this).css({ height: "auto", width: "463px" }); -->
@@ -29,6 +53,7 @@
   <!--   }); -->
     
 	$(".calc_min").live('click', function(){
+		if (window.parent) window.parent.postMessage({action: 'minimizeCalculator'}, '*');
 		$('#mainContentArea').toggle();
 		<!-- $('#keyPad_Help').hide(); -->
                <!--  $('#keyPad_Helpback').hide();  -->
@@ -39,6 +64,7 @@
 		$(this).removeClass("calc_min").addClass('calc_max');
 	});
 	$(".calc_max").live('click', function(){
+		if (window.parent) window.parent.postMessage({action: 'maximizeCalculator'}, '*');
             $(this).removeClass("calc_max").addClass('calc_min');
 		$('#mainContentArea').toggle();
 		if($("#helpContent").css('display') == 'none'){
@@ -54,6 +80,7 @@
   });
 		$('#closeButton').click(function(){
 			$('#loadCalc').hide();
+			if (window.parent) window.parent.postMessage({action: 'closeCalculator'}, '*');
 		});
 		/** new help changes **/
 		$('#keyPad_Help').live('click',function(){

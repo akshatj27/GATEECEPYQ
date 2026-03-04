@@ -139,9 +139,9 @@
         right: 20px;
         width: 480px;
         height: 420px;
-        background-color: #1f2937;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        background-color: transparent;
+        /* border-radius: 10px; */
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
         z-index: 1000;
         display: none;
         overflow: hidden;
@@ -404,10 +404,7 @@
 
     <!-- Floating Calculator Container -->
     <div id="calculatorContainer">
-      <div class="calculator-header">
-        <h3>Scientific Calculator</h3>
-        <button class="calculator-close" id="closeCalculator">×</button>
-      </div>
+      <div id="dragOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: none; cursor: move;"></div>
       <iframe id="calculatorFrame" src="calc/index.html"></iframe>
     </div>
 
@@ -1433,9 +1430,7 @@
         const calculatorContainer = document.getElementById(
           "calculatorContainer"
         );
-        const closeCalculator = document.getElementById("closeCalculator");
-
-        // Check if calculator state is stored
+                // Check if calculator state is stored
         const calculatorVisible =
           localStorage.getItem("calculatorVisible") === "true";
         if (calculatorVisible) {
@@ -1449,45 +1444,64 @@
           localStorage.setItem("calculatorVisible", !isVisible);
         });
 
-        // Close calculator
-        closeCalculator.addEventListener("click", function () {
-          calculatorContainer.style.display = "none";
-          localStorage.setItem("calculatorVisible", false);
+
+
+        // Calculator drag and minimize via postMessage
+        let isIframeDragging = false;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+        const dragOverlay = document.getElementById("dragOverlay");
+
+        window.addEventListener('message', function(e) {
+            if (!e.data || typeof e.data !== 'object') return;
+
+            if (e.data.action === 'closeCalculator') {
+                calculatorContainer.style.display = "none";
+                if (typeof localStorage !== 'undefined') {
+                    localStorage.setItem("calculatorVisible", "false");
+                }
+            } else if (e.data.action === 'minimizeCalculator') {
+                calculatorContainer.style.height = '34px'; // Header height
+            } else if (e.data.action === 'maximizeCalculator') {
+                calculatorContainer.style.height = '420px';
+
+                // Ensure it doesn't go off-screen when expanded
+                const rect = calculatorContainer.getBoundingClientRect();
+                const maxY = window.innerHeight - calculatorContainer.offsetHeight;
+                if (rect.top > maxY && maxY > 0) {
+                    calculatorContainer.style.top = Math.max(0, maxY) + "px";
+                }
+            } else if (e.data.action === 'dragStart') {
+                isIframeDragging = true;
+                dragOffsetX = e.data.clientX;
+                dragOffsetY = e.data.clientY;
+                dragOverlay.style.display = 'block';
+            }
         });
 
-        // Make calculator draggable
-        let isDragging = false;
-        let offsetX, offsetY;
+        document.addEventListener('mousemove', function(e) {
+            if (isIframeDragging) {
+                const rect = calculatorContainer.getBoundingClientRect();
+                const x = e.clientX - dragOffsetX;
+                const y = e.clientY - dragOffsetY;
 
-        const calculatorHeader = document.querySelector(".calculator-header");
-        calculatorHeader.addEventListener("mousedown", function (e) {
-          isDragging = true;
-          offsetX =
-            e.clientX - calculatorContainer.getBoundingClientRect().left;
-          offsetY = e.clientY - calculatorContainer.getBoundingClientRect().top;
+                const maxX = window.innerWidth - calculatorContainer.offsetWidth;
+                const maxY = window.innerHeight - calculatorContainer.offsetHeight;
+
+                calculatorContainer.style.left = Math.min(maxX, Math.max(0, x)) + "px";
+                calculatorContainer.style.top = Math.min(maxY, Math.max(0, y)) + "px";
+                calculatorContainer.style.right = "auto";
+                calculatorContainer.style.bottom = "auto";
+                calculatorContainer.style.transform = "none";
+            }
         });
 
-        document.addEventListener("mousemove", function (e) {
-          if (!isDragging) return;
-
-          const x = e.clientX - offsetX;
-          const y = e.clientY - offsetY;
-
-          // Keep within window boundaries
-          const maxX = window.innerWidth - calculatorContainer.offsetWidth;
-          const maxY = window.innerHeight - calculatorContainer.offsetHeight;
-
-          calculatorContainer.style.left =
-            Math.min(maxX, Math.max(0, x)) + "px";
-          calculatorContainer.style.top = Math.min(maxY, Math.max(0, y)) + "px";
-          calculatorContainer.style.right = "auto";
-          calculatorContainer.style.bottom = "auto";
+        document.addEventListener('mouseup', function(e) {
+            if (isIframeDragging) {
+                isIframeDragging = false;
+                dragOverlay.style.display = 'none';
+            }
         });
-
-        document.addEventListener("mouseup", function () {
-          isDragging = false;
-        });
-      });
 
       // Keyboard shortcuts
       document.addEventListener("keydown", (event) => {
